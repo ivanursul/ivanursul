@@ -34,8 +34,6 @@ markdown: kramdown
 # theme: minima
 gems:
   - jekyll-feed
-  - jekyll-paginate-v2
-  - github-pages
 exclude:
   - Gemfile
   - Gemfile.lock
