@@ -1,0 +1,52 @@
+<section class="row" role="main">
+
+    {% for post in paginator.posts %}
+
+        <article class="post">
+
+            <header class="post-header">
+                <h2 class="post-title">
+                    <a href="{{ post.url | relative_url }}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+
+                <p class="post-time">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <time datetime="{{ post.date | date: '%Y/%m/%d' }}">
+                        {{ post.date | date_to_string }}
+                    </time>
+                    &#160;
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                    <a class="comment-count" href="{{ post.url | relative_url }}/#disqus_thread" 
+                    data-disqus-identifier='ghost-https://ivanursul.com/microservices-interaction-apache-kafka/'>Comments</a>
+                    &#160;
+                </p>
+            </header>
+            <section class="post-excerpt">
+                <p>{{ post.excerpt }}</p>
+            </section>
+
+        </article>
+
+    {% endfor %}
+
+</section>
+
+{% if paginator.total_pages > 1 %}
+    <nav role="pagination">
+
+        <p>
+            {% if paginator.previous_page %}
+                <a class="newer-posts pagination-nav" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+                    <i class="fa fa-angle-double-left"></i>
+                </a>
+            {% endif %}
+            <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+            {% if paginator.next_page %}
+                <a class="older-posts pagination-nav" href="{{ paginator.next_page_path | prepend: site.baseurl }}"><i class="fa fa-angle-double-right"></i></a>
+            {% endif %}
+        </p>
+        
+    </nav>
+{% endif %}
