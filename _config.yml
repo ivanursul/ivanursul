@@ -25,11 +25,17 @@ description: > # this means to ignore newlines until "baseurl:"
   Seasoned software engineer. Prefer Java. A true fan of CI/CD. 
   Always willing to automate everything. Opensource commiter. Blogger.
 
+me: Software engineer. A fan of CI/CD. Blogger.  
+
 baseurl: "/ivanursul" # the subpath of your site, e.g. /blog
 url: "https://chalatz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-twitter_username: jekyllrb
-github_username:  jekyll
+facebook_username: johnyursul
+github_username:  ivanursul
+twitter_username: ivanursul
+instagram_username: joanursul
+linked_in_id: ivan-ursul-5a193449
+upwork_id: 01773bdc595f0cec47
 
 repository: 'chalatz/ivanursul'
 

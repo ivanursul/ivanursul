@@ -1,0 +1,32 @@
+<header class="row">
+
+    {% if site.logo %}
+        <a
+            id="blog-logo"
+            href="{{ '' | relative_url }}">
+            <img src="{{ site.logo | relative_url }}" alt="Blog Logo" />
+        </a>
+    {% endif %}
+
+    <h1><a href="{{ '' | relative_url }}"  alt="Blog Title">{{ site.title }}</a></h1>
+
+    <p class="header-text blog-description">
+        social: 
+        <a href="https://www.facebook.com/{{ site.facebook_username }}">fb</a>
+        |
+        <a href="https://github.com/{{ site.github_username }}">git</a>
+        |
+        <a href="http://stackoverflow.com/users/1446725/ivan-ursul?tab=profile">stack</a>
+                        |
+        <a href="https://www.upwork.com/freelancers/~{{ site.upwork_id }}">up</a>
+                        |
+        <a href="https://www.linkedin.com/in/{{ site.linked_in_id }}">in</a>
+                        |
+        <a href="https://twitter.com/{{ site.twitter_username }}">tw</a>
+        |
+        <a href="https://www.instagram.com/{{ site.instagram_username }}/">insta</a>
+    </p>
+
+    <p class="blog-description">{{ site.me }}</p>
+
+</header>
