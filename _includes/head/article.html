@@ -6,15 +6,18 @@
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="title" content="{{ site.meta_title_content }}" >
     <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
 
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 
     <link rel="stylesheet" type='text/css' href="{{ '/assets/page.css' | relative_url }}"/>
 
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
-    {% include head/social_meta.html %}
+    <link rel="alternate" type="application/rss+xml" title="ivanursul" href="https://ivanursul.com/rss/" />
 
-    {% include head/scripts.html %}
+    {% include head/article_meta.html %}
+
+    {% include head/article_scripts.html %}
 
 </head>

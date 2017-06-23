@@ -1,0 +1,22 @@
+<meta property="og:site_name" content="{{ site.title }}">
+
+<meta name="referrer" content="origin" />
+
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d, %H:%M:%S" }}">
+<meta property="article:author" content="{{ '/' | absolute_url }}">
+<!--article tags meta here-->
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.content | default: site.description | strip_html | normalize_whitespace | truncate: 300 | escape }}" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:description" content="{{ page.content | default: site.description | strip_html | normalize_whitespace | truncate: 300 | escape }}" />
+<meta name="twitter:url" content="{{ page.url | absolute_url }}" />
+<meta name="twitter:creator" content="@ivanursul" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="Ivan Ursul" />
+<meta name="twitter:label2" content="Filed under" />
+
+<!--<meta name="twitter:data2" content="mongodb, java, migrations" />-->

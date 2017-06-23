@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "logo": "{{ 'assets/images/logo.png' | absolute_url }}"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "{{ site.author }}",
+        "image": "//www.gravatar.com/avatar/85cbeff8ef4927acc72a28f9ee51ced8?s=250&d=mm&r=x",
+        "url": "{{ '/' | absolute_url }}",
+        "sameAs": []
+    },
+    "headline": "{{ page.title }}",
+    "url": "{{ page.url | absolute_url }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": " {{ page.date | date_to_xmlschema }}",
+    "keywords": "mongodb, java, migrations",
+    "description": "{{ page.content | default: site.description | strip_html | normalize_whitespace | truncate: 300 | escape }}"
+}
+</script>
+
+{% include head/analytics.html %}
