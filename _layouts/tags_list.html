@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-GB" }}">
+
+  {% include head/head.html %}
+
+  <body class="home-template">
+
+    {% include header/nav.html %}
+    
+    {% include header/info.html %}
+
+    <div class="row tags-list">
+        <div class="tags-list__tag-name">
+            <i class="fa fa-tag"></i> {{page.tag_name}}
+        </div>
+    </div>
+
+    {{ content }}    
+    
+    {% include footer.html %}    
+    
+    {% include scripts/home_page.html %}    
+
+  </body>
+
+</html>

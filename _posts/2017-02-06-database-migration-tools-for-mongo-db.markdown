@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Concurrency structures written using core java"
+title:  "Database Migration tools for Mongo DB"
 date:   2017-02-06 11:29:52 +0300
 permalink: database-migration-tools-for-mongo-db
+tags: mongodb java migrations
 ---
 ![My helpful screenshot]({{ site.url }}{{ site.baseurl }}/assets/images/MongoDB-Logo-5c3a7405a85675366beb3a5ec4c032348c390b3f142f5e6dddf1d78e2df5cb5c.png)
 

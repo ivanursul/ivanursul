@@ -3,6 +3,7 @@ layout: post
 title:  "Concurrency structures written using core java"
 date:   2017-02-25 11:29:52 +0300
 permalink: mconcurrency-structures
+tags: java
 ---
 ### Motivation
 
