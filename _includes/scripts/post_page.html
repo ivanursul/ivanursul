@@ -1,4 +1,20 @@
+<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+
+<script src="{{ '/assets/js/highlight.min.js' | relative_url }}"></script>
+
+<script src="{{ '/assets/js/jssocials.min.js' | relative_url }}"></script>
+
 <script src="{{ '/assets/js/anchor.min.js' | relative_url }}"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+    $("#share").jsSocials({
+        text: "",
+            shareIn: "popup",
+            shares: ["twitter", "facebook", "googleplus", "linkedin"]
+    });	
+	</script>
 
 <script>
     anchors.options = {

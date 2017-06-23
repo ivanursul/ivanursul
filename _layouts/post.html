@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en-GB" }}">
 
-  {% include head/head.html %}
+  {% include head/post_page.html %}
 
   <body class="home-template">
 
@@ -10,7 +10,26 @@
     {% include header/info.html %}
 
     <article class="row post">
+
+        <header>
+          <h2>{{ page.title }}</h2>
+          <div id="share"></div>
+
+          <p class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <time datetime="{{ page.date | date: '%Y/%m/%d' }}">
+              {{ page.date | date_to_string }}
+            </time>
+            &#160;
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+            <a class="comment-count" href="/microservices-interaction-apache-kafka/#disqus_thread"
+            data-disqus-identifier='ghost-https://ivanursul.com/microservices-interaction-apache-kafka/'>Comments</a>
+            &#160;
+          </p>
+      </header>
+
       {{ content }}
+
     </article>
     
     {% include footer.html %}    

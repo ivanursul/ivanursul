@@ -16,7 +16,7 @@ You have two options how to run Mongobee - inside Spring container at the beginn
 
 The first option is good for the local environment when you have a local database and want to keep it up-to-date with shared one:
 
-{% highlight ruby %}
+```
 @Bean
 public Mongobee mongobee(){  
   Mongobee runner = new Mongobee("mongodb://YOUR_DB_HOST:27017/DB_NAME");
@@ -27,4 +27,4 @@ public Mongobee mongobee(){
 
   return runner;
 }
-{% endhighlight %}
+```
