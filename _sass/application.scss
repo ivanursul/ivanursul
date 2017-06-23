@@ -823,6 +823,17 @@ h1 a {
     color: #444
 }
 
+.anchorjs-link {
+  font-family: FontAwesome;
+  color: #444;
+  position: relative !important;
+  font-size: 1.1em;
+  margin-left: 0 !important;
+  &:hover {
+        text-decoration: none;
+    }
+}
+
 .pagination-nav{
     &:hover {
         text-decoration: none;
