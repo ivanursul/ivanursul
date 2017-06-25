@@ -22,8 +22,13 @@
             </time>
             &#160;
             <i class="fa fa-commenting" aria-hidden="true"></i>
-            <a class="comment-count" href="/microservices-interaction-apache-kafka/#disqus_thread"
-            data-disqus-identifier='ghost-https://ivanursul.com/microservices-interaction-apache-kafka/'>Comments</a>
+            <a
+              class="comment-count"
+              href="{{ page.url | relative_url }}/#disqus_thread"
+              data-disqus-identifier='{{ page.id }}'
+            >
+              Comments
+            </a>
             &#160;
           </p>
 
@@ -36,6 +41,10 @@
       {% include posts-nav.html %}
 
     </article>
+
+    {% if site.comments %}
+      {% include comments.html %}
+    {% endif %}
     
     {% include footer.html %}    
     

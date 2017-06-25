@@ -37,9 +37,13 @@ instagram_username: joanursul
 linked_in_id: ivan-ursul-5a193449
 upwork_id: 01773bdc595f0cec47
 
+disqus_unique_url: https://chalatz-ivanursul-disqus-com.disqus.com
+
 repository: 'chalatz/ivanursul'
 
 github: [metadata]
+
+comments: true
 
 # Build settings
 markdown: kramdown
