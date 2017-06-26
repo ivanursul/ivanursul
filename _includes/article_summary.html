@@ -15,7 +15,7 @@
             &#160;
             <i class="fa fa-commenting" aria-hidden="true"></i>
             <a class="comment-count" href="{{ post.url | relative_url }}/#disqus_thread" 
-            data-disqus-identifier='{{ post.id }}'>Comments</a>
+            data-disqus-identifier='{{ site.disqus_identifier_prefix }}{{ post.url | absolute_url }}/'>Comments</a>
             &#160;
         </p>
 
