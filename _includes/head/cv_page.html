@@ -1,0 +1,27 @@
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <meta name="title" content="{{ site.meta_title_content }}" >
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+
+    {% if page.bootstrap %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {%endif %}
+
+    <link rel="stylesheet" type='text/css' href="{{ '/assets/main.css' | relative_url }}"/>
+
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}" />
+
+    <link rel="alternate" type="application/rss+xml" title="ivanursul" href="https://ivanursul.com/rss/" />
+
+    {% include head/social_meta.html %}
+
+    {% include head/scripts.html %}
+
+</head>
