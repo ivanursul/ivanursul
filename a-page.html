@@ -1,0 +1,38 @@
+---
+layout: page
+title: cv
+bootstrap: true
+---
+
+<article class="row post page" role="main">
+
+        <div class="row">
+
+            <h2 class="subscribe-heading">Subscribtion confirmation</h2>
+
+            <p>
+                You are about to subscribe to my blog. From my side, I promise to use your email only for notifying you about new articles and researches.
+            </p>
+
+            <p>
+                I write articles mostly about java and world around, but you may have a chance to read something completely different.
+            </p>
+
+            <p>
+                Last one, it's up to you to decide whether my blog is useful for you or not. The only thing I'd like to ask - no matter what opinion you have, good or bad, always share it in comments section. Thank you ;)
+            </p>
+
+            <form method="post" action="{{ '/subscribe/' | relative_url }}" class="gh-signin">
+                <input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location" value="http://ivanursul.com/subscribe/"><input class="referrer" type="hidden" name="referrer" value="">
+
+                <div class="form-group">
+                    <input class="gh-input" type="email" name="email" autofocus="autofocus" placeholder="Your email address">
+                </div>
+                <button class="btn btn-blue btn-block subscribe-btn" type="submit">Subscribe</button>
+                <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+            </form>
+
+    
+        </div>
+
+</article>
