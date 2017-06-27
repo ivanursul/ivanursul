@@ -1,0 +1,413 @@
+.form,
+form {
+    margin-bottom: 17.5px;
+    padding: 0 0 14px
+}
+
+.form fieldset,
+form fieldset {
+    border: 0;
+    margin: 0;
+    min-width: 0;
+    padding: 0
+}
+
+.form fieldset legend,
+form fieldset legend {
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    font-size: 16.8px;
+    padding: 0;
+    width: 100%
+}
+
+.form label,
+form label {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 700;
+    margin-bottom: 7px;
+    max-width: 100%
+}
+
+.form label.danger:after,
+.form label.firm:after,
+.form label.info:after,
+.form label.success:after,
+.form label.warning:after,
+form label.danger:after,
+form label.firm:after,
+form label.info:after,
+form label.success:after,
+form label.warning:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    padding-left: .3em;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0)
+}
+
+.form label.firm:after,
+form label.firm:after {
+    color: #1abc9c;
+    content: '\f111'
+}
+
+.form label.success:after,
+form label.success:after {
+    color: #11b452;
+    content: '\f058'
+}
+
+.form label.info:after,
+form label.info:after {
+    color: #3498db;
+    content: '\f05a'
+}
+
+.form label.warning:after,
+form label.warning:after {
+    color: #f1c40f;
+    content: '\f071'
+}
+
+.form label.danger:after,
+form label.danger:after {
+    content: '\f057';
+    color: #e74c3c
+}
+
+.form input[type=email],
+.form input[type=number],
+.form input[type=password],
+.form input[type=text],
+.form textarea,
+form input[type=email],
+form input[type=number],
+form input[type=password],
+form input[type=text],
+form textarea {
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    background: rgba(0, 0, 0, 0);
+    color: #666;
+    font-size: 17px;
+    display: block;
+    min-height: 22px;
+    line-height: 22px;
+    width: 100%
+}
+
+.form input[type=email]:focus,
+.form input[type=number]:focus,
+.form input[type=password]:focus,
+.form input[type=text]:focus,
+.form textarea:focus,
+form input[type=email]:focus,
+form input[type=number]:focus,
+form input[type=password]:focus,
+form input[type=text]:focus,
+form textarea:focus {
+    border-color: #66AFE9;
+    outline: 0
+}
+
+.form select,
+form select {
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+    padding: 5px 4px;
+    width: 100%
+}
+
+.form select:focus,
+form select:focus {
+    border-color: #66AFE9;
+    outline: 0
+}
+
+.form.no-border,
+form.no-border {
+    border-bottom: none
+}
+
+.form .input-group,
+form .input-group {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.form .addon,
+.form .button,
+form .addon,
+form .button {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    white-space: nowrap
+}
+
+.form .addon,
+form .addon {
+    border-right: none
+}
+
+.form .button,
+form .button {
+    border-left: none;
+    white-space: nowrap
+}
+
+.form .input,
+form .input {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1
+}
+
+.form button,
+.form input[type=reset],
+.form input[type=submit],
+a.button,
+form button,
+form input[type=reset],
+form input[type=submit],
+html input[type=button] {
+    -webkit-border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -moz-background-clip: padding;
+    border-radius: 5px;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #fff;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: .1px;
+    margin: 0;
+    padding: 12px;
+    position: relative;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased
+}
+
+[disabled],
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+code,
+pre,
+tt {
+    white-space: pre-wrap
+}
+
+.form button:hover,
+.form input[type=reset]:hover,
+.form input[type=submit]:hover,
+a.button:hover,
+form button:hover,
+form input[type=reset]:hover,
+form input[type=submit]:hover,
+html input[type=button]:hover {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .2), 0 3px 6px rgba(0, 0, 0, .28);
+    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .2), 0 3px 6px rgba(0, 0, 0, .28);
+    box-shadow: 0 0 0 rgba(0, 0, 0, .2), 0 0 1px rgba(0, 0, 0, .35)
+}
+
+.form button.success,
+.form input[type=reset].success,
+.form input[type=submit].success,
+a.button.success,
+form button.success,
+form input[type=reset].success,
+form input[type=submit].success,
+html input[type=button].success {
+    background: #11b452;
+    color: #fff
+}
+
+.form button.success:active,
+.form input[type=reset].success:active,
+.form input[type=submit].success:active,
+a.button.success:active,
+form button.success:active,
+form input[type=reset].success:active,
+form input[type=submit].success:active,
+html input[type=button].success:active {
+    background: #27ad60
+}
+
+.form button.info,
+.form input[type=reset].info,
+.form input[type=submit].info,
+a.button.info,
+form button.info,
+form input[type=reset].info,
+form input[type=submit].info,
+html input[type=button].info {
+    background: #3498db;
+    color: #fff
+}
+
+.form button.info:active,
+.form input[type=reset].info:active,
+.form input[type=submit].info:active,
+a.button.info:active,
+form button.info:active,
+form input[type=reset].info:active,
+form input[type=submit].info:active,
+html input[type=button].info:active {
+    background: #2383c4
+}
+
+.form button.warning,
+.form input[type=reset].warning,
+.form input[type=submit].warning,
+a.button.warning,
+form button.warning,
+form input[type=reset].warning,
+form input[type=submit].warning,
+html input[type=button].warning {
+    background: #f1c40f;
+    color: #fff
+}
+
+.form button.warning:active,
+.form input[type=reset].warning:active,
+.form input[type=submit].warning:active,
+a.button.warning:active,
+form button.warning:active,
+form input[type=reset].warning:active,
+form input[type=submit].warning:active,
+html input[type=button].warning:active {
+    background: #cea70c
+}
+
+.form button.danger,
+.form input[type=reset].danger,
+.form input[type=submit].danger,
+a.button.danger,
+form button.danger,
+form input[type=reset].danger,
+form input[type=submit].danger,
+html input[type=button].danger {
+    background: #e74c3c;
+    color: #fff
+}
+
+.form button.danger:active,
+.form input[type=reset].danger:active,
+.form input[type=submit].danger:active,
+a.button.danger:active,
+form button.danger:active,
+form input[type=reset].danger:active,
+form input[type=submit].danger:active,
+html input[type=button].danger:active {
+    background: #dc2d1b
+}
+
+.form button.submit,
+.form input[type=reset].submit,
+.form input[type=submit].submit,
+a.button.submit,
+form button.submit,
+form input[type=reset].submit,
+form input[type=submit].submit,
+html input[type=button].submit {
+    background: #2196f3;
+    color: #fff
+}
+
+.form button.submit:active,
+.form input[type=reset].submit:active,
+.form input[type=submit].submit:active,
+a.button.submit:active,
+form button.submit:active,
+form input[type=reset].submit:active,
+form input[type=submit].submit:active,
+html input[type=button].submit:active {
+    background: #285e8e
+}
+
+.form .input-row,
+form .input-row {
+    padding: 0
+}
+
+.form input[type=email],
+.form input[type=number],
+.form input[type=password],
+.form input[type=text],
+.form textarea,
+form input[type=email],
+form input[type=number],
+form input[type=password],
+form input[type=text],
+form textarea {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    padding: 8px
+}
+
+.form input[type=email]:focus,
+.form input[type=number]:focus,
+.form input[type=password]:focus,
+.form input[type=text]:focus,
+.form textarea:focus,
+form input[type=email]:focus,
+form input[type=number]:focus,
+form input[type=password]:focus,
+form input[type=text]:focus,
+form textarea:focus {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+
+.form input[type=submit],
+form input[type=submit] {
+    text-transform: capitalize
+}
+
+.subscribe-btn,
+button,
+select {
+    text-transform: none
+}
