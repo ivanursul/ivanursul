@@ -1,17 +1,20 @@
-<header class="row">
+<section class="blog-info">
 
     {% if site.logo %}
         <a
             id="blog-logo"
+            class="blog-logo"
             href="{{ '/' | relative_url }}">
             <img src="{{ site.logo | relative_url }}" alt="Blog Logo" />
         </a>
     {% endif %}
 
-    <h1><a href="{{ '/' | relative_url }}"  alt="Blog Title">{{ site.title }}</a></h1>
+    <h1 class="blog-title">
+        <a href="{{ '/' | relative_url }}"  alt="Blog Title">{{ site.title }}</a>
+    </h1>
 
-    <p class="header-text blog-description">
-        social: 
+    <div class="blog-links">
+        <span class="text-gray">social: </span>
         <a href="https://www.facebook.com/{{ site.facebook_username }}">fb</a>
         |
         <a href="https://github.com/{{ site.github_username }}">git</a>
@@ -25,8 +28,8 @@
         <a href="https://twitter.com/{{ site.twitter_username }}">tw</a>
         |
         <a href="https://www.instagram.com/{{ site.instagram_username }}/">insta</a>
-    </p>
+    </div>
 
     <p class="blog-description">{{ site.me }}</p>
 
-</header>
+</section>

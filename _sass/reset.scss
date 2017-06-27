@@ -1,0 +1,449 @@
+@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:700);
+
+a,
+a img,
+blink,
+img,
+ins,
+mark {
+    text-decoration: none
+}
+
+*,
+.col,
+.row {
+    box-sizing: border-box
+}
+
+hr,
+input[type=search] {
+    box-sizing: content-box
+}
+
+html {
+    font-variant: normal;
+    font-stretch: normal
+}
+
+figure img,
+table {
+    width: 100%
+}
+
+body,
+html {
+    line-height: 1.5
+}
+
+.row,
+.row.reverse {
+    -webkit-box-orient: horizontal
+}
+
+a img,
+img {
+    border: 0
+}
+
+.row {
+    display: inherit;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap
+}
+
+article,
+aside,
+details,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+a,
+abbr,
+acronym,
+address,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+ul,
+var,
+video {
+    background: 0 0;
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: baseline;
+    white-space: normal
+}
+
+table tbody tr td,
+td,
+textarea {
+    vertical-align: top
+}
+
+applet,
+basefont,
+dir,
+font,
+isindex,
+menu,
+s,
+strike,
+u {
+    border: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-decoration: inherit;
+    text-align: left;
+    vertical-align: baseline;
+    white-space: normal
+}
+
+cite,
+dfn,
+em,
+i {
+    font-style: italic
+}
+
+address,
+html,
+var {
+    font-style: normal
+}
+
+dir,
+menu {
+    list-style: none
+}
+
+nobr {
+    white-space: normal
+}
+
+marquee {
+    overflow: visible
+}
+
+body {
+    background: #fff;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, .619608)
+}
+
+mark {
+    padding: 0 .25em
+}
+
+h4 {
+    margin-bottom: 1em
+}
+
+h5 {
+    margin-bottom: 1.14286em
+}
+
+h6 {
+    margin-bottom: 1.33333em
+}
+
+address,
+blockquote,
+code,
+dialog,
+dl,
+label,
+ol,
+p,
+pre,
+td,
+th,
+ul {
+    font-size: .9em;
+    line-height: 1.6em;
+    margin-bottom: 1.6em
+}
+
+dialog,
+dl,
+dl dd,
+ol,
+ul {
+    margin-left: 1.6em
+}
+
+a:hover {
+    color: #313131
+}
+
+b,
+caption,
+dt,
+legend,
+strong,
+th,
+thead {
+    font-weight: 700
+}
+
+p code,
+p pre,
+p var {
+    line-height: 1.2em
+}
+
+pre {
+    word-wrap: break-word
+}
+
+dialog,
+dl,
+ol,
+ul {
+    list-style: none inside
+}
+
+ul {
+    list-style: disc
+}
+
+ol {
+    list-style: decimal
+}
+
+li ol,
+li ul {
+    margin: 1em 1.6em 0
+}
+
+li ul {
+    list-style-type: circle
+}
+
+li ol {
+    list-style-type: lower-alpha
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+    content: none
+}
+
+blockquote {
+    padding-left: 1.6em
+}
+
+blockquote>p,
+legend,
+pre>code {
+    padding: 0
+}
+
+abbr,
+acronym,
+dfn {
+    font-size: 80%;
+    letter-spacing: .1em;
+    line-height: 1.2
+}
+
+abbr[title],
+acronym[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help
+}
+
+ins {
+    color: red
+}
+
+del {
+    text-decoration: line-through
+}
+
+embed,
+img,
+object,
+video {
+    max-width: 100%
+}
+
+img::selection {
+    background: 0 0
+}
+
+figure figcaption {
+    background: #eee;
+    border-left: 5px solid #999;
+    margin-bottom: 0;
+    padding: .4em .8em
+}
+
+tr {
+    display: table-row
+}
+
+th {
+    vertical-align: bottom
+}
+
+td form {
+    border-bottom: none;
+    padding-bottom: 0
+}
+
+[disabled],
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+code,
+pre,
+tt {
+    white-space: pre-wrap
+}
+
+[hidden],
+template {
+    display: none
+}
+
+:focus,
+a:active,
+a:hover {
+    outline: 0
+}
+
+h1,
+h2 {
+    font-weight: 200
+}
+
+blockquote p:last-child,
+body>header p,
+pre code {
+    margin-bottom: 0
+}
+
+table td,
+table th {
+    border: none;
+    word-break: break-word
+}
+
+table td a,
+table th a {
+    cursor: pointer
+}
+
+table th {
+    padding: 0 13px 5px
+}
+
+table td {
+    padding: 5px 13px
+}
+
+table tbody tr:nth-child(2n+1) {
+    background-color: #fcfcfc
+}
+
+figure,
+table tbody tr td {
+    margin: 0
+}
+
+table thead th {
+    border: none;
+    text-align: left
+}
+
+.text-gray {
+    color: #999;
+}

@@ -3,33 +3,36 @@ layout: page
 title: subscribe
 ---
 
-<article class="post class" role="main" style="border-bottom: 0px">
+<article class="row post" role="main">
 
-<div class="gh-flow-content-wrap">
-                    <section class="gh-flow-content">
-<header>
-                                <h2 class="subscribe-h3">Subscribtion confirmation</h2>
-  <p class="subscribe" style="
-"> You are about to subscribe to my blog. From my side, I promise to use your email only for notifying you about new articles and researches</p>
-  <p class="subscribe" style="/* text-align: center; */">I write articles mostly about java and world around, but you may have a chance to read something completely different.
-</p>
+    <div class="gh-flow-content-wrap">
+        <section class="gh-flow-content">
+
+            <header>
+                <h2 class="subscribe-h3">Subscribtion confirmation</h2>
+                <p class="subscribe">
+                    You are about to subscribe to my blog. From my side, I promise to use your email only for notifying you about new articles and researches
+                </p>
+                <p class="subscribe">
+                    I write articles mostly about java and world around, but you may have a chance to read something completely different.
+                </p>
   
-  <p class="subscribe">Last one, it's up to you to decide whether my blog is useful for you or not. The only thing I'd like to ask - no matter what opinion you have, good or bad, always share it in comments section. Thank you ;)
-</p>
-                            </header>
+                <p class="subscribe">
+                    Last one, it's up to you to decide whether my blog is useful for you or not. The only thing I'd like to ask - no matter what opinion you have, good or bad, always share it in comments section. Thank you ;)
+                </p>
+            </header>
 
-                            <form method="post" action="/subscribe/" class="gh-signin">
-    <input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location" value="http://ivanursul.com/subscribe/"><input class="referrer" type="hidden" name="referrer" value="">
+            <form method="post" action="{{ '/subscribe/' | relative_url }}" class="gh-signin">
+                <input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location" value="http://ivanursul.com/subscribe/"><input class="referrer" type="hidden" name="referrer" value="">
 
-    <div class="form-group">
-        <input class="gh-input" type="email" name="email" autofocus="autofocus" placeholder="Your email address">
-    </div>
-    <button class="btn btn-blue btn-block subscribe-btn" type="submit">Subscribe</button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
-
-                    </section>
+                <div class="form-group">
+                    <input class="gh-input" type="email" name="email" autofocus="autofocus" placeholder="Your email address">
                 </div>
+                <button class="btn btn-blue btn-block subscribe-btn" type="submit">Subscribe</button>
+                <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+            </form>
 
-		</article>
+        </section>
+    </div>
+
+</article>
