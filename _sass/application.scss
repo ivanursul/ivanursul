@@ -1,6 +1,10 @@
+.row {
+    margin: 0 auto;
+}
+
 body>article,
 body>section {
-    margin: 0 auto
+    //margin: 0 auto
 }
 
 body>header {
@@ -17,21 +21,21 @@ body>nav p {
 
 body article,
 body article header {
-    margin-bottom: 1.6em
+    //margin-bottom: 1.6em
 }
 
 body>section article h3 a {
-    background-image: none;
-    color: #000
+    //background-image: none;
+    //color: #000
 }
 
 body article {
-    padding: 0 2em
+    //padding: 0 2em
 }
 
 body article header p {
-    color: #999;
-    margin-bottom: .4em
+    //color: #999;
+    //margin-bottom: .4em
 }
 
 img,

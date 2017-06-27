@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post post-summary">
 
     <header class="post-header">
         <h2 class="post-title">
@@ -7,14 +7,14 @@
             </a>
         </h2>
 
-        <p class="post-time">
+        <p class="post-info">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
             <time datetime="{{ post.date | date: '%Y/%m/%d' }}">
                 {{ post.date | date_to_string }}
             </time>
             &#160;
             <i class="fa fa-commenting" aria-hidden="true"></i>
-            <a class="comment-count" href="{{ post.url | relative_url }}/#disqus_thread" 
+            <a class="comment-count" href="{{ post.url | relative_url }}#disqus_thread" 
             data-disqus-identifier='{{ site.disqus_identifier_prefix }}{{ post.url | absolute_url }}/'>Comments</a>
             &#160;
         </p>
@@ -22,6 +22,7 @@
         {% include post_tags.html %}
 
     </header>
+
     <section class="post-excerpt">
         {{ post.content | strip_html | truncatewords: 200 }}
     </section>
