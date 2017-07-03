@@ -57,7 +57,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-paginate: 2
+paginate: 5
 paginate_path: "/blog/page/:num/"
 
 sass:
