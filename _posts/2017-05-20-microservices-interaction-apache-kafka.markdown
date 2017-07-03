@@ -1,9 +1,11 @@
 ---
-layout: post
+layout: "post"
 title:  "Microservices interaction at scale using Apache Kafka"
-date:   2017-05-20 11:29:52 +0300
+date: 2017-05-20 09:23:24
 permalink: microservices-interaction-apache-kafka
 ---
+
+
 ### <a href="#intro" name="intro"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Intro
 
 Why do people do microservices architecture?  Let's start with a review of a classical, old-school, n-tier application, which is often called a monolith:
@@ -15,7 +17,7 @@ The first issue is about scalability, it doesn't scale well. If some part of suc
 
 The second issue is about engineers. Since it will become enormously big, you will have to hire a really big team for such system.
 
-<a href="#evolutio" name="evolution"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Evolution
+### <a href="#evolutio" name="evolution"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Evolution
 
 How can you address this issues? One of the ways you can evolve is to make a transition to a microservices architecture
 
