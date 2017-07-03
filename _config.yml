@@ -27,8 +27,8 @@ description: > # this means to ignore newlines until "baseurl:"
 
 me: Software engineer. A fan of CI/CD. Blogger.  
 
-baseurl: "/ivanursul" # the subpath of your site, e.g. /blog
-url: "https://chalatz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ivanursul.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 facebook_username: johnyursul
 github_username:  ivanursul
@@ -40,7 +40,7 @@ upwork_id: 01773bdc595f0cec47
 disqus_unique_url: https://chalatz-ivanursul-disqus-com.disqus.com
 disqus_identifier_prefix: 'ghost-'
 
-repository: 'chalatz/ivanursul'
+repository: 'ivanursul/ivanursul'
 
 github: [metadata]
 
@@ -57,7 +57,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-paginate: 2
+paginate: 5
 paginate_path: "/blog/page/:num/"
 
 sass:
