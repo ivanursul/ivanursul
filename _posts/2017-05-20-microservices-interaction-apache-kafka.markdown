@@ -194,6 +194,11 @@ I encourage you to read more about Kafka Connect, there's a very descriptive doc
 
 I mentioned three patterns, which you can use inside your microservice architecture. This article is an introduction to the Kafka and microservices, I didn't mention other patterns and if you know them - do a little comment and let's discuss.
 
+Here's a video from Lohika Morning anniversary, where I spoke about Kafka:
+
+<iframe width="490" height="370" src="https://www.youtube.com/embed/Pu0xe3kvfMw" frameborder="0" allowfullscreen="allowfullscreen" data-link="http://www.youtube.com/watch?v=Pu0xe3kvfMw"></iframe>
+
+
 ### <a href="#links" name="links"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Links
 
 * [Demo](https://github.com/ivanursul/kafka-microservices)
