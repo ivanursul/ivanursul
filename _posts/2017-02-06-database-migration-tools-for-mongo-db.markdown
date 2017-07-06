@@ -91,7 +91,7 @@ public void someChange5(MongoTemplate mongoTemplate) {
 
 [Mongeez](https://github.com/mongeez/mongeez) is something which you also can run with Spring, or without it, the only difference with Mongobee is that this tool forces you to write XML instructions, like this one:
 
-```java
+```
 <mongoChangeLog>
     <changeSet changeId="ChangeSet-1" author="mlysaght">
         <script>
