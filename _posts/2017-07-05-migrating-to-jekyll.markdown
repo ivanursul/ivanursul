@@ -31,6 +31,6 @@ Another problem comes about pre-showing posts. For example, you want to see how 
 
 I've wrote a simple [migration script](https://github.com/ivanursul/ghost-to-jekyll-migration), which you can use. Remember to include `clean` before executing it, because all content is stored in `target` folder.
 
-### <a href="#ssl" name="ssl"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to setup http ?
+### <a href="#ssl" name="ssl"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to setup https ?
 
 I used Cloudflare for that. It has free plan for personal sites/blog, so It's super cool. See their [blog post](https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/) how to do that.
