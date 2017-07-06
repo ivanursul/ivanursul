@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: ivanursul
 
-email: your-email@domain.com
+email: me@ivanursul.com
 
 meta_title_content: Ivan Ursul Lab. Research & development
 
@@ -28,7 +28,7 @@ description: > # this means to ignore newlines until "baseurl:"
 me: Software engineer. A fan of CI/CD. Blogger.  
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ivanursul.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ivanursul.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 facebook_username: johnyursul
 github_username:  ivanursul
