@@ -29,4 +29,4 @@ Another problem comes about pre-showing posts. For example, you want to see how 
 
 ### <a href="#migrate" name="migrate"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to migrate all content from Ghost ?
 
-I've written a simple [migration script](https://github.com/ivanursul/ghost-to-jekyll-migration), which you can use. Remember to include `clean` before executing it, because all content is stored in `target` folder.
+I've wrote a simple [migration script](https://github.com/ivanursul/ghost-to-jekyll-migration), which you can use. Remember to include `clean` before executing it, because all content is stored in `target` folder.
