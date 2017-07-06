@@ -53,6 +53,7 @@ gems:
   - jekyll-feed
   - github-pages
   - jekyll-paginate
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
