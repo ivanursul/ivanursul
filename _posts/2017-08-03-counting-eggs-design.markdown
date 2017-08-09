@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title:  "Chicken architecture. How I started to count eggs on Raspberry PI 3"
+title:  "Chicken counting app. How to write chicken egg counter on Raspberry PI"
 date: 2018-08-03 09:23:24
 permalink: counting-eggs-in-opencv
 ---
@@ -224,7 +224,21 @@ I did around one week of attempts to install OpenCV on Raspberry PI and I manage
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusions
 
-This project started at 15 of July and we finished development on 5 of August. We have around 100 commits in git repository, predefined SD card, two raspberries and a lot of experience from this field of software development.
+This project started at 15 of July and we finished development on 5 of August. We have around 100 commits in git repository, predefined SD card, two Raspberry PI and a lot of experience from this field of software development.
+
+A stack of languages/tools/framework in this project:
+
+* Java as a programming language
+* OpenCV as a computer vision library
+* Maven as a build tool
+* Project Lombok for cleaner code
+* Junit
+* Slf4j/Logback for logging
+* Guava for internal event processing
+* Square/Tape as a file queue
+* JavaFX for writing UI part
+* PostgreSQL, Spring JDBC, Liquibase
+
 
 
 
