@@ -34,7 +34,7 @@ Okay, we know how to track eggs, in general, now we need to understand how to re
 
 Here's how the process of transformation looks, step by step.
 
-{image}
+![](assets/images/egg-project/three.jpg)
 
 Then, we get this final image and try to get contours of the figures by using 
 `findContours` function. When we find them, we try to create an ellipse from this contours.
