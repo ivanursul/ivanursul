@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title:  "Chicken counting app. How to write chicken egg counter on Raspberry PI"
+title:  "Chicken counting app. How we wrote chicken egg counter on Raspberry PI"
 date: 2018-08-03 09:23:24
 permalink: counting-eggs-in-opencv
 ---
