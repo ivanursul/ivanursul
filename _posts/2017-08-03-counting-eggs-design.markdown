@@ -220,7 +220,7 @@ So i decided to try Raspberry PI 3 with Quad Core processor and 1 GB of RAM. The
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Raspbian image with preinstalled OpenCV and Java
 
-I did around one week of attempts to install OpenCV on Raspberry PI and I managed to install it. I saw some resources, where people try to sell this images. I don't understand their logic, so I am ready to send image to everyone. 
+I did around one week of attempts to install OpenCV on Raspberry PI and I managed to install it. I saw some resources, where people try to sell this images. I don't understand their logic, so I am ready to send image to everyone who will write me. 
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusions
 
