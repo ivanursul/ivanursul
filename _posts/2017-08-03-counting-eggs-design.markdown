@@ -70,7 +70,7 @@ During the project development we were thinking how to fight with false positive
 Of course, we fixed the issue with overlapping eggs, but we also decided to do area limiting. So we can choose recognized figure area and check if it fits our limits. 
 
 Here's a good example what problems can we have if we don't do area limiting:
-![](assets/images/egg-project/area_limiting.png){: .center-image }
+![](assets/images/egg-project/area_limiting.jpg){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Cropping
 
