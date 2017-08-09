@@ -205,9 +205,10 @@ Okay, we have our local queue and a bunch of released eggs there. How to put the
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Database communication
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> UI part
-* Dynamic configuration
-* Settings adjustment
-* Processing video demonstration
+
+We wanted to create a simple UI for our needs - settings adjustments
+UI part is very easy - two camera views(camera + processed camera) and settings page.
+![](assets/images/egg-project/ui.png)
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Hardware
 
