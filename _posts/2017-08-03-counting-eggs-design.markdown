@@ -210,6 +210,8 @@ We wanted to create a simple UI for our needs - settings adjustments
 UI part is very easy - two camera views(camera + processed camera) and settings page.
 ![](assets/images/egg-project/ui.png)
 
+Client didn't ask for any UI part, but we understood that it would be very hard to launch a console app, so we managed to 
+
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Hardware
 
 Guys wanted to run this application on something cheap. So I got my Raspberry PI, first model, with 512 MB RAM and started my long one-week journey on how to install OpenCV to it. In the end, I managed to do it, but our application was running very slow on it. 
@@ -220,7 +222,7 @@ So i decided to try Raspberry PI 3 with Quad Core processor and 1 GB of RAM. The
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Raspbian image with preinstalled OpenCV and Java
 
-I did around one week of attempts to install OpenCV on Raspberry PI and I managed to install it. I saw some resources, where people try to sell this images. I don't understand their logic, so I am ready to send image to everyone who will write me. 
+I did around one week of attempts to install OpenCV on Raspberry PI and I managed to install it. I saw some resources, where people try to sell this images. I don't understand their logic, so I am ready to send image to everyone who will ask. 
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusions
 
