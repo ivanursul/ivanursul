@@ -104,6 +104,9 @@ After research we [came up](https://stackoverflow.com/questions/26932891/detect-
 * Find the local maxima of the resulting image. Location of the maxima correspond to circle centers and max values correspond to their radii
 * Find contours
 
+Here's how the final processed image will look like:
+![](assets/images/egg-project/solution.png){: .center-image }
+
 However nothing comes with no consequences. After switching to the new algorithm performance has dropped a lot and our performance was not so fast as it was before. Client got his 99% precision, but decided to use simpler algorithm, in order to run it on existing hardware.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Core framework
