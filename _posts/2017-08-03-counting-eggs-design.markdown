@@ -107,6 +107,8 @@ After research we [came up](https://stackoverflow.com/questions/26932891/detect-
 Here's how the final processed image will look like:
 ![](assets/images/egg-project/solution.png){: .center-image }
 
+If you compare this image with the previous one, you can notice that we now recognize images at the top-right corner.
+
 However nothing comes with no consequences. After switching to the new algorithm performance has dropped a lot and our performance was not so fast as it was before. Client got his 99% precision, but decided to use simpler algorithm, in order to run it on existing hardware.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Core framework
