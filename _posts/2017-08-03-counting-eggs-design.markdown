@@ -4,7 +4,6 @@ title:  "Chicken architecture. How I started to count eggs on Raspberry PI 3"
 date: 2018-08-03 09:23:24
 permalink: counting-eggs-in-opencv
 ---
-![](assets/images/egg-project/conveyor.gif){: .center-image }
 ### <a href="#howitstarted" name="howitstarted"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How it started
 Besides my main work on Upwork I quite often pick different projets. So I found a project, where I had to write a program for recognizing chicken eggs on a factory stream line. Client wanted to install the application on computer with web camera, put this camera at a top of stream line and the application had to calculate eggs and send them to the DB.Client also wanted to run this program on a cheap computer. The quality of the network in the factory isn't stable, so the program had to be resilient to outstand the network issues. There was enough challenges for me, so I decided to participate on this project.
 
@@ -12,6 +11,8 @@ The biggest challenge here was that I had no serious experience with OpenCV and 
 
 This whole post will be a story how this application was designed, how it was written and what problems did I faced during the development. I will try to explain each architecture decision, from the beginning and to the end of the project.
 
+The final result will look like this:
+![](assets/images/egg-project/conveyor.gif){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to track eggs ?
 
@@ -47,7 +48,7 @@ We decided that the most efficient way to count released egg is to count it, whe
 
 Yes, because we use this term, this means we have implemented direction detection. We have a structure, which tracks eggs and determine the detection: from top to bottom, from bottom to top, left-right and right-left directions.
 
-Here's how it look in the logs:
+Following logs:
 
 ```
 13:50:02.869 [main] INFO  c.h.r.conveyor.DefaultConveyor - Detected direction:
