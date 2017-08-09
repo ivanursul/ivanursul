@@ -65,32 +65,31 @@ How we do it ? At the beginning, the goal is to determine the direction, so we c
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Area limitation
 
-During the project development we were thinking how to fight with false positives. After two days of designing and writing code we got first test video from the chicken conveyor and noticed, that our algorithm was sometimes recognizing a two overlapping eggs as one big egg.
+During the project development we were thinking how to fight with false positives. After two days of designing and writing code we got first test video from the chicken conveyor and noticed, that our algorithm recognized little white points as eggs and count them.
 
-Of course, we fixed the issue with overlapping eggs, but we also decided to do area limiting. So we can choose recognized figure area and check if it fits our limits. 
+So, we decided to do area limiting. We can choose desired egg area and check if it fits our limits. 
 
 Here's a good example what problems can we have if we don't do area limiting:
 ![](assets/images/egg-project/area_limiting.jpg){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Cropping
 
-Just when we did an area limitation, I got an idea, that the overall result could be better if we could crop our image. There's no need to take a whole picture if we are searching eggs only on some particular area ? 
+Just when we did an area limitation, I got an idea, that the overall result could be better if we could crop our image. There's no need to take a whole picture if we searc eggs only in some particular area ? 
 
-So, we added a cropping method. We noticed, that the overall result of recognized eggs increased for around 20%.
+We added a cropping method. We noticed, that the overall result of recognized eggs increased for around 10%.
 
-Cropping was also very useful way of ignoring false positives, the less area we have, the less mistakes we could made.
+Cropping was very useful way of ignoring false positives, because the less area we have, the less mistakes we can made.
 
 ![](assets/images/egg-project/crop.png){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Eggs overlapping
+There's a problem: sometimes eggs roll down around to each other and our detection approach works wrong, because it recognizes two eggs as one big egg.
 
 There's two stories for this chapter, one is how to create a workaround and another is how to go a longer way, but get a better precision.
 
 Our easy solution was to use BINARY thresh method and set it to the value, when actual egg on a processed image will have half of it's real size. 
 
-You can clearly see how one regular egg was has it's half size.
-
-{image egg has it's half size in a processed image}
+![](assets/images/egg-project/half-egg.jpg){: .center-image }
 
 I called it a workaround. For sure, it will fix a problem with eggs overlapping, but it will bring a new problems. First of all, since you are decreasing the size of egg on a processed image, there's a big risk that some eggs will dissapear at all. Actually, this thing happened with us. Here's the best example:
 
