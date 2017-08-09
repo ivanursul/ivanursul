@@ -46,6 +46,8 @@ Then, we get this final image and try to get contours of the figures by using
 
 We decided that the most efficient way to count released egg is to count it, when it's disappearing from the screen, or in another words, approaching the end of the conveyor. Then, OpenCV doesn't find it, we detect it, since we store a list of eggs and then we can release it.
 
+![](assets/images/egg-project/release.gif){: .center-image }
+
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> End of the conveyor?
 
 Yes, because we use this term, this means we have implemented direction detection. We have a structure, which tracks eggs and determine the detection: from top to bottom, from bottom to top, left-right and right-left directions.
