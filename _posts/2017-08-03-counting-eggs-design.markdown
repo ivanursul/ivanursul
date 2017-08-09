@@ -75,6 +75,8 @@ So, we added a cropping method. We noticed, that the overall result of recognize
 
 Cropping was also very useful way of ignoring false positives, the less area we have, the less mistakes we could made.
 
+![](assets/images/egg-project/crop.png){: .center-image }
+
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Eggs overlapping
 
 There's two stories for this chapter, one is how to create a workaround and another is how to go a longer way, but get a better precision.
