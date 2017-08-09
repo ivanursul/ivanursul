@@ -35,10 +35,12 @@ Okay, we know how to track eggs, in general, now we need to understand how to re
 
 Here's how the process of transformation looks, step by step.
 
-![](assets/images/egg-project/three.jpg)
+![](assets/images/egg-project/three.jpg){: .center-image }
 
 Then, we get this final image and try to get contours of the figures by using 
 `findContours` function. When we find them, we try to create an ellipse from this contours.
+
+![](assets/images/egg-project/resulted_conveyor.gif){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Definition of counted egg
 
