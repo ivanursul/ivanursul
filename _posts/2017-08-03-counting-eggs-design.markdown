@@ -18,11 +18,13 @@ The final result will look like this:
 
 That was my first question - how can we track eggs ?
 
-The general idea is that we have a computer, running on Linux system, a webcamera, which takes camerashots from the conveyor. 
+The general idea is that we have a computer, running on Linux system, a webcamera, which takes camerashots from the conveyor and we have all the time moving eggs in one direction(it was a wrong assumption, because conveyor can stop and go opposite direction). 
 
 ![](assets/images/egg-project/conveyor.png)
 
-We need to take those camerashots, find eggs and compare them with previous iteration. If some new figures appear, we need to treat them in one way. If existing figures occur with some delta move(we can check the euclidian distance), then we need to update their centers and positions. If some eggs were not found, we need to release them.
+We need to take those camerashots, find eggs and compare them with previous iteration. If some new figures appear, we need to treat them in one way. If existing figures occur with some delta move(we can check the euclidian distance), then we need to update their centers and positions. If some eggs were not found, we need to release them. 
+
+![](assets/images/egg-project/schema.png)
 
 Later, we decided to give an option to set interval between getting webcam shot.
 
@@ -210,7 +212,7 @@ We wanted to create a simple UI for our needs - settings adjustments
 UI part is very easy - two camera views(camera + processed camera) and settings page.
 ![](assets/images/egg-project/ui.png)
 
-Client didn't ask for any UI part, but we understood that it would be very hard to launch a console app, so we managed to 
+Client didn't ask for any UI part, but we understood that it would be very hard to launch a console app, so we managed to convince client to write a simple UI.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Hardware
 
