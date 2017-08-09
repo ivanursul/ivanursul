@@ -5,9 +5,9 @@ date: 2018-08-03 09:23:24
 permalink: counting-eggs-in-opencv
 ---
 ### <a href="#howitstarted" name="howitstarted"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How it started
-Besides my main work on Upwork I quite often pick different projets. So I found a project, where I had to write a program for recognizing chicken eggs on a factory stream line. Client wanted to install the application on computer with web camera, put this camera at a top of stream line and the application had to calculate eggs and send them to the DB.Client also wanted to run this program on a cheap computer. The quality of the network in the factory isn't stable, so the program had to be resilient to outstand the network issues. There was enough challenges for me, so I decided to participate on this project.
+Besides my main work on Upwork I quite often pick different projets. So I found a project, where I had to write a program for recognizing chicken eggs on a factory stream line. Customer wanted to install the application on computer with web camera, put this camera at a top of stream line and the application had to calculate eggs and send them to the DB. He also wanted to run this program on a cheap computer. The quality of the network in the factory isn't stable, so the program had to be resilient to outstand the network issues. There was enough challenges for me, so I decided to participate on this project.
 
-The biggest challenge here was that I had no serious experience with OpenCV and image recognition, so I wanted to test myself if I can deep dive into unknown field and return with successful result. Client wanted to have 99% of recognition.
+The biggest challenge here was that I had no serious experience with OpenCV and image recognition, so I wanted to test myself if I can deep dive into unknown field and return with successful result. Customer wanted to have 99% of recognition.
 
 This whole post will be a story how this application was designed, how it was written and what problems did I faced during the development. I will try to explain each architecture decision, from the beginning and to the end of the project.
 
@@ -114,7 +114,7 @@ Here's how the final processed image will look like:
 
 If you compare this image with the previous one, you can notice that we now recognize images at the top-right corner.
 
-However nothing comes with no consequences. After switching to the new algorithm performance has dropped a lot and our performance was not so fast as it was before. Client got his 99% precision, but decided to use simpler algorithm, in order to run it on existing hardware.
+However nothing comes with no consequences. After switching to the new algorithm performance has dropped a lot and our performance was not so fast as it was before. Customer got his 99% precision, but decided to use simpler algorithm, in order to run it on existing hardware.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Core framework
 
@@ -215,7 +215,7 @@ We wanted to create a simple UI for our needs - settings adjustments
 UI part is very easy - two camera views(camera + processed camera) and settings page.
 ![](assets/images/egg-project/ui.png)
 
-Client didn't ask for any UI part, but we understood that it would be very hard to launch a console app, so we managed to convince client to write a simple UI.
+Customer didn't ask for any UI part, but we understood that it would be very hard to launch a console app, so we managed to convince customer to write a simple UI.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Hardware
 
