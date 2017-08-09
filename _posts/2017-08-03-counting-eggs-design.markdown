@@ -89,7 +89,7 @@ You can clearly see how one regular egg was has it's half size.
 
 I called it a workaround. For sure, it will fix a problem with eggs overlapping, but it will bring a new problems. First of all, since you are decreasing the size of egg on a processed image, there's a big risk that some eggs will dissapear at all. Actually, this thing happened with us. Here's the best example:
 
-{gif with eggs, running with defaul algorithm}
+![](assets/images/egg-project/problem.png){: .center-image }
 
 Since we had a requirement of 99% recognition precision, this workaround approach gave us only 94%. So we started to think how to do it better.
 
