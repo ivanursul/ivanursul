@@ -30,7 +30,7 @@ Later, we decided to give an option to set interval between getting webcam shot.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to recognize an egg ?
 
-Okay, we know how to track eggs, in general, now we need to understand how to recognize them withing a single iteration. According to the documentation and articles that I read, we need to do following steps:
+Okay, we know how to track eggs, in general, now we need to understand how to recognize them within a single iteration. According to the documentation and articles that I read, we need to do following steps:
 * Convert image to grayscale
 * Apply blur
 * Apply thresholding operation
@@ -46,7 +46,7 @@ Then, we get this final image and try to get contours of the figures by using
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Definition of counted egg
 
-We decided that the most efficient way to count released egg is to count it, when it's disappearing from the screen, or in another words, approaching the end of the conveyor. Then, OpenCV doesn't find it, we detect it, since we store a list of eggs and then we can release it.
+We decided that the most efficient way to count released egg is to count it, when it disappears from the screen, or in other words, approaches to the end of the conveyor. Then, OpenCV doesn't find it, we detect it, since we store a list of eggs and we finally can release it.
 
 ![](assets/images/egg-project/release.gif){: .center-image }
 
@@ -231,7 +231,7 @@ I did around one week of attempts to install OpenCV on Raspberry PI and I manage
 
 This project started at 15 of July and we finished development on 5 of August. We have around 100 commits in git repository, predefined SD card, two Raspberry PI and a lot of experience from this field of software development.
 
-A stack of languages/tools/framework in this project:
+A stack of languages/tools/frameworks in this project:
 
 * Java as a programming language
 * OpenCV as a computer vision library
