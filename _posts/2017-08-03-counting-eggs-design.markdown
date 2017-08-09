@@ -207,8 +207,6 @@ Summing up, whenever I released an egg, I put it in local file queue.
 
 Okay, we have our local queue and a bunch of released eggs there. How to put them in a regular database? I decided to use a regular scheduled task, which checks local queue for new elements and inserts them into the database.
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Database communication
-
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> UI part
 
 We wanted to create a simple UI for our needs - settings adjustments
