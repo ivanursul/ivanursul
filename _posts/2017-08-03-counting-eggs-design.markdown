@@ -19,7 +19,7 @@ That was my first question - how can we track eggs ?
 
 The general idea is that we have a computer, running on Linux system, a webcamera, which takes camerashots from the conveyor. 
 
-{conveyor image}
+![](assets/images/egg-project/conveyor.png)
 
 We need to take those camerashots, find eggs and compare them with previous iteration. If some new figures appear, we need to treat them in one way. If existing figures occur with some delta move(we can check the euclidian distance), then we need to update their centers and positions. If some eggs were not found, we need to release them.
 
