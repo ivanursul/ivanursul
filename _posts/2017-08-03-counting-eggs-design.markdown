@@ -4,9 +4,7 @@ title:  "Chicken architecture. How I started to count eggs on Raspberry PI 3"
 date: 2018-08-03 09:23:24
 permalink: counting-eggs-in-opencv
 ---
-
-![](assets/images/egg-project/conveyor.gif)
-
+![](assets/images/egg-project/conveyor.gif){: .center-image }
 ### <a href="#howitstarted" name="howitstarted"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How it started
 Besides my main work on Upwork I quite often pick different projets. So I found a project, where I had to write a program for recognizing chicken eggs on a factory stream line. Client wanted to install the application on computer with web camera, put this camera at a top of stream line and the application had to calculate eggs and send them to the DB.Client also wanted to run this program on a cheap computer. The quality of the network in the factory isn't stable, so the program had to be resilient to outstand the network issues. There was enough challenges for me, so I decided to participate on this project.
 
