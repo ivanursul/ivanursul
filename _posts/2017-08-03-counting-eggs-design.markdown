@@ -50,7 +50,7 @@ We decided that the most efficient way to count released egg is to count it, whe
 
 ![](assets/images/egg-project/release.gif){: .center-image }
 
-![](assets/images/egg-project/release.jpg){: .center-image }
+![](assets/images/egg-project/release.png){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> End of the conveyor?
 
