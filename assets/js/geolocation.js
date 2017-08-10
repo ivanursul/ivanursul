@@ -1,4 +1,8 @@
 window.onload = function() {
-  console.log("Hello world1");
-	
+	$.ajaxSetup({
+	    beforeSend: function (xhr) {
+				console.log("Hello anakonda");
+	      //xhr.setRequestHeader('X-Bottle-CsrfToken', '{{ session.csrf }}')
+	    }
+	});
 };
