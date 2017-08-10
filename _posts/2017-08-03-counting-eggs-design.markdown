@@ -13,7 +13,7 @@ The biggest challenge here was that I had no serious experience with OpenCV and 
 
 This whole post will be a story how this application was designed, how it was written and what problems did I faced during the development. I will try to explain each architecture decision, from the beginning and to the end of the project.
 
-To intrigue, The final result will look like this:
+To intrigue, The final result look like following:
 ![](assets/images/egg-project/conveyor.gif){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to track eggs ?
