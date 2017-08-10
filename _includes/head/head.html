@@ -19,12 +19,9 @@
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}" />
 
     {% feed_meta %}
-    {% include head/social_meta.html %}
-    {% include head/scripts.html %}
 
-    {% if page.custom_js %}
-      {% for js_file in page.custom_js %}
-      <script src='/assets/js/{{ js_file }}.js' type="text/javascript"></script>
-      {% endfor %}
-    {% endif %}
+    {% include head/social_meta.html %}
+
+    {% include head/scripts.html %}
+    
 </head>
