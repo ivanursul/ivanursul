@@ -11,7 +11,7 @@ The biggest challenge here was that I had no serious experience with OpenCV and 
 
 This whole post will be a story how this application was designed, how it was written and what problems did I faced during the development. I will try to explain each architecture decision, from the beginning and to the end of the project.
 
-The final result will look like this:
+To intrigue, The final result will look like this:
 ![](assets/images/egg-project/conveyor.gif){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to track eggs ?
@@ -49,6 +49,8 @@ Then, we get this final image and try to get contours of the figures by using
 We decided that the most efficient way to count released egg is to count it, when it disappears from the screen, or in other words, approaches to the end of the conveyor. Then, OpenCV doesn't find it, we detect it, since we store a list of eggs and we finally can release it.
 
 ![](assets/images/egg-project/release.gif){: .center-image }
+
+![](assets/images/egg-project/release.jpg){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> End of the conveyor?
 
@@ -213,6 +215,8 @@ UI part is very easy - two camera views(camera + processed camera) and settings 
 ![](assets/images/egg-project/ui.png)
 
 Customer didn't ask for any UI part, but we understood that it would be very hard to launch a console app, so we managed to convince customer to write a simple UI.
+
+We have two views: main and settings views.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Hardware
 
