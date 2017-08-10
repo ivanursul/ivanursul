@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>
         {% if page.layout == 'tags_list' %}
-            {{ page.tag_name }} | 
+            {{ page.tag_name }} |
         {% endif %}
         {{ site.title }}
     </title>
@@ -19,9 +19,7 @@
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}" />
 
     {% feed_meta %}
-
     {% include head/social_meta.html %}
-
     {% include head/scripts.html %}
 
     {% if page.custom_js %}
