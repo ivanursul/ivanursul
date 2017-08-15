@@ -3,8 +3,6 @@ layout: "post"
 title:  "How we wrote chicken egg counter on Raspberry PI"
 date: 2018-08-03 09:23:24
 permalink: counting-eggs-in-opencv
-custom_js:
-- geolocation
 ---
 ### <a href="#howitstarted" name="howitstarted"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How it started
 Besides my main work on Upwork I quite often pick different projets. So I found a project, where I had to write a program for recognizing chicken eggs on a factory stream line. Customer wanted to install the application on computer with web camera, put this camera at a top of stream line and the application had to calculate eggs and send them to the DB. He also wanted to run this program on a cheap computer. The quality of the network in the factory isn't stable, so the program had to be resilient to outstand the network issues. There was enough challenges for me, so I decided to participate on this project.
@@ -20,11 +18,11 @@ To intrigue, The final result look like following:
 
 That was my first question - how can we track eggs ?
 
-The general idea is that we have a computer, running on Linux system, a webcamera, which takes camerashots from the conveyor and we have all the time moving eggs in one direction(it was a wrong assumption, because conveyor can stop and go opposite direction). 
+The general idea is that we have a computer, running on Linux system, a webcamera, which takes camerashots from the conveyor and we have all the time moving eggs in one direction(it was a wrong assumption, because conveyor can stop and go opposite direction).
 
 ![](assets/images/egg-project/conveyor.png)
 
-We need to take those camerashots, find eggs and compare them with previous iteration. If some new figures appear, we need to treat them in one way. If existing figures occur with some delta move(we can check the euclidian distance), then we need to update their centers and positions. If some eggs were not found, we need to release them. 
+We need to take those camerashots, find eggs and compare them with previous iteration. If some new figures appear, we need to treat them in one way. If existing figures occur with some delta move(we can check the euclidian distance), then we need to update their centers and positions. If some eggs were not found, we need to release them.
 
 ![](assets/images/egg-project/schema.png)
 
@@ -41,7 +39,7 @@ Here's how the process of transformation looks, step by step.
 
 ![](assets/images/egg-project/three.jpg){: .center-image }
 
-Then, we get this final image and try to get contours of the figures by using 
+Then, we get this final image and try to get contours of the figures by using
 `findContours` function. When we find them, we try to create an ellipse from this contours.
 
 ![](assets/images/egg-project/resulted_conveyor.gif){: .center-image }
@@ -71,14 +69,14 @@ How we do it ? At the beginning, the goal is to determine the direction, so we c
 
 During the project development we were thinking how to fight with false positives. After two days of designing and writing code we got first test video from the chicken conveyor and noticed, that our algorithm recognized little white points as eggs and count them.
 
-So, we decided to do area limiting. We can choose desired egg area and check if it fits our limits. 
+So, we decided to do area limiting. We can choose desired egg area and check if it fits our limits.
 
 Here's a good example what problems can we have if we don't do area limiting:
 ![](assets/images/egg-project/area_limiting.jpg){: .center-image }
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Cropping
 
-Just when we did an area limitation, I got an idea, that the overall result could be better if we could crop our image. There's no need to take a whole picture if we searc eggs only in some particular area ? 
+Just when we did an area limitation, I got an idea, that the overall result could be better if we could crop our image. There's no need to take a whole picture if we searc eggs only in some particular area ?
 
 We added a cropping method. We noticed, that the overall result of recognized eggs increased for around 10%.
 
@@ -91,7 +89,7 @@ There's a problem: sometimes eggs roll down around to each other and our detecti
 
 There's two stories for this chapter, one is how to create a workaround and another is how to go a longer way, but get a better precision.
 
-Our easy solution was to use BINARY thresh method and set it to the value, when actual egg on a processed image will have half of it's real size. 
+Our easy solution was to use BINARY thresh method and set it to the value, when actual egg on a processed image will have half of it's real size.
 
 ![](assets/images/egg-project/half-egg.jpg){: .center-image }
 
@@ -222,7 +220,7 @@ We have two views: main and settings views.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Hardware
 
-Guys wanted to run this application on something cheap. So I got my Raspberry PI, first model, with 512 MB RAM and started my long one-week journey on how to install OpenCV to it. In the end, I managed to do it, but our application was running very slow on it. 
+Guys wanted to run this application on something cheap. So I got my Raspberry PI, first model, with 512 MB RAM and started my long one-week journey on how to install OpenCV to it. In the end, I managed to do it, but our application was running very slow on it.
 
 So i decided to try Raspberry PI 3 with Quad Core processor and 1 GB of RAM. The application felt itself more comfortable, the only problem was that I couldn't turn on two image views on UI, otherwise application starts lagging.
 
@@ -230,7 +228,7 @@ So i decided to try Raspberry PI 3 with Quad Core processor and 1 GB of RAM. The
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Raspbian image with preinstalled OpenCV and Java
 
-I did around one week of attempts to install OpenCV on Raspberry PI and I managed to install it. I saw some resources, where people try to sell this images. I don't understand their logic, so I am ready to send image to everyone who will ask. 
+I did around one week of attempts to install OpenCV on Raspberry PI and I managed to install it. I saw some resources, where people try to sell this images. I don't understand their logic, so I am ready to send image to everyone who will ask.
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusions
 
@@ -248,7 +246,3 @@ A stack of languages/tools/frameworks in this project:
 * Square/Tape as a file queue
 * JavaFX for writing UI part
 * PostgreSQL, Spring JDBC, Liquibase
-
-
-
-
