@@ -38,11 +38,17 @@ Now go to **Monitor** section, press **Heap Dump** button and specify path where
 
 Then copy it from remote server to your local pc.
 
-### <a href="#downloading_mat" name="downloading_mat"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Memoery Analyzer
+### <a href="#downloading_mat" name="downloading_mat"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Memory Analyzer
 
 Go to [Eclipse MAT](http://www.eclipse.org/mat/) site and download latest version. Once it's downloaded, unzip and launch it.
 
 Then open heap dump, specify that you want to analyse it for memory leaks and that's it. Wait for one minute and see the results.
 
+### <a href="#results" name="results"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Results
+
+In my case, it was a class, which contained a queue, which, for some reasons, couldn't poll elements, because of third party exceptions.
+
+You should get following screen:
+![](assets/images/memory-leak/results.png){: .center-image }
 
 
