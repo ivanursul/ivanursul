@@ -26,6 +26,23 @@ Just enter your terminal and type `jvisualvm`.
 You should get following screen:
 ![](assets/images/memory-leak/jvisualvm.png){: .center-image }
 
+Add a remote connection, specify JMX port and connect.
+
 ### <a href="#waiting" name="waiting"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Waiting
 
 You have to wait some time before retained memory will take place and you will be able to analyse it. It's up to you how long to wait, in my case, it was enough to wait 4-5 hours to get 100% proof of what part of the system is leaking.
+
+### <a href="#heap_dump" name="heap_dump"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Getting heap dump
+
+Now go to **Monitor** section, press **Heap Dump** button and specify path where heap dump should be saved. In my case it was `/tmp/**.hproof`.
+
+Then copy it from remote server to your local pc.
+
+### <a href="#downloading_mat" name="downloading_mat"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Memoery Analyzer
+
+Go to [Eclipse MAT](http://www.eclipse.org/mat/) site and download latest version. Once it's downloaded, unzip and launch it.
+
+Then open heap dump, specify that you want to analyse it for memory leaks and that's it. Wait for one minute and see the results.
+
+
+
