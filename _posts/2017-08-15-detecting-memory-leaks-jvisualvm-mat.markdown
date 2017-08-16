@@ -49,6 +49,7 @@ Then open heap dump, specify that you want to analyse it for memory leaks and th
 In my case, it was a class, which contained a queue, which, for some reasons, couldn't poll elements, because of third party exceptions.
 
 You should get following screen:
+
 ![](assets/images/memory-leak/results.png){: .center-image }
 
 
