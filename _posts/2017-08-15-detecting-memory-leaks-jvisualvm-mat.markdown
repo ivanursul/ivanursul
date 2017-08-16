@@ -25,3 +25,7 @@ Just enter your terminal and type `jvisualvm`.
 
 You should get following screen:
 ![](assets/images/memory-leak/jvisualvm.png){: .center-image }
+
+### <a href="#waiting" name="waiting"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Waiting
+
+You have to wait some time before retained memory will take place and you will be able to analyse it. It's up to you how long to wait, in my case, it was enough to wait 4-5 hours to get 100% proof of what part of the system is leaking.
