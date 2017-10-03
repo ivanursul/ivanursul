@@ -1,6 +1,6 @@
 ---
 layout: "page"
-title:  ""
+title:  "Key things you need to know about how to be a freelancer"
 date: 2018-10-02 12:00:00
 permalink: how-to-be-a-freelancer
 
