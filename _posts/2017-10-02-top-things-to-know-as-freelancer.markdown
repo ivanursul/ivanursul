@@ -13,18 +13,18 @@ That's why I decided to write an article about different aspects of everyday lif
 
 This article will be grounded on Upwork platform, I havent's used other platforms, but I am sure the approach is the same.
 
-### <a href="#understand_customer" name="understand_customer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> You will have to get to know your customer
+## <a href="#understand_customer" name="understand_customer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> You will have to get to know your customer
 
 You will have to understand the similar things about all your clients. Is all of them are a technical people? Do you prefer to work with non-technical people? What is your industry domain? These are the questions you should answer yourself.
 
-### <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
+## <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
 
 Quite often you will decide to work on lower rates. There may be different reasons, starting from a willing to add it in your portfolio and ending with a curiosity. Not everything in this life can be measured by money, customers know that and quite often use it to aqcuire talanted freelancers.
 
 This happen to me when I was writing a [Chicken egg counter on a Raspberry PI](https://ivanursul.com/counting-eggs-in-opencv). It was a fixed price job and the budget was not that big. Anyway, it was an interesting experience, I managed to finish project in time, with a good feedback from customer. It was a technical company, which specializes in Internte of Things, but has a poor experience in image recognition field. 
 
 
-### <a href="#freelancer" name="freelancer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Being a freelancer doesn't mean you will act as a classical freelancer
+## <a href="#freelancer" name="freelancer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Being a freelancer doesn't mean you will act as a classical freelancer
 
 The thing is that there are different freelancers. Because I work on Upwork, I know a lot of guys from all around the world. My team members live in Ukraine, Belarus, Hungary, Moldova, Israel and USA.
 
@@ -32,7 +32,7 @@ Someone is working as a freelancer because he doesn't like burocracy in outsourc
 
 Personally, I like the idea that nobody is trying to teach you. I am doing a good time management to work 40 hours/week, quite often I take different projects where I learn new staff. Besides work, I have [ivanursul.com](https://ivanursul.com) blog where I post different things.
 
-### <a href="#mix" name="mix"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Freelancer is a mix of engineer, salesman and accountant
+## <a href="#mix" name="mix"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Freelancer is a mix of engineer, salesman and accountant
 
 My personal opinion is that freelancer should be like a craftsman: he should now where to get customers, how to work with them and how to work independently. Right, he should be an independent unit, being able to negotiate with the client, make an estimations, design architecture, write code and deliver it in time. 
 
@@ -45,7 +45,7 @@ That's sad, but true, this is the reason why lazy people decide not to work on a
 
 Being a freelancer means being a company with one employee - if you do everything right, you won't be shocked by loosing clients, moving to another country or stopping for some period.
 
-### <a href="#8hours" name="8hours"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Usually it's hard to work 8 hours
+## <a href="#8hours" name="8hours"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Usually it's hard to work 8 hours
 
 When you work on a hourly basis, it's usually hard to work 8 hours. At the beginning I felt myself very exhausted because of this. I decided to work 40 hours per week, so my goal was to work 8 hours 5 days per week. 
 
@@ -55,7 +55,7 @@ In a freelance, you can't do nothing, it can be revealed very easily and you can
 
 There's also another way. You can find a company, which wants to hire someone from the network to work under their name. In this case, you are not a freelancer, but rather a employee, who works from home.
 
-### <a href="#learn" name="learn"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Learn how to calculate
+## <a href="#learn" name="learn"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Learn how to calculate
 
 When I started to work on Upwork, I didn't knew this things. Now I am happy to write them so anyone who reads this article won't shoot themselves in a foot. 
 
@@ -67,12 +67,12 @@ Additionally, you will probably need some sick leaves or days, when you won't be
 
 Summing everything up, you will work 87% of total time in a year. When deciding how much you should take per hour, remember this number. 
 
-### <a href="#wfh" name="wfh"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Working from home is not for every freelancer
+## <a href="#wfh" name="wfh"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Working from home is not for every freelancer
 
 Last thing I'd like to say is that working from home is not for everyone. Personally I managed to work from home for 2 months and then I decided to find some office. Hopefully, I met my groupmates from the university, since then, we are sharing office. It's a great place in the downtown with a good parking zone.
 
 I don't understand people, who say that working from home is pleasure and is a great convenience. Unless you don't have a separate room for work, I don't see how to work from home.
 
-### <a href="#conclusions" name="conclusions"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusions
+## <a href="#conclusions" name="conclusions"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusions
 
 This was my short story about what I did for past 2 years. Because it's a big journey, it's a great experience so you may find a mutually exclusive parts. 
