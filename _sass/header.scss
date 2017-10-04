@@ -22,10 +22,13 @@
     padding: 2em 0 1em;
 }
 
-.social-link:hover, .social-link:visited, .social-link:link, .social-link:active {
-  text-decoration: none!important;
-  -webkit-box-shadow: none!important;
-  box-shadow: none!important;
+.social-link {
+  text-decoration: none !important;
+  border:0px !important;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none;
 }
 
 .blog-title,
