@@ -22,10 +22,10 @@ meta_title_content: Ivan Ursul Lab. Research & development
 author: Ivan Ursul
 
 description: > # this means to ignore newlines until "baseurl:"
-  Seasoned software engineer. Prefer Java. A true fan of CI/CD. 
+  Seasoned software engineer. Prefer Java. A true fan of CI/CD.
   Always willing to automate everything. Opensource commiter. Blogger.
 
-me: Software engineer. A fan of CI/CD. Blogger.  
+me: Software engineer  
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ivanursul.com" # the base hostname & protocol for your site, e.g. http://example.com
