@@ -17,7 +17,7 @@ This article will be grounded on Upwork platform, I haven't used other platforms
 
 You will have to find out the common things about your clients. Is all of them are a technical people? Do you prefer to work with non-technical people? What is your industry domain? These are the questions you should answer yourself.
 
-After you find out 
+After you realize what combines your customers together, you will easily detect potential customers later.
 
 ### <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
 
