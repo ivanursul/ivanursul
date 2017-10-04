@@ -15,7 +15,7 @@ This article will be grounded on Upwork platform, I haven't used other platforms
 
 ### <a href="#understand_customer" name="understand_customer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> You will have to get to know your customer
 
-![](assets/images/freelancer/customer.png){: .center-image }
+![](assets/images/freelancer/client){: .center-image }
 
 You will have to understand the similar things about all your clients. Is all of them are a technical people? Do you prefer to work with non-technical people? What is your industry domain? These are the questions you should answer yourself.
 
