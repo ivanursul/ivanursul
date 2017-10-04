@@ -21,6 +21,8 @@ You will have to understand the similar things about all your clients. Is all of
 
 ### <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
 
+![](assets/images/freelancer/hourly-rate.jpg){: .center-image }
+
 Quite often you will decide to work on lower rates. There may be different reasons, starting with a willingness to add it to your portfolio and ending with a curiosity. Not everything in this life can be measured by money, customers know that and quite often use it to acquire talented freelancers.
 
 This happens to me when I was writing a [Chicken egg counter on a Raspberry PI](https://ivanursul.com/counting-eggs-in-opencv). It was a fixed price job and the budget was not that big. Anyway, it was an interesting experience, I managed to finish the project in time, with a good feedback from the customer. It was a technical company, which specializes in the Internet of Things, but has a poor experience in image recognition field. 
