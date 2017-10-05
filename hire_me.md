@@ -14,7 +14,7 @@ Most of the projects can't be listed here because of NDA, so I described those p
 ### Expertise
 I am experienced in custom software development, serverless architecture, IOT, blockchain related projects.
 
-### Framework/Tool
+### Frameworks/Tools
 
 * Spring Boot, Spring Framework, Jersey
 * JPA, Hibernate, Spring data, JDBI
