@@ -3,7 +3,9 @@ title:  "Working in Upwork"
 date: 2018-10-05 12:00:00
 ---
 
-Starting from 2015, I worked with Upwork company. I was involved in modernization of Upwork. The plan was to migrate from a monolith platform to microservices.
+Starting from 2015, I worked with Upwork company. I was involved in modernization of Upwork. 
+The plan was to migrate from a monolith platform to microservices.
+Since I signed an NDA, I will write only some key information about my work.
 
 ### <a href="#architecture" name="architecture"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Architecture
 
@@ -23,7 +25,7 @@ We used Codahale metrics for monitoring our infrastructure. This metrics were se
 
 ### <a href="#databases" name="databases"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Databases
 
-Mainly, I worked with DynamoDB and PostgreSQL. 
+Mainly, I worked with DynamoDB and PostgreSQL. Anyway, I had a chance to work with both relational and NoSQL storages.
 
 ### <a href="#aws" name="aws"><i class="fa fa-link anchor" aria-hidden="true"></i></a> AWS services
 
