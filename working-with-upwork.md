@@ -34,4 +34,8 @@ Kafka was used as a messaging system, to transport messages between microservice
 
 Upwork has a self-written tool for deploying applications on different environemnts. This tool is integrated with Jenkins, which we trigger on pull request merge to build, test and deploy our applications on dev and staging.
 
-### <a href="#deployment" name="deployment"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Deployment
+### <a href="#process" name="process"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Working process
+
+We used agile methodology together with JIRA tool. We has two week sprints and usually we had around 40 story points per sprint. Team had 5 members.
+
+There was no physical office, all members were from the different countries: Ukraine, Moldova, Israel, Czech Republic and USA.
