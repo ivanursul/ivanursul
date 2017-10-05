@@ -1,8 +1,6 @@
 ---
-layout: "page"
 title:  "Key things you should know about being a freelancer"
 date: 2018-10-02 12:00:00
-permalink: how-to-be-a-freelancer
 ---
 
 Hi, my name is Ivan Ursul and I am a freelance engineer since 2015. It's been a while since I started my career as an independent freelancer, I started it as an engineer in Upwork, in one of their teams, where I was involved first in reporting backend service, then in the time-tracker pipeline, which is served as a backend for Upwork Tracker Application(UTA) client.
