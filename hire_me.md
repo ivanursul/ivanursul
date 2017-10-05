@@ -15,5 +15,4 @@ Here is a list of projects I did and described in my blog:
 Most of the projects can't be listed here because of NDA, so I described those projects, where I could get an approve.
 
 ### Expertise
-
 I am experienced in custom software development, serverless architecture, IOT, blockchain related projects.
