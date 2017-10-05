@@ -16,3 +16,18 @@ Most of the projects can't be listed here because of NDA, so I described those p
 
 ### Expertise
 I am experienced in custom software development, serverless architecture, IOT, blockchain related projects.
+
+### Framework/Tool
+
+* Spring Boot, Spring Framework, Jersey
+* JPA, Hibernate, Spring data, JDBI
+* Netflix OSS: Hystrix, Eureka, Archaius, Prana
+* jUnit, Mockito, Gatling Stress Tool, jMeter
+* Angular, Angular2
+* Postgresql, DynamoDB, OrientDB, MongoDB, Kafka
+* Jenkins, Travis Ci
+* OpenCV, Computer Vision, Image Processing
+* GitHub, BitBucket, GitLab
+* Docker, Ansible, Terraform
+
+If you need a full CV, you can find it [here](https://ivanursul.com/cv)
