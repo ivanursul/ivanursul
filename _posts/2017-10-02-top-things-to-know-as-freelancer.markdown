@@ -21,7 +21,7 @@ After you realize what combines your customers together, you will easily detect 
 
 What matters most - don't waste your time on inadequate customers. I mean, don't accept jobs, where customer ask you to create an Uber like application for 250$. You will not finish it and most probably you will receive a negative feedback, because you will be the side who violated the agreement.
 
-If you decide to do a free or almost free jobs - apply for a specific jobs with 1-2 days of duration. You won't lose much, but it will be enough to get a good feedback and start applying for similar jobs with bigger budget.
+If you decide to do a free or almost free jobs - apply for a specific jobs with 1-2 days of duration. You won't lose much, but it will be enough to get a good feedback and start applying for similar jobs with higher budget.
 
 ### <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
 
