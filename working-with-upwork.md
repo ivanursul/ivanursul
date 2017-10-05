@@ -16,3 +16,16 @@ However, during migration phase I had to work with an old legacy services. They 
 Mainly, I worked with DynamoDB and PostgreSQL. 
 
 ### <a href="#aws" name="aws"><i class="fa fa-link anchor" aria-hidden="true"></i></a> AWS services
+
+We used a lot of different Amazon services:
+
+* EC2
+* DynamoDB, Dynamo Streams, RDS
+* Kinesis
+* S3
+* Aurora
+* Lambda
+
+### <a href="#kafka" name="kafka"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Apache Kafka
+
+Kafka was used as a messaging system, to transport messages between services.
