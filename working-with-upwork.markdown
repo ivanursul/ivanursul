@@ -1,11 +1,11 @@
 ---
-layout: "post"
+layout: "page"
 title:  "Key things you should know about being a freelancer"
 date: 2018-10-02 12:00:00
 permalink: how-to-be-a-freelancer
 ---
 
-Hi, my name is Ivan Ursul and I am a freelance engineer since 2015. It's been a while since I started my career as an independent freelancer, I started it as an engineer in Upwork, in one of their teams, where I was involved first in reporting backend service, then in the time-tracker pipeline, which is served as a backend for Upwork Tracker Application(UTA) client. 
+Hi, my name is Ivan Ursul and I am a freelance engineer since 2015. It's been a while since I started my career as an independent freelancer, I started it as an engineer in Upwork, in one of their teams, where I was involved first in reporting backend service, then in the time-tracker pipeline, which is served as a backend for Upwork Tracker Application(UTA) client.
 
 Today I continue my work with Upwork, but I am also actively working with other customers, who are very different. I've successfully completed 22 projects since the very beginning.
 
@@ -23,7 +23,7 @@ After you realize what combines your customers together, you will easily detect 
 
 Quite often you will decide to work on lower rates. There may be different reasons, starting with a willingness to add it to your portfolio and ending with a curiosity. Not everything in this life can be measured by money, customers know that and quite often use it to acquire talented freelancers.
 
-This happens to me when I was writing a [Chicken egg counter on a Raspberry PI](https://ivanursul.com/counting-eggs-in-opencv). It was a fixed price job and the budget was not that big. Anyway, it was an interesting experience, I managed to finish the project in time, with a good feedback from the customer. It was a technical company, which specializes in the Internet of Things, but has a poor experience in image recognition field. 
+This happens to me when I was writing a [Chicken egg counter on a Raspberry PI](https://ivanursul.com/counting-eggs-in-opencv). It was a fixed price job and the budget was not that big. Anyway, it was an interesting experience, I managed to finish the project in time, with a good feedback from the customer. It was a technical company, which specializes in the Internet of Things, but has a poor experience in image recognition field.
 
 
 ### <a href="#freelancer" name="freelancer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Being a freelancer doesn't mean you will act as a classical freelancer
@@ -36,12 +36,12 @@ Personally, I like the idea that nobody is trying to teach you. I am doing a goo
 
 ### <a href="#mix" name="mix"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Freelancer is a mix of engineer, salesman and accountant
 
-My personal opinion is that freelancer should be like a craftsman: he should know where to get customers, how to work with them and how to work independently. Right, he should be an independent unit, being able to negotiate with the client, make an estimation, design architecture, write code and deliver it in time. 
+My personal opinion is that freelancer should be like a craftsman: he should know where to get customers, how to work with them and how to work independently. Right, he should be an independent unit, being able to negotiate with the client, make an estimation, design architecture, write code and deliver it in time.
 
-Sometimes, a freelancer needs to know how to handle unexpected situations, for instance, when a client decides that you also need to write UI part for this project. 
+Sometimes, a freelancer needs to know how to handle unexpected situations, for instance, when a client decides that you also need to write UI part for this project.
 
-When you work for a company, you are often supplied with a project, your taxes are paid by the company and you are a member of a team of engineers. Some of them can often pick your tasks and do them instead of you. 
-When you work alone, without a company, you don't have all these things and you need to provide them for yourself: the project should be found somewhere, taxes should be paid by yourself and finally, when you don't work - nobody will work instead of you. 
+When you work for a company, you are often supplied with a project, your taxes are paid by the company and you are a member of a team of engineers. Some of them can often pick your tasks and do them instead of you.
+When you work alone, without a company, you don't have all these things and you need to provide them for yourself: the project should be found somewhere, taxes should be paid by yourself and finally, when you don't work - nobody will work instead of you.
 
 That's sad but true, this is the reason why lazy people decide not to work on a freelance basis - because it's hard, they think working in a company will ensure their stability. I used to work in a company, in which one day its main customer decided to end his cooperation. It was a small company with one big customer, so one day all its employees started to search for a new job.
 
@@ -49,9 +49,9 @@ Being a freelancer means being a company with one employee - if you do everythin
 
 ### <a href="#8hours" name="8hours"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Usually it's hard to work 8 hours
 
-When you work on an hourly basis, it's usually hard to work 8 hours. At the beginning, I felt very exhausted because of this. I decided to work 40 hours per week, so my goal was to work 8 hours 5 days per week. 
+When you work on an hourly basis, it's usually hard to work 8 hours. At the beginning, I felt very exhausted because of this. I decided to work 40 hours per week, so my goal was to work 8 hours 5 days per week.
 
-When you work in a company, you can arrive at the office, go with your coworkers for a cup of coffee, browse your Facebook, watch some youtube videos and start your work. It can take up to 2 hours for you to just do nothing. Sometimes, it can event take all entire working day. 
+When you work in a company, you can arrive at the office, go with your coworkers for a cup of coffee, browse your Facebook, watch some youtube videos and start your work. It can take up to 2 hours for you to just do nothing. Sometimes, it can event take all entire working day.
 
 In a freelance, you can't-do anything, it can be revealed very easily and you can lose your job.
 
@@ -59,7 +59,7 @@ There's also another way. You can find a company, which wants to hire someone fr
 
 ### <a href="#learn" name="learn"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Learn how to calculate
 
-When I started to work on Upwork, I didn't know this thing. Now I am happy to write them so anyone who reads this article won't shoot themselves in a foot. 
+When I started to work on Upwork, I didn't know this thing. Now I am happy to write them so anyone who reads this article won't shoot themselves in a foot.
 
 So, the science of calculating your rate is that you need to calculate how much would you like to earn. Then, you need to take into account, that you need a vacation. Freelance vacations are not funded by customers.
 
@@ -67,7 +67,7 @@ We have 12 months in a year, and approximately, you will have 1 month of vacatio
 
 Additionally, you will probably need some sick leaves or days, when you won't be available. Let's say, it's 14 days, which is ~4% of your total time in a year.
 
-Summing everything up, you will work 87% of total time in a year. When deciding how much you should take per hour, remember this number. 
+Summing everything up, you will work 87% of total time in a year. When deciding how much you should take per hour, remember this number.
 
 ### <a href="#wfh" name="wfh"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Working from home is not for every freelancer
 
@@ -77,5 +77,4 @@ I don't understand people, who say that working from home is a pleasure and is a
 
 ### <a href="#conclusions" name="conclusions"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusions
 
-This was my short story about what I did for past 2 years. Because it's a big journey, it's a great experience so you may find a mutually exclusive parts. 
-
+This was my short story about what I did for past 2 years. Because it's a big journey, it's a great experience so you may find a mutually exclusive parts.
