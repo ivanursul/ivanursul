@@ -28,4 +28,10 @@ We used a lot of different Amazon services:
 
 ### <a href="#kafka" name="kafka"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Apache Kafka
 
-Kafka was used as a messaging system, to transport messages between services.
+Kafka was used as a messaging system, to transport messages between microservices.
+
+### <a href="#deployment" name="deployment"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Deployment
+
+Upwork has a self-written tool for deploying applications on different environemnts. This tool is integrated with Jenkins, which we trigger on pull request merge to build, test and deploy our applications on dev and staging.
+
+### <a href="#deployment" name="deployment"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Deployment
