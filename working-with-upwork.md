@@ -1,5 +1,5 @@
 ---
-title:  "Key things you should know about being a freelancer"
+title:  "Working in Upwork"
 date: 2018-10-02 12:00:00
 ---
 
