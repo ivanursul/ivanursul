@@ -13,11 +13,15 @@ That's why I decided to write an article about different aspects of everyday lif
 
 This article will be grounded on Upwork platform, I haven't used other platforms, but I am sure the approach is the same.
 
-### <a href="#understand_customer" name="understand_customer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> You will have to get to know your customer
+### <a href="#understand_customer" name="understand_customer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Learn your customer
 
 You will have to find out the common things about your clients. Is all of them are a technical people? Do you prefer to work with non-technical people? What is your industry domain? These are the questions you should answer yourself.
 
 After you realize what combines your customers together, you will easily detect potential customers later.
+
+What matters most - don't waste your time on inadequate customers. I mean, don't accept jobs, where customer ask you to create an Uber like application for 250$. You will not finish it and most probably you will receive a negative feedback, because you will be the side who violated the agreement.
+
+If you decide to do a free or almost free jobs - apply for a specific jobs with 1-2 days of duration. You won't lose much, but it will be enough to get a good feedback and start applying for similar jobs with bigger budget.
 
 ### <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
 
