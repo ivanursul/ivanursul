@@ -11,6 +11,16 @@ Upwork has a microservices architecture, so most of the time I worked with a lot
 
 However, during migration phase I had to work with an old legacy services. They were written using Perl language.
 
+Common microservice was written using Java, we had a special framework, built around Dropwizard framework.
+
+### <a href="#netflix" name="netflix"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Netflix OSS
+
+There was a lot of Netflix tools: Eureka, Hystrix, Prana, Archaius.
+
+### <a href="#monitoring" name="monitoring"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Monitoring
+
+We used Codahale metrics for monitoring our infrastructure. This metrics were sent to prometheus and there was a special service, which checks them and fires alerts in case of troubles.
+
 ### <a href="#databases" name="databases"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Databases
 
 Mainly, I worked with DynamoDB and PostgreSQL. 
