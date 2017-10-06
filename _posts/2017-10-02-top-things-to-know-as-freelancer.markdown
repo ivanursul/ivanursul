@@ -5,27 +5,27 @@ date: 2018-10-02 12:00:00
 permalink: how-to-be-a-freelancer
 ---
 
-Hi, my name is Ivan Ursul and I am a freelance engineer since 2015. It's been a while since I started my career as an independent freelancer, I started it as an engineer in Upwork, in one of their teams, where I was involved first in reporting backend service, then in the time-tracker pipeline, which is served as a backend for Upwork Tracker Application(UTA) client. 
+Hi, my name is Ivan Ursul and I am a freelance engineer since 2015. It's been a while since I started my career as an independent freelancer. I started it as an engineer in Upwork, in one of their teams, where I was involved first in reporting backend service, then in the time-tracker pipeline, which is served as a backend for Upwork Tracker Application(UTA) client. 
 
 Today I continue my work with Upwork, but I am also actively working with other customers, who are very different. I've successfully completed 22 projects since the very beginning.
 
 That's why I decided to write an article about different aspects of everyday life of a freelance engineer. You may agree or disagree, anyway, I encourage you to leave your thoughts under this article.
 
-This article will be grounded on Upwork platform, I haven't used other platforms, but I am sure the approach is the same.
+This article will be grounded on Upwork platform, I haven't used other platforms, but I am quite sure the approach is the same.
 
 ### <a href="#understand_customer" name="understand_customer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Learn your customer
 
-You will have to find out the common things about your clients. Is all of them are a technical people? Do you prefer to work with non-technical people? What is your industry domain? These are the questions you should answer yourself.
+You will have to find out the common things about your clients. Are all of them technical? Do you prefer to work with non-technical people? What is your industry domain? These are the questions you should have answers to.
 
 After you realize what combines your customers together, you will easily detect potential customers later.
 
 What matters most - don't waste your time on inadequate customers. I mean, don't accept jobs, where customer ask you to create an Uber like application for 250$. You will not finish it and most probably you will receive a negative feedback, because you will be the side who violated the agreement.
 
-If you decide to do a free or almost free jobs - apply for a specific jobs with 1-2 days of duration. You won't lose much, but it will be enough to get a good feedback and start applying for similar jobs with higher budget.
+If you decide to do a free of charge or almost free of charge jobs - apply for a specific jobs with 1-2 days of duration. You won't lose much, but it will be enough to get a good feedback and start applying for similar jobs with higher budget.
 
 ### <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
 
-Quite often you will decide to work on lower rates. There may be different reasons, starting with a willingness to add it to your portfolio and ending with a curiosity. Not everything in this life can be measured by money, customers know that and quite often use it to acquire talented freelancers.
+Sometimes you might decide to work on lower rates. There may be different reasons, starting with a willingness to add it to your portfolio and ending with a curiosity. Not everything in this life can be measured by money, customers know that and quite often use it to acquire talented freelancers.
 
 This happens to me when I was writing a [Chicken egg counter on a Raspberry PI](https://ivanursul.com/counting-eggs-in-opencv). It was a fixed price job and the budget was not that big. Anyway, it was an interesting experience, I managed to finish the project in time, with a good feedback from the customer. It was a technical company, which specializes in the Internet of Things, but has a poor experience in image recognition field. 
 
