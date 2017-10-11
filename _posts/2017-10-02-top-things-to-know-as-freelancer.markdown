@@ -23,6 +23,12 @@ What matters most - don't waste your time on inadequate customers. I mean, don't
 
 If you decide to do a free of charge or almost free of charge jobs - apply for a specific jobs with 1-2 days of duration. You won't lose much, but it will be enough to get a good feedback and start applying for similar jobs with higher budget.
 
+### <a href="#become_customer" name="become_customer"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Give yourself a chance to become a customer
+
+Try to become a customer. Post a job on Upwork with. If you are a software engineer, you can order some design. It doesn't matter what you will order. What matters is that you will get a chance to see another side. 
+
+I wanted to enhance one of my websites, but I couldn't understand what was missing there. So I posted a job. Upwork suggested to create a set of questions,  I choose a default one, a cover letter, and added a custom question to send a past works of an engineer. After one hour I received a around 20 bids from different freelancers from all around the world. None of them were an interesting candidates, because all of them wrote a template bids. So I changed my job post, removed cover letter and added a lot of custom questions. I got 3 bids for the next day and one of them was the candidate I chosen.
+
 ### <a href="#different_rates" name="different_rates"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Your rates will differ on a different projects
 
 Sometimes you might decide to work on lower rates. There may be different reasons, starting with a willingness to add it to your portfolio and ending with a curiosity. Not everything in this life can be measured by money, customers know that and quite often use it to acquire talented freelancers.
