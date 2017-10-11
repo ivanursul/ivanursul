@@ -3,6 +3,7 @@ layout: "post"
 title:  "Kafka differences: topics, partitions, publish/subscribe and queue."
 date: 2016-07-13 22:27:46
 permalink: kafka-differences-topics-partitions-publish-subscribe-and-queue
+tags: ['kafka']
 ---
 
 
@@ -87,7 +88,7 @@ Possible options - create topic with more partitions and restart
 
 > bin/kafka-topics.sh --create --zookeeper localhost:2181 --partitions 2 --topic test
 
-###### What are the guarantees ? 
+###### What are the guarantees ?
 At a high-level Kafka gives the following guarantees:
 
 * Messages sent by a producer to a particular topic partition will be appended in the order they are sent. That is, if a message M1 is sent by the same producer as a message M2, and M1 is sent first, then M1 will have a lower offset than M2 and appear earlier in the log.
@@ -106,4 +107,3 @@ Sure, for example, if you have a single broker.
 
 
 Looks like, that's it, I',m finished, but I'd be glad to get more suggested questions from you. Feel free to post them in your messages and let's answer them together.
-
