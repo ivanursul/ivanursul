@@ -10,6 +10,8 @@ One of our clients wanted to create a graphical dashboard for [Ethereum](https:/
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> What is Ethereum in a nutshell?
 
+Ethereum is a cryptocurrency. The 
+
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Where are transactions stored?
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Chicken - Egg problem. Where did the money came from?
@@ -21,6 +23,8 @@ One of our clients wanted to create a graphical dashboard for [Ethereum](https:/
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> How often does the new block appears?
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> How we design it
+
+### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Is there
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Could it be better?
 
