@@ -1,8 +1,8 @@
 ---
 layout: "post"
-title:  "Kafka consumer memory consumption"
+title:  "Kafka Consumer memory use"
 date: 2018-03-15 00:00:00
-permalink: microservices-interaction-apache-kafka
+permalink: kafka-consumer-memory-use
 tags: ['kafka']
 ---
 
