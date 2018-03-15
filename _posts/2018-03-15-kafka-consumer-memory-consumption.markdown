@@ -39,3 +39,5 @@ So, I consequently launched load tests to insert data into two topics with a thr
 ### <a href="#results" name="results"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Results
 
 I was suprised, but the memory consumption remained the same for 1,200,500 and 1000 events/second. **topic1**, which had 1 partition, consumed around 290 MB, while **topic2** with **1000** partitions consumed around 310 MB. 
+
+Would you like to know how the things are in a cluster? How do you think it will behave? Type in the comments.
