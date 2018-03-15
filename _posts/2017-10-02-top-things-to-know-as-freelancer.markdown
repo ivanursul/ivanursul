@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title:  "Key things you should know about being a freelancer"
-date: 2018-10-02 12:00:00
+date: 2017-10-02 12:00:00
 permalink: how-to-be-a-freelancer
 ---
 
