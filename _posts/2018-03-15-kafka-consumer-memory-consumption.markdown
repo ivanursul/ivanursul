@@ -1,8 +1,8 @@
 ---
 layout: "post"
-title:  "Kafka Consumer memory use"
+title:  "Kafka Consumer memory usage"
 date: 2018-03-15 00:00:00
-permalink: kafka-consumer-memory-use
+permalink: kafka-consumer-memory-usage
 tags: ['kafka']
 ---
 
