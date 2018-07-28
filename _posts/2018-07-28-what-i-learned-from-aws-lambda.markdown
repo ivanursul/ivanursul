@@ -5,6 +5,7 @@ date: 2018-03-15 00:00:00
 permalink: comparing-monitoring-systems
 tags: ['aws', 'lambda', 'serverless']
 ---
+![](assets/images/lambda.png){: .center-image }
 
 For the past 1 month, I had a chance to work with AWS Lambda. During the period of work with Lambda, I collected a lot of thoughts about this technology and would like to share them with you.
 
