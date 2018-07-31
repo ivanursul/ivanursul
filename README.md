@@ -1,2 +1,1 @@
-# ivanursul
 ivanursul.com
