@@ -688,6 +688,7 @@ body {
 img[src$=centerme] {
     display: block;
     margin: 0 auto
+    min-width: 70%;
 }
 
 li {
