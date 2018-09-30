@@ -83,7 +83,7 @@ What I learned from this is that sooner or later, but everything fails. And if y
 
 Usually, when you are modernizing your system to microservices architecture, you keep having a legacy codebase for a few more years before you modernize all your parts. The funny thing is that legacy code can be divided between different teams, so you will have one large legacy repository and a lot of owners for a specific endpoints/pages. This is extremely hard to manage especially when you want someone to migrate to the new version of your API: you have to find all those code owners and ask them to do that.
 
-After 3 years I learned that legacy repo eventually transforms into a repo with lots of abandoned parts of the code, lots of deprecated functions, endpoints, etc. Sometimes people just forget about some functionality, then they leave the company and then code becomes abandoned.
+After 3 years legacy repository eventually transformed into a repo one with lots of abandoned parts of the code, lots of deprecated functions, endpoints, etc. Sometimes people just forget about some functionality, then they leave the company and then code becomes abandoned.
 
 
 ### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Data is everything
@@ -96,8 +96,10 @@ You can have a lot of modern tools in your arsenal but if your data sucks - your
 
 Another thing about databases are that in general, you will have to forget about transactional support: there's no longer a single system and there's no longer a single database which supports transactions. In microservices, your data will first go to one database, a message will be sent and the other databases will have to update their state. And the way to send events is very crucial on how your data can guarantee delivery semantic: if you update your database and right after sending a request to an event bus, there a small chance the second operation will fail. That's why a lot of different techniques like Change Data Capture are invented and are good tools for guaranteeing better delivery semantic. 
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Microservices will not solve all your problems
+### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> A big journey
 
 ![](https://media.giphy.com/media/Ah2Y4u73eNMZE3PGej/giphy.gif?style=centerme)
 
 The one and the only lesson that you can get from using microservices is that this type of architecture is not a magic pill, it won't solve all your problems and even more, you will have to work very hard to set up your infrastructure properly because a lot of moving parts brings more problems. Be aware that you have to get really good reasons to do this journey which will last for at least a few years.
+
+But after all, if you suceed in this tranformation, your system will become more mature, will be capable of handling more load, more data. 
