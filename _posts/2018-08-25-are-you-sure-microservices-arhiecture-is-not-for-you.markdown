@@ -77,7 +77,7 @@ The story is rather about lots of servers located in the cloud. The new age of i
 
 What I learned from this is that sooner or later, but everything fails. And if you have dozens of small servers, then your system will fail more often. 
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Code owners
+### <a href="#codeowner" name="codeowner"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Code owners
 
 ![](https://media.giphy.com/media/B37cYPCruqwwg/giphy.gif?style=centerme)
 
@@ -86,7 +86,7 @@ Usually, when you are modernizing your system to microservices architecture, you
 After 3 years legacy repository eventually transformed into a repo one with lots of abandoned parts of the code, lots of deprecated functions, endpoints, etc. Sometimes people just forget about some functionality, then they leave the company and then code becomes abandoned.
 
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Data is everything
+### <a href="#dataiseverything" name="dataiseverything"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Data is everything
 
 ![](https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif?style=centerme)
 
@@ -96,7 +96,7 @@ You can have a lot of modern tools in your arsenal but if your data sucks - your
 
 Another thing about databases are that in general, you will have to forget about transactional support: there's no longer a single system and there's no longer a single database which supports transactions. In microservices, your data will first go to one database, a message will be sent and the other databases will have to update their state. And the way to send events is very crucial on how your data can guarantee delivery semantic: if you update your database and right after sending a request to an event bus, there a small chance the second operation will fail. That's why a lot of different techniques like Change Data Capture are invented and are good tools for guaranteeing better delivery semantic. 
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> A big journey
+### <a href="#bigjourney" name="bigjourney"><i class="fa fa-link anchor" aria-hidden="true"></i></a> A big journey
 
 ![](https://media.giphy.com/media/Ah2Y4u73eNMZE3PGej/giphy.gif?style=centerme)
 
