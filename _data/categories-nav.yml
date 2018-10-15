@@ -3,7 +3,7 @@ items:
     text: Here you can find articles about everything from the Java world.
     icon: /assets/images/categories-nav/freelancing.png
     url: /articles/java/
-  - title: Programming
-    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-    icon: /assets/images/categories-nav/programming.png
+  - title: AWS
+    text: Want to know more about AWS services? Check it out.
+    icon: /assets/images/categories-nav/aws.png
     url: /articles/programming/
