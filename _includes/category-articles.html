@@ -1,0 +1,7 @@
+{%- for post in the_posts -%}
+    <ul class="articles-summary__list-items">
+        <li>
+            <a href="{{- post.url | relative_url -}}">{{ post.title }}</a>
+        </li>
+    </ul>
+{%- endfor -%}

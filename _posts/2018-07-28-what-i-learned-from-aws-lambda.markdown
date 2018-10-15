@@ -4,6 +4,7 @@ title:  "What I learned from AWS Lambda"
 date: 2018-10-02 00:00:00
 permalink: what-i-learned-from-aws-lambda
 tags: ['aws', 'lambda', 'serverless']
+categories: ['programming']
 ---
 ![](assets/images/lambda.png){: .center-image }
 

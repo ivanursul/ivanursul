@@ -1,0 +1,41 @@
+---
+layout: page  
+---
+{%- comment -%} create an empty array {%- endcomment -%}
+{%- assign the_tags_temp = '' | split: ',' -%}
+
+{%- comment -%} The page's category posts {%- endcomment -%}
+{%- assign the_posts = site.categories[page.category] -%}
+
+<h1 class="articles-summary__heading">
+    <img src="{{- '/assets/images/back-arrows.svg' | relative_url -}}" alt=""> {{- page.title -}}
+</h1>
+
+<p class="articles-summary__date">
+    Recent {{ page.date }}
+</p>
+
+<p class="articles-summary__summary">
+    {{ page.summary }}
+</p>
+
+<div class="articles-summary__meta">
+
+    <div class="articles-summary__author">
+        By {{ page.author | default: 'ivanursul'  }}
+    </div>
+
+    {%- include article_summary-tags.html -%}
+</div>
+
+<section class="articles-summary__content">
+    {{ content }}
+</section>
+
+<section class="articles-summary__list">
+    <h1 class="articles-summary__heading articles-summary__heading--list">
+        Articles
+    </h1>
+    {%- include category-articles.html -%}
+</section>
+
