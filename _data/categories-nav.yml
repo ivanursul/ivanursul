@@ -1,7 +1,7 @@
 items:
   - title: Java
     text: Here you can find articles about everything from the Java world.
-    icon: /assets/images/categories-nav/java.png
+    icon: /assets/images/categories-nav/freelancing.png
     url: /articles/java/
   - title: Programming
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
