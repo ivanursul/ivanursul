@@ -6,4 +6,4 @@ items:
   - title: AWS
     text: Want to know more about AWS services? Check it out.
     icon: /assets/images/categories-nav/aws.png
-    url: /articles/programming/
+    url: /articles/java/
