@@ -2,7 +2,7 @@ items:
   - title: Freelancing
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     icon: /assets/images/categories-nav/freelancing.png
-    url: /freelancing/
+    url: /articles/freelancing/
   - title: Programming
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     icon: /assets/images/categories-nav/programming.png
