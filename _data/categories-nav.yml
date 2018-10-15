@@ -1,0 +1,17 @@
+items:
+  - title: Freelancing
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    icon: /assets/images/categories-nav/freelancing.png
+    url: /freelancing/
+  - title: Programming
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    icon: /assets/images/categories-nav/programming.png
+    url: /articles/programming/
+  - title: Design
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    icon: /assets/images/categories-nav/design.png
+    url: /design/
+  - title: Projects & Thoughts
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    icon: /assets/images/categories-nav/projects-thoughts.png
+    url: /projects-thoughts/

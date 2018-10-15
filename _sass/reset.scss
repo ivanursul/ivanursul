@@ -32,7 +32,7 @@ table {
 
 body,
 html {
-    line-height: 1.5
+    line-height: 1.4
 }
 
 .row,
@@ -474,7 +474,7 @@ audio:not([controls]) {
 
 a {
     background: 0 0;
-    color: #0074d9
+    color: #2380fb;
 }
 
 a:focus {
@@ -687,7 +687,8 @@ body {
 
 img[src$=centerme] {
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
+    min-width: 70%
 }
 
 li {

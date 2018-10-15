@@ -1,9 +1,9 @@
 <nav class="blog-nav">
-	<a class="blog-nav__item {% if page.title == 'home' %} blog-nav__item--active {% endif %}" href="{{ '/' | relative_url }}">blog</a>
+	<a class="blog-nav__item {% if page.title == 'articles' %} blog-nav__item--active {% endif %}" href="{{ '/' | relative_url }}">articles</a>
+	|
+	<a class="blog-nav__item {% if page.title == 'blog' %} blog-nav__item--active {% endif %}" href="{{ '/blog' | relative_url }}">blog</a>
 	|
 	<a class="blog-nav__item {% if page.title == 'cv' %} blog-nav__item--active {% endif %}" href="{{ 'cv' | relative_url }}">cv</a>
 	|
-	<a class="blog-nav__item {% if page.title == 'subscribe' %} blog-nav__item--active {% endif %}" href="{{ 'subscribe' | relative_url }}">subscribe</a>
-	|
-	<a class="blog-nav__item {% if page.title == 'cooperation' %} blog-nav__item--active {% endif %}" href="{{ 'cooperation' | relative_url }}">cooperation</a>
+	<a target="_blank" href="https://jastics.com">jastics labs</a>
 </nav>

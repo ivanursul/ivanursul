@@ -3,6 +3,10 @@
     margin-top: 12px;
 }
 
+.blog-nav a {
+    color: #272A47;
+}
+
 .blog-nav__item {
     padding-bottom: 3px;
     &:hover {
@@ -22,10 +26,19 @@
     padding: 2em 0 1em;
 }
 
+.social-link {
+  width: 36px;
+  height: 36px;
+}
+
 .blog-title,
 .blog-links,
 .blog-description {
     text-align: center;
+}
+
+.blog-description {
+  font-size: 1em;
 }
 
 .blog-links {

@@ -1,0 +1,18 @@
+{%- comment -%} loop through the posts of the the page's category {%- endcomment -%}
+{%- for post in the_posts -%}
+    {%- comment -%} loop through the tags of each post from the page's category {%- endcomment -%}
+    {%- for tag in post.tags -%}
+        {%- comment -%} push each tag to an array {%- endcomment -%}
+        {%- assign the_tags_temp = the_tags_temp | push: tag -%}
+    {%- endfor -%}
+{%- endfor -%}
+
+{%- comment -%} make sure the tags array has no duplicates {%- endcomment -%}
+{%- assign the_tags = the_tags_temp | uniq -%}
+
+<div class="articles-summary__tags">
+    {%- for the_tag in the_tags -%}
+    {%- assign tag_slug = the_tag | slugify -%}
+        <a href="{{ site.baseurl }}/tag/{{ tag_slug }}" class="articles-summary__tag">{{- the_tag -}}</a>
+    {%- endfor -%}
+</div>

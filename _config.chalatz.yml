@@ -1,0 +1,65 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: ivanursul
+
+email: me@ivanursul.com
+
+meta_title_content: Ivan Ursul Lab. Research & development
+
+author: Ivan Ursul
+
+description: > # this means to ignore newlines until "baseurl:"
+  Seasoned software engineer. Prefer Java. A true fan of CI/CD.
+  Always willing to automate everything. Opensource commiter. Blogger.
+
+me: Software engineer  
+
+baseurl: "/ivanursul2" # the subpath of your site, e.g. /blog
+url: "https://chalatz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+facebook_username: johnyursul
+github_username:  ivanursul
+twitter_username: ivanursul
+instagram_username: joanursul
+linked_in_id: ivan-ursul-5a193449
+upwork_id: 01773bdc595f0cec47
+
+disqus_unique_url: https://ivanursul.disqus.com
+disqus_identifier_prefix: 'ghost-'
+
+repository: 'chalatz/ivanursul2'
+
+github: [metadata]
+
+comments: false
+
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - github-pages
+  - jekyll-paginate
+  - jekyll-sitemap
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+paginate: 5
+paginate_path: "/blog/page/:num/"
+
+sass:
+    style: compressed

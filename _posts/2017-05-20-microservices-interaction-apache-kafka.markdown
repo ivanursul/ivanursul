@@ -1,21 +1,24 @@
 ---
-layout: post
+layout: "post"
 title:  "Microservices interaction at scale using Apache Kafka"
-date:   2017-05-20 11:29:52 +0300
+date: 2017-05-20 09:23:24
 permalink: microservices-interaction-apache-kafka
+tags: ['kafka']
 ---
+
+
 ### <a href="#intro" name="intro"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Intro
 
 Why do people do microservices architecture?  Let's start with a review of a classical, old-school, n-tier application, which is often called a monolith:
 ![](assets/images/Screen-Shot-2017-05-25-at-12-55-37-PM.png)
 Everyone worked with this types of applications, we were studying them in university, we did lot's of projects with this architecture and at first glance, it's a good architecture. We can immediately start doing systems on this architecture, they are perfectly simple and easy to implement.
-But as such system becomes bigger, it starts receiving lots of different issues. 
+But as such system becomes bigger, it starts receiving lots of different issues.
 
 The first issue is about scalability, it doesn't scale well. If some part of such system will need to scale, then the overall system should be scaled. Since the system is divided into modules, it runs as one physical process and there's no option to scale one module. This can lead to expensive large instances, which you will have to maintain.
 
 The second issue is about engineers. Since it will become enormously big, you will have to hire a really big team for such system.
 
-<a href="#evolutio" name="evolution"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Evolution
+### <a href="#evolutio" name="evolution"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Evolution
 
 How can you address this issues? One of the ways you can evolve is to make a transition to a microservices architecture
 
@@ -27,7 +30,7 @@ Here's how it looks in practice:
 
 ![](https://media.giphy.com/media/xUPGcoQgzgXZp263i8/giphy.gif?style=centerme)
 
-You will get a lot of different services, running across the network, having different approaches, some of them will occasionally fail, some of them will have lots of bugs. 
+You will get a lot of different services, running across the network, having different approaches, some of them will occasionally fail, some of them will have lots of bugs.
 This is the world, where you will live.
 
 ### <a href="#goals" name="goals"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Goals
@@ -45,7 +48,7 @@ By working in monolith application, you had a lot of engineers inefficiently wor
 
 ![](assets/images/Screen-Shot-2017-05-25-at-4-35-46-PM.png)
 
-The second goal is about data. If you are migrating to microservices, then you should have enough data. This age is about different storages, so when migrating, you will get an option to choose the data storage you want. If you have some graph structures in your business domain, you can decide to use some graph storages like Neo4J. If you have search logic, then search indexes are for you. In case you have a non-stable schema, you can always decide to use NoSQL types of storages like MongoDB. 
+The second goal is about data. If you are migrating to microservices, then you should have enough data. This age is about different storages, so when migrating, you will get an option to choose the data storage you want. If you have some graph structures in your business domain, you can decide to use some graph storages like Neo4J. If you have search logic, then search indexes are for you. In case you have a non-stable schema, you can always decide to use NoSQL types of storages like MongoDB.
 
 #### <a href="#independence" name="independence"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Service independence
 
@@ -101,7 +104,7 @@ Additionally, it brings bigger latency, your users will be affected and for sure
 
 #### <a href="#consistency" name="consistency"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Consistency
 
-And even if you had to update all the services immediately, I bet, you could do that without bringing inconsistency to your system. 
+And even if you had to update all the services immediately, I bet, you could do that without bringing inconsistency to your system.
 
 ![](assets/images/Screen-Shot-2017-06-04-at-2-19-32-PM.png)
 
@@ -110,7 +113,7 @@ Think about a case, when you are calling services one-by-one and one of the serv
 ### <a href="#asyncmessaging" name="asyncmessaging"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Asynchronous messaging
 
 Service interfaces are sometimes a good approach for getting some real-time data, but the bad thing about them is that they introduce real-time coupling.
-Who worked some time in software engineering, knows, that the best option to avoid real-time coupling is to bring asynchronous approach. What does it mean in the scope of our microservices architecture? 
+Who worked some time in software engineering, knows, that the best option to avoid real-time coupling is to bring asynchronous approach. What does it mean in the scope of our microservices architecture?
 
 ![](assets/images/Screen-Shot-2017-06-04-at-2-23-16-PM-1.png)
 
@@ -120,7 +123,7 @@ When we do such architecture, we can then clearly see, that there are two types 
 
 ![](assets/images/Screen-Shot-2017-06-04-at-2-37-05-PM.png)
 
-This way of doing microservice communication is more natural, rather than doing communication each particular service. 
+This way of doing microservice communication is more natural, rather than doing communication each particular service.
 
 ![](assets/images/Screen-Shot-2017-06-04-at-2-40-56-PM.png)
 
@@ -134,14 +137,14 @@ Apache Kafka is an example of such message broker. Created inside LinkedIn, it l
 
 Here, in this article, we'd like to know how Kafka can improve our microservices, right? Let's review a couple of patterns.
 
-### <a href="#eventsourcing" name="eventsourcing"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Event Sourcing 
+### <a href="#eventsourcing" name="eventsourcing"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Event Sourcing
 
-It's the first pattern, which can be used together with Kafka. For those of you who don't know what is Event Sourcing pattern, I recommend reading some articles. The idea is pretty simple - you use Kafka as an event-sourcing storage, for storing all the events. Then, you use Kafka Consumer for reading those changes. In microservices, it means, that you will design your requests according to the fact, that you will store a message in Kafka and process it later. This means you won't be able to give an immediate answer and this forces you to change the way you process your data. 
+It's the first pattern, which can be used together with Kafka. For those of you who don't know what is Event Sourcing pattern, I recommend reading some articles. The idea is pretty simple - you use Kafka as an event-sourcing storage, for storing all the events. Then, you use Kafka Consumer for reading those changes. In microservices, it means, that you will design your requests according to the fact, that you will store a message in Kafka and process it later. This means you won't be able to give an immediate answer and this forces you to change the way you process your data.
 
 ![](assets/images/Screen-Shot-2017-06-19-at-5-15-06-PM.png)
 
-However, this gives you more options to work with your data. First of all, as you know, Kafka has an option to rewind messages for specific consumers. You just give an instruction, that you need to rewind it 2 hours behind and that's it, your consumer will start processing older messages. That's a good compensation for delayed processing, don't you find? 
-I didn't mention debugging. As you store all the requests in Kafka, you will be able to analyze them in your non-production environment, find a bug in your code, fix it and rewind the messages. 
+However, this gives you more options to work with your data. First of all, as you know, Kafka has an option to rewind messages for specific consumers. You just give an instruction, that you need to rewind it 2 hours behind and that's it, your consumer will start processing older messages. That's a good compensation for delayed processing, don't you find?
+I didn't mention debugging. As you store all the requests in Kafka, you will be able to analyze them in your non-production environment, find a bug in your code, fix it and rewind the messages.
 
 Another big advantage in having event sourced approach in your system is that you will have a better scaling opportunities. You will have three dedicated functions: writing to Kafka, reading from the Kafka(processing data to your separate storage) and reading from separate storage. Why don't you create separate instances for all those three functions? Here's how it should look:
 
@@ -155,13 +158,13 @@ I wrote a lot of text about event sourcing pattern, but I haven't explained the 
 
 We've discussed event sourcing previously. While event sourcing intends to update it's database after inserting to event store, CDC(Change Data Capture) approach works completely different.
 
-Before we discuss this approach, let's imagine we have our microservice, it's data storage and some message broker like Kafka. We would like to update our storage during each request and we also need to update Kafka, so other microservices can reach information about our updates. Does anyone see a problem here? 
+Before we discuss this approach, let's imagine we have our microservice, it's data storage and some message broker like Kafka. We would like to update our storage during each request and we also need to update Kafka, so other microservices can reach information about our updates. Does anyone see a problem here?
 
 ![](assets/images/Screen-Shot-2017-06-19-at-5-15-40-PM.png)
 
-The problem is that we have two source, which needs to be updated. It's almost impossible to save information in data storage and insert a new message in Kafka and have a consistent system. This approach suffers from race conditions and it's very easy to insert a record in the database and have an exception in Kafka side. What should we do instead? 
+The problem is that we have two source, which needs to be updated. It's almost impossible to save information in data storage and insert a new message in Kafka and have a consistent system. This approach suffers from race conditions and it's very easy to insert a record in the database and have an exception in Kafka side. What should we do instead?
 
-The alternative way is to continue inserts into our data storage and stop inserting new messages into Kafka. How is Kafka going to be up-to-date? Let's think about what we're inserting in Kafka. The truth is that we are inserting the same message(or almost the same), so the other consumers(microservices) can react on this event. Change Data Capture approach is getting fresh changes from the database and inserts them to Kafka. 
+The alternative way is to continue inserts into our data storage and stop inserting new messages into Kafka. How is Kafka going to be up-to-date? Let's think about what we're inserting in Kafka. The truth is that we are inserting the same message(or almost the same), so the other consumers(microservices) can react on this event. Change Data Capture approach is getting fresh changes from the database and inserts them to Kafka.
 
 ![](assets/images/Screen-Shot-2017-06-19-at-5-18-25-PM.png)
 
@@ -180,7 +183,7 @@ One of the biggest advantages, that I see is that we can adapt existing database
 
 ### <a href="#kafkaconnectpattern" name="kafkaconnectpattern"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Kafka Connect
 
-Finally, when you don't want to use event sourcing pattern and you don't have any CDC tools in your data storage, you can stick to Kafka Connect. 
+Finally, when you don't want to use event sourcing pattern and you don't have any CDC tools in your data storage, you can stick to Kafka Connect.
 
 ![](assets/images/Screen-Shot-2017-06-19-at-5-20-07-PM.png)
 
@@ -191,6 +194,11 @@ I encourage you to read more about Kafka Connect, there's a very descriptive doc
 ### <a href="#conclusion" name="conclusion"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusion
 
 I mentioned three patterns, which you can use inside your microservice architecture. This article is an introduction to the Kafka and microservices, I didn't mention other patterns and if you know them - do a little comment and let's discuss.
+
+Here's a video from Lohika Morning anniversary, where I spoke about Kafka:
+
+<iframe width="490" height="370" src="https://www.youtube.com/embed/Pu0xe3kvfMw" frameborder="0" allowfullscreen="allowfullscreen" data-link="http://www.youtube.com/watch?v=Pu0xe3kvfMw"></iframe>
+
 
 ### <a href="#links" name="links"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Links
 
