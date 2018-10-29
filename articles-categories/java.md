@@ -15,7 +15,9 @@ summary: Articles about pure Java, from Collections to Concurrency.
 
 ## Collections:
 
-
+* Sed quia non numquam
+* Fugiat quo voluptas nulla
+* Sed quia non numquam
 
 ## Multi Threading:
 
