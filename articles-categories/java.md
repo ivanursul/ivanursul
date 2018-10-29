@@ -7,13 +7,17 @@ date: 2018/08/04
 author: ivanursul
 summary: Articles about pure Java, from Collections to Concurrency.
 ---
-## Basics:
-
-* Sed quia non numquam
-* Fugiat quo voluptas nulla
-* Sed quia non numquam
 
 ## Collections:
+
+* Basics
+* Arrays
+* Sets
+* Maps
+* Queues
+* Apache Commons Collections
+
+## Stream API:
 
 * Sed quia non numquam
 * Fugiat quo voluptas nulla
