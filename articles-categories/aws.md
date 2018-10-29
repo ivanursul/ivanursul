@@ -1,13 +1,12 @@
 ---
 layout: category
-title: Java
-category: java
-permalink: /articles/java/
+title: AWS
+category: aws
+permalink: /articles/aws/
 date: 2018/08/04
 author: ivanursul
-summary: Articles about pure Java, from Collections to Concurrency.
+summary: Articles about AWS and everything around it. 
 ---
-
 
 ## Lorem Ipsum:
 
