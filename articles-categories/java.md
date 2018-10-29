@@ -7,22 +7,24 @@ date: 2018/08/04
 author: ivanursul
 summary: Articles about pure Java, from Collections to Concurrency.
 ---
+## Basics:
+
+* Sed quia non numquam
+* Fugiat quo voluptas nulla
+* Sed quia non numquam
+
+## Collections:
 
 
-## Lorem Ipsum:
 
-1. Sed quia non numquam
-2. Fugiat quo voluptas nulla
-3. Sed quia non numquam
+## Multi Threading:
 
-## Exercitationem ullam:
-
-1. Sed quia non numquam
-2. Fugiat quo voluptas nulla
-3. Sed quia non numquam
+* Sed quia non numquam
+* Fugiat quo voluptas nulla
+* Sed quia non numquam
 
 ## Totam rem aperiam:
 
-1. Sed quia non numquam
-2. Fugiat quo voluptas nulla
-3. Sed quia non numquam
+* Sed quia non numquam
+* Fugiat quo voluptas nulla
+* Sed quia non numquam
