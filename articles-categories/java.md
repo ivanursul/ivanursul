@@ -16,6 +16,7 @@ summary: Articles about pure Java, from Collections to Concurrency.
 * Maps
 * Queues
 * Apache Commons Collections
+* Guava collections
 
 ## Stream API:
 
