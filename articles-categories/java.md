@@ -9,7 +9,8 @@ summary: Articles about pure Java, from Collections to Concurrency.
 ---
 
 ### Collections
-* Arrays
+
+* Lists
 * Sets
 * Maps
 * Queues

@@ -8,20 +8,20 @@ author: ivanursul
 summary: Articles about AWS and everything around it. 
 ---
 
-## Lorem Ipsum:
+### Lorem Ipsum:
 
-1. Sed quia non numquam
-2. Fugiat quo voluptas nulla
-3. Sed quia non numquam
+* Sed quia non numquam
+* Fugiat quo voluptas nulla
+* Sed quia non numquam
 
-## Exercitationem ullam:
+### Exercitationem ullam:
 
-1. Sed quia non numquam
-2. Fugiat quo voluptas nulla
-3. Sed quia non numquam
+* Sed quia non numquam
+* Fugiat quo voluptas nulla
+* Sed quia non numquam
 
-## Totam rem aperiam:
+### Totam rem aperiam:
 
-1. Sed quia non numquam
-2. Fugiat quo voluptas nulla
-3. Sed quia non numquam
+* Sed quia non numquam
+* Fugiat quo voluptas nulla
+* Sed quia non numquam
