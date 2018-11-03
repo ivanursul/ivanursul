@@ -5,7 +5,7 @@ category: java
 permalink: /articles/java/
 date: 2018/08/04
 author: ivanursul
-summary: Articles about pure Java, from Collections to Concurrency.
+summary: Write once, run anywhere!
 ---
 
 ### Collections
