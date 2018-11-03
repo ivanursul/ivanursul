@@ -8,9 +8,7 @@ author: ivanursul
 summary: Articles about pure Java, from Collections to Concurrency.
 ---
 
-## Collections:
-
-* Basics
+### Collections
 * Arrays
 * Sets
 * Maps
@@ -18,19 +16,19 @@ summary: Articles about pure Java, from Collections to Concurrency.
 * Apache Commons Collections
 * Guava collections
 
-## Stream API:
+### Stream API
 
 * Sed quia non numquam
 * Fugiat quo voluptas nulla
 * Sed quia non numquam
 
-## Multi Threading:
+### Multi Threading
 
 * Sed quia non numquam
 * Fugiat quo voluptas nulla
 * Sed quia non numquam
 
-## Totam rem aperiam:
+### Totam rem aperiam
 
 * Sed quia non numquam
 * Fugiat quo voluptas nulla
