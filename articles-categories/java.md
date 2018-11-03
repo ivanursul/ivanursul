@@ -23,7 +23,7 @@ So I decided to create a separate place in my blog, where Java world will be cov
 * Apache Commons Collections
 * Guava collections
 
-### Stream API
+<!-- ### Stream API
 
 * Sed quia non numquam
 * Fugiat quo voluptas nulla
@@ -39,4 +39,4 @@ So I decided to create a separate place in my blog, where Java world will be cov
 
 * Sed quia non numquam
 * Fugiat quo voluptas nulla
-* Sed quia non numquam
+* Sed quia non numquam -->
