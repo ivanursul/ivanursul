@@ -5,7 +5,7 @@ category: java
 permalink: /articles/java/
 date: 2018/08/04
 author: ivanursul
-summary: Write once, run anywhere!
+summary: Write once, run anywhere(c)!
 ---
 
 Test test
