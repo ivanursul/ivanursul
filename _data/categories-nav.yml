@@ -3,7 +3,7 @@ items:
     text: Here you can find articles about everything from the Java world.
     icon: /assets/images/categories-nav/java.png
     url: /articles/java/
-  - title: AWS
-    text: Want to know more about AWS services? Check it out.
-    icon: /assets/images/categories-nav/aws.png
-    url: /articles/aws/
+  # - title: AWS
+  #   text: Want to know more about AWS services? Check it out.
+  #   icon: /assets/images/categories-nav/aws.png
+  #   url: /articles/aws/
