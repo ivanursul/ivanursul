@@ -1,6 +1,6 @@
 items:
   - title: Java
-    text: Here you can find articles about everything from the Java world.
+    text: Write once, run anywhere(c)
     icon: /assets/images/categories-nav/java.png
     url: /articles/java/
   # - title: AWS
