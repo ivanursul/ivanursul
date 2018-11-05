@@ -318,8 +318,7 @@ blockquote {
 }
 
 blockquote>p,
-legend,
-pre>code {
+legend {
     padding: 0
 }
 
@@ -678,7 +677,13 @@ code,
 tt {
     padding: .2rem 0 .1rem;
     border-radius: 2px;
-    color: #e01616
+    color: #000;
+    font-family: Inconsolata,​ sans-serif;
+    font-size: 16px;
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+    background: #f0f0f0;
 }
 
 body {
@@ -700,14 +705,6 @@ table {
     border-spacing: 0;
     border-collapse: collapse;
     font-size: 14px
-}
-
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, serif;
-    font-size: 1em
 }
 
 h1 {
