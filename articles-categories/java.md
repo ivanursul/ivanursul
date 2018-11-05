@@ -21,26 +21,15 @@ Collections in Java is a framework that gives an API for working with a group of
 You perform different kinds of operations like searching, sorting, insertion, removing. Some collections are good for one operations, while other collections are good for other operations.
 
 * Lists
-* [**Sets](https://ivanursul.com/articles/java/sets)
+* [Sets](https://ivanursul.com/articles/java/sets)
 * Maps
 * Queues
-* Apache Commons Collections
-* Guava collections
+* Deques
 
 <!-- ### Stream API
 
-* Sed quia non numquam
-* Fugiat quo voluptas nulla
-* Sed quia non numquam
-
-### Multi Threading
-
-* Sed quia non numquam
-* Fugiat quo voluptas nulla
-* Sed quia non numquam
-
-### Totam rem aperiam
-
-* Sed quia non numquam
-* Fugiat quo voluptas nulla
-* Sed quia non numquam -->
+http://tutorials.jenkov.com/java-collections/set.html
+https://www.codejava.net/java-core/collections/java-set-collection-tutorial-and-examples
+https://dzone.com/articles/the-developers-guide-to-collections-sets
+https://www.geeksforgeeks.org/set-in-java/
+-->
