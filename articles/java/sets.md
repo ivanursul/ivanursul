@@ -36,10 +36,12 @@ public interface Set<E> extends Collection<E> {
 
 ### <a href="#implementations" name="implementations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementations
 
-Set interface has three basic implementations, available in Collections framework: [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html), [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) and [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html)
+Set interface has three basic implementations, available in Collections framework: [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html), [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) and [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html).
 
 ### <a href="#how-to-create" name="how-to-create"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to create
 
 ### <a href="#set-methods" name="set-methods"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Reviewing Set methods
+
+### <a href="#concurrency" name="concurrency"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Concurrency
 
 ### <a href="#performance" name="performance"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Performance
