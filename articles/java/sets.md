@@ -36,7 +36,7 @@ public interface Set<E> extends Collection<E> {
 
 ### <a href="#implementations" name="implementations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementations
 
-Set interface has three basic implementations, available in Collections framework: 
+Set interface has three basic implementations, available in Collections framework: HashSet, TreeSet and LinkedHashSet
 
 ### <a href="#how-to-create" name="how-to-create"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to create
 
