@@ -16,6 +16,10 @@ So I decided to create a separate place in my blog, where Java world will be cov
 
 ### Collections
 
+Collections in Java is a framework that gives an API for working with a group of objects.
+
+You perform different kinds of operations like searching, sorting, insertion, removing. Some collections are good for one operations, while other collections are good for other operations.
+
 * Lists
 * [Sets](https://ivanursul.com/articles/java/sets)
 * Maps
