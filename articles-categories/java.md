@@ -21,7 +21,7 @@ Collections in Java is a framework that gives an API for working with a group of
 You perform different kinds of operations like searching, sorting, insertion, removing. Some collections are good for one operations, while other collections are good for other operations.
 
 * Lists
-* [Sets](https://ivanursul.com/articles/java/sets)
+* [**Sets](https://ivanursul.com/articles/java/sets)
 * Maps
 * Queues
 * Apache Commons Collections
