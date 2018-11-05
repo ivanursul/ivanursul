@@ -17,7 +17,7 @@ So I decided to create a separate place in my blog, where Java world will be cov
 ### Collections
 
 * Lists
-* Sets
+* [Sets](https://ivanursul.com/articles/java/sets)
 * Maps
 * Queues
 * Apache Commons Collections
