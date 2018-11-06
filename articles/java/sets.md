@@ -80,3 +80,16 @@ set.clear();
 
 set.isEmpty(); // true
 ```
+
+### <a href="#bulk-operations" name="bulk-operations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Bulk operations
+
+There are bulk operations, available for Set interface:
+```
+Set<String> set = new HashSet<>();
+
+set.addAll(Arrays.asList("element1", "element2", "element3")); // [element1, element2, element3]
+set.containsAll(Arrays.asList("element1", "element2")); // true
+set.retainAll(Arrays.asList("element1", "element2")); // [element1, element2]
+set.removeAll(Arrays.asList("element1", "element2")); // []
+set.size(); // 0
+```
