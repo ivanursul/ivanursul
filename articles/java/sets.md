@@ -39,7 +39,9 @@ Set should be used in situations when you don't want to see duplicated elements.
 ### <a href="#implementations" name="implementations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementations
 
 Set interface has three basic implementations, available in Collections framework: [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html), [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) and [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html):
-* 
+* HashSet, a default implementation, backed by HashMap. Gives no guarantee about ordering.
+* TreeSet, order set structure, gives guarantee about ordering.
+* LinkedHashSet should be used if you want to maintain insertion order, without duplicates.
 
 ### <a href="#how-to-create" name="how-to-create"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to create
 
