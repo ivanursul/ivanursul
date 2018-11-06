@@ -12,24 +12,24 @@ A [Set](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html) is a [Coll
 A Set interface contains only methods, inherited from Collection interface + it adds it's own methods:
 
 ```
-    public interface Set<E> extends Collection<E> {
-        int size();
-        boolean isEmpty();
-        boolean contains(Object o);
-        Iterator<E> iterator();
-        Object[] toArray();
-        <T> T[] toArray(T[] a);
-        boolean add(E e);
-        boolean remove(Object o);
-        boolean containsAll(Collection<?> c);
-        boolean addAll(Collection<? extends E> c);
-        boolean retainAll(Collection<?> c);
-        boolean removeAll(Collection<?> c);
-        void clear();
-        boolean equals(Object o);
-        int hashCode();
-        default Spliterator<E> spliterator() { /* ... */ }
-    }
+public interface Set<E> extends Collection<E> {
+    int size();
+    boolean isEmpty();
+    boolean contains(Object o);
+    Iterator<E> iterator();
+    Object[] toArray();
+    <T> T[] toArray(T[] a);
+    boolean add(E e);
+    boolean remove(Object o);
+    boolean containsAll(Collection<?> c);
+    boolean addAll(Collection<? extends E> c);
+    boolean retainAll(Collection<?> c);
+    boolean removeAll(Collection<?> c);
+    void clear();
+    boolean equals(Object o);
+    int hashCode();
+    default Spliterator<E> spliterator() { /* ... */ }
+}
 ```
 
 ### <a href="#when_to_use" name="when_to_use"><i class="fa fa-link anchor" aria-hidden="true"></i></a> When to use
@@ -47,9 +47,9 @@ Set interface has three basic implementations, available in Collections framewor
 
 The default way of creating sets is following:
 ```
-        Set<String> hashSet = new HashSet<>();
-        Set<String> treeSet = new TreeSet<>();
-        Set<String> linkedHashSet = new LinkedHashSet<>();
+Set<String> hashSet = new HashSet<>();
+Set<String> treeSet = new TreeSet<>();
+Set<String> linkedHashSet = new LinkedHashSet<>();
 ```
 
 ### <a href="#basic-operations" name="basic-operations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Basic operations
@@ -57,26 +57,26 @@ The default way of creating sets is following:
 Here are the basic operations described:
 
 ```
-        Set<String> set = new HashSet<>();
-        
-        set.add("element1");
-        
-        set.addAll(Arrays.asList("element1", "element2"));
-        set.size(); // 2
-        set.contains("element1"); // true
-        set.containsAll(Arrays.asList("element1", "element2"));
-        
-        set.isEmpty(); // false
-        
-        set.add("element3");
-        set.size(); // 3
-        set.removeIf(item -> "element3".equals(item));
-        set.size(); // 2
-        
-        set.stream()
-                .forEach(item -> System.out.println(item));
-        
-        set.clear();
+Set<String> set = new HashSet<>();
 
-        set.isEmpty(); // true
+set.add("element1");
+
+set.addAll(Arrays.asList("element1", "element2"));
+set.size(); // 2
+set.contains("element1"); // true
+set.containsAll(Arrays.asList("element1", "element2"));
+
+set.isEmpty(); // false
+
+set.add("element3");
+set.size(); // 3
+set.removeIf(item -> "element3".equals(item));
+set.size(); // 2
+
+set.stream()
+        .forEach(item -> System.out.println(item));
+
+set.clear();
+
+set.isEmpty(); // true
 ```
