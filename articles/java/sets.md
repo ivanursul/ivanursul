@@ -94,5 +94,3 @@ set.removeAll(Arrays.asList("element1", "element2")); // []
 set.size(); // 0
 ```
 
-### <a href="#bulk-operations" name="bulk-operations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Bulk operations
-
