@@ -51,7 +51,3 @@ The default way of creating sets is following:
         Set<String> treeSet = new TreeSet<>();
         Set<String> linkedHashSet = new LinkedHashSet<>();
 ```
-
-### <a href="#concurrency" name="concurrency"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Concurrency
-
-### <a href="#performance" name="performance"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Performance
