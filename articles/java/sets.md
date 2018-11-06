@@ -73,7 +73,7 @@ set.size(); // 3
 set.removeIf(item -> "element3".equals(item));
 set.size(); // 2
 
-set.stream()
+set.stream() // stream operations
         .forEach(item -> System.out.println(item));
 
 set.clear();
@@ -93,3 +93,6 @@ set.retainAll(Arrays.asList("element1", "element2")); // [element1, element2]
 set.removeAll(Arrays.asList("element1", "element2")); // []
 set.size(); // 0
 ```
+
+### <a href="#bulk-operations" name="bulk-operations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Bulk operations
+
