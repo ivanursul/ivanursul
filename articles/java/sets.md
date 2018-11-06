@@ -51,3 +51,32 @@ The default way of creating sets is following:
         Set<String> treeSet = new TreeSet<>();
         Set<String> linkedHashSet = new LinkedHashSet<>();
 ```
+
+### <a href="#basic-operations" name="basic-operations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Basic operations
+
+Here are the basic operations described:
+
+```
+        Set<String> set = new HashSet<>();
+        
+        set.add("element1");
+        
+        set.addAll(Arrays.asList("element1", "element2"));
+        set.size(); // 2
+        set.contains("element1"); // true
+        set.containsAll(Arrays.asList("element1", "element2"));
+        
+        set.isEmpty(); // false
+        
+        set.add("element3");
+        set.size(); // 3
+        set.removeIf(item -> "element3".equals(item));
+        set.size(); // 2
+        
+        set.stream()
+                .forEach(item -> System.out.println(item));
+        
+        set.clear();
+
+        set.isEmpty(); // true
+```
