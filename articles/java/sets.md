@@ -34,13 +34,21 @@ public interface Set<E> extends Collection<E> {
 
 ### <a href="#when_to_use" name="when_to_use"><i class="fa fa-link anchor" aria-hidden="true"></i></a> When to use
 
+Set should be used in situations when you don't want to see duplicated elements.
+
 ### <a href="#implementations" name="implementations"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementations
 
-Set interface has three basic implementations, available in Collections framework: [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html), [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) and [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html).
+Set interface has three basic implementations, available in Collections framework: [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html), [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) and [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html):
+* 
 
 ### <a href="#how-to-create" name="how-to-create"><i class="fa fa-link anchor" aria-hidden="true"></i></a> How to create
 
-### <a href="#set-methods" name="set-methods"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Reviewing Set methods
+The default way of creating sets is following:
+```
+        Set<String> hashSet = new HashSet<>();
+        Set<String> treeSet = new TreeSet<>();
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+```
 
 ### <a href="#concurrency" name="concurrency"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Concurrency
 
