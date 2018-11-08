@@ -5,7 +5,7 @@ date: 2018-10-08 00:00:00
 
 ### <a href="#list-interface" name="list-interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> List Interface
 
-The Java List Interface represents a collection of elements. What is *characteristic* about List is that same element can occur more than once, also elements in a List have an order and they can be iterated in that order. 
+The Java List Interface represents a collection of elements. What is *characteristic* about List is that same element can occur more than once, also elements in a List have an insertion order and they can be iterated in that order. 
 
 ### <a href="#implementation" name="implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementation
 
@@ -40,7 +40,7 @@ The List allows **add, remove, get and set** operations based on numerical posit
 * E	remove(int index) - *Removes the element at the specified position in this list*
 * E	set(int index, E element) - *Replaces the element at the specified position in this list with the specified element*
 
-More methods you can find bellow and on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
+Bellow you can find a few more methods, for further information feel free to check <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
 * void	clear() - *Removes all of the elements from this list*
 * boolean	contains(Object o) - *Returns true if this list contains the specified element*
 * int	size() - *Returns the number of elements in this list*
@@ -92,3 +92,18 @@ public class ListDemo
 2
 [5, 2, 3, 2]
 ```
+
+### <a href="#arrayList" name="arrayList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> ArrayList
+
+The ArrayList class implements an List Interface and represents dynamic arrays that can grow as needed. All elements of an ArrayList are stored in a Java array, but unlike an array that has a fixed length, ArrayList are created with initial size. That means that if the size is exceeded the collection is automatically enlarged and if an element is removed from ArrayList the array may be shrunk.
+
+Size enlargement is done by copying the old elements to the new array and using that new array instead of the old one. Since the size of an array doubles every time it needs more space, this can be controled by using *trimToSize()* method. This method copies all the elements from the existing array to a new array with size of exactly same number as the elements in the existing array.
+
+As ArrayList is generic that means that you work with a general type T, where T can be replaced by any type such as int, double, String, Object etc. The most important thing is that ArrayList and ArrayList<T> are different. For ArrayList you must specify the type of the elements that will be stored. For example, if you want to store textual values in your ArrayList, this is the way of declaration:
+```
+ArrayList<String> text = new ArrayList<String>();
+```
+
+You can, also, see a declaration such as *List<String> text = new ArrayList<String>();*. This way, named *Polymorphism*, is usually used because the object named *"text"* is intended to be used as a List and it is recommended to declare it as List<String> type.
+ 
+ ### <a href="#linkedList" name="linkedList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedList
