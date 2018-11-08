@@ -9,9 +9,9 @@ Document and its structure will be changed from top to the bottom, as I gather m
 -->
 
 ---
-title: "Lists in Java"
+Title: "Lists in Java"
 ---
-date: 08-11-2018
+Date: 08-11-2018
 ---
 
 </br></br></br>
