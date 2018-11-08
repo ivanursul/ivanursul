@@ -59,7 +59,7 @@ More methods you can find in bellow and on <a href="https://docs.oracle.com/java
 * default void	sort(Comparator<? super E> c) - Sorts this list according to the order induced by the specified Comparator
 * int	indexOf(Object o) - Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element
 
-**EXAMPLE
+**EXAMPLE**
 ```
 import java.util.*; 
   
