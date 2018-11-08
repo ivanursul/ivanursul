@@ -104,7 +104,7 @@ As ArrayList is generic that means that you work with a general type T, where T 
 ArrayList<String> text = new ArrayList<String>();
 ```
 
-You can, also, see a declaration such as *List<String> text = new ArrayList<String>();*. This way, named *Polymorphism*, is usually used because the object named *"text"* is intended to be used as a List and it is recommended to declare it as List<String> type.
+You can, also, see a declaration such as List<String> text = new ArrayList<String>();. This way, named *Polymorphism*, is usually used because the object named *"text"* is intended to be used as a List and it is recommended to declare it as List<String> type.
  
 ### <a href="#linkedList" name="linkedList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedList
 
