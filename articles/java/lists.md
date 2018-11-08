@@ -20,7 +20,7 @@ List Interface is implemented by classes listed below:
 
 ### <a href="#creating-list-objects" name="creating-list-objects"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Creating List Objects
 
-List is an interface, and the instances of List can be created in the following ways:
+The List is an interface, and the instances of List can be created in the following ways:
 
 ```
 List list1 = new ArrayList();
@@ -31,7 +31,7 @@ List list4 = new Stack();
 
 ### <a href="#operations-on-list" name="operations-on-list"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Operations on List
 
-List allows **add, remove, get and set** operations based on numerical positions of elements in List. List provides following methods for these operations:
+The List allows **add, remove, get and set** operations based on numerical positions of elements in List. The List provides the following methods for these operations:
 
 * void add(int index, E element) - *Inserts the specified element at the specified position in this list*
 * boolean	add(E e) - *Appends the specified element to the end of this list*
@@ -40,7 +40,7 @@ List allows **add, remove, get and set** operations based on numerical positions
 * E	remove(int index) - *Removes the element at the specified position in this list*
 * E	set(int index, E element) - *Replaces the element at the specified position in this list with the specified element*
 
-More methods you can find in bellow and on <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
+More methods you can find bellow and on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
 * void	clear() - *Removes all of the elements from this list*
 * boolean	contains(Object o) - *Returns true if this list contains the specified element*
 * int	size() - *Returns the number of elements in this list*
