@@ -23,3 +23,24 @@ The Java List Interface represents a collection of elements. What is *characteri
 
 The Java.util.List is a child interface of Collection, therefore all methods from Collection can be used in List Interface as well.
 <p align="center"> <img src="https://www.geeksforgeeks.org/wp-content/uploads/ListInterfaceJava.png" /> </p>
+
+List Interface is implemented by classes listed below:
+* ArrayList (java.util.ArrayList),
+* LinkedList (java.util.LinkedList),
+* Vector (java.util.Vector),
+* Stack (java.util.Stack).
+
+### &nbsp; 1.1.1 Creating List Objects
+
+List is an interface, and the instances of List can be created in the following ways:
+
+```
+List list1 = new ArrayList();
+List list2 = new LinkedList();
+List list3 = new Vector(); 
+List list4 = new Stack(); 
+```
+
+### &nbsp; 1.1.2 Operations on List
+
+List allows **add, remove, get and set** operations based on numerical positions of elements in List. List provides following methods for these operations:
