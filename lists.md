@@ -15,6 +15,10 @@ date: 08-11-2018
 ---
 
 </br></br></br>
-# List Structure
+# 1. List Interface
 
-The Java *List* Interface represents a collection of elements. What is characteristic about List is that same element can occur more than once, also elements in a List have an order and they can be iterated in that order.
+The Java List Interface represents a collection of elements. What is *characteristic* about List is that same element can occur more than once, also elements in a List have an order and they can be iterated in that order. 
+
+## 1.1 Implementation
+
+The Java.util.List is a child interface of Collection, therefor all methods from Collection can be used in List Interface as well.
