@@ -9,10 +9,11 @@ Document and its structure will be changed from top to the bottom, as I gather m
 -->
 
 ---
-Title: "Lists in Java"
+Title: "Lists in Java" &nbsp; Date: 08-11-2018
 ---
-Date: 08-11-2018
----
+
+
+
 
 </br></br></br>
 # 1. List Interface
