@@ -1,26 +1,13 @@
-<!---
-
-Comment test!
-
-I am doing this first time and this is only test blog. Time to time will be better formated, for now focus is on content.
-
-Document and its structure will be changed from top to the bottom, as I gather more info about some parts.
-
--->
-
 ---
-Title: "Lists in Java" &nbsp; Date: 08-11-2018
+title:  "Sets in Java"
+date: 2018-10-08 00:00:00
 ---
 
-
-
-
-</br></br></br>
-# 1. List Interface
+### <a href="#overview" name="overview"><i class="fa fa-link anchor" aria-hidden="true"></i></a> List Interface
 
 The Java List Interface represents a collection of elements. What is *characteristic* about List is that same element can occur more than once, also elements in a List have an order and they can be iterated in that order. 
 
-## &nbsp; 1.1 Implementation
+### <a href="#interface" name="interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementation
 
 The Java.util.List is a child interface of Collection, therefore all methods from Collection can be used in List Interface as well.
 <p align="center"> <img src="https://www.geeksforgeeks.org/wp-content/uploads/ListInterfaceJava.png" /> </p>
@@ -31,7 +18,7 @@ List Interface is implemented by classes listed below:
 * Vector (java.util.Vector),
 * Stack (java.util.Stack).
 
-### &nbsp; 1.1.1 Creating List Objects
+### <a href="#interface" name="interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Creating List Objects
 
 List is an interface, and the instances of List can be created in the following ways:
 
@@ -42,7 +29,7 @@ List list3 = new Vector();
 List list4 = new Stack(); 
 ```
 
-### &nbsp; 1.1.2 Operations on List
+### <a href="#interface" name="interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Operations on List
 
 List allows **add, remove, get and set** operations based on numerical positions of elements in List. List provides following methods for these operations:
 
