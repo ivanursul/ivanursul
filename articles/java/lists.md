@@ -39,7 +39,7 @@ A List allows **add, remove, get and set** operations based on numerical positio
 * E	remove(int index) - *Removes the element at the specified position in this list*
 * E	set(int index, E element) - *Replaces the element at the specified position in this list with the specified element*
 
-Bellow, you can find a few more methods, for further information feel free to check the<a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
+Bellow, you can find a few more methods, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
 * void	clear() - *Removes all of the elements from this list*
 * boolean	contains(Object o) - *Returns true if this list contains the specified element*
 * int	size() - *Returns the number of elements in this list*
@@ -110,7 +110,7 @@ You can, also, see a declaration such as *List<String> text = new ArrayList<Stri
 
 A LinkedList is a linear data structure where elements are linked by using pointers. That means that the elements are not stored at contiguous memory locations. A LinkedList consists of nodes where each node contains a data field and a reference to the next node in the list.
 
-In other words, the LinkedList is nothing but a series of elements, where each has 2 fields. In one is the value of the element (what would be in that place in the ordinary sequence), and in the second is pointer to the next element of the string. The last element shows NULL.
+In other words, the LinkedList is nothing but a series of elements, where each has 2 fields. In one is the value of the element (what would be in that place in the ordinary sequence), and in the second is a pointer to the next element of the string. The last element shows NULL.
 
 The differences between ArrayList and LinkedList are:
 * ArrayList internally uses a dynamic array to store the elements and LinkedList uses a doubly linked list
