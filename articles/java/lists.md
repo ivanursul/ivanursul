@@ -10,7 +10,6 @@ The Java List Interface represents a collection of elements. What is *characteri
 ### <a href="#implementation" name="implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementation
 
 The Java.util.List is a child interface of Collection, therefore all methods from Collection can be used in List Interface as well.
-<p align="center"> <img src="https://www.geeksforgeeks.org/wp-content/uploads/ListInterfaceJava.png" /> </p>
 
 List Interface is implemented by classes listed below:
 * ArrayList (java.util.ArrayList),
@@ -20,7 +19,7 @@ List Interface is implemented by classes listed below:
 
 ### <a href="#creating-list-objects" name="creating-list-objects"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Creating List Objects
 
-The List is an interface, and the instances of List can be created in the following ways:
+A List is an interface, and the instances of List can be created in the following ways:
 
 ```
 List list1 = new ArrayList();
@@ -31,7 +30,7 @@ List list4 = new Stack();
 
 ### <a href="#operations-on-list" name="operations-on-list"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Operations on List
 
-The List allows **add, remove, get and set** operations based on numerical positions of elements in List. The List provides the following methods for these operations:
+A List allows **add, remove, get and set** operations based on numerical positions of elements in List. A List provides the following methods for these operations:
 
 * void add(int index, E element) - *Inserts the specified element at the specified position in this list*
 * boolean	add(E e) - *Appends the specified element to the end of this list*
@@ -107,3 +106,8 @@ ArrayList<String> text = new ArrayList<String>();
 You can, also, see a declaration such as *List<String> text = new ArrayList<String>();*. This way, named *Polymorphism*, is usually used because the object named *"text"* is intended to be used as a List and it is recommended to declare it as List<String> type.
  
  ### <a href="#linkedList" name="linkedList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedList
+
+A LinkedList is a linear data structure where elements are linked by using pointers. That means that the elements are not stored at contiguous memory locations. There are:
+* Singly Linked List,
+* Circular Linked List,
+* Doubly Linked List.
