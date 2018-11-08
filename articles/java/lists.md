@@ -97,7 +97,7 @@ public class Demo
 
 The ArrayList class implements a List Interface and represents dynamic arrays that can grow as needed. All elements of an ArrayList are stored in a Java array, but unlike an array that has a fixed length, ArrayLists are created with an initial size. That means that if the size is exceeded the collection is automatically enlarged and if an element is removed from ArrayList the array may be shrunk.
 
-Size enlargement is done by copying the old elements to the new array and using that new array instead of the old one. Since the size of an array doubles every time it needs more space, this can be controled by using *trimToSize()* method. This method copies all the elements from the existing array to a new array with size of exactly same number as the elements in the existing array.
+Size enlargement is done by copying the old elements to the new array and using that new array instead of the old one. Since the size of an array doubles every time it needs more space, this can be controlled by using *trimToSize()* method. This method copies all the elements from the existing array to a new array with size of exactly same number as the elements in the existing array.
 
 As ArrayList is generic that means that you work with a general type T, where T can be replaced by any type such as int, double, String, Object etc. The most important thing is that ArrayList and ArrayList<T> are different. For ArrayList, you must specify the type of elements that will be stored. For example, if you want to store textual values in your ArrayList, this is the way of declaration:
 ```
@@ -110,15 +110,66 @@ You can, also, see a declaration such as *List<String> text = new ArrayList<Stri
 
 A LinkedList is a linear data structure where elements are linked by using pointers. That means that the elements are not stored at contiguous memory locations. A LinkedList consists of nodes where each node contains a data field and a reference to the next node in the list.
 
+In other words, the LinkedList is nothing but a series of elements, where each has 2 fields. In one is the value of the element (what would be in that place in the ordinary sequence), and in the second is pointer to the next element of the string. The last element shows NULL.
+
 The differences between ArrayList and LinkedList are:
-* ArrayList internally uses dynamic array to store the elements and LinkedList uses doubly linked list
-* A ArrayList consumes less memory than an LinkedList because it does not store the next and previous references as LinkedList does
+* ArrayList internally uses a dynamic array to store the elements and LinkedList uses a doubly linked list
+* An ArrayList consumes less memory than a LinkedList because it does not store the next and previous references as LinkedList does
 * ArrayList is good for storing and accessing data and LinkedList is good for manipulating data
-* LinkedList manipualtion is faster than ArrayList
+* LinkedList manipulation is faster than ArrayList
 * Element access time for ArrayList is O(1) and for LinkedList is O(n), because it needs to go to the element by following the next/prev references
 
-The way of declaring LinkedList is similar to ArrayList. For example, if you want to store textual values in your ArrayList, the way of declaration is:
+The way of declaring LinkedList is similar to ArrayList. For example, if you want to store textual values in your ArrayList, the way of a declaration is:
 ```
 LinkedList<String> text = new LinkedList<String>();
 ```
 
+**Example - The "throws" function**
+```
+public Object pop() throws UnderflowException {
+     if(this.isempty()) {
+       throw new UnderflowException();
+     }
+     DoublyLinkedList oldback = this.back;
+     Object result = oldback.element;
+     this.back = oldback.next;
+     if(this.front == oldback) {
+       this.front = null;
+     }
+     oldback.remove();
+     return result;
+   }
+
+public boolean isempty() {
+        if(this.front == null || this.back == null) {
+          if(this.back != this.front) {
+            throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
+          }
+          return true;
+        } else {
+          return false;
+        }
+      }
+```
+**Example - The "insert" function***
+```
+public void push(Object x) throws OverflowException {
+        if (this.isempty()){
+          this.front = this.back = new DLL(null, x, null);
+        } else {
+          DLL oldback = this.back;
+          this.back = new DLL(null, x, oldback);
+        }
+}
+
+public boolean isempty() {
+        if(this.front == null || this.back == null) {
+          if(this.back != this.front) {
+            throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
+          }
+          return true;
+        } else {
+          return false;
+        }
+      }
+```
