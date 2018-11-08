@@ -45,19 +45,19 @@ List list4 = new Stack();
 
 List allows **add, remove, get and set** operations based on numerical positions of elements in List. List provides following methods for these operations:
 
-* void add(int index, E element) - Inserts the specified element at the specified position in this list
-* boolean	add(E e) - Appends the specified element to the end of this list
-* boolean	addAll(int index, Collection<? extends E> c) - Inserts all of the elements in the specified collection into this list at the specified position
-* E	get(int index) - Returns the element at the specified position in this list
-* E	remove(int index) - Removes the element at the specified position in this list
-* E	set(int index, E element) - Replaces the element at the specified position in this list with the specified element
+* void add(int index, E element) - *Inserts the specified element at the specified position in this list*
+* boolean	add(E e) - *Appends the specified element to the end of this list*
+* boolean	addAll(int index, Collection<? extends E> c) - *Inserts all of the elements in the specified collection into this list at the specified position*
+* E	get(int index) - *Returns the element at the specified position in this list*
+* E	remove(int index) - *Removes the element at the specified position in this list*
+* E	set(int index, E element) - *Replaces the element at the specified position in this list with the specified element*
 
 More methods you can find in bellow and on <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
-* void	clear() - Removes all of the elements from this list
-* boolean	contains(Object o) - Returns true if this list contains the specified element
-* int	size() - Returns the number of elements in this list
-* default void	sort(Comparator<? super E> c) - Sorts this list according to the order induced by the specified Comparator
-* int	indexOf(Object o) - Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element
+* void	clear() - *Removes all of the elements from this list*
+* boolean	contains(Object o) - *Returns true if this list contains the specified element*
+* int	size() - *Returns the number of elements in this list*
+* default void	sort(Comparator<? super E> c) - *Sorts this list according to the order induced by the specified Comparator*
+* int	indexOf(Object o) - *Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element*
 
 **Example**
 ```
