@@ -151,7 +151,7 @@ public boolean isempty() {
         }
       }
 ```
-**Example - The "insert" function***
+**Example - The "insert" function**
 ```
 public void push(Object x) throws OverflowException {
         if (this.isempty()){
