@@ -50,46 +50,47 @@ Bellow, you can find a few more methods, for further information feel free to ch
 ```
 import java.util.*; 
   
-public class ListDemo 
+public class Demo 
 { 
     public static void main (String[] args) 
     { 
         // Creating a list 
-        List<Integer> l1 = new ArrayList<Integer>(); 
-        l1.add(0, 1);  // adds 1 at 0 index 
-        l1.add(1, 2);  // adds 2 at 1 index 
-        System.out.println(l1);  // [1, 2] 
+        List<Integer> list1 = new ArrayList<Integer>(); 
+        list1.add(0, 5);  // adds 5 at 0 index 
+        list1.add(1, 6);  // adds 6 at 1 index
+        list1.add(2, 7);  // adds 7 at 2 index
+        System.out.println(list1);  // [5, 6, 7] 
   
-        // Creating another list 
-        List<Integer> l2 = new ArrayList<Integer>(); 
-        l2.add(1); 
-        l2.add(2); 
-        l2.add(3); 
+        // Creating a 2nd list
+        List<Integer> list2 = new ArrayList<Integer>(); 
+        list2.add(1); 
+        list2.add(2); 
+        list2.add(3); 
   
-        // Will add list l2 from 1 index 
-        l1.addAll(1, l2); 
-        System.out.println(l1); 
+        // Will add list list2 from 2 index 
+        list1.addAll(2, list2); 
+        System.out.println(list1); 
   
-        // Removes element from index 1 
-        l1.remove(1);      
-        System.out.println(l1); // [1, 2, 3, 2] 
+        // Removes element from index 3 
+        list1.remove(3);      
+        System.out.println(list1); 
   
         // Prints element at index 3 
-        System.out.println(l1.get(3)); 
+        System.out.println(list1.get(3)); 
   
         // Replace 0th element with 5 
-        l1.set(0, 5);    
-        System.out.println(l1);  
+        list1.set(0, 5);    
+        System.out.println(list1);  
     } 
 }
 ```
 **Result**
 ```
-[1, 2]
-[1, 1, 2, 3, 2]
-[1, 2, 3, 2]
-2
-[5, 2, 3, 2]
+[5, 6, 7]
+[5, 6, 1, 2, 3, 7]
+[5, 6, 1, 3, 7]
+3
+[5, 6, 1, 3, 7]
 ```
 
 ### <a href="#arrayList" name="arrayList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> ArrayList
@@ -107,7 +108,17 @@ You can, also, see a declaration such as *List<String> text = new ArrayList<Stri
  
  ### <a href="#linkedList" name="linkedList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedList
 
-A LinkedList is a linear data structure where elements are linked by using pointers. That means that the elements are not stored at contiguous memory locations. There are:
-* Singly Linked List,
-* Circular Linked List,
-* Doubly Linked List.
+A LinkedList is a linear data structure where elements are linked by using pointers. That means that the elements are not stored at contiguous memory locations. A LinkedList consists of nodes where each node contains a data field and a reference to the next node in the list.
+
+The differences between ArrayList and LinkedList are:
+* ArrayList internally uses dynamic array to store the elements and LinkedList uses doubly linked list
+* A ArrayList consumes less memory than an LinkedList because it does not store the next and previous references as LinkedList does
+* ArrayList is good for storing and accessing data and LinkedList is good for manipulating data
+* LinkedList manipualtion is faster than ArrayList
+* Element access time for ArrayList is O(1) and for LinkedList is O(n), because it needs to go to the element by following the next/prev references
+
+The way of declaring LinkedList is similar to ArrayList. For example, if you want to store textual values in your ArrayList, the way of declaration is:
+```
+LinkedList<String> text = new LinkedList<String>();
+```
+
