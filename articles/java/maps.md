@@ -48,9 +48,7 @@ public class Demo {
         // Iterate over fruits
         for(Object x: fruits.keySet()) {
             System.out.println(x + " - " + fruits.get(x));
-        }
-
-        System.out.println();        
+        }    
 
         // Clear all values.
         fruits.clear();
