@@ -5,7 +5,7 @@ date: 2018-11-09 00:00:00
 
 ### <a href="#map-implementation" name="map-implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Map Implementation
 
-**Welcome** to the blog about *Map* Interface. There will be words about what *Map* represents, as well as its implementations such as *HashMap, TreeMap, LinkedHashMap, EnumMap, WeakHashMap, IdentityHashMap and ConcurrentHashMap*. I hope you will enjoy the content and gain some new experience.
+**Welcome** to the blog about *Map* Interface. There will be words about what *Map* represents, as well as its implementations such as *WeakHashMap, IdentityHashMap and ConcurrentHashMap*, with more focus on *HashMap, TreeMap, LinkedHashMap and EnumMap*. I hope you will enjoy the content and gain some new experience.
 
 A *Map* is an Interface that contains set key-value and it has a form like this ```Map <K, V>```, where K represents key and V stands for value. Keys map values and they are unique, which means that two same keys are not allowed. Also, keys are objects that are used to retrieve values.
 
@@ -35,21 +35,20 @@ public class Demo {
 
     public static void main(String[] args) {
 
+        // Creating HashMap
         Map fruits = new HashMap();
 
-        // Adding fruits.
+        // Adding fruits
         fruits.put("Banana", 1);
-
         fruits.put("Apple", 12);
-
         fruits.put("Avocado", 8);
 
         System.out.println("Fruits: " + fruits.size());
 
         // Iterate over fruits
-        for(Object key: fruits.keySet())
-
-            System.out.println(key + " - " + fruits.get(key));
+        for(Object x: fruits.keySet()) {
+            System.out.println(x + " - " + fruits.get(x));
+        }
 
         System.out.println();        
 
@@ -57,7 +56,6 @@ public class Demo {
         fruits.clear();
 
         System.out.println("Size: " + fruits.size());
-
     }
 }
 ```
@@ -75,6 +73,30 @@ This type is recommended to use if you need SortedMap operations or key-ordered 
 
 One more thing, just as HashMap and TreeMap, *LinkedHashMap* is not synchronized as well, which means that if you use multiple threads, it must be synchronized externally.
 
+**Example**
+```
+public class Demo {
+
+    public static void main(String[] args) {
+    
+        // Creating LinkedHashMap
+        Map<String, String> fruits = new LinkedHashMap<String, String>();
+        
+        // Adding fruits
+        fruits.put("Banana", "1");
+        fruits.put("Apple", "12");
+        fruits.put("Avocado", "5");
+        fruits.put("Orange", "25");
+        fruits.put(null, "22" );
+        
+        // Iterating
+        for(Map.Entry<String, String> x : fruits.entrySet()){
+            System.out.println(x.getKey() + " " + x.getValue());
+        }
+    }
+}
+```
+
 ### <a href="#enumMap" name="enumMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> EnumMap
 
 *EnumMap* who extends AbstractMap<K,V> Class and implements Serializable and Cloneable Interface, is internally implemented as an array. It represents a high performance Map implementation and is used with enum keys. It is recommended if you want to map an enum to a value.
@@ -85,10 +107,44 @@ Like the previously mentioned classes, *EnumMap* is not synchronized as well. Th
 ```
 EnumMap<SomeClass, String> map = new EnumMap<SomeClass, String>;
 ```
+**Example**
+```
+import java.util.EnumMap;
 
+public class Demo {
 
-
-
-
+    public static void main(String[] args) {
+        
+        // Creating EnumMap
+        EnumMap<Test, String> fruits = new EnumMap<Test, String>(Test.class);
+        
+        // Adding fruits
+        fruits.put(Test.A, "Banana");
+        fruits.put(Test.B, "Apple");
+        fruits.put(Test.C, "Avocado");
+        fruits.put(Test.D, "Orange");
+        
+        //Iterate over key
+        for(Test x: fruits.keySet()){
+            System.out.println(x +" "+ x.getNumber() );
+        }
+        
+       // Iterate over values
+        for(String x: fruits.values()){
+            System.out.println(x);
+        }
+    }
+}
+enum Test {
+    A(1), B(2), C(3), D(4);
+    private int number;
+    private Test(int x) {
+        number = x;
+    }
+    public int getNumber() {
+        return number;
+    }
+}
+```
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
