@@ -1,5 +1,5 @@
 ---
-title:  "Sets in Java"
+title:  "Lists in Java"
 date: 2018-11-08 00:00:00
 ---
 
