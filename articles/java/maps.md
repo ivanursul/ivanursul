@@ -134,11 +134,14 @@ public class Demo {
     }
 }
 enum Test {
+
     A(1), B(2), C(3), D(4);
     private int number;
+    
     private Test(int x) {
         number = x;
     }
+    
     public int getNumber() {
         return number;
     }
