@@ -5,6 +5,8 @@ date: 2018-11-08 00:00:00
 
 ### <a href="#list-interface" name="list-interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> List Interface
 
+**Welcome** to the blog about *List* Interface. There will be words about what *List* represents, as well as its implementations such as *Vector and Stack* with accent to the *ArrayList and LinkedList*. I hope you enjoy content and gain some new experience.
+
 The Java List Interface represents a collection of elements. What is *characteristic* about List is that same element can occur more than once, also elements in a List have an insertion order and they can be iterated in that order. 
 
 ### <a href="#implementation" name="implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementation
@@ -173,3 +175,5 @@ public boolean isempty() {
         }
       }
 ```
+
+If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
