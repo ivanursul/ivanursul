@@ -5,9 +5,9 @@ date: 2018-11-09 00:00:00
 
 ### <a href="#map-implementation" name="map-implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Map Implementation
 
-**Welcome** to the blog about *Map* Interface. There will be words about what *Map* represents, as well as its implementations such as *HashMap, TreeMap, LinkedHashMap, EnumMap, WeakHashMap, IdentityHashMap and ConcurrentHashMap*. I hope you enjoy content and gain some new experience.
+**Welcome** to the blog about *Map* Interface. There will be words about what *Map* represents, as well as its implementations such as *HashMap, TreeMap, LinkedHashMap, EnumMap, WeakHashMap, IdentityHashMap and ConcurrentHashMap*. I hope you will enjoy the content and gain some new experience.
 
-A *Map* is an Interface that contains set key-value and it has form like this ```Map <K, V>```, where K represents key and V stands for value. Keys map values and they are unique, which means that two same keys are not allowed. Also, a keys are objects that are used to retrieve values.
+A *Map* is an Interface that contains set key-value and it has a form like this ```Map <K, V>```, where K represents key and V stands for value. Keys map values and they are unique, which means that two same keys are not allowed. Also, keys are objects that are used to retrieve values.
 
 Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 * V	put(K key, V value) - *Associates the specified value with the specified key in this map*
@@ -22,9 +22,9 @@ There are three groups of *Map* implementations:
 
 ### <a href="#hashMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> HashMap
 
-*HashMap* is implementation of Map based on HashTable. The advantage is that the execution time remains constant even for large sets. In other words *HashMap* is used if the speed is important to you and iteration order is not your primary focus.
+*HashMap* extends AbstractMap<K,V> Class and implements Map<K,V>, Cloneable and Serializable Interfaces. Also, it represents an implementation of Map based on HashTable. The advantage is that the execution time remains constant even for large sets. In other words *HashMap* is used if the speed is important to you and iteration order is not your primary focus. The characteristic about *HashMap* is that order of the elements is not guaranteed and it can shuffle time to time.
 
-For adding an element, the requirements are key and value. As it is said, key are used to retrieve values and in this case it can be **null**. HashMap generate a hashcode for the key and check if there is any value associated to it. If it is, then HashMap returns the value, otherwise it adds value associated to the key.
+For adding an element, the requirements are key and value. As it is said, keys are used to retrieve values and in this case, it can be **null**. HashMap generates a hashcode for the key and checks if there is any value associated with it. If it is, then HashMap returns the value, otherwise, it adds value associated to the key.
 
 **Example**
 ```
@@ -63,6 +63,15 @@ public class Demo {
 ```
 ### <a href="#treeMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> TreeMap
 
+*TreeMap* extends AbstractMap<K,V> Class and implements NavigableMap<K,V>, Cloneable and Serializable Interfaces. The thing that is associated with *TreeMap* is that it is sorted according to the natural ordering of its keys, or by a Comparator provided at the creation time. In opposite of HashMap, this class maintains an order on its elements. For an integer, it sorts elements to ascending order and for Strings, it is an alphabetical order. There is also the possibility of self-defining the order.
+
+This type is recommended to use if you need SortedMap operations or key-ordered Collection-view iteration. *TreeMap* is not synchronized, which means that if you use multiple threads, it must be synchronized externally.
+
+### <a href="#linkedHashMap" name="linkedHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedHashMap
+
+*LinkedHashMap* extends HashMap<K,V> Class and implements Map<K,V> Interface and is recommended if you want a performance near good as HashMap and insertion order iteration. Since it has a possibility to use removeEldestEntry method, there is an easy way to make a custom cache (an example of this will be left to the reader).
+
+*LinkedHashMap* maintains a doubly linked list which defines the iteration ordering, which is the order in which keys were inserted into the map, but it is also based on hash table and therefore it differs from HashMap.
 
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
