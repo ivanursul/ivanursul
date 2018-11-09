@@ -41,7 +41,7 @@ A List allows **add, remove, get and set** operations based on numerical positio
 * E	remove(int index) - *Removes the element at the specified position in this list*
 * E	set(int index, E element) - *Replaces the element at the specified position in this list with the specified element*
 
-Bellow, you can find a few more methods, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
+Bellow, you can find a few more methods, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 * void	clear() - *Removes all of the elements from this list*
 * boolean	contains(Object o) - *Returns true if this list contains the specified element*
 * int	size() - *Returns the number of elements in this list*
