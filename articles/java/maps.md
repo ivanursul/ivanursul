@@ -24,27 +24,25 @@ There are three groups of *Map* implementations:
 
 *HashMap* is implementation of Map based on HashTable. The advantage is that the execution time remains constant even for large sets. In other words *HashMap* is used if the speed is important to you and iteration order is not your primary focus.
 
+For adding an element, the requirements are key and value. As it is said, key are used to retrieve values and in this case it can be **null**. HashMap generate a hashcode for the key and check if there is any value associated to it. If it is, then HashMap returns the value, otherwise it adds value associated to the key.
+
 **Example**
 ```
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class Demo {
-
 
     public static void main(String[] args) {
 
         Map fruits = new HashMap();
 
         // Adding fruits.
-
         fruits.put("Banana", 1);
 
         fruits.put("Apple", 12);
 
         fruits.put("Avocado", 8);
-
 
         System.out.println("Fruits: " + fruits.size());
 
@@ -53,11 +51,9 @@ public class Demo {
 
             System.out.println(key + " - " + fruits.get(key));
 
-        System.out.println();
-        
+        System.out.println();        
 
         // Clear all values.
-
         fruits.clear();
 
         System.out.println("Size: " + fruits.size());
@@ -65,6 +61,7 @@ public class Demo {
     }
 }
 ```
+### <a href="#treeMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> TreeMap
 
 
 
