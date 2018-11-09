@@ -71,7 +71,24 @@ This type is recommended to use if you need SortedMap operations or key-ordered 
 
 *LinkedHashMap* extends HashMap<K,V> Class and implements Map<K,V> Interface and is recommended if you want a performance near good as HashMap and insertion order iteration. Since it has a possibility to use removeEldestEntry method, there is an easy way to make a custom cache (we encourage the reader to try to do this example).
 
-*LinkedHashMap* maintains a doubly linked list which defines the iteration ordering that represents the order in which keys are inserted into the map, but it is also based on hash table and therefore it differs from HashMap. Theyr common thins is that both, HashMap and *LinkedHashMap*, permits null elements and has constant execution time, but because of the linked list *LinkedHashMap* has slightly lower performance.
+*LinkedHashMap* maintains a doubly linked list which defines the iteration ordering that represents the order in which keys are inserted into the map, but it is also based on hash table and therefore it differs from HashMap. Their common side is that both, HashMap and *LinkedHashMap*, permits null elements and has constant execution time, but because of the linked list *LinkedHashMap* has slightly lower performance.
+
+One more thing, just as HashMap and TreeMap, *LinkedHashMap* is not synchronized as well, which means that if you use multiple threads, it must be synchronized externally.
+
+### <a href="#enumMap" name="enumMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> EnumMap
+
+*EnumMap* who extends AbstractMap<K,V> Class and implements Serializable and Cloneable Interface, is internally implemented as an array. It represents a high performance Map implementation and is used with enum keys. It is recommended if you want to map an enum to a value.
+
+Similar to TreeMap, *EnumMap* is maintained in the natural order of their keys. *EnumMap* is a combination of the safety of the Map Interface and a wide range of its methods with a speed that is similar to an array. Null keys are not permitted and they lead to a NullPointerException, but Null values are free to use.
+
+Like the previously mentioned classes, *EnumMap* is not synchronized as well. The example of a declaration is below:
+```
+EnumMap<SomeClass, String> map = new EnumMap<SomeClass, String>;
+```
+
+
+
+
 
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
