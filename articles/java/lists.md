@@ -1,6 +1,6 @@
 ---
 title:  "Sets in Java"
-date: 2018-10-08 00:00:00
+date: 2018-11-08 00:00:00
 ---
 
 ### <a href="#list-interface" name="list-interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> List Interface
