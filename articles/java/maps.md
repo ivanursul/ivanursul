@@ -7,7 +7,7 @@ date: 2018-11-09 00:00:00
 
 **Welcome** to the blog about *Map* Interface. There will be words about what *Map* represents, as well as its implementations such as *WeakHashMap, IdentityHashMap and ConcurrentHashMap*, with more focus on *HashMap, TreeMap, LinkedHashMap and EnumMap*. I hope you will enjoy the content and gain some new experience.
 
-A *Map* is an Interface that contains set key-value and it has a form like this ```Map <K, V>```, where K represents key and V stands for value. Keys map values and they are unique, which means that two same keys are not allowed. Also, keys are objects that are used to retrieve values.
+A *Map* is an Interface that contains set key-value and it has a form like this Map <K, V>, where K represents key and V stands for value. Keys map values and they are unique, which means that two same keys are not allowed. Also, keys are objects that are used to retrieve values.
 
 Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 * V	put(K key, V value) - *Associates the specified value with the specified key in this map*
