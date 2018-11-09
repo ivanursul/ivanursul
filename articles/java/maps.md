@@ -69,9 +69,9 @@ This type is recommended to use if you need SortedMap operations or key-ordered 
 
 ### <a href="#linkedHashMap" name="linkedHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedHashMap
 
-*LinkedHashMap* extends HashMap<K,V> Class and implements Map<K,V> Interface and is recommended if you want a performance near good as HashMap and insertion order iteration. Since it has a possibility to use removeEldestEntry method, there is an easy way to make a custom cache (an example of this will be left to the reader).
+*LinkedHashMap* extends HashMap<K,V> Class and implements Map<K,V> Interface and is recommended if you want a performance near good as HashMap and insertion order iteration. Since it has a possibility to use removeEldestEntry method, there is an easy way to make a custom cache (we encourage the reader to try to do this example).
 
-*LinkedHashMap* maintains a doubly linked list which defines the iteration ordering, which is the order in which keys were inserted into the map, but it is also based on hash table and therefore it differs from HashMap.
+*LinkedHashMap* maintains a doubly linked list which defines the iteration ordering that represents the order in which keys are inserted into the map, but it is also based on hash table and therefore it differs from HashMap. Theyr common thins is that both, HashMap and *LinkedHashMap*, permits null elements and has constant execution time, but because of the linked list *LinkedHashMap* has slightly lower performance.
 
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
