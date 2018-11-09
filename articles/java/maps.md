@@ -68,7 +68,28 @@ public class Demo {
 
 This type is recommended to use if you need SortedMap operations or key-ordered Collection-view iteration. *TreeMap* is not synchronized, which means that if you use multiple threads, it must be synchronized externally.
 
-The example of TreeMap 
+**Example**
+```
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class Demo {
+
+    public static void main(String[] args) {
+    
+        // Creating a TreeMap
+        SortedMap<String, Integer> fruits  = new TreeMap<>();
+
+        // Adding fruits
+        fruits.put("Banana", 1);
+        fruits.put("Apple", 2);
+        fruits.put("Avocado", 5);
+        fruits.put("Orange", 22);
+
+        System.out.println(fruits);
+    }
+}
+```
 
 ### <a href="#linkedHashMap" name="linkedHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedHashMap
 
