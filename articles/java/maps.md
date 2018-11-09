@@ -12,19 +12,24 @@ A *Map* is an Interface that contains set key-value and it has a form like this 
 Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 * V	put(K key, V value) - *Associates the specified value with the specified key in this map*
 * V	remove(Object key) - *Removes the mapping for a key from this map if it is present*
-* Collection<V>	values() - *Returns a Collection view of the values contained in this map*
-* void	clear() - *Removes all of the mappings from this map** 
+* Collection<&#xfeff;V>	values() - *Returns a Collection view of the values contained in this map*
+* void	clear() - *Removes all of the mappings from this map* 
 
 There are three groups of *Map* implementations:
-* General-purpose *(HashMap, TreeMap and LinkedHashMap),
-* Special-purpose *(EnumMap, WeakHashMap and IdentityHashMap),
+* General-purpose *(HashMap, TreeMap and LinkedHashMap)*,
+* Special-purpose *(EnumMap, WeakHashMap and IdentityHashMap)*,
 * Concurrent implementations *(ConcurrentHashMap)*.
 
 ### <a href="#hashMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> HashMap
 
 *HashMap* extends AbstractMap<K,V> Class and implements Map<K,V>, Cloneable and Serializable Interfaces. Also, it represents an implementation of Map based on HashTable. The advantage is that the execution time remains constant even for large sets. In other words *HashMap* is used if the speed is important to you and iteration order is not your primary focus. The characteristic about *HashMap* is that order of the elements is not guaranteed and it can shuffle time to time.
 
-For adding an element, the requirements are key and value. As it is said, keys are used to retrieve values and in this case, it can be **null**. HashMap generates a hashcode for the key and checks if there is any value associated with it. If it is, then HashMap returns the value, otherwise, it adds value associated to the key.
+For adding an element, the requirements are key and value. As it is said, keys are used to retrieve values and in this case, it can be **null**. *HashMap* generates a hashcode for the key and checks if there is any value associated with it. If it is, then HashMap returns the value, otherwise, it adds value associated to the key.
+
+Below are the most commonly used *HashMap* methods:
+* V	replace(K key, V value) - *Replaces the entry for the specified key only if it is currently mapped to some value*
+* boolean containsKey(Object key) - *Returns true if this map contains a mapping for the specified key*
+* boolean isEmpty() - *Returns true if this map contains no key-value mappings*
 
 **Example**
 ```
@@ -62,6 +67,8 @@ public class Demo {
 *TreeMap* extends AbstractMap<K,V> Class and implements NavigableMap<K,V>, Cloneable and Serializable Interfaces. The thing that is associated with *TreeMap* is that it is sorted according to the natural ordering of its keys, or by a Comparator provided at the creation time. In opposite of HashMap, this class maintains an order on its elements. For an integer, it sorts elements to ascending order and for Strings, it is an alphabetical order. There is also the possibility of self-defining the order.
 
 This type is recommended to use if you need SortedMap operations or key-ordered Collection-view iteration. *TreeMap* is not synchronized, which means that if you use multiple threads, it must be synchronized externally.
+
+The example of TreeMap 
 
 ### <a href="#linkedHashMap" name="linkedHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedHashMap
 
