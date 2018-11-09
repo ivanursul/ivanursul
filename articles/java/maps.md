@@ -24,7 +24,47 @@ There are three groups of *Map* implementations:
 
 *HashMap* is implementation of Map based on HashTable. The advantage is that the execution time remains constant even for large sets. In other words *HashMap* is used if the speed is important to you and iteration order is not your primary focus.
 
+**Example**
+```
+import java.util.HashMap;
+import java.util.Map;
 
+
+public class Demo {
+
+
+    public static void main(String[] args) {
+
+        Map fruits = new HashMap();
+
+        // Adding fruits.
+
+        fruits.put("Banana", 1);
+
+        fruits.put("Apple", 12);
+
+        fruits.put("Avocado", 8);
+
+
+        System.out.println("Fruits: " + fruits.size());
+
+        // Iterate over fruits
+        for(Object key: fruits.keySet())
+
+            System.out.println(key + " - " + fruits.get(key));
+
+        System.out.println();
+        
+
+        // Clear all values.
+
+        fruits.clear();
+
+        System.out.println("Size: " + fruits.size());
+
+    }
+}
+```
 
 
 
