@@ -104,9 +104,9 @@ As ArrayList is generic that means that you work with a general type T, where T 
 ArrayList<String> text = new ArrayList<String>();
 ```
 
-You can, also, see a declaration such as *List<String> text = new ArrayList<String>();*. This way, named *Polymorphism*, is usually used because the object named *"text"* is intended to be used as a List and it is recommended to declare it as List<String> type.
+You can, also, see a declaration such as *List<&#xfeff;String> text = new ArrayList<&#xfeff;String>();*. This way, named *Polymorphism*, is usually used because the object named *"text"* is intended to be used as a List and it is recommended to declare it as List<String> type.
  
- ### <a href="#linkedList" name="linkedList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedList
+### <a href="#linkedList" name="linkedList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedList
 
 A LinkedList is a linear data structure where elements are linked by using pointers. That means that the elements are not stored at contiguous memory locations. A LinkedList consists of nodes where each node contains a data field and a reference to the next node in the list.
 
