@@ -22,7 +22,7 @@ There are three groups of *Map* implementations:
 
 ### <a href="#hashMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> HashMap
 
-*HashMap* extends AbstractMap<K,V> Class and implements Map<K,V>, Cloneable and Serializable Interfaces. Also, it represents an implementation of Map based on HashTable. The advantage is that the execution time remains constant even for large sets. In other words *HashMap* is used if the speed is important to you and iteration order is not your primary focus. The characteristic about *HashMap* is that order of the elements is not guaranteed and it can shuffle time to time.
+*HashMap* extends AbstractMap<K,V> Class and implements Map<K,V>, Cloneable and Serializable Interfaces. Also, it represents an implementation of Map based on HashTable. The advantage is that the execution time remains constant even for large sets. In other words, *HashMap* is used if the speed is important to you and iteration order is not your primary focus. The characteristic about *HashMap* is that order of the elements is not guaranteed and it can shuffle time to time.
 
 For adding an element, the requirements are key and value. As it is said, keys are used to retrieve values and in this case, it can be **null**. *HashMap* generates a hashcode for the key and checks if there is any value associated with it. If it is, then HashMap returns the value, otherwise, it adds value associated to the key.
 
@@ -95,7 +95,7 @@ public class Demo {
 
 *LinkedHashMap* extends HashMap<K,V> Class and implements Map<K,V> Interface and is recommended if you want a performance near good as HashMap and insertion order iteration. Since it has a possibility to use removeEldestEntry method, there is an easy way to make a custom cache (we encourage the reader to try to do this example).
 
-*LinkedHashMap* maintains a doubly linked list which defines the iteration ordering that represents the order in which keys are inserted into the map, but it is also based on hash table and therefore it differs from HashMap. Their common side is that both, HashMap and *LinkedHashMap*, permits null elements and has constant execution time, but because of the linked list *LinkedHashMap* has slightly lower performance.
+*LinkedHashMap* maintains a doubly-linked list which defines the iteration ordering that represents the order in which keys are inserted into the map, but it is also based on hash table and therefore it differs from HashMap. Their common side is that both, HashMap and *LinkedHashMap*, permits null elements and has constant execution time, but because of the linked list *LinkedHashMap* has slightly lower performance.
 
 One more thing, just as HashMap and TreeMap, *LinkedHashMap* is not synchronized as well, which means that if you use multiple threads, it must be synchronized externally.
 
