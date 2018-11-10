@@ -1,9 +1,11 @@
 ---
-title:  "Sets in Java"
-date: 2018-10-08 00:00:00
+title:  "Lists in Java"
+date: 2018-11-08 00:00:00
 ---
 
 ### <a href="#list-interface" name="list-interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> List Interface
+
+**Welcome** to the blog about *List* Interface. There will be words about what *List* represents, as well as its implementations such as *Vector and Stack* with accent to the *ArrayList and LinkedList*. I hope you will enjoy the content and gain some new experience.
 
 The Java List Interface represents a collection of elements. What is *characteristic* about List is that same element can occur more than once, also elements in a List have an insertion order and they can be iterated in that order. 
 
@@ -39,7 +41,7 @@ A List allows **add, remove, get and set** operations based on numerical positio
 * E	remove(int index) - *Removes the element at the specified position in this list*
 * E	set(int index, E element) - *Replaces the element at the specified position in this list with the specified element*
 
-Bellow, you can find a few more methods, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>
+Bellow, you can find a few more methods, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 * void	clear() - *Removes all of the elements from this list*
 * boolean	contains(Object o) - *Returns true if this list contains the specified element*
 * int	size() - *Returns the number of elements in this list*
@@ -173,3 +175,5 @@ public boolean isempty() {
         }
       }
 ```
+
+If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
