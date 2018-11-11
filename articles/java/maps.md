@@ -5,7 +5,7 @@ date: 2018-11-09 00:00:00
 
 ### <a href="#map-implementation" name="map-implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Map Implementation
 
-**Welcome** to the blog about *Map* Interface. There will be words about what *Map* represents, as well as its implementations such as *WeakHashMap, IdentityHashMap and ConcurrentHashMap*, with more focus on *HashMap, TreeMap, LinkedHashMap and EnumMap*. I hope you will enjoy the content and gain some new experience.
+Welcome to the blog about *Map* Interface. In this article I am going to introduce a concept of *Maps*, also known as Dictionaries, and its implementations such as *WeakHashMap and ConcurrentHashMap*, with accent on *HashMap, TreeMap, LinkedHashMap, EnumMap and IdentityHashMap*. I hope you will enjoy the content and gain some new experience.
 
 A *Map* is an Interface that contains set key-value and it has a form like this Map <K, V>, where K represents key and V stands for value. Keys map values and they are unique, which means that two same keys are not allowed. Also, keys are objects that are used to retrieve values.
 
@@ -19,6 +19,10 @@ There are three groups of *Map* implementations:
 * General-purpose *(HashMap, TreeMap and LinkedHashMap)*,
 * Special-purpose *(EnumMap, WeakHashMap and IdentityHashMap)*,
 * Concurrent implementations *(ConcurrentHashMap)*.
+
+### <a href="#hashTable" name="hashTable"><i class="fa fa-link anchor" aria-hidden="true"></i></a> HashTable
+
+*HashTable* extends Dictionary<K,V> Class and implements Map<K,V>, Cloneable and Serializable Interfaces. It stores key-value pairs in a hash table, where keys are mapped to values. *HashTable* is synchronised and an instance of *Hashtable* has two parameters that affect performance. One is initial capacity that represents the number of buckets in the hash table at the time the hash table is created, and the other is load factor represents a measure of how full the hash table is allowed to get, before its capacity is increased. Higher values of the load factor decrease the space, but increase the time cost so it is up to developer to balance between these values. The default load factor is (.75).
 
 ### <a href="#hashMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> HashMap
 
@@ -125,7 +129,7 @@ public class Demo {
 
 ### <a href="#enumMap" name="enumMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> EnumMap
 
-*EnumMap* who extends AbstractMap<K,V> Class and implements Serializable and Cloneable Interface, is internally implemented as an array. It represents a high performance Map implementation and is used with enum keys. It is recommended if you want to map an enum to a value.
+*EnumMap* who extends AbstractMap<K,V> Class and implements Serializable and Cloneable Interfaces, is internally implemented as an array. It represents a high performance Map implementation and is used with enum keys. It is recommended if you want to map an enum to a value.
 
 Similar to TreeMap, *EnumMap* is maintained in the natural order of their keys. *EnumMap* is a combination of the safety of the Map Interface and a wide range of its methods with a speed that is similar to an array. Null keys are not permitted and they lead to a NullPointerException, but Null values are free to use.
 
@@ -173,6 +177,35 @@ enum Test {
     public int getNumber() {
         return number;
     }
+}
+```
+
+### <a href="#identityHashMap" name="identityHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> IdentityHashMap
+
+*IdentityHashMap* extends AbstractMap<K,V> Class and implements Map<K,V>, Serializable and Cloneable Interfaces. This Class implements Map Interface with a hash table and its keys comparation is not based on the object equality, but on the reference equality. In normal Map implementation, such as HashMap, two keys are equal only if k1==null when k2==null or k1.equals(k2). In an *IdentityHashMap* it is different, two keys are equal only if k1==k2.
+
+In *IdentityHashMap* Class the order is not guaranteed, it has constant-time performance and this implementation is not synchronized. This Class is used in special occasions, when reference-equality semantics are required, and permits null values and the null key. The exaples are maintaining proxy objects, topology-preserving object graph transformations, such as serialization or deep-copying and more.
+
+**Example**
+
+```
+import java.util.Map;
+import java.util.IdentityHashMap;
+
+public class Demo {
+    
+    public static void main(String[] args) { 
+           
+        // Creating IdentityHashMap
+        Map fruits = new IdentityHashMap();
+               
+        // Adding fruits
+        fruits.put(new String("1") ,"Banana"); 
+        fruits.put(new String("2") ,"Avocado"); 
+        fruits.put(new String("3") ,"Apple"); 
+       
+        System.out.println("Fruits:"+ fruits);                            
+ }
 }
 ```
 
