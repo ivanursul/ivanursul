@@ -5,7 +5,7 @@ date: 2018-11-09 00:00:00
 
 ### <a href="#map-implementation" name="map-implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Map Implementation
 
-Welcome to the blog about *Map* Interface. In this article I am going to introduce a concept of *Maps*, also known as Dictionaries, and its implementations such as *WeakHashMap and ConcurrentHashMap*, with the accent on *HashMap, TreeMap, LinkedHashMap, EnumMap and IdentityHashMap*. I hope you will enjoy the content and gain some new experience.
+Welcome to the blog about *Map* Interface. In this article, I am going to introduce a concept of *Maps*, also known as Dictionaries, and its implementations such as *WeakHashMap and ConcurrentHashMap*, with the accent on *HashMap, TreeMap, LinkedHashMap, EnumMap and IdentityHashMap*. I hope you will enjoy the content and gain some new experience.
 
 A *Map* is an Interface that contains set key-value and it has a form like this Map <K, V>, where K represents key and V stands for value. Keys map values and they are unique, which means that two same keys are not allowed. Also, keys are objects that are used to retrieve values.
 
