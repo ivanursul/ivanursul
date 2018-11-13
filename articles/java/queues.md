@@ -17,9 +17,9 @@ Interface *Queue<E>* extends Collection<E> Interface and represents a collection
   * *Remove* - E poll() retrieves and removes the head of this queue, or returns null if this queue is empty
   * *Examine* - E peek() retrieves the head of this queue or returns null if this queue is empty
   
-*Queues* usually order elements in a first-in-first-out (FIFO) standard. In a FIFO queue, all new elements are placed at the tail of the queue. There are also a last-in-first-out (LIFO) queues or stacks, but it's important to note that whatever the ordering is used, the element on the head of the queue will be removed by calling methods remove() or poll().
+*Queues* usually order elements in a first-in-first-out (FIFO) data structure. In a FIFO queue, all new elements are added at the tail of the queue. There are also a last-in-first-out (LIFO) queues or stacks, but it's important to note that whatever the ordering is used, the element on the head of the queue will be removed by calling methods remove() or poll().
 
-When *Queues* declarations are made, the PriorityQueue and LinkedList Classes are usually used. Both implementations are not thread-safe and as their alternative, if a thread-safe implementation is needed, PriorityBlockingQueue is recommended.
+*Queue* is just an Interface and if we want to declare *Queues*, the PriorityQueue and LinkedList Classes are usually used. Both implementations are not thread-safe and as their alternative, if a thread-safe implementation is needed, PriorityBlockingQueue is recommended.
 
 **Example**
 ```
