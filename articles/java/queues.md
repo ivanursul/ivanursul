@@ -5,7 +5,7 @@ date: 2018-11-13 00:00:00
 
 ### <a href="#queues" name="queues"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Queues
 
-Welcome to the blog about *Queue* Interface. In this article, I am going to introduce a concept of *Queues*, and methods divided into two groups, depending on their behavior. I hope you will enjoy the content and gain some new experience.
+Welcome to the blog about *Queue* Interface. In this article, I am going to introduce a concept of *Queues, PriorityQueues and PriorityBlockingQueues*, and methods divided into two groups, depending on their behavior. I hope you will enjoy the content and gain some new experience.
 
 Interface *Queue<E&#xfeff;>* extends Collection<&#xfeff;E> Class and represents a collection intended to hold the elements about to be processed. Besides the operations that inherit from Collection, *Queue* provides operations such as insertion, extraction, and inspection. Each operation has two directions:
 * first throws an exception if the operation fails
@@ -61,10 +61,18 @@ Class *PriorityQueue<E&#xfeff;>* extends AbstractQueue<E> Class and implements S
 *PriorityQueue* doesn't permit Null elements and insertion of non-comparable objects. This implementation is not synchronized which means that multiple threads should not access a *PriorityQueue*, alternatively, PriorityBlockingQueue should be used.
 
 Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/PriorityQueue.html">official website</a>:
-* boolean add(E e), boolean offer(E e), 	E peek(), E poll()
+* boolean add(E e), boolean offer(E e), E peek(), E poll()
 * void clear() - *This method removes all of the elements from this priority queue*
 * int size() - *This method returns the number of elements in this collection*
 
 ### <a href="#priorityBlockingQueue" name="priorityBlockingQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue
+
+*PriorityBlockingQueue<E>* extends AbstractQueue<E> Class and implements BlockingQueue<E> and Serializable Interfaces. It represents an unbounded blocking queue and uses the same ordering as PriorityQueue. Instead of FIFO order, this queue orders its elements based on their natural ordering. Just like PriorityQueue, *PriorityBlockingQueue* doesn't permit Null elements and insertion of non-comparable objects.
+ 
+Ordering of elements with equal priority is not guaranteed but you can define custom classes or comparators that use a secondary key to break ties in primary priority values.
+
+Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/PriorityBlockingQueue.html">official website</a>:
+* boolean add(E e), boolean offer(E e), E peek(), E poll()
+* int	drainTo(Collection<? super E> c) - *Removes all available elements from this queue and adds them to the given collection*
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
