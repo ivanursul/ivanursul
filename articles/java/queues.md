@@ -19,7 +19,7 @@ Interface *Queue<E&#xfeff;>* extends Collection<&#xfeff;E> Class and represents 
   
 *Queues* usually order elements in a first-in-first-out (FIFO) data structure algorithm. In a FIFO queue, all new elements are added at the tail of the queue. There are also a last-in-first-out (LIFO) queues or stacks, but it's important to note that whatever the ordering is used, the element on the head of the queue will be removed by calling methods remove() or poll(). About LIFO data structures, stacks and deques will be more words in the article <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>.
 
-*Queue* is just an Interface and if we want to declare *Queues*, the PriorityQueue and LinkedList Classes are usually used. Both implementations are not thread-safe and as their alternative, if a thread-safe implementation is needed, PriorityBlockingQueue is recommended.
+The *Queue* is just an Interface and if we want to declare *Queues*, the PriorityQueue and LinkedList Classes are usually used. Both implementations are not thread-safe and as their alternative, if a thread-safe implementation is needed, PriorityBlockingQueue is recommended.
 
 **Example**
 ```
@@ -67,9 +67,9 @@ Some usual methods are listed below, for further information feel free to check 
 
 ### <a href="#priorityBlockingQueue" name="priorityBlockingQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue
 
-*PriorityBlockingQueue<E>* extends AbstractQueue<E> Class and implements BlockingQueue<E> and Serializable Interfaces. It represents an unbounded blocking queue and uses the same ordering as PriorityQueue. Instead of FIFO order, this queue orders its elements based on their natural ordering. Just like PriorityQueue, *PriorityBlockingQueue* doesn't permit Null elements and insertion of non-comparable objects.
+*PriorityBlockingQueue<E>* extends AbstractQueue<E> Class and implements BlockingQueue<E> and Serializable Interfaces. It represents an unbounded blocking queue and uses the same ordering as PriorityQueue. Instead of FIFO order, this queue orders its elements based on their natural ordering. Just like thr PriorityQueue, *PriorityBlockingQueue* doesn't permit Null elements and insertion of non-comparable objects.
  
-Ordering of elements with equal priority is not guaranteed but you can define custom classes or comparators that use a secondary key to break ties in primary priority values.
+The ordering of elements with equal priority is not guaranteed but you can define custom classes or comparators that use a secondary key to break ties in primary priority values.
 
 Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/PriorityBlockingQueue.html">official website</a>:
 * boolean add(E e), boolean offer(E e), E peek(), E poll()
