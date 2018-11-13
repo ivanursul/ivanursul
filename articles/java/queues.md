@@ -41,13 +41,13 @@ public class Demo
     // Display contents of the queue
     System.out.println("Fruits in queue: " + fruits); 
   
-    // Removing the head of queue
+    // Removing the head of the queue
     String removeElement = fruits.remove(); 
     System.out.println("Removed element: " + removeElement); 
   
     System.out.println("Fruits in queue: " + fruits); 
   
-    // Viewing the head of queue 
+    // Viewing the head of the queue 
     String head = fruits.peek(); 
     System.out.println("Head of queue: " + head); 
   } 
@@ -56,9 +56,14 @@ public class Demo
 
 ### <a href="#priorityQueue" name="priorityQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityQueue
 
-Class *PriorityQueue<E&#xfeff;>* extends AbstractQueue<E> Class and implements Serializable Interface and represents an unbounded priority queue based on a priority heap. The elements are ordered according to their natural ordering or by a Comparator (depending on which constructor is used). A priority queue is unbounded, but has an internal capacity which grows automatically when elements are added.
+Class *PriorityQueue<E&#xfeff;>* extends AbstractQueue<E> Class and implements Serializable Interface and represents an unbounded priority queue based on a priority heap. The elements are ordered according to their natural ordering or by a Comparator (depending on which constructor is used). A priority queue is unbounded but has an internal capacity which grows automatically when elements are added.
  
-*PriorityQueue* doesn't permit Null elements and insertion of non-comparable objects. This implementation is not synchronized which means that multiple threads should not access a *PriorityQueue*, alternatively PriorityBlockingQueue should be used.
+*PriorityQueue* doesn't permit Null elements and insertion of non-comparable objects. This implementation is not synchronized which means that multiple threads should not access a *PriorityQueue*, alternatively, PriorityBlockingQueue should be used.
+
+Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/PriorityQueue.html">official website</a>:
+* boolean add(E e), boolean offer(E e), 	E peek(), E poll()
+* void clear() - *This method removes all of the elements from this priority queue*
+* int size() - *This method returns the number of elements in this collection*
 
 ### <a href="#priorityBlockingQueue" name="priorityBlockingQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue
 
