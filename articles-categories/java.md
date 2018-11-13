@@ -22,7 +22,7 @@ You perform different kinds of operations like searching, sorting, insertion, re
 
 * [Lists](https://ivanursul.com/articles/java/lists)
 * [Sets](https://ivanursul.com/articles/java/sets)
-* Maps
+* [Maps](https://ivanursul.com/articles/java/maps)
 * Queues
 * Deques
 
