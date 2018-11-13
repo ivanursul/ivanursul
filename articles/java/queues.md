@@ -3,7 +3,7 @@ title: "Queues in Java"
 date: 2018-11-13 00:00:00
 ---
 
-### <a href="#queues" name="queues"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Queues
+### <a href="#queuesInterface" name="queuesInterface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Queue Interface
 
 Welcome to the blog about *Queue* Interface. In this article, I am going to introduce a concept of *Queues* and methods divided into two groups, depending on their behavior, with focus on *PriorityQueues and PriorityBlockingQueues*. I hope you will enjoy the content and gain some new experience.
 
@@ -56,7 +56,7 @@ public class Demo
 } 
 ```
 
-### <a href="#priorityQueue" name="priorityQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityQueue
+### <a href="#priorityQueueClass" name="priorityQueueClass"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityQueue Class
 
 Class *PriorityQueue<E&#xfeff;>* extends AbstractQueue<E> Class and implements Serializable Interface. It represents an unbounded priority queue based on a priority heap. The elements are ordered according to their natural ordering or by a Comparator (depending on which constructor is used). A priority queue is unbounded but has an internal capacity which grows automatically when elements are added.
  
@@ -103,7 +103,7 @@ public class Demo {
 ```
 
 
-### <a href="#priorityBlockingQueue" name="priorityBlockingQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue
+### <a href="#priorityBlockingQueueClass" name="priorityBlockingQueueClass"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue Class
 
 *PriorityBlockingQueue<E&#xfeff;>* extends AbstractQueue<E&#xfeff;> Class and implements BlockingQueue<E&#xfeff;> and Serializable Interfaces. It represents an unbounded blocking queue and uses the same ordering as PriorityQueue. Instead of FIFO order, this queue orders its elements based on their natural ordering. Just like thr PriorityQueue, *PriorityBlockingQueue* doesn't permit Null elements and insertion of non-comparable objects.
  
@@ -118,5 +118,31 @@ Constructors:
 * PriorityBlockingQueue(Collection<? extends E> c) - *Creates a PriorityBlockingQueue containing the elements in the specified collection*
 * PriorityBlockingQueue(int initialCapacity) - *Creates a PriorityBlockingQueue with the specified initial capacity that orders its elements according to their natural ordering*
 * PriorityBlockingQueue(int initialCapacity, Comparator<? super E> comparator) - *Creates a PriorityBlockingQueue with the specified initial capacity that orders its elements according to the specified comparator*
+
+**Example**
+```
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.PriorityBlockingQueue;
+
+public class Demo {
+
+    public static void main(String[] args) {
+    
+     // Creating list of numbers
+    	LinkedList<Integer> list = new LinkedList<Integer>();
+    	list.add(5);
+    	list.add(25);
+    	list.add(2);
+    	list.add(15);    	
+    	
+    	BlockingQueue<Integer> queue = new PriorityBlockingQueue<>(list);
+    	
+     // Printing numbers in unspecified order
+    	System.out.println(queue);
+    }
+}
+```
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
