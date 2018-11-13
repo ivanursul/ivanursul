@@ -21,6 +21,8 @@ Interface *Queue<E&#xfeff;>* extends Collection<&#xfeff;E> Class and represents 
 
 The *Queue* is just an Interface and if we want to declare *Queues*, the PriorityQueue and LinkedList Classes are usually used. Both implementations are not thread-safe and as their alternative, if a thread-safe implementation is needed, PriorityBlockingQueue is recommended.
 
+Methods inherited from Interface java.util.Collection: *addAll, clear, contains, containsAll, equals, hashCode, isEmpty, iterator, remove, removeAll, retainAll, size, toArray, toArray.*
+
 **Example**
 ```
 import java.util.LinkedList; 
@@ -72,6 +74,33 @@ Constructors:
 * PriorityQueue(int initialCapacity, Comparator<? super E> comparator) - *Creates a PriorityQueue with the specified initial capacity that orders its elements according to the specified comparator*
 * PriorityQueue(PriorityQueue<? extends E> c) - *Creates a PriorityQueue containing the elements in the specified priority queue*
 * PriorityQueue(SortedSet<? extends E> c) - *Creates a PriorityQueue containing the elements in the specified sorted set*
+
+**Example**
+```
+import java.util.PriorityQueue;
+
+public class Demo {
+
+    public static void main(String[] args) {
+    
+        // Creating a PriorityQueue
+        PriorityQueue<String> fruits = new PriorityQueue<>();
+
+        // Adding fruits
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Apple");
+        fruits.add("Avocado");
+        
+        System.out.println("Fruits in queue: " + fruits);
+
+        // Remove a fruit from the PriorityQueue
+        fruits.remove();
+        
+        System.out.println("Fruits in queue: " + fruits);        
+    }
+}
+```
 
 
 ### <a href="#priorityBlockingQueue" name="priorityBlockingQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue
