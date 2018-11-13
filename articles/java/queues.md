@@ -17,7 +17,7 @@ Interface *Queue<E>* extends Collection<E> Interface and represents a collection
   * *Remove* - E poll() retrieves and removes the head of this queue, or returns null if this queue is empty
   * *Examine* - E peek() retrieves the head of this queue or returns null if this queue is empty
   
-*Queues* usually order elements in a first-in-first-out (FIFO) data structure. In a FIFO queue, all new elements are added at the tail of the queue. There are also a last-in-first-out (LIFO) queues or stacks, but it's important to note that whatever the ordering is used, the element on the head of the queue will be removed by calling methods remove() or poll().
+*Queues* usually order elements in a first-in-first-out (FIFO) data structure. In a FIFO queue, all new elements are added at the tail of the queue. There are also a last-in-first-out (LIFO) queues or stacks, but it's important to note that whatever the ordering is used, the element on the head of the queue will be removed by calling methods remove() or poll(). About LIFO data structures, stacks and deques, will be more words in the article <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>.
 
 *Queue* is just an Interface and if we want to declare *Queues*, the PriorityQueue and LinkedList Classes are usually used. Both implementations are not thread-safe and as their alternative, if a thread-safe implementation is needed, PriorityBlockingQueue is recommended.
 
@@ -53,3 +53,5 @@ public class Demo
   } 
 } 
 ```
+
+If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
