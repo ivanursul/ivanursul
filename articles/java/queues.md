@@ -65,6 +65,15 @@ Some usual methods are listed below, for further information feel free to check 
 * void clear() - *This method removes all of the elements from this priority queue*
 * int size() - *This method returns the number of elements in this collection*
 
+Constructors:
+* PriorityQueue() - *Creates a PriorityQueue with the default initial capacity (11) that orders its elements according to their natural ordering*
+* PriorityQueue(Collection<? extends E> c) - *Creates a PriorityQueue containing the elements in the specified collection*
+* PriorityQueue(int initialCapacity) - *Creates a PriorityQueue with the specified initial capacity that orders its elements according to their natural ordering*
+* PriorityQueue(int initialCapacity, Comparator<? super E> comparator) - *Creates a PriorityQueue with the specified initial capacity that orders its elements according to the specified comparator*
+* PriorityQueue(PriorityQueue<? extends E> c) - *Creates a PriorityQueue containing the elements in the specified priority queue*
+* PriorityQueue(SortedSet<? extends E> c) - *Creates a PriorityQueue containing the elements in the specified sorted set*
+
+
 ### <a href="#priorityBlockingQueue" name="priorityBlockingQueue"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue
 
 *PriorityBlockingQueue<E&#xfeff;>* extends AbstractQueue<E&#xfeff;> Class and implements BlockingQueue<E&#xfeff;> and Serializable Interfaces. It represents an unbounded blocking queue and uses the same ordering as PriorityQueue. Instead of FIFO order, this queue orders its elements based on their natural ordering. Just like thr PriorityQueue, *PriorityBlockingQueue* doesn't permit Null elements and insertion of non-comparable objects.
@@ -74,5 +83,11 @@ The ordering of elements with equal priority is not guaranteed but you can defin
 Some usual methods are listed below, for further information feel free to check the <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/PriorityBlockingQueue.html">official website</a>:
 * boolean add(E e), boolean offer(E e), E peek(), E poll()
 * int	drainTo(Collection<? super E> c) - *Removes all available elements from this queue and adds them to the given collection*
+
+Constructors:
+* PriorityBlockingQueue() - *Creates a PriorityBlockingQueue with the default initial capacity (11) that orders its elements according to their natural ordering*
+* PriorityBlockingQueue(Collection<? extends E> c) - *Creates a PriorityBlockingQueue containing the elements in the specified collection*
+* PriorityBlockingQueue(int initialCapacity) - *Creates a PriorityBlockingQueue with the specified initial capacity that orders its elements according to their natural ordering*
+* PriorityBlockingQueue(int initialCapacity, Comparator<? super E> comparator) - *Creates a PriorityBlockingQueue with the specified initial capacity that orders its elements according to the specified comparator*
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
