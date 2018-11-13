@@ -5,7 +5,7 @@ date: 2018-11-13 00:00:00
 
 ### <a href="#queuesInterface" name="queuesInterface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Queue Interface
 
-Welcome to the blog about *Queue* Interface. In this article, I am going to introduce a concept of *Queues* and methods divided into two groups, depending on their behavior, with focus on *PriorityQueues and PriorityBlockingQueues*. I hope you will enjoy the content and gain some new experience.
+Welcome to the blog about *Queue* Interface. In this article, I am going to introduce a concept of *Queues* and methods divided into two groups, depending on their behavior, with the focus on *PriorityQueues and PriorityBlockingQueues*. I hope you will enjoy the content and gain some new experience.
 
 Interface *Queue<E&#xfeff;>* extends Collection<&#xfeff;E> Class and represents a collection intended to hold the elements about to be processed. Besides the operations that inherit from Collection, *Queue* provides operations such as insertion, extraction, and inspection. Each operation has two directions:
 * first throws an exception if the operation fails
@@ -105,7 +105,7 @@ public class Demo {
 
 ### <a href="#priorityBlockingQueueClass" name="priorityBlockingQueueClass"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityBlockingQueue Class
 
-*PriorityBlockingQueue<E&#xfeff;>* extends AbstractQueue<E&#xfeff;> Class and implements BlockingQueue<E&#xfeff;> and Serializable Interfaces. It represents an unbounded blocking queue and uses the same ordering as PriorityQueue. Instead of FIFO order, this queue orders its elements based on their natural ordering. Just like thr PriorityQueue, *PriorityBlockingQueue* doesn't permit Null elements and insertion of non-comparable objects.
+*PriorityBlockingQueue<E&#xfeff;>* extends AbstractQueue<E&#xfeff;> Class and implements BlockingQueue<E&#xfeff;> and Serializable Interfaces. It represents an unbounded blocking queue and uses the same ordering as PriorityQueue. Instead of FIFO order, this queue orders its elements based on their natural ordering. Just like the PriorityQueue, *PriorityBlockingQueue* doesn't permit Null elements and insertion of non-comparable objects.
  
 The ordering of elements with equal priority is not guaranteed but you can define custom classes or comparators that use a secondary key to break ties in primary priority values.
 
