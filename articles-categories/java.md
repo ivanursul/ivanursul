@@ -23,7 +23,7 @@ You perform different kinds of operations like searching, sorting, insertion, re
 * [Lists](https://ivanursul.com/articles/java/lists)
 * [Sets](https://ivanursul.com/articles/java/sets)
 * [Maps](https://ivanursul.com/articles/java/maps)
-* Queues
+* [Queues](https://ivanursul.com/articles/java/queues)
 * Deques
 
 <!-- ### Stream API
