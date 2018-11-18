@@ -2,7 +2,7 @@
 layout: "post"
 title:  "Testing RESTful CRUD Web Service with Gatling Tool"
 date: 2015-02-08 09:30:45
-permalink: untitled-2
+permalink: gatling-testing
 ---
 
 

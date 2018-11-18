@@ -2,7 +2,7 @@
 layout: "post"
 title:  "Gatling integration tool - making more flexibility"
 date: 2015-02-08 08:21:24
-permalink: untitled
+permalink: gatling-flexibility
 ---
 
 
