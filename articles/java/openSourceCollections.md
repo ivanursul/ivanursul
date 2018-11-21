@@ -1,9 +1,9 @@
 ---
-title: "Queues in Java"
-date: 2018-11-13 00:00:00
+title: "Open Source Collections in Java"
+date: 2018-11-21 00:00:00
 ---
 
-### <a href="#queuesInterface" name="queuesInterface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Queue Interface
+### <a href="#openSourceCollectionsInJava" name="openSourceCollectionsInJava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Open Source Collections in Java
 
 Welcome to the blog about *Queue* Interface. In this article, I am going to introduce a concept of *Queues* and methods divided into two groups, depending on their behavior, with the focus on *PriorityQueues and PriorityBlockingQueues*. I hope you will enjoy the content and gain some new experience.
 
