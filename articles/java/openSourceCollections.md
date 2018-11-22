@@ -187,7 +187,7 @@ public class BidiMapDemo {
       //Create BidiMap
       BidiMap<String, String> bidiMap = new TreeBidiMap<>();
 
-      //add keys and values
+      //Add keys and values
       bidiMap.put("Banana", "fruit");
       bidiMap.put("BMW", "car");
       bidiMap.put("Red", "color");
@@ -222,7 +222,50 @@ public class BidiMapDemo {
 
 **Example - MapIterator usage**
 ```
+import org.apache.commons.collections4.IterableMap;
+import org.apache.commons.collections4.MapIterator;
+import org.apache.commons.collections4.map.HashedMap;
 
+public class MapIteratorDemo {
+
+   public static void main(String[] args) {
+      
+        //Create IterableMap
+	      IterableMap<String, String> iterableMap = new HashedMap<>();
+
+	      //Add keys and values
+	      iterableMap.put("Banana", "fruit");
+	      iterableMap.put("BMW", "car");
+	      iterableMap.put("Red", "color");
+
+	      //Create MapIterator
+	      MapIterator<String, String> mapIterator = iterableMap.mapIterator();
+	      
+	      //Go through MapIterator
+	      while (mapIterator.hasNext()) {
+	    	  
+	    	  //Put key in variable key with type Object
+	          Object key = mapIterator.next();
+	          
+	          //Put value in variable value with type Object
+	          Object value = mapIterator.getValue();
+	
+	          //Show content of key and value in this iteration
+	          System.out.println("Key is: " + key + ", and value is: " + value);
+		      }
+      
+	      //Show IterableMap content
+	      System.out.println("Content of the IterableMap is: " + iterableMap);
+	      
+	      //Remove key "Banana"
+	      iterableMap.remove("Banana");
+	      System.out.println("Content of the IterableMap after chenge is: " + iterableMap);
+	      
+	      //Change the value of key "BMW"
+	      iterableMap.replace("BMW", "color");
+	      System.out.println("Content of the IterableMap after chenge is: " + iterableMap);
+   }
+}
 ```
 
 
