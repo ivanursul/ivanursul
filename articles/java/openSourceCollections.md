@@ -20,10 +20,10 @@ Appache Commons Collections provide the following features:
 * *Bag* Interface with a number of copies of each object
 * *BidiMap* Interface provide Bi-Directional maps that can be looked up both, from value to key, as like as key to value
 * *MapIterator* Interface provide iteration over maps
-* *Transforming decorators* alter each object when it is added to the collection
-* *Composite collections* make multiple collections look like one (uniformly)
+* *Transforming Decorators* alter each object when it is added to the collection
+* *Composite Collections* make multiple collections look like one (uniformly)
 * *Ordered Maps* and *Sets* retain the order elements are added in
-* *Reference map* allows keys and/or values to be garbage collected under close control
+* *Reference Map* allows keys and/or values to be garbage collected under close control
 
 **How to use library**
 To use this library, you have to download it from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with WinRar and open your environment (Eclipse). After you create project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
