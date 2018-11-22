@@ -131,7 +131,7 @@ Below, you can find some Classes from Package org.apache.commons.collections4 su
   </tr>
 </table>
 
-In *Appache Commons Collections* exist 19 Packages with numerous Interfaces, Classes and Methods. We shared only few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>,so we can focus more on practical examples.
+In *Appache Commons Collections* exist 19 Packages with numerous Interfaces, Classes and Methods. We shared only few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>, so we can focus more on practical examples.
 
 **Example - Bags usage**
 ```
