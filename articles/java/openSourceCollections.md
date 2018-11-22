@@ -25,7 +25,7 @@ Appache Commons Collections provide the following features:
 * *Ordered Maps* and *Sets* retain the order elements are added in
 * *Reference map* allows keys and/or values to be garbage collected under close control
 
-Below, you can find some Interfaces supported by Appache Commons Collections, for more feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
+Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Appache Commons Collections*, for further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
 <table style="width:100%">
   <tr>
     <th>Interfaces</th>
@@ -89,6 +89,43 @@ Below, you can find some Interfaces supported by Appache Commons Collections, fo
   </tr>            
 </table>
 
+Below, you can find some Classes from Package org.apache.commons.collections4 supported by *Appache Commons Collections*, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
+<table style="width:100%">
+  <tr>
+    <th>Classes</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>BagUtils</td>
+    <td>Provides utility methods and decorators for Bag and SortedBag instances</td>
+  </tr> 
+  <tr>
+    <td>CollectionUtils</td>
+    <td>Provides utility methods and decorators for Collection instances</td>
+  </tr>
+  <tr>
+    <td>EnumerationUtils</td>
+    <td>Provides utility methods for Enumeration instances</td>
+  </tr>
+  <tr>
+    <td>ListUtils</td>
+    <td>Provides utility methods and decorators for List instances</td>
+  </tr>
+  <tr>
+    <td>MapUtils</td>
+    <td>Provides utility methods and decorators for Map and SortedMap instances</td>
+  </tr>
+  <tr>
+    <td>QueueUtils</td>
+    <td>Provides utility methods and decorators for Queue instances</td>
+  </tr>
+  <tr>
+    <td>SetUtils</td>
+    <td>Provides utility methods and decorators for Set and SortedSet instances</td>
+  </tr>
+</table>
+
+In *Appache Commons Collections* exist 19 Packages with numerous Interfaces, Classes and Methods. We shared only one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>. Now, we are going to focus on practical examples.
 
 
 
