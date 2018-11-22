@@ -202,20 +202,20 @@ public class BidiMapDemo {
       System.out.println("The key of fruit value is: " + bidiMap.getKey("fruit"));
   
       //Remove by value fruit
-	    bidiMap.removeValue("fruit");
-	    System.out.println("BidiMap content after removed value: " + bidiMap);
+      bidiMap.removeValue("fruit");
+      System.out.println("BidiMap content after removed value: " + bidiMap);
       
       //Remove by key BMW
-		  bidiMap.remove("BMW");
-		  System.out.println("BidiMap content after removed key: " + bidiMap);
+      bidiMap.remove("BMW");
+      System.out.println("BidiMap content after removed key: " + bidiMap);
         
       bidiMap.put("Banana", "fruit");
-		  bidiMap.put("BMW", "car");
-		  System.out.println(bidiMap);
+      bidiMap.put("BMW", "car");
+      System.out.println(bidiMap);
       
       //Create new BidiMap to show method used to replace the site of key/value
-		  BidiMap<String, String> inversedBidiMap = bidiMap.inverseBidiMap();  
-		  System.out.println("Inversed BidiMap: " + inversedBidiMap);
+      BidiMap<String, String> inversedBidiMap = bidiMap.inverseBidiMap();  
+      System.out.println("Inversed BidiMap: " + inversedBidiMap);
    }
 }
 ```
