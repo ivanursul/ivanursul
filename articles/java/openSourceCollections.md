@@ -25,6 +25,12 @@ Appache Commons Collections provide the following features:
 * *Ordered Maps* and *Sets* retain the order elements are added in
 * *Reference map* allows keys and/or values to be garbage collected under close control
 
+**How to use library**
+To use this library, you have to download it from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with WinRar and open your environment (Eclipse). After you create project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
+
+**Synchronozation**
+*Appache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
+
 Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Appache Commons Collections*, for further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
 <table style="width:100%">
   <tr>
@@ -127,9 +133,44 @@ Below, you can find some Classes from Package org.apache.commons.collections4 su
 
 In *Appache Commons Collections* exist 19 Packages with numerous Interfaces, Classes and Methods. We shared only few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>,so we can focus more on practical examples.
 
-**Synchronization**
+**Example - Bags usage**
+```
+import org.apache.commons.collections4.Bag;
+import org.apache.commons.collections4.bag.HashBag;
 
-*Appache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
+public class BagDemo {
+   public static void main(String[] args) {
+      Bag<String> bag = new HashBag<>();
+
+      //add "Banana" five times to the bag.
+      bag.add("Banana" , 5);
+      
+      //add "Orange" one time to the bag.
+      bag.add("Orange");
+      
+      //add "Apple" two times to the bag.
+      bag.add("Apple", 2);
+      
+      //get the count of "d" present in bag.
+      System.out.println("d is present " + bag.getCount("d") + " times.");
+      System.out.println("bag: " +bag);
+      
+      //get the set of unique values from the bag
+      System.out.println("Unique Set: " +bag.uniqueSet());
+      
+      //remove 2 occurrences of "d" from the bag
+      bag.remove("d",2);
+      System.out.println("2 occurences of d removed from bag: " +bag);
+      System.out.println("d is present " + bag.getCount("d") + " times.");
+      System.out.println("bag: " +bag);
+      System.out.println("Unique Set: " +bag.uniqueSet());
+   }
+}
+```
+
+
+
+
 
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
