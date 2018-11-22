@@ -30,9 +30,7 @@ Supported Packages, Interfaces and Classes:
   <tr>
     <th>Packages</th>
     <th>Interfaces</th> 
-    <th>Interface Description</th>
     <th>Classes</th>
-    <th>Class Description</th>
   </tr>
   <tr>
     <td>org.apache.commons.collections4</td>
