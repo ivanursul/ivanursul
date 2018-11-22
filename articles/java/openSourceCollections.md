@@ -36,63 +36,127 @@ Supported Packages, Interfaces and Classes:
     <td>50</td>
   </tr>
   <tr>
-    <td>BidiMap<&#xfeff;K,V> <br /> BoundedCollection<&#xfeff;E> <br /> BoundedMap<&#xfeff;K,V> <br /> Closure<T> <br /> Equator<&#xfeff;T> <br /> Factory<&#xfeff;T> <br /> Get<&#xfeff;K,V> <br /> IterableGet<&#xfeff;K,V> <br /> IterableMap<&#xfeff;K,V> <br /> IterableSortedMap<&#xfeff;K,V> <br /> KeyValue<&#xfeff;K,V> <br /> ListValuedMap<&#xfeff;K,V> <br /> MapIterator<&#xfeff;K,V> <br /> MultiMap<&#xfeff;K,V> <br /> MultiSet<&#xfeff;E> <br /> MultiSet.Entry<&#xfeff;E> <br /> MultiValuedMap<&#xfeff;K,V> <br /> OrderedBidiMap<&#xfeff;K,V> <br /> OrderedIterator<&#xfeff;E> <br /> OrderedMap<&#xfeff;K,V> <br /> OrderedMapIterator<&#xfeff;K,V> <br /> Predicate<&#xfeff;T> <br /> Put<&#xfeff;K,V> <br /> ResettableIterator<&#xfeff;E> <br /> ResettableListIterator<&#xfeff;E> <br /> SetValuedMap<&#xfeff;K,V> <br /> SortedBag<&#xfeff;E> <br /> SortedBidiMap<&#xfeff;K,V> <br /> Transformer<&#xfeff;I,O> <br /> Trie<&#xfeff;K,V> <br /> Unmodifiable</td> </td>
+    <td>BidiMap<&#xfeff;K,V></td>
     <td>Jackson</td> 
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>BoundedCollection<&#xfeff;E></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>BoundedMap<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>Closure<T></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>Equator<&#xfeff;T></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>Factory<&#xfeff;T></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>Get<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>IterableGet<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>IterableMap<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>IterableSortedMap<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>KeyValue<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>ListValuedMap<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>MapIterator<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>MultiMap<&#xfeff;K,V></td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Bag<&#xfeff;E></td>
+    <td>MultiSet<&#xfeff;E></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>MultiSet.Entry<&#xfeff;E></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>MultiValuedMap<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>OrderedBidiMap<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>OrderedIterator<&#xfeff;E></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>OrderedMap<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>OrderedMapIterator<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Predicate<&#xfeff;T></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Put<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>ResettableIterator<&#xfeff;E></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>ResettableListIterator<&#xfeff;E></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>SetValuedMap<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>SortedBag<&#xfeff;E></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>SortedBidiMap<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>  
+  <tr>
+    <td>Transformer<&#xfeff;I,O></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Trie<&#xfeff;K,V></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Unmodifiable</td>
     <td>50</td>
   </tr>      
       
