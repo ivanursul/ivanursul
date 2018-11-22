@@ -139,11 +139,14 @@ import org.apache.commons.collections4.Bag;
 import org.apache.commons.collections4.bag.HashBag;
 
 public class BagDemo {
+
    public static void main(String[] args) {
+      
+      //create Bag
       Bag<String> bag = new HashBag<>();
 
       //add "Banana" five times to the bag.
-      bag.add("Banana" , 5);
+      bag.add("Banana", 5);
       
       //add "Orange" one time to the bag.
       bag.add("Orange");
@@ -151,25 +154,76 @@ public class BagDemo {
       //add "Apple" two times to the bag.
       bag.add("Apple", 2);
       
-      //get the count of "d" present in bag.
-      System.out.println("d is present " + bag.getCount("d") + " times.");
-      System.out.println("bag: " +bag);
+      //show content of the Bag
+      System.out.println("Bag content: " + bag);
       
-      //get the set of unique values from the bag
-      System.out.println("Unique Set: " +bag.uniqueSet());
+      //show the set of unique values in the bag
+      System.out.println("Unique values: " + bag.uniqueSet());
       
-      //remove 2 occurrences of "d" from the bag
-      bag.remove("d",2);
-      System.out.println("2 occurences of d removed from bag: " +bag);
-      System.out.println("d is present " + bag.getCount("d") + " times.");
-      System.out.println("bag: " +bag);
-      System.out.println("Unique Set: " +bag.uniqueSet());
+      //show the number of "Apple" present in bag
+      System.out.println("Apple is presented " + bag.getCount("Apple") + " times.");
+      
+      //remove 2 appearances of "Banana" from the bag
+      bag.remove("Banana", 2);
+      
+      //show content of the Bag
+      System.out.println("Content of the bag after removed 2 appearances of Banana: " + bag);
+      
+      //show the number of "Banana" present in bag
+      System.out.println("Banana is present " + bag.getCount("Banana") + " times.");
    }
 }
 ```
 
+**Example - BidiMap usage**
+```
+import org.apache.commons.collections4.BidiMap;
+import org.apache.commons.collections4.bidimap.TreeBidiMap;
 
+public class BidiMapDemo {
 
+   public static void main(String[] args) {
+      
+      //Create BidiMap
+      BidiMap<String, String> bidiMap = new TreeBidiMap<>();
+
+      //add keys and values
+      bidiMap.put("Banana", "fruit");
+      bidiMap.put("BMW", "car");
+      bidiMap.put("Red", "color");
+      
+      //Show BidiMap content
+      System.out.println("Content of bidiMap: " + bidiMap);
+      
+      //Show the value of Banana key
+      System.out.println("The value of Banana key is: " + bidiMap.get("Banana")); 
+      
+      //Show the key of fruit value
+      System.out.println("The key of fruit value is: " + bidiMap.getKey("fruit"));
+  
+      //Remove by value fruit
+	    bidiMap.removeValue("fruit");
+	    System.out.println("BidiMap content after removed value: " + bidiMap);
+      
+      //Remove by key BMW
+		  bidiMap.remove("BMW");
+		  System.out.println("BidiMap content after removed key: " + bidiMap);
+        
+      bidiMap.put("Banana", "fruit");
+		  bidiMap.put("BMW", "car");
+		  System.out.println(bidiMap);
+      
+      //Create new BidiMap to show method used to replace the site of key/value
+		  BidiMap<String, String> inversedBidiMap = bidiMap.inverseBidiMap();  
+		  System.out.println("Inversed BidiMap: " + inversedBidiMap);
+   }
+}
+```
+
+**Example - MapIterator usage**
+```
+
+```
 
 
 
