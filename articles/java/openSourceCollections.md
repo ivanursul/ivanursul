@@ -125,10 +125,11 @@ Below, you can find some Classes from Package org.apache.commons.collections4 su
   </tr>
 </table>
 
-In *Appache Commons Collections* exist 19 Packages with numerous Interfaces, Classes and Methods. We shared only one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>. Now, we are going to focus on practical examples.
+In *Appache Commons Collections* exist 19 Packages with numerous Interfaces, Classes and Methods. We shared only few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>,so we can focus more on practical examples.
 
+**Synchronization**
 
-
+*Appache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
 
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
