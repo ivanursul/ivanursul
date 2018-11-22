@@ -36,7 +36,7 @@ Supported Packages, Interfaces and Classes:
   </tr>
   <tr>
     <td>org.apache.commons.collections4</td>
-    <td>Bag<E> <br /> BidiMap<K,V></td> 
+    <td>Bag<E> <br /> BidiMap<K,V> <br /> BoundedCollection<E> <br /> BoundedMap<K,V> <br /> Closure<T> <br /> Equator<T> <br /> Factory<T> <br /> Get<K,V> <br /> IterableGet<K,V> <br /> IterableMap<K,V> <br /> IterableSortedMap<K,V> <br /> KeyValue<K,V> <br /> ListValuedMap<K,V> <br /> MapIterator<K,V> <br /> MultiMap<K,V> <br /> MultiSet<E> <br /> MultiSet.Entry<E> <br /> MultiValuedMap<K,V> <br /> OrderedBidiMap<K,V> <br /> OrderedIterator<E> <br /> OrderedMap<K,V> <br /> OrderedMapIterator<K,V> <br /> Predicate<T> <br /> Put<K,V> <br /> ResettableIterator<E> <br /> ResettableListIterator<E> <br /> SetValuedMap<K,V> <br /> SortedBag<E> <br /> SortedBidiMap<K,V> <br /> Transformer<I,O> <br /> Trie<K,V> <br /> Unmodifiable</td> 
     <td>50</td>
   </tr>
   <tr>
