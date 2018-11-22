@@ -142,34 +142,34 @@ public class BagDemo {
 
    public static void main(String[] args) {
       
-      //create Bag
+      //Create Bag
       Bag<String> bag = new HashBag<>();
 
-      //add "Banana" five times to the bag.
+      //Add "Banana" five times to the bag
       bag.add("Banana", 5);
       
-      //add "Orange" one time to the bag.
+      //Add "Orange" one time to the bag
       bag.add("Orange");
       
-      //add "Apple" two times to the bag.
+      //Add "Apple" two times to the bag
       bag.add("Apple", 2);
       
-      //show content of the Bag
+      //Show content of the Bag
       System.out.println("Bag content: " + bag);
       
-      //show the set of unique values in the bag
+      //Show the set of unique values in the bag
       System.out.println("Unique values: " + bag.uniqueSet());
       
-      //show the number of "Apple" present in bag
+      //Show the number of "Apple" present in bag
       System.out.println("Apple is presented " + bag.getCount("Apple") + " times.");
       
-      //remove 2 appearances of "Banana" from the bag
+      //Remove 2 appearances of "Banana" from the bag
       bag.remove("Banana", 2);
       
-      //show content of the Bag
+      //Show content of the Bag
       System.out.println("Content of the bag after removed 2 appearances of Banana: " + bag);
       
-      //show the number of "Banana" present in bag
+      //Show the number of "Banana" present in bag
       System.out.println("Banana is present " + bag.getCount("Banana") + " times.");
    }
 }
