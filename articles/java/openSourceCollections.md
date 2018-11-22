@@ -30,11 +30,13 @@ Supported Packages, Interfaces and Classes:
   <tr>
     <th>Packages</th>
     <th>Interfaces</th> 
+    <th>Interface Description</th>
     <th>Classes</th>
+    <th>Class Description</th>
   </tr>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
+    <td>org.apache.commons.collections4</td>
+    <td>Bag<E> <br /> BidiMap<K,V></td> 
     <td>50</td>
   </tr>
   <tr>
