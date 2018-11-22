@@ -25,7 +25,7 @@ Appache Commons Collections provide the following features:
 * *Ordered Maps* and *Sets* retain the order elements are added in
 * *Reference map* allows keys and/or values to be garbage collected under close control
 
-Supported Packages, Interfaces and Classes:
+Below, you can find some Interfaces supported by Appache Commons Collections, for more feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 <table style="width:100%">
   <tr>
     <th>Interfaces</th>
