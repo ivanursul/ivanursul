@@ -12,6 +12,22 @@ The Collection in Java provides an architecture to manipulate with the group of 
 * interfaces such as <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a>, and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>
 * classes such as <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">ArrayList<a/>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">LinkedList</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Vector</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Stack</a>,<a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">PriorityQueue</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">HashSet</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">LinkedHashSet</a>, and <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets"> TreeSet</a>
 
+More about this will be explained below, distributed by different libraries.
+
+### <a href="#appacheCommonsCollections" name="appacheCommonsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Appache Commons Collections
+
+Appache Commons Collections provide the following features:
+* *Bag* Interface with a number of copies of each object
+* *BidiMap* Interface provide Bi-Directional maps that can be looked up both, from value to key, as like as key to value
+* *MapIterator* Interface provide iteration over maps
+* *Transforming decorators* alter each object when it is added to the collection
+* *Composite collections* make multiple collections look like one (uniformly)
+* *Ordered Maps* and *Sets* retain the order elements are added in
+* *Reference map* allows keys and/or values to be garbage collected under close control
+
+
+
+
 
 
 If you liked this article, you might be interested in <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/maps">Maps</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a> and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>. Feel free to browse.
