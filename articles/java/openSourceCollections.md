@@ -32,7 +32,7 @@ To use this library, you have to download it from the <a href="https://commons.a
 *Appache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
 
 Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Appache Commons Collections*, for further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
-<table style="width:100%">
+<table>
   <tr>
     <th>Interfaces</th>
     <th>Description</th> 
@@ -96,7 +96,7 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
 </table>
 
 Below, you can find some Classes from Package org.apache.commons.collections4 supported by *Appache Commons Collections*, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
-<table style="width:100%">
+<table>
   <tr>
     <th>Classes</th>
     <th>Description</th> 
