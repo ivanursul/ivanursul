@@ -33,7 +33,7 @@ Supported Packages, Interfaces and Classes:
   </tr>
   <tr>
     <td>Bag<&#xfeff;E></td>
-    <td>50</td>
+    <td>*Collection that counts the number of times an object appears in the collection*</td>
   </tr>
   <tr>
     <td>BidiMap<&#xfeff;K,V></td>
