@@ -33,133 +33,60 @@ Supported Packages, Interfaces and Classes:
   </tr>
   <tr>
     <td>Bag<&#xfeff;E></td>
-    <td>*Collection that counts the number of times an object appears in the collection*</td>
-  </tr>
-  <tr>
-    <td>BidiMap<&#xfeff;K,V></td>
-    <td>Jackson</td> 
-  </tr>
-  <tr>
-    <td>BoundedCollection<&#xfeff;E></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>BoundedMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Closure<T></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Equator<&#xfeff;T></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Factory<&#xfeff;T></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Get<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>IterableGet<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>IterableMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>IterableSortedMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>KeyValue<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>ListValuedMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>MapIterator<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>MultiMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>MultiSet<&#xfeff;E></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>MultiSet.Entry<&#xfeff;E></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>MultiValuedMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>OrderedBidiMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>OrderedIterator<&#xfeff;E></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>OrderedMap<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>OrderedMapIterator<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Predicate<&#xfeff;T></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Put<&#xfeff;K,V></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>ResettableIterator<&#xfeff;E></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>ResettableListIterator<&#xfeff;E></td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>SetValuedMap<&#xfeff;K,V></td>
-    <td>50</td>
+    <td>Collection that counts the number of times an object appears in the collection</td>
   </tr>
   <tr>
     <td>SortedBag<&#xfeff;E></td>
-    <td>50</td>
+    <td>Type of Bag that maintains a sorted order among its unique representative members</td>
   </tr>
   <tr>
-    <td>SortedBidiMap<&#xfeff;K,V></td>
-    <td>50</td>
+    <td>BidiMap<&#xfeff;K,V></td>
+    <td>Map that allows Bi-Directional lookup between key and values</td> 
+  </tr>
+  <tr>
+    <td>OrderedBidiMap<&#xfeff;K,V></td>
+    <td>Map that allows Bi-Directional lookup between key and values and retains and provides access to an ordering</td>
   </tr>  
   <tr>
-    <td>Transformer<&#xfeff;I,O></td>
-    <td>50</td>
+    <td>SortedBidiMap<&#xfeff;K,V></td>
+    <td>Map that allows bidirectional lookup between key and values and retains both keys and values in sorted order</td>
   </tr>
   <tr>
-    <td>Trie<&#xfeff;K,V></td>
-    <td>50</td>
+    <td>Equator<&#xfeff;T></td>
+    <td>A function which determines equality between objects of type T</td>
   </tr>
+  <tr>
+    <td>Get<&#xfeff;K,V></td>
+    <td>The "read" subset of the Map interface</td>
+  </tr>
+  <tr>
+    <td>IterableGet<&#xfeff;K,V></td>
+    <td>The "read" subset of the Map interface</td>
+  </tr>
+  <tr>
+    <td>IterableMap<&#xfeff;K,V></td>
+    <td>Map that can be iterated directly without creating an entry set</td>
+  </tr>
+  <tr>
+    <td>KeyValue<&#xfeff;K,V></td>
+    <td>A key value pair</td>
+  </tr>
+  <tr>
+    <td>ListValuedMap<&#xfeff;K,V></td>
+    <td>Map that holds a list of values against each key</td>
+  </tr>
+  <tr>
+    <td>MultiValuedMap<&#xfeff;K,V></td>
+    <td>Map that holds a collection of values against each key</td>
+  </tr>
+  <tr>
+    <td>MultiSet<&#xfeff;E></td>
+    <td>Collection that counts the number of times an object appears in the collection</td>
+  </tr> 
   <tr>
     <td>Unmodifiable</td>
-    <td>50</td>
-  </tr>      
-      
+    <td>Marker interface for collections, maps and iterators that are unmodifiable</td>
+  </tr>            
 </table>
 
 
