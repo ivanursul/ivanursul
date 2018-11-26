@@ -344,13 +344,40 @@ public class MapIteratorDemo {
 
 Just like Apache Commons Collections, *Guava* represents open source library as well. Guava is made by Google and provides the following benefits:
 * Collections - include immutable collections, bidirectional maps, multisets, multimaps, tables, and more,
-* Strings - provides classes like Splitter, Joiner, CharMatcher, and more,
-* Fluent Comparator Class for ordering,
+* Strings - provides classes like <a href="https://github.com/google/guava/wiki/StringsExplained">Splitter</a>, <a href="https://github.com/google/guava/wiki/StringsExplained">Joiner</a> <a href="https://github.com/google/guava/wiki/StringsExplained">CharMatcher</a>, and more,
+* <a href="https://github.com/google/guava/wiki/OrderingExplained">Comparator</a> Class for ordering,
 * Graphs, Caching, operations on primitive types not provided by JDK, simplified I/O and more.
 
+*Guava* provides static methods to facilitate the declaration of a variable, like it is mentioned below:
+```
+List<String> list = new ArrayList<String>();
+list.add("Banana");
+list.add("Apple");
+list.add("Avocado");
+list.add("Orange");
+OR
+List<String> list2 = Lists.newArrayList("Banana", "Apple", "Avocado", "Orange");
+```
+```
+List<Map<String, String>> map = new LinkedList<Map<String, String>>();
+OR
+List<Map<String, String>> map2 = Lists.newLinkedList();
+```
+As you can conclude, writing the code is much easier with *Guava*.
 
+**How to use library:**
 
+Below, you can find *dependancy* for Maven's library importation:
+```
+<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>19.0</version>
+</dependency>
+```
 
+More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
 
 
 
