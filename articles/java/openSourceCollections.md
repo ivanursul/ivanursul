@@ -383,6 +383,68 @@ Below, you can find *dependancy* for Maven's library importation:
 
 More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
 
+Below, you can find some Interfaces from Package com.google.common.collect, supported by *Guava*, for further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
+<table>
+  <tr>
+    <th>Interfaces</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>BiMap<&#xfeff;K, V></td>
+    <td>A Bidirectional Map that preserves the uniqueness of its values and keys</td>
+  </tr>
+  <tr>
+    <td>ListMultimap<K, V&#xfeff;></td>
+    <td>A Multimap that can hold duplicate key-value pairs and maintains the insertion ordering of values for a given key</td>
+  </tr>
+  <tr>
+    <td>Multimap<K, V&#xfeff;></td>
+    <td>A Collection that maps keys to values, similar to Map, but each key may be associated with multiple values</td> 
+  </tr>
+  <tr>
+    <td>Multiset<E&#xfeff;></td>
+    <td>A Collection that supports order-independent equality, like Set, but may have duplicate elements</td>
+  </tr>  
+  <tr>
+    <td>Table<R, C, V&#xfeff;></td>
+    <td>A Collection that associates an ordered pair of keys, called a row key and a column key, with a single value</td>
+  </tr>           
+</table>
+
+Below, you can find some Classes from Package com.google.common.collect supported by *Guava*, for further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
+<table>
+  <tr>
+    <th>Classes</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>ArrayListMultimap<&#xfeff;K, V></td>
+    <td>A Multimap that uses an ArrayList to store the values for a given key</td>
+  </tr> 
+  <tr>
+    <td>ArrayTable<&#xfeff;R, C, V></td>
+    <td>Fixed-size Table implementation backed by a two-dimensional array</td>
+  </tr>
+  <tr>
+    <td>ImmutableBiMap<&#xfeff;K, V></td>
+    <td>A BiMap whose content will never change</td>
+  </tr>
+  <tr>
+    <td>ImmutableList<&#xfeff;E></td>
+    <td>A List whose content will never change</td>
+  </tr>
+  <tr>
+    <td>LinkedListMultimap<&#xfeff;K, V></td>
+    <td>A ListMultimap that supports deterministic iteration order for both keys and values</td>
+  </tr>
+  <tr>
+    <td>Ordering<&#xfeff;T></td>
+    <td>A Comparator with additional methods to support common operations</td>
+  </tr>  
+</table>
+
+In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
+
 **Example - MultiMap**
 ```
 import com.google.common.collect.ArrayListMultimap;
