@@ -342,7 +342,9 @@ public class MapIteratorDemo {
 
 ### <a href="#guava" name="guava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Guava - Google's Collections
 
-Just like Apache Commons Collections, *Guava* represents open source library as well. Guava is made by Google and provides the following benefits:
+Just like Apache Commons Collections, *Guava* represents open source set of libraries as well. Guava is made by Google and provides the following benefits:
+* It helps in reducing coding errors and makes it easy to maintain the code,
+* It is a reliable, fast, and efficient,
 * Collections - include immutable collections, bidirectional maps, multisets, multimaps, tables, and more,
 * Strings - provides classes like <a href="https://github.com/google/guava/wiki/StringsExplained">Splitter</a>, <a href="https://github.com/google/guava/wiki/StringsExplained">Joiner</a> <a href="https://github.com/google/guava/wiki/StringsExplained">CharMatcher</a>, and more,
 * <a href="https://github.com/google/guava/wiki/OrderingExplained">Comparator</a> Class for ordering,
@@ -370,8 +372,7 @@ List<Map<String, String>> map2 = Lists.newLinkedList();
 As you can conclude, writing the code is much easier with *Guava*.
 
 **How to use library:**
-
-Below, you can find *dependancy* for Maven's library importation:
+*Dependancy* for Maven's library importation is listed hereafter:
 ```
 <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 <dependency>
@@ -446,6 +447,7 @@ Below, you can find some Classes from Package com.google.common.collect supporte
 In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
 **Example - MultiMap**
+*MultiMap is like a Map, but it may contain duplicate keys and provides easy way to handle mapping from keys to collection of values.*
 ```
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -488,7 +490,11 @@ public class MultiMapDemo {
 }
 ```
 
+**Example - Optional usage**
+*Optional object is used to represent null with absent value.*
+```
 
+```
 
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
