@@ -145,6 +145,66 @@ Below, you can find some Classes from Package org.apache.commons.collections4 su
 
 In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>, so we can focus more on practical examples.
 
+**Example - Ignore Null values**
+```
+import java.util.LinkedList;
+import java.util.List;
+import org.apache.commons.collections4.CollectionUtils;
+
+public class NullDemo {
+
+	   public static void main(String[] args) {
+	   	     
+	      List<String> list = new LinkedList<String>();
+		
+	      list.add("Apple");
+	      CollectionUtils.addIgnoreNull(list, "Avocado");
+	      list.add("Orange");
+	      CollectionUtils.addIgnoreNull(list, null);
+	      list.add("Banana");
+	    
+	      System.out.println(list);
+
+	      if(list.contains(null)) {
+	         System.out.println("Null value is present");
+	      } else {
+	         System.out.println("Null value is not present");
+	      }
+	       /*
+	      	As you can see at the end, in the list NULL value does not exists.
+		Method addIgnoreNull is very usefull if you want to forbid NULL values in your lists.
+	      */
+	   }
+}
+```
+
+**Example - Merging lists**
+```
+import java.util.LinkedList;
+import java.util.List;
+import org.apache.commons.collections4.CollectionUtils;
+
+public class MergeDemo {
+
+	   public static void main(String[] args) {
+	   	     
+		   	List<String> list1 = new LinkedList<String>();
+	   		List<String> list2 = new LinkedList<String>();
+	   		
+	   		list1.add("Banana");
+	   		list1.add("Apple");
+	   		
+	   		list2.add("Orange");
+	   
+	   		List<String> sortedList = CollectionUtils.collate(list1, list2);
+	    
+	   		System.out.println(sortedList);
+			
+			//This method makes it easier to combine multiple lists			
+	   }
+}
+```
+
 **Example - Bags usage**
 ```
 import org.apache.commons.collections4.Bag;
