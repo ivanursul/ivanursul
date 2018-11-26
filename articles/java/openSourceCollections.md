@@ -25,7 +25,7 @@ More about this will be explained below, distributed by different libraries.
 * *Ordered Maps* and *Sets* retain the order elements are added in
 * *Reference Map* allows keys and/or values to be garbage collected under close control
 
-**How to use library**
+**How to use library:**
 To use this library, all you have to do is to insert *dependency* code to your project. Assuming that you know how to use Maven, you can find the code at the <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.1">official website</a>:
 ```
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
@@ -38,9 +38,9 @@ To use this library, all you have to do is to insert *dependency* code to your p
 
 More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
 
-Another way of using *Apache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with WinRar and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
+Another way of using *Apache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with <a href="https://www.win-rar.com/start.html?&L=0">WinRar</a> and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
 
-**Synchronization**
+**Synchronization:**
 *Apache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
 
 Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Apache Commons Collections*, for further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
@@ -339,6 +339,22 @@ public class MapIteratorDemo {
    }
 }
 ```
+
+### <a href="#guava" name="guava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Guava - Google's Collections
+
+Just like Apache Commons Collections, *Guava* represents open source library as well. Guava is made by Google and provides the following benefits:
+* Collections - include immutable collections, bidirectional maps, multisets, multimaps, tables, and more,
+* Strings - provides classes like Splitter, Joiner, CharMatcher, and more,
+* Fluent Comparator Class for ordering,
+* Graphs, Caching, operations on primitive types not provided by JDK, simplified I/O and more.
+
+
+
+
+
+
+
+
 
 
 
