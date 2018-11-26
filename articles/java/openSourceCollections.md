@@ -26,7 +26,7 @@ More about this will be explained below, distributed by different libraries.
 * *Reference Map* allows keys and/or values to be garbage collected under close control
 
 **How to use library**
-To use this library, all you have to do is to insert *dependancy* code to your project. Assuming that you know how to use Maven, you can find the code at the <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.1">official website</a>:
+To use this library, all you have to do is to insert *dependency* code to your project. Assuming that you know how to use Maven, you can find the code at the <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.1">official website</a>:
 ```
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 <dependency>
@@ -51,7 +51,7 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
   </tr>
   <tr>
     <td>Bag<&#xfeff;E></td>
-    <td>Collection that counts the number of times an object appears in the collection</td>
+    <td>A Collection that counts the number of times an object appears in the collection</td>
   </tr>
   <tr>
     <td>SortedBag<&#xfeff;E></td>
@@ -59,15 +59,15 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
   </tr>
   <tr>
     <td>BidiMap<&#xfeff;K, V></td>
-    <td>Map that allows Bi-Directional lookup between key and values</td> 
+    <td>A Map that allows Bi-Directional lookup between key and values</td> 
   </tr>
   <tr>
     <td>OrderedBidiMap<&#xfeff;K, V></td>
-    <td>Map that allows Bi-Directional lookup between key and values and retains and provides access to an ordering</td>
+    <td>A Map that allows Bi-Directional lookup between key and values and retains and provides access to an ordering</td>
   </tr>  
   <tr>
     <td>SortedBidiMap<&#xfeff;K, V></td>
-    <td>Map that allows bidirectional lookup between key and values and retains both keys and values in sorted order</td>
+    <td>A Map that allows bidirectional lookup between key and values and retains both keys and values in sorted order</td>
   </tr>
   <tr>
     <td>Equator<&#xfeff;T></td>
@@ -83,7 +83,7 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
   </tr>
   <tr>
     <td>IterableMap<&#xfeff;K, V></td>
-    <td>Map that can be iterated directly without creating an entry set</td>
+    <td>A Map that can be iterated directly without creating an entry set</td>
   </tr>
   <tr>
     <td>KeyValue<&#xfeff;K, V></td>
@@ -91,15 +91,15 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
   </tr>
   <tr>
     <td>ListValuedMap<&#xfeff;K, V></td>
-    <td>Map that holds a list of values against each key</td>
+    <td>A Map that holds a list of values against each key</td>
   </tr>
   <tr>
     <td>MultiValuedMap<&#xfeff;K, V></td>
-    <td>Map that holds a collection of values against each key</td>
+    <td>A Map that holds a collection of values against each key</td>
   </tr>
   <tr>
     <td>MultiSet<&#xfeff;E></td>
-    <td>Collection that counts the number of times an object appears in the collection</td>
+    <td>A Collection that counts the number of times an object appears in the collection</td>
   </tr> 
   <tr>
     <td>Unmodifiable</td>
@@ -282,4 +282,4 @@ public class MapIteratorDemo {
 
 
 
-If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a> and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
+If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
