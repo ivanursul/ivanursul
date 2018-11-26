@@ -5,21 +5,21 @@ date: 2018-11-21 00:00:00
 
 ### <a href="#openSourceCollectionsInJava" name="openSourceCollectionsInJava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Open Source Collections in Java
 
-Welcome to the blog about *Collections* in Java. In this article, I am going to introduce a concept of *Appache Commons, Guava, Fastutil, Trove, and Goldman Sachs Collections libraries* and their Interfaces, Classes and Methods supported by examples. I hope you will enjoy the content and gain some new experience.
+Welcome to the blog about *Collections* in Java. In this article, I am going to introduce a concept of *Apache Commons, Guava, Fastutil, Trove, and Goldman Sachs Collections libraries* and their Interfaces, Classes, and Methods supported by examples. I hope you will enjoy the content and gain some new experience.
 
 The Collection in Java provides an architecture to manipulate with the group of objects. Collections provide:
-* all the operations that are performed on a data, such as searching, sorting, insertion, and deletion
+* all the operations that are performed on data, such as searching, sorting, insertion, and deletion
 * interfaces such as <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Lists</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">Sets</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">Queues</a>, and <a href="https://programiranjepro.github.io/ivanursul/articles/java/deques">Deques</a>
 * classes such as <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">ArrayList<a/>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">LinkedList</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Vector</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/lists">Stack</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/queues">PriorityQueue</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">HashSet</a>, <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets">LinkedHashSet</a>, and <a href="https://programiranjepro.github.io/ivanursul/articles/java/sets"> TreeSet</a>
 
 More about this will be explained below, distributed by different libraries.
 
-### <a href="#appacheCommonsCollections" name="appacheCommonsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Appache Commons Collections
+### <a href="#apacheCommonsCollections" name="apacheCommonsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Apache Commons Collections
 
-<a href="https://commons.apache.org/proper/commons-collections/">Appache Commons Collections</a> provide the following features:
+<a href="https://commons.apache.org/proper/commons-collections/">Apache Commons Collections</a> provide the following features:
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/Bag.html">Bag</a> Interface with a number of copies of each object
-* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provide Bi-Directional maps that can be looked up both, from value to key, as like as key to value
-* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/MapIterator.html">MapIterator</a> Interface provide iteration over maps
+* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provides Bi-Directional maps that can be looked up both, from value to key, as like as key to value
+* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/MapIterator.html">MapIterator</a> Interface provides iteration over maps
 * *Transforming Decorators* alter each object when it is added to the collection
 * *Composite Collections* make multiple collections look like one (uniformly)
 * *Ordered Maps* and *Sets* retain the order elements are added in
@@ -38,12 +38,12 @@ To use this library, all you have to do is to insert *dependancy* code to your p
 
 More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
 
-Another way of using *Appache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with WinRar and open your environment (Eclipse). After you create project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
+Another way of using *Apache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with WinRar and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
 
-**Synchronozation**
-*Appache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
+**Synchronization**
+*Apache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
 
-Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Appache Commons Collections*, for further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
+Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Apache Commons Collections*, for further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -58,15 +58,15 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
     <td>Type of Bag that maintains a sorted order among its unique representative members</td>
   </tr>
   <tr>
-    <td>BidiMap<&#xfeff;K,V></td>
+    <td>BidiMap<&#xfeff;K, V></td>
     <td>Map that allows Bi-Directional lookup between key and values</td> 
   </tr>
   <tr>
-    <td>OrderedBidiMap<&#xfeff;K,V></td>
+    <td>OrderedBidiMap<&#xfeff;K, V></td>
     <td>Map that allows Bi-Directional lookup between key and values and retains and provides access to an ordering</td>
   </tr>  
   <tr>
-    <td>SortedBidiMap<&#xfeff;K,V></td>
+    <td>SortedBidiMap<&#xfeff;K, V></td>
     <td>Map that allows bidirectional lookup between key and values and retains both keys and values in sorted order</td>
   </tr>
   <tr>
@@ -74,27 +74,27 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
     <td>A function which determines equality between objects of type T</td>
   </tr>
   <tr>
-    <td>Get<&#xfeff;K,V></td>
+    <td>Get<&#xfeff;K, V></td>
     <td>The "read" subset of the Map interface</td>
   </tr>
   <tr>
-    <td>IterableGet<&#xfeff;K,V></td>
+    <td>IterableGet<&#xfeff;K, V></td>
     <td>The "read" subset of the Map interface</td>
   </tr>
   <tr>
-    <td>IterableMap<&#xfeff;K,V></td>
+    <td>IterableMap<&#xfeff;K, V></td>
     <td>Map that can be iterated directly without creating an entry set</td>
   </tr>
   <tr>
-    <td>KeyValue<&#xfeff;K,V></td>
-    <td>A key value pair</td>
+    <td>KeyValue<&#xfeff;K, V></td>
+    <td>A key-value pair</td>
   </tr>
   <tr>
-    <td>ListValuedMap<&#xfeff;K,V></td>
+    <td>ListValuedMap<&#xfeff;K, V></td>
     <td>Map that holds a list of values against each key</td>
   </tr>
   <tr>
-    <td>MultiValuedMap<&#xfeff;K,V></td>
+    <td>MultiValuedMap<&#xfeff;K, V></td>
     <td>Map that holds a collection of values against each key</td>
   </tr>
   <tr>
@@ -103,11 +103,11 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
   </tr> 
   <tr>
     <td>Unmodifiable</td>
-    <td>Marker interface for collections, maps and iterators that are unmodifiable</td>
+    <td>Marker interface for collections, maps, and iterators that are unmodifiable</td>
   </tr>            
 </table>
 
-Below, you can find some Classes from Package org.apache.commons.collections4 supported by *Appache Commons Collections*, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
+Below, you can find some Classes from Package org.apache.commons.collections4 supported by *Apache Commons Collections*, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 <table>
   <tr>
     <th>Classes</th>
@@ -143,7 +143,7 @@ Below, you can find some Classes from Package org.apache.commons.collections4 su
   </tr>
 </table>
 
-In *Appache Commons Collections* exist 19 Packages with numerous Interfaces, Classes and Methods. We shared only few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>, so we can focus more on practical examples.
+In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>, so we can focus more on practical examples.
 
 **Example - Bags usage**
 ```
@@ -256,7 +256,7 @@ public class MapIteratorDemo {
 	//Go through MapIterator
 	while (mapIterator.hasNext()) {
 	    	  
-		//Put key in variable key with type Object
+		//Put a key in variable key with type Object
 	        Object key = mapIterator.next();
 	          
 	        //Put value in variable value with type Object
