@@ -16,10 +16,10 @@ More about this will be explained below, distributed by different libraries.
 
 ### <a href="#appacheCommonsCollections" name="appacheCommonsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Appache Commons Collections
 
-Appache Commons Collections provide the following features:
-* *Bag* Interface with a number of copies of each object
-* *BidiMap* Interface provide Bi-Directional maps that can be looked up both, from value to key, as like as key to value
-* *MapIterator* Interface provide iteration over maps
+<a href="https://commons.apache.org/proper/commons-collections/">Appache Commons Collections</a> provide the following features:
+* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/Bag.html">Bag</a> Interface with a number of copies of each object
+* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provide Bi-Directional maps that can be looked up both, from value to key, as like as key to value
+* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/MapIterator.html">MapIterator</a> Interface provide iteration over maps
 * *Transforming Decorators* alter each object when it is added to the collection
 * *Composite Collections* make multiple collections look like one (uniformly)
 * *Ordered Maps* and *Sets* retain the order elements are added in
