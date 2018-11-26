@@ -355,12 +355,16 @@ list.add("Banana");
 list.add("Apple");
 list.add("Avocado");
 list.add("Orange");
+
 OR
+
 List<String> list2 = Lists.newArrayList("Banana", "Apple", "Avocado", "Orange");
 ```
 ```
 List<Map<String, String>> map = new LinkedList<Map<String, String>>();
+
 OR
+
 List<Map<String, String>> map2 = Lists.newLinkedList();
 ```
 As you can conclude, writing the code is much easier with *Guava*.
@@ -379,8 +383,48 @@ Below, you can find *dependancy* for Maven's library importation:
 
 More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
 
+**Example - MultiMap**
+```
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 
+public class MultiMapDemo {
 
+	   public static void main(String args[]) {
+		
+	       //Create MultiMap
+	       Multimap<String,String> multiMap = ArrayListMultimap.create();
+	       
+	       //Add values
+	       multiMap.put("fruit", "Banana");
+	       multiMap.put("fruit", "Apple");
+	       multiMap.put("fruit", "Banana");
+	       multiMap.put("fruit", "Avocado");
+	       multiMap.put("fruit", "Orange");
+	        
+	       multiMap.put("car", "BMW");
+	       multiMap.put("car", "BMW");
+	       multiMap.put("car", "Opel");
+	       multiMap.put("car", "Fiat");
+	 
+	       System.out.println("Total items in multiMap: " + multiMap.size());
+	       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
+	       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));	        
+	       System.out.println("Total items in car: " + multiMap.get("car").size());
+	       System.out.println("car Items: " + multiMap.get("car"));
+	       
+	       //Remove value Banana with key fruit
+	       multiMap.remove("fruit", "Banana");
+	       
+	       //There is still 1 Banana
+	       System.out.println("Total items in multiMap: " + multiMap.size());
+	       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
+	       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));	        
+	       System.out.println("Total items in car: " + multiMap.get("car").size());
+	       System.out.println("car Items: " + multiMap.get("car"));		   
+	   }
+}
+```
 
 
 
