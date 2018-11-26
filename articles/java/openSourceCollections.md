@@ -171,8 +171,8 @@ public class NullDemo {
 	         System.out.println("Null value is not present");
 	      }
 	       /*
-	      	As you can see at the end, in the list NULL value does not exists.
-		Method addIgnoreNull is very usefull if you want to forbid NULL values in your lists.
+	      	As you can see at the end, in the list NULL value does not exist.
+		Method addIgnoreNull is very useful if you want to forbid NULL values in your lists.
 	      */
 	   }
 }
