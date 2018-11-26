@@ -447,8 +447,10 @@ Below, you can find some Classes from Package com.google.common.collect supporte
 In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
 **Example - MultiMap**
-*MultiMap is like a Map, but it may contain duplicate keys and provides easy way to handle mapping from keys to collection of values.*
 ```
+/*
+MultiMap is like a Map, but it may contain duplicate keys and provides easy way to handle mapping from keys to collection of values.
+*/
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
@@ -491,9 +493,10 @@ public class MultiMapDemo {
 ```
 
 **Example - Optional usage**
-*Optional object is used to represent null with absent value.*
 ```
-
+/*
+Optional object is used to represent null with absent value.
+*/
 ```
 
 
