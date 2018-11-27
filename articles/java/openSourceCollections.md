@@ -631,6 +631,35 @@ public class OrderingDemo {
 }
 ```
 
+### <a href="#fastUtil" name="fastUtil"><i class="fa fa-link anchor" aria-hidden="true"></i></a> FastUtil Collections
+
+*FastUtil* characterize the fastest implementations available. Some of the benefits that it provides are listed below:
+* Classes that support very large collections,
+* Classes for fast and practical access to binary and text files,
+* Provides type-specific Maps, Sets, Lists and PriorityQueues,
+* In terms of memory, it is space-efficient
+
+In addition to the advantages it provides, attention should be paid to the following shortcomings. For further information, feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
+* Automatic boxing and unboxing can lead you to choose the wrong method. Suggestion is to set enviroment to mark boxing/unboxing as a warning or as an error,
+* Classes are not synchronized which means that for multiple threads it must be synchronized externally,
+* Reference-based classes violate the Map contract and do not use the equals() method. Instead they compare objects by reference and should be used only when reference-based equality is desired,
+* Linked classes provide methods to get the first and last element in iteration order, and to start a bidirectional iterator from any element, but any submap or subset method will cause an UnsupportedOperationException,
+* Maps that have objects as keys, the get() and remove() methods do not admit polymorphic versions. Instead, new methods are introduced - getvaluetype() and removevaluetype()
+
+**How to use a library:**
+*Dependancy* for Maven’s library importation is listed hereafter:
+```
+<!-- https://mvnrepository.com/artifact/it.unimi.dsi/fastutil -->
+<dependency>
+    <groupId>it.unimi.dsi</groupId>
+    <artifactId>fastutil</artifactId>
+    <version>8.1.0</version>
+</dependency>
+```
+
+
+
+
 
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
