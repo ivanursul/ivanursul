@@ -25,7 +25,7 @@ More about this will be explained below, distributed by different libraries.
 * *Ordered Maps* and *Sets* retain the order elements are added in
 * *Reference Map* allows keys and/or values to be garbage collected under close control
 
-**How to use library:**
+**How to use a library:**
 To use this library, all you have to do is to insert *dependency* code to your project. Assuming that you know how to use Maven, you can find the code at the <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.1">official website</a>:
 ```
 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
@@ -331,11 +331,11 @@ public class MapIteratorDemo {
 	      
 	//Remove key "Banana"
 	iterableMap.remove("Banana");
-	System.out.println("Content of the IterableMap after chenge is: " + iterableMap);
+	System.out.println("Content of the IterableMap after change is: " + iterableMap);
 	      
 	//Change the value of key "BMW"
 	iterableMap.replace("BMW", "color");
-	System.out.println("Content of the IterableMap after chenge is: " + iterableMap);
+	System.out.println("Content of the IterableMap after change is: " + iterableMap);
    }
 }
 ```
@@ -371,7 +371,7 @@ List<Map<String, String>> map2 = Lists.newLinkedList();
 ```
 As you can conclude, writing the code is much easier with *Guava*.
 
-**How to use library:**
+**How to use a library:**
 *Dependancy* for Maven's library importation is listed hereafter:
 ```
 <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
@@ -449,7 +449,7 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
 **Example - MultiSet**
 ```
 /*
-Multiset is not a Set, it represents a bag which contains sets of elements.
+A Multiset is not a Set, it represents a bag which contains sets of elements.
 */
 
 import com.google.common.collect.HashMultiset;
@@ -484,7 +484,7 @@ public class MultiSetDemo {
 **Example - MultiMap**
 ```
 /*
-MultiMap is like a Map, but it may contain duplicate keys and provides easy way to handle mapping from keys to collection of values.
+A MultiMap is like a Map, but it may contain duplicate keys and provides an easy way to handle mapping from keys to a collection of values.
 */
 
 import com.google.common.collect.ArrayListMultimap;
@@ -531,7 +531,7 @@ public class MultiMapDemo {
 **Example - Optional usage**
 ```
 /*
-Optional object is used to represent null with absent value.
+The Optional object is used to represent null with absent value.
 */
 
 import com.google.common.base.Optional;
