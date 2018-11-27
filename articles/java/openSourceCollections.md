@@ -446,11 +446,47 @@ Below, you can find some Classes from Package com.google.common.collect supporte
 
 In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
+**Example - MultiSet**
+```
+/*
+Multiset is not a Set, it represents a bag which contains sets of elements.
+*/
+
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
+
+public class MultiSetDemo {
+	
+   public static void main(String args[]) {
+	   
+	   // Create Multiset
+	   Multiset<String> multiSet = HashMultiset.create();
+	   
+	   // Add values
+	   multiSet.add("Banana");
+	   multiSet.add("Apple");
+	   multiSet.add("Orange");
+	   multiSet.add("Avocado");
+	   multiSet.add("Banana");
+	   
+	   System.out.println("Number of elements in multiSet: " + multiSet.size());
+
+	   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
+	   
+	   // Delete element Banana
+	   multiSet.remove("Banana");
+	   System.out.println("Number of elements in multiSet: " + multiSet.size());
+	   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));	   
+   }
+}
+```
+
 **Example - MultiMap**
 ```
 /*
 MultiMap is like a Map, but it may contain duplicate keys and provides easy way to handle mapping from keys to collection of values.
 */
+
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
@@ -497,7 +533,104 @@ public class MultiMapDemo {
 /*
 Optional object is used to represent null with absent value.
 */
+
+import com.google.common.base.Optional;
+
+public class OptionalDemo {
+	
+   public static void main(String args[]) {
+	
+      OptionalDemo optionalDemo = new OptionalDemo();
+
+      Integer value =  null;
+      Integer value2 =  new Integer(11);
+      Integer value3 =  new Integer(5);
+      Integer value4 =  null;
+      Integer value5 =  null;
+      
+      //Allows NULL value
+      Optional<Integer> x = Optional.fromNullable(value);
+      
+      //Does not allow NULL value
+      Optional<Integer> y = Optional.of(value2);
+      
+      //Does not allow NULL value
+      Optional<Integer> z = Optional.of(value3);
+
+      //Does not allow NULL value
+      //Optional<Integer> v = Optional.of(value4); This throws NullPointerException
+
+      //Allows NULL value
+      Optional<Integer> w = Optional.fromNullable(value5);
+
+      System.out.println(optionalDemo.calculation(x, y, z, w));
+   }
+
+   public Integer calculation(Optional<Integer> x, Optional<Integer> y, Optional<Integer> z, Optional<Integer> w) {
+	         
+      System.out.println("x is present: " + x.isPresent());
+      System.out.println("y is present: " + y.isPresent());
+      System.out.println("z is present: " + z.isPresent());
+      System.out.println("w is present: " + w.isPresent());
+
+      //Returns the value if present otherwise returns the default value passed
+      Integer value1 = x.or(new Integer(0));	
+      System.out.println(value1);
+
+      //Gets the value, value should be present
+      Integer value2 = y.get();
+      System.out.println(value2);
+      
+      Integer value3 = z.get();
+      System.out.println(value3);
+      
+      //Integer value5 = w.get(); Can't be called because of an absent value
+
+      return value1 + value2 - value3;
+  }
+}
 ```
+
+**Example - Ordering**
+```
+import java.util.Collections;
+import java.util.List;
+
+import com.google.common.collect.Lists;
+import com.google.common.collect.Ordering;
+
+public class OrderingDemo {
+	
+   public static void main(String args[]) {
+	   
+      // Create Lists
+      List<Integer> numbers = Lists.newArrayList(1,7,4,22,1,-13,222);
+      List<String> fruits = Lists.newArrayList("Banana","Avocado","Banana","Orange","Apple");
+
+      // Create Ordering
+      Ordering ordering = Ordering.natural();
+      System.out.println("Numbers: " + numbers);      
+      System.out.println("Fruits: " + fruits);
+        
+      // Sort elements
+      Collections.sort(numbers,ordering);
+      Collections.sort(fruits,ordering);
+      System.out.println("Sorted numbers: " + numbers);      
+      System.out.println("Sorted numbers: " + fruits);
+       
+      // Sort descending
+      Collections.sort(fruits,ordering.reverse());
+      System.out.println("Reverse: " + fruits);
+
+      numbers.add(null);
+      System.out.println("Null added to Sorted numbers: " + numbers);	
+
+      Collections.sort(numbers,ordering.nullsFirst());
+      System.out.println("Null at first position: " + numbers);
+   }
+}
+```
+
 
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
