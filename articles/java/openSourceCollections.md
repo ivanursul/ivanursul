@@ -634,12 +634,12 @@ public class OrderingDemo {
 ### <a href="#fastUtil" name="fastUtil"><i class="fa fa-link anchor" aria-hidden="true"></i></a> FastUtil Collections
 
 *FastUtil* characterize the fastest implementations available. Some of the benefits that it provides are listed below:
-* Classes that support very large collections,
+* Classes that support very large collections (64-bit),
 * Classes for fast and practical access to binary and text files,
-* Provides type-specific Maps, Sets, Lists and PriorityQueues,
+* Provides structure-specific and type-specific Maps, Sets, Lists and PriorityQueues,
 * In terms of memory, it is space-efficient
 
-In addition to the advantages it provides, attention should be paid to the following shortcomings. For further information, feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
+In addition to the advantages *FastUtil* provides, attention should be paid to the following shortcomings. For further information, feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
 * Automatic boxing and unboxing can lead you to choose the wrong method. Suggestion is to set enviroment to mark boxing/unboxing as a warning or as an error,
 * Classes are not synchronized which means that for multiple threads it must be synchronized externally,
 * Reference-based classes violate the Map contract and do not use the equals() method. Instead they compare objects by reference and should be used only when reference-based equality is desired,
@@ -656,6 +656,8 @@ In addition to the advantages it provides, attention should be paid to the follo
     <version>8.1.0</version>
 </dependency>
 ```
+
+Another characteristic is huge jar file, because of numerous Classes. Therefore, you can customize it and use the alternative way of selecting specific Classes.
 
 
 
