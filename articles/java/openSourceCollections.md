@@ -43,7 +43,7 @@ Another way of using *Apache Commons Collections* is to download the library fro
 **Synchronization:**
 *Apache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
 
-Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Apache Commons Collections*, for further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
+Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Apache Commons Collections*. For further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -107,7 +107,7 @@ Below, you can find some Interfaces from Package org.apache.commons.collections4
   </tr>            
 </table>
 
-Below, you can find some Classes from Package org.apache.commons.collections4 supported by *Apache Commons Collections*, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
+Below, you can find some Classes from Package org.apache.commons.collections4 supported by *Apache Commons Collections*. For further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
 <table>
   <tr>
     <th>Classes</th>
@@ -384,7 +384,7 @@ As you can conclude, writing the code is much easier with *Guava*.
 
 More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
 
-Below, you can find some Interfaces from Package com.google.common.collect, supported by *Guava*, for further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
+Below, you can find some Interfaces from Package com.google.common.collect, supported by *Guava*. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -412,7 +412,7 @@ Below, you can find some Interfaces from Package com.google.common.collect, supp
   </tr>           
 </table>
 
-Below, you can find some Classes from Package com.google.common.collect supported by *Guava*, for further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
+Below, you can find some Classes from Package com.google.common.collect supported by *Guava*. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
 <table>
   <tr>
     <th>Classes</th>
@@ -633,7 +633,7 @@ public class OrderingDemo {
 
 ### <a href="#fastUtil" name="fastUtil"><i class="fa fa-link anchor" aria-hidden="true"></i></a> FastUtil Collections
 
-*FastUtil* characterize the fastest implementations available. Some of the benefits that it provides are listed below:
+*FastUtil* characterize high performance and the fastest implementations available. Some of the benefits it provides are listed below:
 * Classes that support very large collections (64-bit),
 * Classes for fast and practical access to binary and text files,
 * Provides structure-specific and type-specific Maps, Sets, Lists and PriorityQueues,
@@ -646,6 +646,8 @@ In addition to the advantages *FastUtil* provides, attention should be paid to t
 * Linked classes provide methods to get the first and last element in iteration order, and to start a bidirectional iterator from any element, but any submap or subset method will cause an UnsupportedOperationException,
 * Maps that have objects as keys, the get() and remove() methods do not admit polymorphic versions. Instead, new methods are introduced - getvaluetype() and removevaluetype()
 
+Another characteristic is huge jar file, because of numerous Classes. Therefore, you can customize it and use the alternative way of selecting specific Classes.
+
 **How to use a library:**
 *Dependancy* for Maven’s library importation is listed hereafter:
 ```
@@ -657,7 +659,69 @@ In addition to the advantages *FastUtil* provides, attention should be paid to t
 </dependency>
 ```
 
-Another characteristic is huge jar file, because of numerous Classes. Therefore, you can customize it and use the alternative way of selecting specific Classes.
+More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+
+Below, you can find some Interfaces from Package it.unimi.dsi.fastutil, supported by *FastUtil*. For further information feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
+<table>
+  <tr>
+    <th>Interfaces</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>BidirectionalIterator<K&#xfeff;></td>
+    <td>A Bidirectional Iterator</td>
+  </tr>
+  <tr>
+    <td>BigList<K&#xfeff;></td>
+    <td>A list with big indices (64-bit)</td>
+  </tr>
+  <tr>
+    <td>BigSwapper</td>
+    <td>An object that can swap elements whose positions are specified by longs</td> 
+  </tr>
+  <tr>
+    <td>Function<K, V&#xfeff;></td>
+    <td>A function mapping keys into values</td>
+  </tr>  
+  <tr>
+    <td>PriorityQueue<K&#xfeff;></td>
+    <td>A Priority Queue</td>
+  </tr>           
+</table>
+
+Below, you can find some Classes from Package it.unimi.dsi.fastutil.ints supported by *FastUtil*. For further information feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
+<table>
+  <tr>
+    <th>Classes</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>Int2BooleanFunctions.Singleton</td>
+    <td>An immutable class representing a type-specific singleton function</td>
+  </tr> 
+  <tr>
+    <td>Int2ByteFunctions.SynchronizedFunction</td>
+    <td>A synchronized wrapper class for functions</td>
+  </tr>
+  <tr>
+    <td>Int2CharMaps.Singleton</td>
+    <td>An immutable class representing a type-specific singleton map</td>
+  </tr>
+  <tr>
+    <td>Int2DoubleSortedMaps</td>
+    <td>A class providing static methods and objects that do useful things with type-specific sorted maps</td>
+  </tr>
+  <tr>
+    <td>Int2FloatSortedMaps.Singleton</td>
+    <td>An immutable class representing a type-specific singleton sorted map</td>
+  </tr>
+  <tr>
+    <td>Int2IntMaps.UnmodifiableMap</td>
+    <td>An unmodifiable wrapper class for maps</td>
+  </tr>  
+</table>
+
+In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
 
 
