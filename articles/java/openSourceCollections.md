@@ -724,7 +724,8 @@ Below, you can find some Classes from Package it.unimi.dsi.fastutil.ints support
 In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
 **Example - DoubleArrayList**
-```import it.unimi.dsi.fastutil.doubles.DoubleArrayList;
+```
+import it.unimi.dsi.fastutil.doubles.DoubleArrayList;
 
 public class DoubleArrayListDemo {
 	
