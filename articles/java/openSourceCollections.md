@@ -851,8 +851,124 @@ public class Long2IntArrayMapDemo {
 
 ### <a href="#troveLibrary" name="troveLibrary"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Trove Library
 
-*Trove* provides high speed regular and primitive Collections and in opposite of FastUtil, *Trove* is significantly smaller.
+*Trove*, in opposite of FastUtil, is significantly smaller. Advantages of this library are high speed regular and primitive Collections, and reduced memory consumption. One of the interesting features is that almost all the Classes and Interfaces start with "T". *Trove* allows storing primitive data types in Collections, which is specially useful if there is a large ArrayList/Set/Map with keys or values that could be a primitive type.
 
+The most important Collections here are ArrayLists, Sets, and Maps, but SortedMaps and Maps with a fixed iteration order do not exist. As you will conclude from text below, the Trove Maps and Sets use open addressing instead of the chaining approach.
+
+**How to use a library:**
+To use this library, all you have to do is to insert Maven's *dependency* code to your project.
+```
+<!-- https://mvnrepository.com/artifact/net.sf.trove4j/trove4j -->
+<dependency>
+    <groupId>net.sf.trove4j</groupId>
+    <artifactId>trove4j</artifactId>
+    <version>3.0.3</version>
+</dependency>
+```
+
+More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+
+Below, you can find some Interfaces supported by *Trove*. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
+<table>
+  <tr>
+    <th>Interfaces</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>TDoubleDoubleMap</td>
+    <td>A primitive Map of double keys and values</td>
+  </tr>
+  <tr>
+    <td>TFloatIntMap</td>
+    <td>A primitive Map of float keys and int values</td>
+  </tr>
+  <tr>
+    <td>TIntFloatMap</td>
+    <td>A primitive Map of int keys and float values</td> 
+  </tr>
+  <tr>
+    <td>TDoubleSet</td>
+    <td>A Set that uses an open-addressed hash table to store its contents</td>
+  </tr>  
+  <tr>
+    <td>TIntSet</td>
+    <td>A Set that uses an open-addressed hash table to store its contents</td>
+  </tr>           
+</table>
+
+Below, you can find some Classes supported by *Trove*. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
+<table>
+  <tr>
+    <th>Classes</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>TCollections</td>
+    <td>Trove equivalent of the Collections Class</td>
+  </tr> 
+  <tr>
+    <td>TDoubleArrayList</td>
+    <td>A resizable ArrayList of double primitives</td>
+  </tr>
+  <tr>
+    <td>TLongArrayList</td>
+    <td>A resizable ArrayList of long primitives</td>
+  </tr> 
+</table> 
+
+**Example - ArrayList**
+```
+import gnu.trove.list.array.TIntArrayList;
+import gnu.trove.procedure.TIntProcedure;
+
+public class ArrayListDemo {
+ 
+    public static void main(String[] args) {
+        
+    	// Create ArrayList
+    	TIntArrayList x = new TIntArrayList();
+    	
+    	// Add values
+    	x.add(new int[]{11,2,14,7,22,2});
+    	System.out.println(x);
+    	
+    	// Remove element with value 2
+    	x.remove(2);
+    	
+    	// Sort x - it is must for binarySearch method
+    	x.sort();
+    	System.out.println(x);
+    	
+    	// Show element position in x, by value
+    	// If method did not find value, returns -1
+    	System.out.println(x.binarySearch(1)); 
+    	System.out.println(x.binarySearch(11));
+    	
+    	System.out.println("Max value is: " + x.max() + ", and min value is: " + x.min());
+    	
+    	// Reverse elements on positions 2, 3 and 4
+    	x.reverse(2, 5);
+    	
+    	// Show x if procedure is true
+    	System.out.println(x.grep(new TIntProcedure() {
+			
+			public boolean execute(int value) {
+				// TODO Auto-generated method stub
+				return 1==1;
+			}
+		}));
+    	
+    }
+}
+```
+
+**Example - Set**
+```
+```
+
+**Example - Map**
+```
+```
 
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
