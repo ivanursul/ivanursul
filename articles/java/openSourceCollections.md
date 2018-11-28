@@ -804,6 +804,50 @@ public class Long2IntArrayMapDemo {
 }
 ```
 
+**Example - Read-Only and Sorted Maps**
+```
+import it.unimi.dsi.fastutil.ints.Int2IntAVLTreeMap;
+import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMaps;
+import it.unimi.dsi.fastutil.ints.Int2IntSortedMap;
+import it.unimi.dsi.fastutil.ints.Int2IntSortedMaps;
+
+public class Long2IntArrayMapDemo {
+	
+	public static void main(String[] args) {
+		
+		// Create Int2IntMap
+		Int2IntMap map = new Int2IntArrayMap();
+		
+		// Add elements
+		map.put(1, 12);
+		map.put(12, 4);
+		map.put(3, 8);
+		map.put(4, 4);
+		
+		System.out.println(map);
+		
+		// Create read-only Map, which prohibits the entry of new elements or any changes on the map
+		Int2IntMap map2 = Int2IntMaps.unmodifiable(map);
+		// map2.put(5, 5); Throws an Exception
+		// map2.remove(1); Throws an Exception
+
+		// Create Int2IntSortedMap
+		Int2IntSortedMap map3 = new Int2IntAVLTreeMap();
+		
+		// Add elements
+		map3.put(1, 12);
+		map3.put(12, 4);
+		map3.put(3, 8);
+		map3.put(4, 4);
+		System.out.println(map3);
+		
+		// Create read-only sorted Map
+		Int2IntSortedMap sortedMap = Int2IntSortedMaps.unmodifiable(map3);
+	}
+}
+```
 
 
 
