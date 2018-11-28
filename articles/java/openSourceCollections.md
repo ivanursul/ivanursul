@@ -1049,21 +1049,21 @@ To use this library, all you have to do is to insert Maven's *dependency* code t
 More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
 
 According to the <a href="https://www.goldmansachs.com">official website</a>, the most used iteration patterns in *Goldman Sachs Collections* are:
-• Filtering patterns:
-	• Select
-	• Reject
-	• Partition
-• Transforming patterns:
-	• Collect
-	• Flatten
-	• GroupBy
-• "Short-circuit" patterns:
-	• Detect
-	• AnySatisfy
-	• AllSatisfy
-• Generic action patterns:
-	• ForEach
-	• InjectInto
+* Filtering patterns:
+	* Select
+	* Reject
+	* Partition
+* Transforming patterns:
+	* Collect
+	* Flatten
+	* GroupBy
+* "Short-circuit" patterns:
+	* Detect
+	* AnySatisfy
+	* AllSatisfy
+* Generic action patterns:
+	* ForEach
+	* InjectInto
 
 More about patterns you can find on official links: <a href="https://www.goldmansachs.com/gs-collections/presentations/BOJUG_April_26_2014_GSCollections.pdf">link1</a>, <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Training%20Session%20and%20Kata%205.0.0.pdf">link2</a>, and <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Reference%20Guide%201.2.0.pdf">link3</a>
 
