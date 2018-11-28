@@ -1031,5 +1031,92 @@ public class SetDemo {
 }
 ```
 
+### <a href="#goldmanSachsCollections" name="goldmanSachsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Goldman Sachs Collections (Eclipse Collections)
+
+Just like Trove, *Goldman Sachs Collections* is optimized for performance and memory usage and allows storing primitive data types in Collections. Its focus is on iteration improvment and has possibility of creating Immutable Collections, Bags, Multimaps, BiMaps, and Intervals. Just like Guava, writing the code is much easier with *Goldman Sachs Collections*. This library provides sort(), min(), max(), select(), collect() methods for all kind of Collections.
+
+**How to use a library:**
+To use this library, all you have to do is to insert Maven's *dependency* code to your project.
+```
+<!-- https://mvnrepository.com/artifact/com.goldmansachs/gs-collections-forkjoin -->
+<dependency>
+    <groupId>com.goldmansachs</groupId>
+    <artifactId>gs-collections-forkjoin</artifactId>
+    <version>7.0.1</version>
+</dependency>
+```
+
+More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+
+According to the <a href="https://www.goldmansachs.com">official website</a>, the most used iteration patterns in *Goldman Sachs Collections* are:
+• Filtering patterns:
+	• Select
+	• Reject
+	• Partition
+• Transforming patterns:
+	• Collect
+	• Flatten
+	• GroupBy
+• "Short-circuit" patterns:
+	• Detect
+	• AnySatisfy
+	• AllSatisfy
+• Generic action patterns:
+	• ForEach
+	• InjectInto
+
+More about patterns you can find on official links: <a href="https://www.goldmansachs.com/gs-collections/presentations/BOJUG_April_26_2014_GSCollections.pdf">link1</a>, <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Training%20Session%20and%20Kata%205.0.0.pdf">link2</a>, and <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Reference%20Guide%201.2.0.pdf">link3</a>
+
+Below, you can find some Interfaces supported by *Goldman Sachs Collections*. For further information feel free to check the <a href="https://www.goldmansachs.com/gs-collections/javadoc/5.0.0/overview-summary.html">official website</a>:
+<table>
+  <tr>
+    <th>Interfaces</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>Bag<&#xfeff;T></td>
+    <td>A Bag whose elements are unordered and may contain duplicate entries</td>
+  </tr>
+  <tr>
+    <td>ImmutableSortedBag<&#xfeff;T></td>
+    <td>A sorted Bag that is immutable</td>
+  </tr>
+  <tr>
+    <td>BiMap<&#xfeff;K, V></td>
+    <td>A Map that allows bidirectional lookup between key and values</td> 
+  </tr>
+  <tr>
+    <td>MapIterable<&#xfeff;K, V></td>
+    <td>A Read-only Map</td>
+  </tr>  
+  <tr>
+    <td>Multimap<&#xfeff;K, V></td>
+    <td>A Map that can associate multiple values for keys</td>
+  </tr>
+  <tr>
+    <td>ImmutableSortedSet<&#xfeff;T></td>
+    <td>A non-modifiable sorted Set</td>
+  </tr>
+</table>
+
+Below, you can find some Classes supported by *Goldman Sachs Collections*. For further information feel free to check the <a href="https://www.goldmansachs.com/gs-collections/javadoc/5.0.0/overview-summary.html">official website</a>:
+<table>
+  <tr>
+    <th>Classes</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>SynchronizedBag<&#xfeff;T></td>
+    <td>A synchronized view of a MutableBag</td>
+  </tr>
+    <td>ImmutableArrayBag<&#xfeff;T></td>
+    <td>A non-modifiable Array Bag</td>
+  </tr>
+  <tr>
+    <td>DropIterator<&#xfeff;T></td>
+    <td>Iterates over the elements of the iterator skipping the first count elements or the full iterator if the count is non-positive</td>
+  </tr> 
+</table>
+
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
