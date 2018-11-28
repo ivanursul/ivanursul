@@ -395,19 +395,19 @@ Below, you can find some Interfaces from Package com.google.common.collect, supp
     <td>A Bidirectional Map that preserves the uniqueness of its values and keys</td>
   </tr>
   <tr>
-    <td>ListMultimap<K, V&#xfeff;></td>
+    <td>ListMultimap<&#xfeff;K, V></td>
     <td>A Multimap that can hold duplicate key-value pairs and maintains the insertion ordering of values for a given key</td>
   </tr>
   <tr>
-    <td>Multimap<K, V&#xfeff;></td>
+    <td>Multimap<&#xfeff;K, V></td>
     <td>A Collection that maps keys to values, similar to Map, but each key may be associated with multiple values</td> 
   </tr>
   <tr>
-    <td>Multiset<E&#xfeff;></td>
+    <td>Multiset<&#xfeff;E></td>
     <td>A Collection that supports order-independent equality, like Set, but may have duplicate elements</td>
   </tr>  
   <tr>
-    <td>Table<R, C, V&#xfeff;></td>
+    <td>Table<&#xfeff;R, C, V></td>
     <td>A Collection that associates an ordered pair of keys, called a row key and a column key, with a single value</td>
   </tr>           
 </table>
