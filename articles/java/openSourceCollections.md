@@ -633,20 +633,20 @@ public class OrderingDemo {
 
 ### <a href="#fastUtil" name="fastUtil"><i class="fa fa-link anchor" aria-hidden="true"></i></a> FastUtil Collections
 
-*FastUtil* characterize high performance and the fastest implementations available. Some of the benefits it provides are listed below:
+*FastUtil* characterizes high performance and the fastest implementations available. Some of the benefits it provides are listed below:
 * Classes that support very large collections (64-bit),
 * Classes for fast and practical access to binary and text files,
 * Provides structure-specific and type-specific Maps, Sets, Lists and PriorityQueues,
 * In terms of memory, it is space-efficient
 
 In addition to the advantages *FastUtil* provides, attention should be paid to the following shortcomings. For further information, feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
-* Automatic boxing and unboxing can lead you to choose the wrong method. Suggestion is to set enviroment to mark boxing/unboxing as a warning or as an error,
+* Automatic boxing and unboxing can lead you to choose the wrong method. A suggestion is to set the environment to mark boxing/unboxing as a warning or as an error,
 * Classes are not synchronized which means that for multiple threads it must be synchronized externally,
-* Reference-based classes violate the Map contract and do not use the equals() method. Instead they compare objects by reference and should be used only when reference-based equality is desired,
+* Reference-based classes violate the Map contract and do not use the equals() method. Instead, they compare objects by reference and should be used only when reference-based equality is desired,
 * Linked classes provide methods to get the first and last element in iteration order, and to start a bidirectional iterator from any element, but any submap or subset method will cause an UnsupportedOperationException,
 * Maps that have objects as keys, the get() and remove() methods do not admit polymorphic versions. Instead, new methods are introduced - getvaluetype() and removevaluetype()
 
-Another characteristic is huge jar file, because of numerous Classes. Therefore, you can customize it and use the alternative way of selecting specific Classes.
+Another characteristic is a huge jar file, because of numerous Classes. Therefore, you can customize it and use the alternative way of selecting specific Classes.
 
 **How to use a library:**
 *Dependancy* for Maven’s library importation is listed hereafter:
@@ -851,9 +851,9 @@ public class Long2IntArrayMapDemo {
 
 ### <a href="#troveLibrary" name="troveLibrary"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Trove Library
 
-*Trove*, in opposite of FastUtil, is significantly smaller. Advantages of this library are high speed regular and primitive Collections, and reduced memory consumption. One of the interesting features is that almost all the Classes and Interfaces start with "T". *Trove* allows storing primitive data types in Collections, which is specially useful if there is a large ArrayList/Set/Map with keys or values that could be a primitive type.
+*Trove*, in the opposite of FastUtil, is significantly smaller. Advantages of this library are high speed regular and primitive Collections and reduced memory consumption. One of the interesting features is that almost all the Classes and Interfaces start with "T". *Trove* allows storing primitive data types in Collections, which is especially useful if there is a large ArrayList/Set/Map with keys or values that could be a primitive type.
 
-The most important Collections here are ArrayLists, Sets, and Maps, but SortedMaps and Maps with a fixed iteration order do not exist. As you will conclude from text below, the Trove Maps and Sets use open addressing instead of the chaining approach.
+The most important Collections here are ArrayLists, Sets, and Maps, but SortedMaps and Maps with a fixed iteration order do not exist. As you will conclude from the text below, the Trove Maps and Sets use open addressing instead of the chaining approach.
 
 **How to use a library:**
 To use this library, all you have to do is to insert Maven's *dependency* code to your project.
