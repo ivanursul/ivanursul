@@ -723,7 +723,85 @@ Below, you can find some Classes from Package it.unimi.dsi.fastutil.ints support
 
 In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
+**Example - DoubleArrayList**
+```import it.unimi.dsi.fastutil.doubles.DoubleArrayList;
 
+public class DoubleArrayListDemo {
+	
+	public static void main(String[] args) {
+			
+			// Create DoubleArrayList
+			DoubleArrayList dal = new DoubleArrayList();  
+			
+			// Add values - Note that there are 2 ways of adding values push and add
+			dal.push(11);  
+			dal.push(2.5);  
+			dal.push(13.5);  
+			dal.add(7.5);  
+			dal.add(22.5);
+			dal.add(11);
+			
+			System.out.println(dal);
+			
+			// Check if there is element with value 11
+			System.out.println(dal.contains(11));
+			
+			// Show element on 0th position
+			// Note that there are 2 ways of showing values on position 0 peek and get
+			System.out.println(dal.peek(0)); 
+			
+			// Remove element with value 11
+			dal.rem(11);
+			System.out.println(dal);
+			
+			// Show element on 0th position
+			System.out.println(dal.get(0));
+	      
+			// Remove element - There are few ways of removing elements pop, rem, remove
+			dal.pop();
+			System.out.println(dal);
+			
+			// Show the last element in dal
+			System.out.println(dal.get(dal.size() - 1));
+	}
+}
+```
+
+**Example - Long2IntArrayMap**
+```
+import it.unimi.dsi.fastutil.longs.Long2IntArrayMap;
+
+public class Long2IntArrayMapDemo {
+	
+	public static void main(String[] args) {
+		
+		// Create Long2IntArrayMap
+		Long2IntArrayMap map = new Long2IntArrayMap();
+		
+		// Add values
+		map.put(1, 25512);
+		map.put(22, 21231);
+		map.put(15, 123124);
+		map.put(10L, 11231123);
+		
+		// Remove value
+		map.remove(10L);
+		
+		// Show element with key 22
+		System.out.println(map.get(22));
+		
+		// Set default value to show if key is not found
+		map.defaultReturnValue(-1);
+		System.out.println(map.get(14));
+		
+		System.out.println(map);
+		
+		// Delete all values from map
+		map.clear();
+		System.out.println(map);
+	}
+}
+```
 
 
 
