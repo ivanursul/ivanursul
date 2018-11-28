@@ -849,6 +849,10 @@ public class Long2IntArrayMapDemo {
 }
 ```
 
+### <a href="#troveLibrary" name="troveLibrary"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Trove Library
+
+*Trove* provides high speed regular and primitive Collections and in opposite of FastUtil, *Trove* is significantly smaller.
+
 
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
