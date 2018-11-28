@@ -668,11 +668,11 @@ Below, you can find some Interfaces from Package it.unimi.dsi.fastutil, supporte
     <th>Description</th> 
   </tr>
   <tr>
-    <td>BidirectionalIterator<K&#xfeff;></td>
+    <td>BidirectionalIterator<K &#xfeff;></td>
     <td>A Bidirectional Iterator</td>
   </tr>
   <tr>
-    <td>BigList<K&#xfeff;></td>
+    <td>BigList<K &#xfeff;></td>
     <td>A list with big indices (64-bit)</td>
   </tr>
   <tr>
@@ -680,7 +680,7 @@ Below, you can find some Interfaces from Package it.unimi.dsi.fastutil, supporte
     <td>An object that can swap elements whose positions are specified by longs</td> 
   </tr>
   <tr>
-    <td>Function<K, V&#xfeff;></td>
+    <td>Function<K, V &#xfeff;></td>
     <td>A function mapping keys into values</td>
   </tr>  
   <tr>
