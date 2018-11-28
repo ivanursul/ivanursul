@@ -964,10 +964,71 @@ public class ArrayListDemo {
 
 **Example - Set**
 ```
+import gnu.trove.iterator.TDoubleIterator;
+import gnu.trove.set.TDoubleSet;
+import gnu.trove.set.hash.TDoubleHashSet;
+
+public class SetDemo {
+ 
+    public static void main(String[] args) {
+        
+    	// Create ArrayList
+    	TDoubleSet x = new TDoubleHashSet();
+    	
+    	// Add values
+    	x.addAll(new double[]{11.5,2.3,14,7.1,22,2.3});
+    	System.out.println(x);
+    	
+    	// Remove element with value 2
+    	x.remove(2.3);
+    	System.out.println(x);
+    	
+    	// Create iterator
+    	TDoubleIterator iterator = x.iterator();
+    	
+    	// Show elements
+    	while (iterator.hasNext()) System.out.println(iterator.next());    	
+    }
+}
 ```
 
 **Example - Map**
 ```
+import gnu.trove.iterator.TIntIntIterator;
+import gnu.trove.map.TIntIntMap;
+import gnu.trove.map.hash.TIntIntHashMap;
+
+public class SetDemo {
+ 
+    public static void main(String[] args) {
+        
+    	// Create Map
+    	TIntIntMap x = new TIntIntHashMap();
+    	
+    	// Add values
+    	x.put(1, 12);
+    	x.put(11, 12);
+    	x.put(2, 2);
+    	x.put(5, 10);
+    	x.put(12, 20);
+    	System.out.println(x);
+    	
+    	// Remove element with value 2
+    	x.remove(5);
+    	System.out.println(x);
+    	
+    	// Create iterator
+    	TIntIntIterator iterator = x.iterator();
+
+    	// Show elements
+    	while (iterator.hasNext()) {
+    		
+        	// Advance() method is must to show keys and values of Map
+    		iterator.advance();
+    		System.out.println("Key: " + iterator.key() + ", value: " + iterator.value());  	
+    	}
+    }
+}
 ```
 
 
