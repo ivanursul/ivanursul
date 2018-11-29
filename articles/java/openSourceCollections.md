@@ -1225,24 +1225,36 @@ public class ListDemo {
 }
 ```
 
-**Example - **
+**Example - Set**
 ```
+import com.gs.collections.api.block.procedure.primitive.DoubleProcedure;
+import com.gs.collections.api.list.primitive.DoubleList;
+import com.gs.collections.api.set.primitive.ImmutableDoubleSet;
+import com.gs.collections.impl.factory.primitive.DoubleSets;
 
-```
-
-**Example - **
-```
-
-```
-
-**Example - **
-```
-
-```
-
-**Example - **
-```
-
+public class BiMapDemo {
+ 
+    public static void main(String[] args) {
+        
+    	// Create ImmutableDoubleSet and add values
+    	ImmutableDoubleSet set = DoubleSets.immutable.of(4.2,3.3,15.5,8.4);
+    	
+    	// Show elements stored in Set
+    	set.forEach((DoubleProcedure) System.out::println);
+    	System.out.println("Max value is: " + set.max());
+    	System.out.println("Min value is: " + set.min());
+    	System.out.println("Average value is: " + set.average());
+    	
+    	// Method freeze() returns a copy similar to immutable
+    	ImmutableDoubleSet set2 = (ImmutableDoubleSet) set.freeze();
+    	
+    	// Transform Set to sorted List
+    	DoubleList list = set2.toSortedList();
+    	
+    	// Elements are sorted by value
+    	list.forEach((DoubleProcedure) System.out::println);
+    }
+}
 ```
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
