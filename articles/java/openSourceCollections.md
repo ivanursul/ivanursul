@@ -1065,7 +1065,7 @@ According to the <a href="https://www.goldmansachs.com">official website</a>, th
 	* ForEach
 	* InjectInto
 
-More about patterns you can find on official links: <a href="https://www.goldmansachs.com/gs-collections/presentations/BOJUG_April_26_2014_GSCollections.pdf">link1</a>, <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Training%20Session%20and%20Kata%205.0.0.pdf">link2</a>, and <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Reference%20Guide%201.2.0.pdf">link3</a>
+More about patterns you can find on official links: <a href="https://www.goldmansachs.com/gs-collections/presentations/BOJUG_April_26_2014_GSCollections.pdf">link1</a>, <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Training%20Session%20and%20Kata%205.0.0.pdf">link2</a>, and <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Reference%20Guide%201.2.0.pdf">link3</a>.
 
 Below, you can find some Interfaces supported by *Goldman Sachs Collections*. For further information feel free to check the <a href="https://www.goldmansachs.com/gs-collections/javadoc/5.0.0/overview-summary.html">official website</a>:
 <table>
@@ -1118,5 +1118,95 @@ Below, you can find some Classes supported by *Goldman Sachs Collections*. For f
   </tr> 
 </table>
 
+**Example - Bag**
+```
+import java.util.Comparator;
+import java.util.List;
+
+import com.gs.collections.api.bag.Bag;
+import com.gs.collections.impl.block.factory.Comparators;
+import com.gs.collections.impl.factory.Bags;
+
+public class BagDemo {
+ 
+    public static void main(String[] args) {
+        
+    	// Create immutable bag and add values - all in one line of code
+    	Bag<String> bag = Bags.immutable.of("Banana", "Avocado", "Apple", "Orange", "Avocado", "Avocado");
+    	
+    	System.out.println(bag);    	
+    	System.out.println("First element is: " + bag.getFirst() + ", and last element is: " + bag.getLast());
+    	System.out.println("Number of different elements in bag: " + bag.sizeDistinct());
+    	System.out.println("Number of all elements in bag: " + bag.size());
+    	
+    	// Transform bag to a list
+    	List<String> list = bag.toList();
+    	
+    	System.out.println("Elements in list: " + list);
+    	
+    	// List is mutable, in opposite of created immutable bag, so we can add values
+    	list.add("Kiwi");
+    	
+    	// Create comparator so we can sort the list
+    	Comparator<? super String> comparator = Comparators.reverseNaturalOrder();
+    	list.sort(comparator);
+    	System.out.println("Elements in list after change: " + list);
+    }
+}
+```
+
+**Example - BiMap**
+```
+import com.gs.collections.api.bimap.BiMap;
+import com.gs.collections.api.bimap.MutableBiMap;
+import com.gs.collections.api.list.ImmutableList;
+import com.gs.collections.api.list.MutableList;
+import com.gs.collections.impl.factory.BiMaps;
+
+public class BiMapDemo {
+ 
+    public static void main(String[] args) {
+        
+    	// Create BiMap and add elements
+    	BiMap<Integer, String> map = BiMaps.mutable.of(1,"Banana",22,"Avocado",5,"Kiwi",7,"Orange");
+    	((MutableBiMap<Integer, String>) map).put(3,"Apple");
+    	
+    	System.out.println("Keys in map: " + map.keysView() + ", values in map: " + map.valuesView());
+    	
+    	// Transform map to mutable list
+    	MutableList<String> mutableList = map.toSortedList();
+    	mutableList.add("Orange");
+    	System.out.println(mutableList);
+    	
+    	// Transform mutable to immutable list
+    	ImmutableList<String> immutableList = mutableList.toImmutable();    	
+    }
+}
+```
+
+**Example - **
+```
+
+```
+
+**Example - **
+```
+
+```
+
+**Example - **
+```
+
+```
+
+**Example - **
+```
+
+```
+
+**Example - **
+```
+
+```
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
