@@ -147,73 +147,46 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 
 **Example - Ignore Null values**
 ```
-import java.util.LinkedList;
-import java.util.List;
-import org.apache.commons.collections4.CollectionUtils;
-
-public class NullDemo {
-
-	   public static void main(String[] args) {
-	   	     
-	      List<String> list = new LinkedList<String>();
+      List<String> list = new LinkedList<String>();
 		
-	      list.add("Apple");
-	      CollectionUtils.addIgnoreNull(list, "Avocado");
-	      list.add("Orange");
-	      CollectionUtils.addIgnoreNull(list, null);
-	      list.add("Banana");
+      list.add("Apple");
+      CollectionUtils.addIgnoreNull(list, "Avocado");
+      list.add("Orange");
+      CollectionUtils.addIgnoreNull(list, null);
+      list.add("Banana");
 	    
-	      System.out.println(list);
+      System.out.println(list);
 
-	      if(list.contains(null)) {
-	         System.out.println("Null value is present");
-	      } else {
-	         System.out.println("Null value is not present");
-	      }
-	       /*
-	      	As you can see at the end, in the list NULL value does not exist.
-		Method addIgnoreNull is very useful if you want to forbid NULL values in your lists.
-	      */
-	   }
-}
+      if(list.contains(null)) {
+         System.out.println("Null value is present");
+      } else {
+         System.out.println("Null value is not present");
+      }
+       /*
+      	As you can see at the end, in the list NULL value does not exist.
+	Method addIgnoreNull is very useful if you want to forbid NULL values in your lists.
+      */
 ```
 
 **Example - Merging lists**
 ```
-import java.util.LinkedList;
-import java.util.List;
-import org.apache.commons.collections4.CollectionUtils;
-
-public class MergeDemo {
-
-	   public static void main(String[] args) {
-	   	     
-		   	List<String> list1 = new LinkedList<String>();
-	   		List<String> list2 = new LinkedList<String>();
+	List<String> list1 = new LinkedList<String>();
+   	List<String> list2 = new LinkedList<String>();
 	   		
-	   		list1.add("Banana");
-	   		list1.add("Apple");
-	   		
-	   		list2.add("Orange");
+	list1.add("Banana");
+	list1.add("Apple");
+	  		
+	list2.add("Orange");
 	   
-	   		List<String> sortedList = CollectionUtils.collate(list1, list2);
+	List<String> sortedList = CollectionUtils.collate(list1, list2);
 	    
-	   		System.out.println(sortedList);
+	System.out.println(sortedList);
 			
-			//This method makes it easier to combine multiple lists			
-	   }
-}
+	//This method makes it easier to combine multiple lists	
 ```
 
 **Example - Bags usage**
 ```
-import org.apache.commons.collections4.Bag;
-import org.apache.commons.collections4.bag.HashBag;
-
-public class BagDemo {
-
-   public static void main(String[] args) {
-      
       //Create Bag
       Bag<String> bag = new HashBag<>();
 
@@ -243,19 +216,10 @@ public class BagDemo {
       
       //Show the number of "Banana" present in bag
       System.out.println("Banana is present " + bag.getCount("Banana") + " times.");
-   }
-}
 ```
 
 **Example - BidiMap usage**
 ```
-import org.apache.commons.collections4.BidiMap;
-import org.apache.commons.collections4.bidimap.TreeBidiMap;
-
-public class BidiMapDemo {
-
-   public static void main(String[] args) {
-      
       //Create BidiMap
       BidiMap<String, String> bidiMap = new TreeBidiMap<>();
 
@@ -288,20 +252,10 @@ public class BidiMapDemo {
       //Create new BidiMap to show method used to replace the site of key/value
       BidiMap<String, String> inversedBidiMap = bidiMap.inverseBidiMap();  
       System.out.println("Inversed BidiMap: " + inversedBidiMap);
-   }
-}
 ```
 
 **Example - MapIterator usage**
 ```
-import org.apache.commons.collections4.IterableMap;
-import org.apache.commons.collections4.MapIterator;
-import org.apache.commons.collections4.map.HashedMap;
-
-public class MapIteratorDemo {
-
-   public static void main(String[] args) {
-      
         //Create IterableMap
 	IterableMap<String, String> iterableMap = new HashedMap<>();
 
@@ -336,8 +290,6 @@ public class MapIteratorDemo {
 	//Change the value of key "BMW"
 	iterableMap.replace("BMW", "color");
 	System.out.println("Content of the IterableMap after change is: " + iterableMap);
-   }
-}
 ```
 
 ### <a href="#guava" name="guava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Guava - Google's Collections
@@ -452,33 +404,24 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
 A Multiset is not a Set, it represents a bag which contains sets of elements.
 */
 
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.Multiset;
+   // Create Multiset
+   Multiset<String> multiSet = HashMultiset.create();
+	   
+   // Add values
+   multiSet.add("Banana");
+   multiSet.add("Apple");
+   multiSet.add("Orange");
+   multiSet.add("Avocado");
+   multiSet.add("Banana");
+	   
+   System.out.println("Number of elements in multiSet: " + multiSet.size());
 
-public class MultiSetDemo {
-	
-   public static void main(String args[]) {
+   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
 	   
-	   // Create Multiset
-	   Multiset<String> multiSet = HashMultiset.create();
-	   
-	   // Add values
-	   multiSet.add("Banana");
-	   multiSet.add("Apple");
-	   multiSet.add("Orange");
-	   multiSet.add("Avocado");
-	   multiSet.add("Banana");
-	   
-	   System.out.println("Number of elements in multiSet: " + multiSet.size());
-
-	   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
-	   
-	   // Delete element Banana
-	   multiSet.remove("Banana");
-	   System.out.println("Number of elements in multiSet: " + multiSet.size());
-	   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));	   
-   }
-}
+   // Delete element Banana
+   multiSet.remove("Banana");
+   System.out.println("Number of elements in multiSet: " + multiSet.size());
+   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
 ```
 
 **Example - MultiMap**
@@ -487,45 +430,34 @@ public class MultiSetDemo {
 A MultiMap is like a Map, but it may contain duplicate keys and provides an easy way to handle mapping from keys to a collection of values.
 */
 
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Multimap;
-
-public class MultiMapDemo {
-
-	   public static void main(String args[]) {
-		
-	       //Create MultiMap
-	       Multimap<String,String> multiMap = ArrayListMultimap.create();
+       //Create MultiMap
+       Multimap<String,String> multiMap = ArrayListMultimap.create();
 	       
-	       //Add values
-	       multiMap.put("fruit", "Banana");
-	       multiMap.put("fruit", "Apple");
-	       multiMap.put("fruit", "Banana");
-	       multiMap.put("fruit", "Avocado");
-	       multiMap.put("fruit", "Orange");
+       //Add values
+       multiMap.put("fruit", "Banana");
+       multiMap.put("fruit", "Apple");
+       multiMap.put("fruit", "Banana");
+       multiMap.put("fruit", "Avocado");
+       multiMap.put("fruit", "Orange");
 	        
-	       multiMap.put("car", "BMW");
-	       multiMap.put("car", "BMW");
-	       multiMap.put("car", "Opel");
-	       multiMap.put("car", "Fiat");
+       multiMap.put("car", "BMW");
+       multiMap.put("car", "BMW");
+       multiMap.put("car", "Opel");
+       multiMap.put("car", "Fiat");
 	 
-	       System.out.println("Total items in multiMap: " + multiMap.size());
-	       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
-	       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));	        
-	       System.out.println("Total items in car: " + multiMap.get("car").size());
-	       System.out.println("car Items: " + multiMap.get("car"));
+       System.out.println("Total items in multiMap: " + multiMap.size());
+       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
+       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));
 	       
-	       //Remove value Banana with key fruit
-	       multiMap.remove("fruit", "Banana");
+       //Remove value Banana with key fruit
+       multiMap.remove("fruit", "Banana");
 	       
-	       //There is still 1 Banana
-	       System.out.println("Total items in multiMap: " + multiMap.size());
-	       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
-	       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));	        
-	       System.out.println("Total items in car: " + multiMap.get("car").size());
-	       System.out.println("car Items: " + multiMap.get("car"));		   
-	   }
-}
+       //There is still 1 Banana
+       System.out.println("Total items in multiMap: " + multiMap.size());
+       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
+       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));	        
+       System.out.println("Total items in car: " + multiMap.get("car").size());
+       System.out.println("car Items: " + multiMap.get("car"));	
 ```
 
 **Example - Optional usage**
@@ -534,12 +466,6 @@ public class MultiMapDemo {
 The Optional object is used to represent null with absent value.
 */
 
-import com.google.common.base.Optional;
-
-public class OptionalDemo {
-	
-   public static void main(String args[]) {
-	
       OptionalDemo optionalDemo = new OptionalDemo();
 
       Integer value =  null;
@@ -593,16 +519,6 @@ public class OptionalDemo {
 
 **Example - Ordering**
 ```
-import java.util.Collections;
-import java.util.List;
-
-import com.google.common.collect.Lists;
-import com.google.common.collect.Ordering;
-
-public class OrderingDemo {
-	
-   public static void main(String args[]) {
-	   
       // Create Lists
       List<Integer> numbers = Lists.newArrayList(1,7,4,22,1,-13,222);
       List<String> fruits = Lists.newArrayList("Banana","Avocado","Banana","Orange","Apple");
@@ -725,128 +641,99 @@ In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. 
 
 **Example - DoubleArrayList**
 ```
-import it.unimi.dsi.fastutil.doubles.DoubleArrayList;
-
-public class DoubleArrayListDemo {
-	
-	public static void main(String[] args) {
+	// Create DoubleArrayList
+	DoubleArrayList dal = new DoubleArrayList();  
 			
-			// Create DoubleArrayList
-			DoubleArrayList dal = new DoubleArrayList();  
+	// Add values - Note that there are 2 ways of adding values push and add
+	dal.push(11);  
+	dal.push(2.5);  
+	dal.push(13.5);  
+	dal.add(7.5);  
+	dal.add(22.5);
+	dal.add(11);
 			
-			// Add values - Note that there are 2 ways of adding values push and add
-			dal.push(11);  
-			dal.push(2.5);  
-			dal.push(13.5);  
-			dal.add(7.5);  
-			dal.add(22.5);
-			dal.add(11);
+	System.out.println(dal);
 			
-			System.out.println(dal);
+	// Check if there is element with value 11
+	System.out.println(dal.contains(11));
 			
-			// Check if there is element with value 11
-			System.out.println(dal.contains(11));
+	// Show element on 0th position
+	// Note that there are 2 ways of showing values on position 0 peek and get
+	System.out.println(dal.peek(0)); 
 			
-			// Show element on 0th position
-			// Note that there are 2 ways of showing values on position 0 peek and get
-			System.out.println(dal.peek(0)); 
+	// Remove element with value 11
+	dal.rem(11);
+	System.out.println(dal);
 			
-			// Remove element with value 11
-			dal.rem(11);
-			System.out.println(dal);
+	// Show element on 0th position
+	System.out.println(dal.get(0));
+      
+	// Remove element - There are few ways of removing elements pop, rem, remove
+	dal.pop();
+	System.out.println(dal);
 			
-			// Show element on 0th position
-			System.out.println(dal.get(0));
-	      
-			// Remove element - There are few ways of removing elements pop, rem, remove
-			dal.pop();
-			System.out.println(dal);
-			
-			// Show the last element in dal
-			System.out.println(dal.get(dal.size() - 1));
-	}
-}
+	// Show the last element in dal
+	System.out.println(dal.get(dal.size() - 1));
 ```
 
 **Example - Long2IntArrayMap**
 ```
-import it.unimi.dsi.fastutil.longs.Long2IntArrayMap;
-
-public class Long2IntArrayMapDemo {
+	// Create Long2IntArrayMap
+	Long2IntArrayMap map = new Long2IntArrayMap();
+		
+	// Add values
+	map.put(1, 25512);
+	map.put(22, 21231);
+	map.put(15, 123124);
+	map.put(10L, 11231123);
+		
+	// Remove value
+	map.remove(10L);
+		
+	// Show element with key 22
+	System.out.println(map.get(22));
+		
+	// Set default value to show if key is not found
+	map.defaultReturnValue(-1);
+	System.out.println(map.get(14));
+		
+	System.out.println(map);
 	
-	public static void main(String[] args) {
-		
-		// Create Long2IntArrayMap
-		Long2IntArrayMap map = new Long2IntArrayMap();
-		
-		// Add values
-		map.put(1, 25512);
-		map.put(22, 21231);
-		map.put(15, 123124);
-		map.put(10L, 11231123);
-		
-		// Remove value
-		map.remove(10L);
-		
-		// Show element with key 22
-		System.out.println(map.get(22));
-		
-		// Set default value to show if key is not found
-		map.defaultReturnValue(-1);
-		System.out.println(map.get(14));
-		
-		System.out.println(map);
-		
-		// Delete all values from map
-		map.clear();
-		System.out.println(map);
-	}
-}
+	// Delete all values from map
+	map.clear();
+	System.out.println(map);
 ```
 
 **Example - Read-Only and Sorted Maps**
 ```
-import it.unimi.dsi.fastutil.ints.Int2IntAVLTreeMap;
-import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
-import it.unimi.dsi.fastutil.ints.Int2IntMap;
-import it.unimi.dsi.fastutil.ints.Int2IntMaps;
-import it.unimi.dsi.fastutil.ints.Int2IntSortedMap;
-import it.unimi.dsi.fastutil.ints.Int2IntSortedMaps;
-
-public class Long2IntArrayMapDemo {
+	// Create Int2IntMap
+	Int2IntMap map = new Int2IntArrayMap();
+		
+	// Add elements
+	map.put(1, 12);
+	map.put(12, 4);
+	map.put(3, 8);
+	map.put(4, 4);
+		
+	System.out.println(map);
 	
-	public static void main(String[] args) {
+	// Create read-only Map, which prohibits the entry of new elements or any changes on the map
+	Int2IntMap map2 = Int2IntMaps.unmodifiable(map);
+	// map2.put(5, 5); Throws an Exception
+	// map2.remove(1); Throws an Exception
+	
+	// Create Int2IntSortedMap
+	Int2IntSortedMap map3 = new Int2IntAVLTreeMap();
 		
-		// Create Int2IntMap
-		Int2IntMap map = new Int2IntArrayMap();
-		
-		// Add elements
-		map.put(1, 12);
-		map.put(12, 4);
-		map.put(3, 8);
-		map.put(4, 4);
-		
-		System.out.println(map);
-		
-		// Create read-only Map, which prohibits the entry of new elements or any changes on the map
-		Int2IntMap map2 = Int2IntMaps.unmodifiable(map);
-		// map2.put(5, 5); Throws an Exception
-		// map2.remove(1); Throws an Exception
-
-		// Create Int2IntSortedMap
-		Int2IntSortedMap map3 = new Int2IntAVLTreeMap();
-		
-		// Add elements
-		map3.put(1, 12);
-		map3.put(12, 4);
-		map3.put(3, 8);
-		map3.put(4, 4);
-		System.out.println(map3);
-		
-		// Create read-only sorted Map
-		Int2IntSortedMap sortedMap = Int2IntSortedMaps.unmodifiable(map3);
-	}
-}
+	// Add elements
+	map3.put(1, 12);
+	map3.put(12, 4);
+	map3.put(3, 8);
+	map3.put(4, 4);
+	System.out.println(map3);
+	
+	// Create read-only sorted Map
+	Int2IntSortedMap sortedMap = Int2IntSortedMaps.unmodifiable(map3);
 ```
 
 ### <a href="#troveLibrary" name="troveLibrary"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Trove Library
@@ -918,13 +805,6 @@ Below, you can find some Classes supported by *Trove*. For further information f
 
 **Example - ArrayList**
 ```
-import gnu.trove.list.array.TIntArrayList;
-import gnu.trove.procedure.TIntProcedure;
-
-public class ArrayListDemo {
- 
-    public static void main(String[] args) {
-        
     	// Create ArrayList
     	TIntArrayList x = new TIntArrayList();
     	
@@ -952,26 +832,15 @@ public class ArrayListDemo {
     	// Show x if procedure is true
     	System.out.println(x.grep(new TIntProcedure() {
 			
-			public boolean execute(int value) {
-				// TODO Auto-generated method stub
-				return 1==1;
-			}
-		}));
-    	
-    }
-}
+		public boolean execute(int value) {
+			// TODO Auto-generated method stub
+			return 1==1;
+		}
+	}));
 ```
 
 **Example - Set**
 ```
-import gnu.trove.iterator.TDoubleIterator;
-import gnu.trove.set.TDoubleSet;
-import gnu.trove.set.hash.TDoubleHashSet;
-
-public class SetDemo {
- 
-    public static void main(String[] args) {
-        
     	// Create ArrayList
     	TDoubleSet x = new TDoubleHashSet();
     	
@@ -987,21 +856,11 @@ public class SetDemo {
     	TDoubleIterator iterator = x.iterator();
     	
     	// Show elements
-    	while (iterator.hasNext()) System.out.println(iterator.next());    	
-    }
-}
+    	while (iterator.hasNext()) System.out.println(iterator.next()); 
 ```
 
 **Example - Map**
 ```
-import gnu.trove.iterator.TIntIntIterator;
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
-
-public class SetDemo {
- 
-    public static void main(String[] args) {
-        
     	// Create Map
     	TIntIntMap x = new TIntIntHashMap();
     	
@@ -1021,14 +880,11 @@ public class SetDemo {
     	TIntIntIterator iterator = x.iterator();
 
     	// Show elements
-    	while (iterator.hasNext()) {
-    		
+    	while (iterator.hasNext()) {    		
         	// Advance() method is must to show keys and values of Map
     		iterator.advance();
     		System.out.println("Key: " + iterator.key() + ", value: " + iterator.value());  	
     	}
-    }
-}
 ```
 
 ### <a href="#goldmanSachsCollections" name="goldmanSachsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Goldman Sachs Collections (Eclipse Collections)
@@ -1120,17 +976,6 @@ Below, you can find some Classes supported by *Goldman Sachs Collections*. For f
 
 **Example - Bag**
 ```
-import java.util.Comparator;
-import java.util.List;
-
-import com.gs.collections.api.bag.Bag;
-import com.gs.collections.impl.block.factory.Comparators;
-import com.gs.collections.impl.factory.Bags;
-
-public class BagDemo {
- 
-    public static void main(String[] args) {
-        
     	// Create immutable bag and add values - all in one line of code
     	Bag<String> bag = Bags.immutable.of("Banana", "Avocado", "Apple", "Orange", "Avocado", "Avocado");
     	
@@ -1151,22 +996,10 @@ public class BagDemo {
     	Comparator<? super String> comparator = Comparators.reverseNaturalOrder();
     	list.sort(comparator);
     	System.out.println("Elements in list after change: " + list);
-    }
-}
 ```
 
 **Example - BiMap**
 ```
-import com.gs.collections.api.bimap.BiMap;
-import com.gs.collections.api.bimap.MutableBiMap;
-import com.gs.collections.api.list.ImmutableList;
-import com.gs.collections.api.list.MutableList;
-import com.gs.collections.impl.factory.BiMaps;
-
-public class BiMapDemo {
- 
-    public static void main(String[] args) {
-        
     	// Create BiMap and add elements
     	BiMap<Integer, String> map = BiMaps.mutable.of(1,"Banana",22,"Avocado",5,"Kiwi",7,"Orange");
     	((MutableBiMap<Integer, String>) map).put(3,"Apple");
@@ -1179,26 +1012,11 @@ public class BiMapDemo {
     	System.out.println(mutableList);
     	
     	// Transform mutable to immutable list
-    	ImmutableList<String> immutableList = mutableList.toImmutable();    	
-    }
-}
+    	ImmutableList<String> immutableList = mutableList.toImmutable();   
 ```
 
 **Example - List**
 ```
-import java.util.HashMap;
-import java.util.Map;
-
-import com.gs.collections.api.collection.primitive.MutableIntCollection;
-import com.gs.collections.api.list.MutableList;
-import com.gs.collections.api.list.primitive.IntList;
-import com.gs.collections.impl.factory.primitive.IntLists;
-import com.gs.collections.impl.list.mutable.FastList;
-
-public class ListDemo {
- 
-    public static void main(String[] args) {
-        
     	// Create IntList and add values
     	IntList list = IntLists.mutable.of(1,4,5,22,13);  
     	((MutableIntCollection) list).add(11);
@@ -1220,22 +1038,11 @@ public class ListDemo {
     	for(int i = 0; i < list.size() - 1; i++) 
     		map.put(list.get(i), fruits.get(i));
     	
-    	System.out.println(map);    	
-    }
-}
+    	System.out.println(map);  
 ```
 
 **Example - Set**
 ```
-import com.gs.collections.api.block.procedure.primitive.DoubleProcedure;
-import com.gs.collections.api.list.primitive.DoubleList;
-import com.gs.collections.api.set.primitive.ImmutableDoubleSet;
-import com.gs.collections.impl.factory.primitive.DoubleSets;
-
-public class BiMapDemo {
- 
-    public static void main(String[] args) {
-        
     	// Create ImmutableDoubleSet and add values
     	ImmutableDoubleSet set = DoubleSets.immutable.of(4.2,3.3,15.5,8.4);
     	
@@ -1253,8 +1060,6 @@ public class BiMapDemo {
     	
     	// Elements are sorted by value
     	list.forEach((DoubleProcedure) System.out::println);
-    }
-}
 ```
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a>, and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
