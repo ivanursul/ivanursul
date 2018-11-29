@@ -1184,9 +1184,45 @@ public class BiMapDemo {
 }
 ```
 
-**Example - **
+**Example - List**
 ```
+import java.util.HashMap;
+import java.util.Map;
 
+import com.gs.collections.api.collection.primitive.MutableIntCollection;
+import com.gs.collections.api.list.MutableList;
+import com.gs.collections.api.list.primitive.IntList;
+import com.gs.collections.impl.factory.primitive.IntLists;
+import com.gs.collections.impl.list.mutable.FastList;
+
+public class ListDemo {
+ 
+    public static void main(String[] args) {
+        
+    	// Create IntList and add values
+    	IntList list = IntLists.mutable.of(1,4,5,22,13);  
+    	((MutableIntCollection) list).add(11);
+    
+    	System.out.println("The average value of elements in list is: " + list.average());
+    	
+    	// Create MutableList and add values
+    	MutableList<String> fruits = FastList.newListWith("Banana","Orange","Apple","Kiwi","Avocado");
+    	System.out.println(fruits);
+    	
+	// Create MutableListMultimap and add values from fruits with keys expressed in the number of letters each word contains
+	MutableListMultimap<Integer, String> multimap = fruits.groupBy(StringFunctions.length());
+    	System.out.println(multimap);
+	
+    	// Create Map
+    	Map<Integer, String> map = new HashMap();
+    		
+    	// Add keys from list and values from fruits to a Map
+    	for(int i = 0; i < list.size() - 1; i++) 
+    		map.put(list.get(i), fruits.get(i));
+    	
+    	System.out.println(map);    	
+    }
+}
 ```
 
 **Example - **
