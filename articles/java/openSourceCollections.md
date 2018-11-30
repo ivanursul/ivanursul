@@ -901,7 +901,7 @@ Below, you can find some Classes supported by *Trove*. For further information f
 
 ### <a href="#goldmanSachsCollections" name="goldmanSachsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Goldman Sachs Collections (Eclipse Collections)
 
-In this section, we will focus on *GS Collections* and will see what are the parts where this library is similar to four previously mentioned libraries, what this library provides and what are the most used iteration patterns, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use Bags, BiMaps, Lists, Sets, their transformations from one to another and many useful Methods provided by these Collections.
+In this section, we will focus on *GS Collections* and you will see what are the parts where this library is similar to four previously mentioned libraries, what this library provides and what are the most used iteration patterns, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use Bags, BiMaps, Lists, Sets, their transformations from one to another and many useful Methods provided by these Collections.
 
 Just like Trove, *Goldman Sachs Collections* is optimized for performance and memory usage and allows storing primitive data types in Collections. Its focus is on iteration improvment and has possibility of creating Immutable Collections, Bags, Multimaps, BiMaps, and Intervals. Just like Guava, writing the code is much easier with *Goldman Sachs Collections*. This library provides sort(), min(), max(), select(), collect() methods for all kind of Collections.
 
