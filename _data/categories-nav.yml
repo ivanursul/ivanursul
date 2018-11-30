@@ -1,7 +1,7 @@
 items:
   - title: Java
     text: Write once, run anywhere(c)
-    icon: /assets/images/categories-nav/java_icon.png
+    icon: /assets/images/categories-nav/java_i.png
     url: /articles/java/
   - title: ChatBots
     text: Everything about ChatBots
