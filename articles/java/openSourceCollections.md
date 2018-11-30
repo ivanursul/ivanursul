@@ -494,7 +494,8 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
 
       	System.out.println(optionalDemo.calculation(x, y, z, w));
 
-   	public Integer calculation(Optional<Integer> x, Optional<Integer> y, Optional<Integer> z, Optional<Integer> w) {
+   	public Integer calculation(Optional<Integer> x, Optional<Integer> y, 
+		Optional<Integer> z, Optional<Integer> w) {
 	         
       		System.out.println("x is present: " + x.isPresent());
       		System.out.println("y is present: " + y.isPresent());
