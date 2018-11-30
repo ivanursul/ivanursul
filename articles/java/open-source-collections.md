@@ -16,6 +16,8 @@ More about this will be explained below, distributed by different libraries.
 
 ### <a href="#apacheCommonsCollections" name="apacheCommonsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Apache Commons Collections
 
+In this section, we will focus on *Apache Commons Collections*, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to ignore Null values, how to merge lists, and how to use Bags, BidiMaps, and MapIterator.
+
 <a href="https://commons.apache.org/proper/commons-collections/">Apache Commons Collections</a> provide the following features:
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/Bag.html">Bag</a> Interface with a number of copies of each object
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provides Bi-Directional Maps that can be looked up both, from value to key, as like as key to value
@@ -28,15 +30,15 @@ More about this will be explained below, distributed by different libraries.
 **How to use a library:**
 To use this library, all you have to do is to insert *dependency* code to your project. Assuming that you know how to use Maven, you can find the code at the <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.1">official website</a>:
 ```
-<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
-<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-collections4</artifactId>
-    <version>4.1</version>
-</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+	<dependency>
+  	  	<groupId>org.apache.commons</groupId>
+  	  	<artifactId>commons-collections4</artifactId>
+  	  	<version>4.1</version>
+	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Another way of using *Apache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with <a href="https://www.win-rar.com/start.html?&L=0">WinRar</a> and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
 
@@ -147,25 +149,25 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 
 **Example - Ignore Null values**
 ```
-      List<String> list = new LinkedList<String>();
+      	List<String> list = new LinkedList<String>();
 		
-      list.add("Apple");
-      CollectionUtils.addIgnoreNull(list, "Avocado");
-      list.add("Orange");
-      CollectionUtils.addIgnoreNull(list, null);
-      list.add("Banana");
+      	list.add("Apple");
+     	CollectionUtils.addIgnoreNull(list, "Avocado");
+      	list.add("Orange");
+      	CollectionUtils.addIgnoreNull(list, null);
+      	list.add("Banana");
 	    
-      System.out.println(list);
+      	System.out.println(list);
 
-      if(list.contains(null)) {
-         System.out.println("Null value is present");
-      } else {
-         System.out.println("Null value is not present");
-      }
-       /*
+      	if(list.contains(null)) {
+         	System.out.println("Null value is present");
+      	} else {
+         	System.out.println("Null value is not present");
+      	}
+       	/*
       	As you can see at the end, in the list NULL value does not exist.
 	Method addIgnoreNull is very useful if you want to forbid NULL values in your lists.
-      */
+      	*/
 ```
 
 **Example - Merging lists**
@@ -187,71 +189,71 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 
 **Example - Bags usage**
 ```
-      //Create Bag
-      Bag<String> bag = new HashBag<>();
+      	//Create Bag
+      	Bag<String> bag = new HashBag<>();
 
-      //Add "Banana" five times to the bag
-      bag.add("Banana", 5);
+      	//Add "Banana" five times to the bag
+      	bag.add("Banana", 5);
       
-      //Add "Orange" one time to the bag
-      bag.add("Orange");
+      	//Add "Orange" one time to the bag
+      	bag.add("Orange");
       
-      //Add "Apple" two times to the bag
-      bag.add("Apple", 2);
+      	//Add "Apple" two times to the bag
+      	bag.add("Apple", 2);
       
-      //Show content of the Bag
-      System.out.println("Bag content: " + bag);
+      	//Show content of the Bag
+      	System.out.println("Bag content: " + bag);
       
-      //Show the set of unique values in the bag
-      System.out.println("Unique values: " + bag.uniqueSet());
+      	//Show the set of unique values in the bag
+      	System.out.println("Unique values: " + bag.uniqueSet());
       
-      //Show the number of "Apple" present in bag
-      System.out.println("Apple is presented " + bag.getCount("Apple") + " times.");
+      	//Show the number of "Apple" present in bag
+      	System.out.println("Apple is presented " + bag.getCount("Apple") + " times.");
       
-      //Remove 2 appearances of "Banana" from the bag
-      bag.remove("Banana", 2);
+      	//Remove 2 appearances of "Banana" from the bag
+      	bag.remove("Banana", 2);
       
-      //Show content of the Bag
-      System.out.println("Content of the bag after removed 2 appearances of Banana: " + bag);
+      	//Show content of the Bag
+      	System.out.println("Content of the bag after removed 2 appearances of Banana: " + bag);
       
-      //Show the number of "Banana" present in bag
-      System.out.println("Banana is present " + bag.getCount("Banana") + " times.");
+      	//Show the number of "Banana" present in bag
+      	System.out.println("Banana is present " + bag.getCount("Banana") + " times.");
 ```
 
 **Example - BidiMap usage**
 ```
-      //Create BidiMap
-      BidiMap<String, String> bidiMap = new TreeBidiMap<>();
+      	//Create BidiMap
+      	BidiMap<String, String> bidiMap = new TreeBidiMap<>();
 
-      //Add keys and values
-      bidiMap.put("Banana", "fruit");
-      bidiMap.put("BMW", "car");
-      bidiMap.put("Red", "color");
+      	//Add keys and values
+      	bidiMap.put("Banana", "fruit");
+      	bidiMap.put("BMW", "car");
+      	bidiMap.put("Red", "color");
       
-      //Show BidiMap content
-      System.out.println("Content of bidiMap: " + bidiMap);
+      	//Show BidiMap content
+      	System.out.println("Content of bidiMap: " + bidiMap);
       
-      //Show the value of Banana key
-      System.out.println("The value of Banana key is: " + bidiMap.get("Banana")); 
+      	//Show the value of Banana key
+      	System.out.println("The value of Banana key is: " + bidiMap.get("Banana")); 
       
-      //Show the key of fruit value
-      System.out.println("The key of fruit value is: " + bidiMap.getKey("fruit"));
+      	//Show the key of fruit value
+      	System.out.println("The key of fruit value is: " + bidiMap.getKey("fruit"));
   
-      //Remove by value fruit
-      bidiMap.removeValue("fruit");
-      System.out.println("BidiMap content after removed value: " + bidiMap);
+      	//Remove by value fruit
+      	bidiMap.removeValue("fruit");
+      	System.out.println("BidiMap content after removed value: " + bidiMap);
       
-      //Remove by key BMW
-      bidiMap.remove("BMW");
-      System.out.println("BidiMap content after removed key: " + bidiMap);
+      	//Remove by key BMW
+      	bidiMap.remove("BMW");
+      	System.out.println("BidiMap content after removed key: " + bidiMap);
         
-      bidiMap.put("Banana", "fruit");
-      bidiMap.put("BMW", "car");
-      System.out.println(bidiMap);
+      	bidiMap.put("Banana", "fruit");
+      	bidiMap.put("BMW", "car");
+      	System.out.println(bidiMap);
       
-      //Create new BidiMap to show method used to replace the site of key/value
-      BidiMap<String, String> inversedBidiMap = bidiMap.inverseBidiMap();  
-      System.out.println("Inversed BidiMap: " + inversedBidiMap);
+      	//Create new BidiMap to show method used to replace the site of key/value
+      	BidiMap<String, String> inversedBidiMap = bidiMap.inverseBidiMap();  
+    	System.out.println("Inversed BidiMap: " + inversedBidiMap);
 ```
 
 **Example - MapIterator usage**
@@ -294,6 +296,8 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 
 ### <a href="#guava" name="guava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Guava - Google's Collections
 
+In this section, we will focus on *Guava* and how to take advantage of easier and faster code writing, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use MultiSet, MultiMap, Optional and Ordering Classes.
+
 Just like Apache Commons Collections, *Guava* represents open source set of libraries as well. *Guava* is made by Google and provides the following benefits:
 * It helps in reducing coding errors and makes it easy to maintain the code,
 * It is a reliable, fast, and efficient,
@@ -304,37 +308,35 @@ Just like Apache Commons Collections, *Guava* represents open source set of libr
 
 *Guava* provides static methods to facilitate the declaration of a variable, like it is mentioned below:
 ```
-List<String> list = new ArrayList<String>();
-list.add("Banana");
-list.add("Apple");
-list.add("Avocado");
-list.add("Orange");
+	List<String> list = new ArrayList<String>();
+	list.add("Banana");
+	list.add("Apple");
+	list.add("Avocado");
+	list.add("Orange");
 
-OR
-
-List<String> list2 = Lists.newArrayList("Banana", "Apple", "Avocado", "Orange");
+	// Or simplier
+	List<String> list2 = Lists.newArrayList("Banana", "Apple", "Avocado", "Orange");
 ```
 ```
-List<Map<String, String>> map = new LinkedList<Map<String, String>>();
+	List<Map<String, String>> map = new LinkedList<Map<String, String>>();
 
-OR
-
-List<Map<String, String>> map2 = Lists.newLinkedList();
+	//Or simplier
+	List<Map<String, String>> map2 = Lists.newLinkedList();
 ```
 As you can conclude, writing the code is much easier with *Guava*.
 
 **How to use a library:**
 *Dependancy* for Maven's library importation is listed hereafter:
 ```
-<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-<dependency>
-    <groupId>com.google.guava</groupId>
-    <artifactId>guava</artifactId>
-    <version>19.0</version>
-</dependency>
+	<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+	<dependency>
+ 	   	<groupId>com.google.guava</groupId>
+ 	   	<artifactId>guava</artifactId>
+  	  	<version>19.0</version>
+	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Below, you can find some Interfaces from Package com.google.common.collect, supported by *Guava*. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
 <table>
@@ -400,154 +402,154 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
 
 **Example - MultiSet**
 ```
-/*
-A Multiset is not a Set, it represents a bag which contains sets of elements.
-*/
+	/*
+	A Multiset is not a Set, it represents a bag which contains sets of elements.
+	*/
+	
+   	// Create Multiset
+   	Multiset<String> multiSet = HashMultiset.create();
+	   
+   	// Add values
+   	multiSet.add("Banana");
+   	multiSet.add("Apple");
+   	multiSet.add("Orange");
+   	multiSet.add("Avocado");
+   	multiSet.add("Banana");
+	   
+  	System.out.println("Number of elements in multiSet: " + multiSet.size());
 
-   // Create Multiset
-   Multiset<String> multiSet = HashMultiset.create();
+   	System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
 	   
-   // Add values
-   multiSet.add("Banana");
-   multiSet.add("Apple");
-   multiSet.add("Orange");
-   multiSet.add("Avocado");
-   multiSet.add("Banana");
-	   
-   System.out.println("Number of elements in multiSet: " + multiSet.size());
-
-   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
-	   
-   // Delete element Banana
-   multiSet.remove("Banana");
-   System.out.println("Number of elements in multiSet: " + multiSet.size());
-   System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
+  	// Delete element Banana
+   	multiSet.remove("Banana");
+   	System.out.println("Number of elements in multiSet: " + multiSet.size());
+   	System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
 ```
 
 **Example - MultiMap**
 ```
-/*
-A MultiMap is like a Map, but it may contain duplicate keys and provides an easy way to handle mapping from keys to a collection of values.
-*/
+	/*
+	A MultiMap is like a Map, but it may contain duplicate keys and provides 
+	an easy way to handle mapping from keys to a collection of values.
+	*/
 
-       //Create MultiMap
-       Multimap<String,String> multiMap = ArrayListMultimap.create();
+       	//Create MultiMap
+       	Multimap<String,String> multiMap = ArrayListMultimap.create();
 	       
-       //Add values
-       multiMap.put("fruit", "Banana");
-       multiMap.put("fruit", "Apple");
-       multiMap.put("fruit", "Banana");
-       multiMap.put("fruit", "Avocado");
-       multiMap.put("fruit", "Orange");
+       	//Add values
+       	multiMap.put("fruit", "Banana");
+       	multiMap.put("fruit", "Apple");
+       	multiMap.put("fruit", "Banana");
+       	multiMap.put("fruit", "Avocado");
+       	multiMap.put("fruit", "Orange");
 	        
-       multiMap.put("car", "BMW");
-       multiMap.put("car", "BMW");
-       multiMap.put("car", "Opel");
-       multiMap.put("car", "Fiat");
+       	multiMap.put("car", "BMW");
+       	multiMap.put("car", "BMW");
+       	multiMap.put("car", "Opel");
+       	multiMap.put("car", "Fiat");
 	 
-       System.out.println("Total items in multiMap: " + multiMap.size());
-       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
-       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));
+       	System.out.println("Total items in multiMap: " + multiMap.size());
+       	System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
+       	System.out.println("fruits in multiMap: " + multiMap.get("fruit"));
 	       
-       //Remove value Banana with key fruit
-       multiMap.remove("fruit", "Banana");
+       	//Remove value Banana with key fruit
+       	multiMap.remove("fruit", "Banana");
 	       
-       //There is still 1 Banana
-       System.out.println("Total items in multiMap: " + multiMap.size());
-       System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
-       System.out.println("fruits in multiMap: " + multiMap.get("fruit"));	        
-       System.out.println("Total items in car: " + multiMap.get("car").size());
-       System.out.println("car Items: " + multiMap.get("car"));	
+       	//There is still 1 Banana
+       	System.out.println("Total items in multiMap: " + multiMap.size());
+       	System.out.println("Total fruits in multiMap: " + multiMap.get("fruit").size());
+       	System.out.println("fruits in multiMap: " + multiMap.get("fruit"));	        
+       	System.out.println("Total items in car: " + multiMap.get("car").size());
+       	System.out.println("car Items: " + multiMap.get("car"));	
 ```
 
 **Example - Optional usage**
 ```
-/*
-The Optional object is used to represent null with absent value.
-*/
+	/*
+	The Optional object is used to represent null with absent value.
+	*/
 
-      OptionalDemo optionalDemo = new OptionalDemo();
+      	OptionalDemo optionalDemo = new OptionalDemo();
 
-      Integer value =  null;
-      Integer value2 =  new Integer(11);
-      Integer value3 =  new Integer(5);
-      Integer value4 =  null;
-      Integer value5 =  null;
+      	Integer value =  null;
+      	Integer value2 =  new Integer(11);
+      	Integer value3 =  new Integer(5);
+      	Integer value4 =  null;
+      	Integer value5 =  null;
       
-      //Allows NULL value
-      Optional<Integer> x = Optional.fromNullable(value);
+      	//Allows NULL value
+      	Optional<Integer> x = Optional.fromNullable(value);
       
-      //Does not allow NULL value
-      Optional<Integer> y = Optional.of(value2);
+      	//Does not allow NULL value
+      	Optional<Integer> y = Optional.of(value2);
       
-      //Does not allow NULL value
-      Optional<Integer> z = Optional.of(value3);
+      	//Does not allow NULL value
+      	Optional<Integer> z = Optional.of(value3);
 
-      //Does not allow NULL value
-      //Optional<Integer> v = Optional.of(value4); This throws NullPointerException
+      	//Does not allow NULL value
+      	//Optional<Integer> v = Optional.of(value4); This throws NullPointerException
 
-      //Allows NULL value
-      Optional<Integer> w = Optional.fromNullable(value5);
+      	//Allows NULL value
+      	Optional<Integer> w = Optional.fromNullable(value5);
 
-      System.out.println(optionalDemo.calculation(x, y, z, w));
-   }
+      	System.out.println(optionalDemo.calculation(x, y, z, w));
 
-   public Integer calculation(Optional<Integer> x, Optional<Integer> y, Optional<Integer> z, Optional<Integer> w) {
+   	public Integer calculation(Optional<Integer> x, Optional<Integer> y, 
+		Optional<Integer> z, Optional<Integer> w) {
 	         
-      System.out.println("x is present: " + x.isPresent());
-      System.out.println("y is present: " + y.isPresent());
-      System.out.println("z is present: " + z.isPresent());
-      System.out.println("w is present: " + w.isPresent());
+      		System.out.println("x is present: " + x.isPresent());
+      		System.out.println("y is present: " + y.isPresent());
+      		System.out.println("z is present: " + z.isPresent());
+      		System.out.println("w is present: " + w.isPresent());
 
-      //Returns the value if present otherwise returns the default value passed
-      Integer value1 = x.or(new Integer(0));	
-      System.out.println(value1);
+      		//Returns the value if present otherwise returns the default value passed
+      		Integer value1 = x.or(new Integer(0));	
+      		System.out.println(value1);
 
-      //Gets the value, value should be present
-      Integer value2 = y.get();
-      System.out.println(value2);
+      		//Gets the value, value should be present
+      		Integer value2 = y.get();
+      		System.out.println(value2);
       
-      Integer value3 = z.get();
-      System.out.println(value3);
+      		Integer value3 = z.get();
+      		System.out.println(value3);
       
-      //Integer value5 = w.get(); Can't be called because of an absent value
+      		//Integer value5 = w.get(); Can't be called because of an absent value
 
-      return value1 + value2 - value3;
-  }
-}
+      		return value1 + value2 - value3;
+  	}
 ```
 
 **Example - Ordering**
 ```
-      // Create Lists
-      List<Integer> numbers = Lists.newArrayList(1,7,4,22,1,-13,222);
-      List<String> fruits = Lists.newArrayList("Banana","Avocado","Banana","Orange","Apple");
+      	// Create Lists
+      	List<Integer> numbers = Lists.newArrayList(1,7,4,22,1,-13,222);
+      	List<String> fruits = Lists.newArrayList("Banana","Avocado","Banana","Orange","Apple");
 
-      // Create Ordering
-      Ordering ordering = Ordering.natural();
-      System.out.println("Numbers: " + numbers);      
-      System.out.println("Fruits: " + fruits);
+      	// Create Ordering
+      	Ordering ordering = Ordering.natural();
+      	System.out.println("Numbers: " + numbers);      
+      	System.out.println("Fruits: " + fruits);
         
-      // Sort elements
-      Collections.sort(numbers,ordering);
-      Collections.sort(fruits,ordering);
-      System.out.println("Sorted numbers: " + numbers);      
-      System.out.println("Sorted numbers: " + fruits);
+      	// Sort elements
+      	Collections.sort(numbers,ordering);
+      	Collections.sort(fruits,ordering);
+      	System.out.println("Sorted numbers: " + numbers);      
+      	System.out.println("Sorted numbers: " + fruits);
        
-      // Sort descending
-      Collections.sort(fruits,ordering.reverse());
-      System.out.println("Reverse: " + fruits);
+      	// Sort descending
+      	Collections.sort(fruits,ordering.reverse());
+      	System.out.println("Reverse: " + fruits);
 
-      numbers.add(null);
-      System.out.println("Null added to Sorted numbers: " + numbers);	
+      	numbers.add(null);
+      	System.out.println("Null added to Sorted numbers: " + numbers);	
 
-      Collections.sort(numbers,ordering.nullsFirst());
-      System.out.println("Null at first position: " + numbers);
-   }
-}
+      	Collections.sort(numbers,ordering.nullsFirst());
+      	System.out.println("Null at first position: " + numbers);
 ```
 
 ### <a href="#fastUtil" name="fastUtil"><i class="fa fa-link anchor" aria-hidden="true"></i></a> FastUtil Collections
+
+In this section, we will focus on *FastUtil* and why it takes the 1st place in performance tests, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use DoubleArrayList, Long2IntArrayMap, how to create Read-Only and Sorted Maps.
 
 *FastUtil* characterizes high performance and the fastest implementations available. Some of the benefits it provides are listed below:
 * Classes that support very large collections (64-bit),
@@ -576,15 +578,15 @@ Another characteristic is a huge jar file, because of numerous Classes. Therefor
 **How to use a library:**
 *Dependancy* for Maven’s library importation is listed hereafter:
 ```
-<!-- https://mvnrepository.com/artifact/it.unimi.dsi/fastutil -->
-<dependency>
-    <groupId>it.unimi.dsi</groupId>
-    <artifactId>fastutil</artifactId>
-    <version>8.1.0</version>
-</dependency>
+	<!-- https://mvnrepository.com/artifact/it.unimi.dsi/fastutil -->
+	<dependency>
+    		<groupId>it.unimi.dsi</groupId>
+    		<artifactId>fastutil</artifactId>
+    		<version>8.1.0</version>
+	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Below, you can find some Interfaces from Package it.unimi.dsi.fastutil, supported by *FastUtil*. For further information feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
 <table>
@@ -747,6 +749,8 @@ In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. 
 
 ### <a href="#troveLibrary" name="troveLibrary"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Trove Library
 
+In this section, we will focus on *Trove*, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about ArrayLists, Sets, and Maps.
+
 *Trove*, in the opposite of FastUtil, is significantly smaller. Advantages of this library are high speed regular and primitive Collections and reduced memory consumption. One of the interesting features is that almost all the Classes and Interfaces start with "T". *Trove* allows storing primitive data types in Collections, which is especially useful if there is a large ArrayList/Set/Map with keys or values that could be a primitive type.
 
 The most important Collections here are ArrayLists, Sets, and Maps, but SortedMaps and Maps with a fixed iteration order do not exist. As you will conclude from the text below, the Trove Maps and Sets use open addressing instead of the chaining approach.
@@ -754,15 +758,15 @@ The most important Collections here are ArrayLists, Sets, and Maps, but SortedMa
 **How to use a library:**
 To use this library, all you have to do is to insert Maven's *dependency* code to your project.
 ```
-<!-- https://mvnrepository.com/artifact/net.sf.trove4j/trove4j -->
-<dependency>
-    <groupId>net.sf.trove4j</groupId>
-    <artifactId>trove4j</artifactId>
-    <version>3.0.3</version>
-</dependency>
+	<!-- https://mvnrepository.com/artifact/net.sf.trove4j/trove4j -->
+	<dependency>
+    		<groupId>net.sf.trove4j</groupId>
+    		<artifactId>trove4j</artifactId>
+    		<version>3.0.3</version>
+	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Below, you can find some Interfaces supported by *Trove*. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
 <table>
@@ -842,7 +846,6 @@ Below, you can find some Classes supported by *Trove*. For further information f
     	System.out.println(x.grep(new TIntProcedure() {
 			
 		public boolean execute(int value) {
-			// TODO Auto-generated method stub
 			return 1==1;
 		}
 	}));
@@ -898,20 +901,22 @@ Below, you can find some Classes supported by *Trove*. For further information f
 
 ### <a href="#goldmanSachsCollections" name="goldmanSachsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Goldman Sachs Collections (Eclipse Collections)
 
+In this section, we will focus on *GS Collections* and you will see what are the parts where this library is similar to four previously mentioned libraries, what this library provides and what are the most used iteration patterns, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use Bags, BiMaps, Lists, Sets, their transformations from one to another and many useful Methods provided by these Collections.
+
 Just like Trove, *Goldman Sachs Collections* is optimized for performance and memory usage and allows storing primitive data types in Collections. Its focus is on iteration improvment and has possibility of creating Immutable Collections, Bags, Multimaps, BiMaps, and Intervals. Just like Guava, writing the code is much easier with *Goldman Sachs Collections*. This library provides sort(), min(), max(), select(), collect() methods for all kind of Collections.
 
 **How to use a library:**
 To use this library, all you have to do is to insert Maven's *dependency* code to your project.
 ```
-<!-- https://mvnrepository.com/artifact/com.goldmansachs/gs-collections-forkjoin -->
-<dependency>
-    <groupId>com.goldmansachs</groupId>
-    <artifactId>gs-collections-forkjoin</artifactId>
-    <version>7.0.1</version>
-</dependency>
+	<!-- https://mvnrepository.com/artifact/com.goldmansachs/gs-collections-forkjoin -->
+	<dependency>
+    		<groupId>com.goldmansachs</groupId>
+    		<artifactId>gs-collections-forkjoin</artifactId>
+    		<version>7.0.1</version>
+	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 According to the <a href="https://www.goldmansachs.com">official website</a>, the most used iteration patterns in *Goldman Sachs Collections* are:
 * Filtering patterns:
