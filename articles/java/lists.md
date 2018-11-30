@@ -5,9 +5,9 @@ date: 2018-11-08 00:00:00
 
 ### <a href="#list-interface" name="list-interface"><i class="fa fa-link anchor" aria-hidden="true"></i></a> List Interface
 
-Welcome to the blog about *List* Interface. In this article, I am going to introduce a concept of *List* and its implementations such as *Vector and Stack* with the accent to the *ArrayList and LinkedList*. I hope you will enjoy the content and gain some new experience.
+Welcome to the blog about List Interface. In this article, I am going to introduce a concept of List and its implementations such as Vector and Stack with the accent to the ArrayList and LinkedList. I hope you will enjoy the content and gain some new experience.
 
-The Java List Interface represents a collection of elements. What is *characteristic* about List is that same element can occur more than once, also elements in a List have an insertion order and they can be iterated in that order. 
+The Java List Interface represents a collection of elements. What is characteristic about List is that same element can occur more than once, also elements in a List have an insertion order and they can be iterated in that order. 
 
 ### <a href="#implementation" name="implementation"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Implementation
 
@@ -24,38 +24,32 @@ List Interface is implemented by classes listed below:
 A List is an interface, and the instances of List can be created in the following ways:
 
 ```
-List list1 = new ArrayList();
-List list2 = new LinkedList();
-List list3 = new Vector(); 
-List list4 = new Stack(); 
+        List list1 = new ArrayList();
+        List list2 = new LinkedList();
+        List list3 = new Vector(); 
+        List list4 = new Stack(); 
 ```
 
 ### <a href="#operations-on-list" name="operations-on-list"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Operations on List
 
-A List allows **add, remove, get and set** operations based on numerical positions of elements in List. A List provides the following methods for these operations:
+A List allows add, remove, get and set operations based on numerical positions of elements in List. A List provides the following methods for these operations:
 
-* void add(int index, E element) - *Inserts the specified element at the specified position in this list*
-* boolean	add(E e) - *Appends the specified element to the end of this list*
-* boolean	addAll(int index, Collection<? extends E> c) - *Inserts all of the elements in the specified collection into this list at the specified position*
-* E	get(int index) - *Returns the element at the specified position in this list*
-* E	remove(int index) - *Removes the element at the specified position in this list*
-* E	set(int index, E element) - *Replaces the element at the specified position in this list with the specified element*
+* void add(int index, E element) - Inserts the specified element at the specified position in this list
+* boolean add(E e) - Appends the specified element to the end of this list
+* boolean addAll(int index, Collection<? extends E> c) - Inserts all of the elements in the specified collection into this list at the specified position
+* E get(int index) - Returns the element at the specified position in this list
+* E remove(int index) - Removes the element at the specified position in this list
+* E set(int index, E element) - Replaces the element at the specified position in this list with the specified element
 
 Bellow, you can find a few more methods, for further information feel free to check the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>:
-* void	clear() - *Removes all of the elements from this list*
-* boolean	contains(Object o) - *Returns true if this list contains the specified element*
-* int	size() - *Returns the number of elements in this list*
-* default void	sort(Comparator<? super E> c) - *Sorts this list according to the order induced by the specified Comparator*
-* int	indexOf(Object o) - *Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element*
+* void clear() - Removes all of the elements from this list
+* boolean contains(Object o) - Returns true if this list contains the specified element
+* int size() - Returns the number of elements in this list
+* default void sort(Comparator<? super E> c) - Sorts this list according to the order induced by the specified Comparator
+* int indexOf(Object o) - Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element
 
-**Example**
+Example:
 ```
-import java.util.*; 
-  
-public class Demo 
-{ 
-    public static void main (String[] args) 
-    { 
         // Creating a list 
         List<Integer> list1 = new ArrayList<Integer>(); 
         list1.add(0, 5);  // adds 5 at 0 index 
@@ -83,30 +77,28 @@ public class Demo
         // Replace 0th element with 5 
         list1.set(0, 5);    
         System.out.println(list1);  
-    } 
-}
 ```
-**Result**
+Result:
 ```
-[5, 6, 7]
-[5, 6, 1, 2, 3, 7]
-[5, 6, 1, 3, 7]
-3
-[5, 6, 1, 3, 7]
+        [5, 6, 7]
+        [5, 6, 1, 2, 3, 7]
+        [5, 6, 1, 3, 7]
+        3
+        [5, 6, 1, 3, 7]
 ```
 
 ### <a href="#arrayList" name="arrayList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> ArrayList
 
 The ArrayList class implements a List Interface and represents dynamic arrays that can grow as needed. All elements of an ArrayList are stored in a Java array, but unlike an array that has a fixed length, ArrayLists are created with an initial size. That means that if the size is exceeded the collection is automatically enlarged and if an element is removed from ArrayList the array may be shrunk.
 
-Size enlargement is done by copying the old elements to the new array and using that new array instead of the old one. Since the size of an array doubles every time it needs more space, this can be controlled by using *trimToSize()* method. This method copies all the elements from the existing array to a new array with size of exactly same number as the elements in the existing array.
+Size enlargement is done by copying the old elements to the new array and using that new array instead of the old one. Since the size of an array doubles every time it needs more space, this can be controlled by using trimToSize() method. This method copies all the elements from the existing array to a new array with size of exactly same number as the elements in the existing array.
 
 As ArrayList is generic that means that you work with a general type T, where T can be replaced by any type such as int, double, String, Object etc. The most important thing is that ArrayList and ArrayList<T> are different. For ArrayList, you must specify the type of elements that will be stored. For example, if you want to store textual values in your ArrayList, this is the way of declaration:
 ```
-ArrayList<String> text = new ArrayList<String>();
+        ArrayList<String> text = new ArrayList<String>();
 ```
 
-You can, also, see a declaration such as *List<&#xfeff;String> text = new ArrayList<&#xfeff;String>();*. This way, named *Polymorphism*, is usually used because the object named *"text"* is intended to be used as a List and it is recommended to declare it as List<String> type.
+You can, also, see a declaration such as List<&#xfeff;String> text = new ArrayList<&#xfeff;String>();. This way, named Polymorphism, is usually used because the object named "text" is intended to be used as a List and it is recommended to declare it as List<String> type.
  
 ### <a href="#linkedList" name="linkedList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedList
 
@@ -123,57 +115,65 @@ The differences between ArrayList and LinkedList are:
 
 The way of declaring LinkedList is similar to ArrayList. For example, if you want to store textual values in your ArrayList, the way of a declaration is:
 ```
-LinkedList<String> text = new LinkedList<String>();
+        LinkedList<String> text = new LinkedList<String>();
 ```
 
-**Example - The "throws" function**
+Example - The "throws" function
 ```
-public Object pop() throws UnderflowException {
-     if(this.isempty()) {
-       throw new UnderflowException();
-     }
-     DoublyLinkedList oldback = this.back;
-     Object result = oldback.element;
-     this.back = oldback.next;
-     if(this.front == oldback) {
-       this.front = null;
-     }
-     oldback.remove();
-     return result;
-   }
-
-public boolean isempty() {
-        if(this.front == null || this.back == null) {
-          if(this.back != this.front) {
-            throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
-          }
-          return true;
-        } else {
-          return false;
+        public Object pop() throws UnderflowException {
+        
+              if(this.isempty()) {
+                    throw new UnderflowException();
+              }
+                
+               DoublyLinkedList oldback = this.back;
+               Object result = oldback.element;
+               this.back = oldback.next;
+                
+               if(this.front == oldback) {
+                     this.front = null;
+               }
+                 
+               oldback.remove();                
+               return result;
         }
-      }
-```
-**Example - The "insert" function**
-```
-public void push(Object x) throws OverflowException {
-        if (this.isempty()){
-          this.front = this.back = new DLL(null, x, null);
-        } else {
-          DLL oldback = this.back;
-          this.back = new DLL(null, x, oldback);
-        }
-}
 
-public boolean isempty() {
-        if(this.front == null || this.back == null) {
-          if(this.back != this.front) {
-            throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
-          }
-          return true;
-        } else {
-          return false;
+        public boolean isempty() {
+          
+                if(this.front == null || this.back == null) {
+                  
+                        if(this.back != this.front) {
+                              throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
+                        }                          
+                        return true;                          
+                 } else {
+                        return false;
+                 }
         }
-      }
 ```
+Example - The "insert" function
+```
+        public void push(Object x) throws OverflowException {
+           
+                if (this.isempty()){
+                        this.front = this.back = new DLL(null, x, null);
+                } else {
+                DLL oldback = this.back;
+                this.back = new DLL(null, x, oldback);
+              }
+        }
 
+        public boolean isempty() {
+         
+                if(this.front == null || this.back == null) {
+                
+                        if(this.back != this.front) {
+                                throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
+                        }                          
+                        return true;
+                 } else {
+                         return false;
+                 }
+        }
+```
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a> and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
