@@ -9,7 +9,6 @@ summary: Write once, run anywhere(c)
 ---
 
 Over the past few years I realized that I spend less and less time writing code in Java and more time doing non-technical things like reading emails(sometimes it can take a lot of time for me). 
-
 I decided to create a separate place in my blog, where Java world will be covered, so I will start with covering basic things and will continue with more sophisticated, edge-cased articles about the Java world.
 
 ### Collections
