@@ -5,7 +5,7 @@ date: 2018-11-21 00:00:00
 
 ### <a href="#openSourceCollectionsInJava" name="openSourceCollectionsInJava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Open Source Collections in Java
 
-Welcome to the blog about *Collections* in Java. In this article, I am going to introduce a concept of *Apache Commons, Guava, Fastutil, Trove, and Goldman Sachs Collections libraries* and their Interfaces, Classes, and Methods supported by examples. I hope you will enjoy the content and gain some new experience.
+Welcome to the blog about Collections in Java. In this article, I am going to introduce a concept of Apache Commons, Guava, Fastutil, Trove, and Goldman Sachs Collections libraries and their Interfaces, Classes, and Methods supported by examples. I hope you will enjoy the content and gain some new experience.
 
 The Collection in Java provides an architecture to manipulate with the group of objects. Collections provide:
 * all the operations that are performed on data, such as searching, sorting, insertion, and deletion
@@ -16,19 +16,19 @@ More about this will be explained below, distributed by different libraries.
 
 ### <a href="#apacheCommonsCollections" name="apacheCommonsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Apache Commons Collections
 
-In this section, we will focus on *Apache Commons Collections*, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to ignore Null values, how to merge lists, and how to use Bags, BidiMaps, and MapIterator.
+In this section, we will focus on Apache Commons Collections, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to ignore Null values, how to merge lists, and how to use Bags, BidiMaps, and MapIterator.
 
 <a href="https://commons.apache.org/proper/commons-collections/">Apache Commons Collections</a> provide the following features:
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/Bag.html">Bag</a> Interface with a number of copies of each object
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provides Bi-Directional Maps that can be looked up both, from value to key, as like as key to value
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/MapIterator.html">MapIterator</a> Interface provides iteration over maps
-* *Transforming Decorators* alter each object when it is added to the collection
-* *Composite Collections* make multiple collections look like one (uniformly)
-* *Ordered Maps* and *Sets* retain the order elements are added in
-* *Reference Map* allows keys and/or values to be garbage collected under close control
+* Transforming Decorators alter each object when it is added to the collection
+* Composite Collections make multiple collections look like one (uniformly)
+* Ordered Maps and Sets retain the order elements are added in
+* Reference Map allows keys and/or values to be garbage collected under close control
 
-**How to use a library:**
-To use this library, all you have to do is to insert *dependency* code to your project. Assuming that you know how to use Maven, you can find the code at the <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.1">official website</a>:
+How to use a library: 
+To use this library, all you have to do is to insert dependency code to your project. Assuming that you know how to use Maven, you can find the code at the <a href="https://mvnrepository.com/artifact/org.apache.commons/commons-collections4/4.1">official website</a>:
 ```
 	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 	<dependency>
@@ -40,12 +40,12 @@ To use this library, all you have to do is to insert *dependency* code to your p
 
 More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
-Another way of using *Apache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with <a href="https://www.win-rar.com/start.html?&L=0">WinRar</a> and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
+Another way of using Apache Commons Collections is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with <a href="https://www.win-rar.com/start.html?&L=0">WinRar</a> and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
 
-**Synchronization:**
-*Apache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of Collections, Maps and Bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
+Synchronization: 
+Apache Commons Collections and Java collections have a similar synchronization solution. The majority of the various implementations of Collections, Maps and Bags are not thread safe without additional synchronization, therefore synchronizeXXX method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
 
-Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Apache Commons Collections*. For further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
+Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by Apache Commons Collections. For further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -145,9 +145,9 @@ Below, you can find some Classes from Package org.apache.commons.collections4 su
   </tr>
 </table>
 
-In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>, so we can focus more on practical examples.
+In Apache Commons Collections exist 19 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html">official website</a>, so we can focus more on practical examples.
 
-**Example - Ignore Null values**
+Example - Ignore Null values
 ```
       	List<String> list = new LinkedList<String>();
 		
@@ -170,7 +170,7 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
       	*/
 ```
 
-**Example - Merging lists**
+Example - Merging lists
 ```
 	List<String> list1 = new LinkedList<String>();
    	List<String> list2 = new LinkedList<String>();
@@ -187,7 +187,7 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 	//This method makes it easier to combine multiple lists	
 ```
 
-**Example - Bags usage**
+Example - Bags usage
 ```
       	//Create Bag
       	Bag<String> bag = new HashBag<>();
@@ -220,7 +220,7 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
       	System.out.println("Banana is present " + bag.getCount("Banana") + " times.");
 ```
 
-**Example - BidiMap usage**
+Example - BidiMap usage
 ```
       	//Create BidiMap
       	BidiMap<String, String> bidiMap = new TreeBidiMap<>();
@@ -256,7 +256,7 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
     	System.out.println("Inversed BidiMap: " + inversedBidiMap);
 ```
 
-**Example - MapIterator usage**
+Example - MapIterator usage
 ```
         //Create IterableMap
 	IterableMap<String, String> iterableMap = new HashedMap<>();
@@ -296,9 +296,9 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 
 ### <a href="#guava" name="guava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Guava - Google's Collections
 
-In this section, we will focus on *Guava* and how to take advantage of easier and faster code writing, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use MultiSet, MultiMap, Optional and Ordering Classes.
+In this section, we will focus on Guava and how to take advantage of easier and faster code writing, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use MultiSet, MultiMap, Optional and Ordering Classes.
 
-Just like Apache Commons Collections, *Guava* represents open source set of libraries as well. *Guava* is made by Google and provides the following benefits:
+Just like Apache Commons Collections, Guava represents open source set of libraries as well. Guava is made by Google and provides the following benefits:
 * It helps in reducing coding errors and makes it easy to maintain the code,
 * It is a reliable, fast, and efficient,
 * Collections - include immutable Collections, Bidirectional Maps, Multisets, Multimaps, Tables, and more,
@@ -306,7 +306,7 @@ Just like Apache Commons Collections, *Guava* represents open source set of libr
 * <a href="https://github.com/google/guava/wiki/OrderingExplained">Comparator</a> Class for ordering,
 * Graphs, Caching, operations on primitive types not provided by JDK, simplified I/O and more.
 
-*Guava* provides static methods to facilitate the declaration of a variable, like it is mentioned below:
+Guava provides static methods to facilitate the declaration of a variable, like it is mentioned below:
 ```
 	List<String> list = new ArrayList<String>();
 	list.add("Banana");
@@ -323,10 +323,10 @@ Just like Apache Commons Collections, *Guava* represents open source set of libr
 	//Or simplier
 	List<Map<String, String>> map2 = Lists.newLinkedList();
 ```
-As you can conclude, writing the code is much easier with *Guava*.
+As you can conclude, writing the code is much easier with Guava.
 
-**How to use a library:**
-*Dependancy* for Maven's library importation is listed hereafter:
+How to use a library: 
+Dependancy for Maven's library importation is listed hereafter:
 ```
 	<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 	<dependency>
@@ -338,7 +338,7 @@ As you can conclude, writing the code is much easier with *Guava*.
 
 More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
-Below, you can find some Interfaces from Package com.google.common.collect, supported by *Guava*. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
+Below, you can find some Interfaces from Package com.google.common.collect, supported by Guava. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -366,7 +366,7 @@ Below, you can find some Interfaces from Package com.google.common.collect, supp
   </tr>           
 </table>
 
-Below, you can find some Classes from Package com.google.common.collect supported by *Guava*. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
+Below, you can find some Classes from Package com.google.common.collect supported by Guava. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
 <table>
   <tr>
     <th>Classes</th>
@@ -398,9 +398,9 @@ Below, you can find some Classes from Package com.google.common.collect supporte
   </tr>  
 </table>
 
-In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
+In Guava exist 16 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes from one Package and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
-**Example - MultiSet**
+Example - MultiSet
 ```
 	/*
 	A Multiset is not a Set, it represents a bag which contains sets of elements.
@@ -426,7 +426,7 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
    	System.out.println("Number of Banana in multiSet: " + multiSet.count("Banana"));
 ```
 
-**Example - MultiMap**
+Example - MultiMap
 ```
 	/*
 	A MultiMap is like a Map, but it may contain duplicate keys and provides 
@@ -463,7 +463,7 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
        	System.out.println("car Items: " + multiMap.get("car"));	
 ```
 
-**Example - Optional usage**
+Example - Optional usage
 ```
 	/*
 	The Optional object is used to represent null with absent value.
@@ -519,7 +519,7 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
   	}
 ```
 
-**Example - Ordering**
+Example - Ordering
 ```
       	// Create Lists
       	List<Integer> numbers = Lists.newArrayList(1,7,4,22,1,-13,222);
@@ -549,24 +549,24 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
 
 ### <a href="#fastUtil" name="fastUtil"><i class="fa fa-link anchor" aria-hidden="true"></i></a> FastUtil Collections
 
-In this section, we will focus on *FastUtil* and why it takes the 1st place in performance tests, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use DoubleArrayList, Long2IntArrayMap, how to create Read-Only and Sorted Maps.
+In this section, we will focus on FastUtil and why it takes the 1st place in performance tests, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use DoubleArrayList, Long2IntArrayMap, how to create Read-Only and Sorted Maps.
 
-*FastUtil* characterizes high performance and the fastest implementations available. Some of the benefits it provides are listed below:
+FastUtil characterizes high performance and the fastest implementations available. Some of the benefits it provides are listed below:
 * Classes that support very large collections (64-bit),
 * Classes for fast and practical access to binary and text files,
 * Provides structure-specific and type-specific Maps, Sets, Lists and PriorityQueues,
 * In terms of memory, it is space-efficient
 
-**Speed test:**
-According to the benchmarks, *FastUtil* has the title of the "fastest" implementation. The title is defended with the following benefits:
-* In int-int map testing, there is a fact that the fewer memory accesses an implementation makes to access an entry – the faster it would be, and *FastUtil* has an advantage because of the highly optimized code. This is especially important for large Maps.
-* In int-Object testing, again highly optimized code get's *FastUtil* to top positions. That's because once the underlying storage becomes identical, second order optimizations start to make the difference.
-* In Object-int testing, the most important thing is a minimum possible number of underlying arrays. *FastUtil* again proved to be excellent with a convincing first place.
+Speed test: 
+According to the benchmarks, FastUtil has the title of the "fastest" implementation. The title is defended with the following benefits:
+* In int-int map testing, there is a fact that the fewer memory accesses an implementation makes to access an entry – the faster it would be, and FastUtil has an advantage because of the highly optimized code. This is especially important for large Maps.
+* In int-Object testing, again highly optimized code get's FastUtil to top positions. That's because once the underlying storage becomes identical, second order optimizations start to make the difference.
+* In Object-int testing, the most important thing is a minimum possible number of underlying arrays. FastUtil again proved to be excellent with a convincing first place.
 * In Object-Object testing, it takes one of the satisfactory top positions, but not the first, because of less efficient memory access pattern.
 
 For further information, feel free to check this <a href="http://java-performance.info/hashmap-overview-jdk-fastutil-goldman-sachs-hppc-koloboke-trove-january-2015/">website</a>, and we highly recommend you to try to do your own tests.
 
-In addition to the advantages *FastUtil* provides, attention should be paid to the following shortcomings. For further information, feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
+In addition to the advantages FastUtil provides, attention should be paid to the following shortcomings. For further information, feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
 * Automatic boxing and unboxing can lead you to choose the wrong method. A suggestion is to set the environment to mark boxing/unboxing as a warning or as an error,
 * Classes are not synchronized which means that for multiple threads it must be synchronized externally,
 * Reference-based classes violate the Map contract and do not use the equals() method. Instead, they compare objects by reference and should be used only when reference-based equality is desired,
@@ -575,8 +575,8 @@ In addition to the advantages *FastUtil* provides, attention should be paid to t
 
 Another characteristic is a huge jar file, because of numerous Classes. Therefore, you can customize it and use the alternative way of selecting specific Classes.
 
-**How to use a library:**
-*Dependancy* for Maven’s library importation is listed hereafter:
+How to use a library: 
+Dependancy for Maven’s library importation is listed hereafter:
 ```
 	<!-- https://mvnrepository.com/artifact/it.unimi.dsi/fastutil -->
 	<dependency>
@@ -588,7 +588,7 @@ Another characteristic is a huge jar file, because of numerous Classes. Therefor
 
 More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
-Below, you can find some Interfaces from Package it.unimi.dsi.fastutil, supported by *FastUtil*. For further information feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
+Below, you can find some Interfaces from Package it.unimi.dsi.fastutil, supported by FastUtil. For further information feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -648,9 +648,9 @@ Below, you can find some Classes from Package it.unimi.dsi.fastutil.ints support
   </tr>  
 </table>
 
-In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
+In FastUtil exist 11 Packages with numerous Interfaces, Classes, and Methods. We shared only a few Interfaces and Classes and encourage you to check the others on the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>.
 
-**Example - DoubleArrayList**
+Example - DoubleArrayList
 ```
 	// Create DoubleArrayList
 	DoubleArrayList dal = new DoubleArrayList();  
@@ -687,7 +687,7 @@ In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. 
 	System.out.println(dal.get(dal.size() - 1));
 ```
 
-**Example - Long2IntArrayMap**
+Example - Long2IntArrayMap
 ```
 	// Create Long2IntArrayMap
 	Long2IntArrayMap map = new Long2IntArrayMap();
@@ -715,7 +715,7 @@ In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. 
 	System.out.println(map);
 ```
 
-**Example - Read-Only and Sorted Maps**
+Example - Read-Only and Sorted Maps
 ```
 	// Create Int2IntMap
 	Int2IntMap map = new Int2IntArrayMap();
@@ -749,14 +749,14 @@ In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. 
 
 ### <a href="#troveLibrary" name="troveLibrary"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Trove Library
 
-In this section, we will focus on *Trove*, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about ArrayLists, Sets, and Maps.
+In this section, we will focus on Trove, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about ArrayLists, Sets, and Maps.
 
-*Trove*, in the opposite of FastUtil, is significantly smaller. Advantages of this library are high speed regular and primitive Collections and reduced memory consumption. One of the interesting features is that almost all the Classes and Interfaces start with "T". *Trove* allows storing primitive data types in Collections, which is especially useful if there is a large ArrayList/Set/Map with keys or values that could be a primitive type.
+Trove, in the opposite of FastUtil, is significantly smaller. Advantages of this library are high speed regular and primitive Collections and reduced memory consumption. One of the interesting features is that almost all the Classes and Interfaces start with "T". Trove allows storing primitive data types in Collections, which is especially useful if there is a large ArrayList/Set/Map with keys or values that could be a primitive type.
 
 The most important Collections here are ArrayLists, Sets, and Maps, but SortedMaps and Maps with a fixed iteration order do not exist. As you will conclude from the text below, the Trove Maps and Sets use open addressing instead of the chaining approach.
 
-**How to use a library:**
-To use this library, all you have to do is to insert Maven's *dependency* code to your project.
+How to use a library: 
+To use this library, all you have to do is to insert Maven's dependency code to your project.
 ```
 	<!-- https://mvnrepository.com/artifact/net.sf.trove4j/trove4j -->
 	<dependency>
@@ -768,7 +768,7 @@ To use this library, all you have to do is to insert Maven's *dependency* code t
 
 More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
-Below, you can find some Interfaces supported by *Trove*. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
+Below, you can find some Interfaces supported by Trove. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -796,7 +796,7 @@ Below, you can find some Interfaces supported by *Trove*. For further informatio
   </tr>           
 </table>
 
-Below, you can find some Classes supported by *Trove*. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
+Below, you can find some Classes supported by Trove. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
 <table>
   <tr>
     <th>Classes</th>
@@ -816,7 +816,7 @@ Below, you can find some Classes supported by *Trove*. For further information f
   </tr> 
 </table> 
 
-**Example - ArrayList**
+Example - ArrayList
 ```
     	// Create ArrayList
     	TIntArrayList x = new TIntArrayList();
@@ -851,7 +851,7 @@ Below, you can find some Classes supported by *Trove*. For further information f
 	}));
 ```
 
-**Example - Set**
+Example - Set
 ```
     	// Create ArrayList
     	TDoubleSet x = new TDoubleHashSet();
@@ -871,7 +871,7 @@ Below, you can find some Classes supported by *Trove*. For further information f
     	while (iterator.hasNext()) System.out.println(iterator.next()); 
 ```
 
-**Example - Map**
+Example - Map
 ```
     	// Create Map
     	TIntIntMap x = new TIntIntHashMap();
@@ -901,12 +901,12 @@ Below, you can find some Classes supported by *Trove*. For further information f
 
 ### <a href="#goldmanSachsCollections" name="goldmanSachsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Goldman Sachs Collections (Eclipse Collections)
 
-In this section, we will focus on *GS Collections* and you will see what are the parts where this library is similar to four previously mentioned libraries, what this library provides and what are the most used iteration patterns, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use Bags, BiMaps, Lists, Sets, their transformations from one to another and many useful Methods provided by these Collections.
+In this section, we will focus on GS Collections and you will see what are the parts where this library is similar to four previously mentioned libraries, what this library provides and what are the most used iteration patterns, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use Bags, BiMaps, Lists, Sets, their transformations from one to another and many useful Methods provided by these Collections.
 
-Just like Trove, *Goldman Sachs Collections* is optimized for performance and memory usage and allows storing primitive data types in Collections. Its focus is on iteration improvment and has possibility of creating Immutable Collections, Bags, Multimaps, BiMaps, and Intervals. Just like Guava, writing the code is much easier with *Goldman Sachs Collections*. This library provides sort(), min(), max(), select(), collect() methods for all kind of Collections.
+Just like Trove, Goldman Sachs Collections is optimized for performance and memory usage and allows storing primitive data types in Collections. Its focus is on iteration improvment and has possibility of creating Immutable Collections, Bags, Multimaps, BiMaps, and Intervals. Just like Guava, writing the code is much easier with Goldman Sachs Collections. This library provides sort(), min(), max(), select(), collect() methods for all kind of Collections.
 
-**How to use a library:**
-To use this library, all you have to do is to insert Maven's *dependency* code to your project.
+How to use a library: 
+To use this library, all you have to do is to insert Maven's dependency code to your project.
 ```
 	<!-- https://mvnrepository.com/artifact/com.goldmansachs/gs-collections-forkjoin -->
 	<dependency>
@@ -918,7 +918,7 @@ To use this library, all you have to do is to insert Maven's *dependency* code t
 
 More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
-According to the <a href="https://www.goldmansachs.com">official website</a>, the most used iteration patterns in *Goldman Sachs Collections* are:
+According to the <a href="https://www.goldmansachs.com">official website</a>, the most used iteration patterns in Goldman Sachs Collections are:
 * Filtering patterns:
 	* Select
 	* Reject
@@ -937,7 +937,7 @@ According to the <a href="https://www.goldmansachs.com">official website</a>, th
 
 More about patterns you can find on official links: <a href="https://www.goldmansachs.com/gs-collections/presentations/BOJUG_April_26_2014_GSCollections.pdf">link1</a>, <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Training%20Session%20and%20Kata%205.0.0.pdf">link2</a>, and <a href="https://www.goldmansachs.com/gs-collections/documents/GS%20Collections%20Reference%20Guide%201.2.0.pdf">link3</a>.
 
-Below, you can find some Interfaces supported by *Goldman Sachs Collections*. For further information feel free to check the <a href="https://www.goldmansachs.com/gs-collections/javadoc/5.0.0/overview-summary.html">official website</a>:
+Below, you can find some Interfaces supported by Goldman Sachs Collections. For further information feel free to check the <a href="https://www.goldmansachs.com/gs-collections/javadoc/5.0.0/overview-summary.html">official website</a>:
 <table>
   <tr>
     <th>Interfaces</th>
@@ -969,7 +969,7 @@ Below, you can find some Interfaces supported by *Goldman Sachs Collections*. Fo
   </tr>
 </table>
 
-Below, you can find some Classes supported by *Goldman Sachs Collections*. For further information feel free to check the <a href="https://www.goldmansachs.com/gs-collections/javadoc/5.0.0/overview-summary.html">official website</a>:
+Below, you can find some Classes supported by Goldman Sachs Collections. For further information feel free to check the <a href="https://www.goldmansachs.com/gs-collections/javadoc/5.0.0/overview-summary.html">official website</a>:
 <table>
   <tr>
     <th>Classes</th>
@@ -988,7 +988,7 @@ Below, you can find some Classes supported by *Goldman Sachs Collections*. For f
   </tr> 
 </table>
 
-**Example - Bag**
+Example - Bag
 ```
     	// Create immutable bag and add values - all in one line of code
     	Bag<String> bag = Bags.immutable.of("Banana", "Avocado", "Apple", "Orange", "Avocado", "Avocado");
@@ -1012,7 +1012,7 @@ Below, you can find some Classes supported by *Goldman Sachs Collections*. For f
     	System.out.println("Elements in list after change: " + list);
 ```
 
-**Example - BiMap**
+Example - BiMap
 ```
     	// Create BiMap and add elements
     	BiMap<Integer, String> map = BiMaps.mutable.of(1,"Banana",22,"Avocado",5,"Kiwi",7,"Orange");
@@ -1029,7 +1029,7 @@ Below, you can find some Classes supported by *Goldman Sachs Collections*. For f
     	ImmutableList<String> immutableList = mutableList.toImmutable();   
 ```
 
-**Example - List**
+Example - List
 ```
     	// Create IntList and add values
     	IntList list = IntLists.mutable.of(1,4,5,22,13);  
@@ -1055,7 +1055,7 @@ Below, you can find some Classes supported by *Goldman Sachs Collections*. For f
     	System.out.println(map);  
 ```
 
-**Example - Set**
+Example - Set
 ```
     	// Create ImmutableDoubleSet and add values
     	ImmutableDoubleSet set = DoubleSets.immutable.of(4.2,3.3,15.5,8.4);
