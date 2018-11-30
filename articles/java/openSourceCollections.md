@@ -18,7 +18,7 @@ More about this will be explained below, distributed by different libraries.
 
 <a href="https://commons.apache.org/proper/commons-collections/">Apache Commons Collections</a> provide the following features:
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/Bag.html">Bag</a> Interface with a number of copies of each object
-* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provides Bi-Directional maps that can be looked up both, from value to key, as like as key to value
+* <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provides Bi-Directional Maps that can be looked up both, from value to key, as like as key to value
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/MapIterator.html">MapIterator</a> Interface provides iteration over maps
 * *Transforming Decorators* alter each object when it is added to the collection
 * *Composite Collections* make multiple collections look like one (uniformly)
@@ -41,7 +41,7 @@ More information about Maven, and how to use it, you can find in this <a href="h
 Another way of using *Apache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with <a href="https://www.win-rar.com/start.html?&L=0">WinRar</a> and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
 
 **Synchronization:**
-*Apache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of collections, maps and bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
+*Apache Commons Collections* and Java collections have a similar synchronization solution. The majority of the various implementations of Collections, Maps and Bags are not thread safe without additional synchronization, therefore **synchronizeXXX** method on Collections is recommended for these implementations to be synchronized in a multithreaded application use.
 
 Below, you can find some Interfaces from Package org.apache.commons.collections4, supported by *Apache Commons Collections*. For further information feel free to check the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>:
 <table>
@@ -294,11 +294,11 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 
 ### <a href="#guava" name="guava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Guava - Google's Collections
 
-Just like Apache Commons Collections, *Guava* represents open source set of libraries as well. Guava is made by Google and provides the following benefits:
+Just like Apache Commons Collections, *Guava* represents open source set of libraries as well. *Guava* is made by Google and provides the following benefits:
 * It helps in reducing coding errors and makes it easy to maintain the code,
 * It is a reliable, fast, and efficient,
-* Collections - include immutable collections, bidirectional maps, multisets, multimaps, tables, and more,
-* Strings - provides classes like <a href="https://github.com/google/guava/wiki/StringsExplained">Splitter</a>, <a href="https://github.com/google/guava/wiki/StringsExplained">Joiner</a> <a href="https://github.com/google/guava/wiki/StringsExplained">CharMatcher</a>, and more,
+* Collections - include immutable Collections, Bidirectional Maps, Multisets, Multimaps, Tables, and more,
+* Strings - provides Classes like <a href="https://github.com/google/guava/wiki/StringsExplained">Splitter</a>, <a href="https://github.com/google/guava/wiki/StringsExplained">Joiner</a> <a href="https://github.com/google/guava/wiki/StringsExplained">CharMatcher</a>, and more,
 * <a href="https://github.com/google/guava/wiki/OrderingExplained">Comparator</a> Class for ordering,
 * Graphs, Caching, operations on primitive types not provided by JDK, simplified I/O and more.
 
@@ -554,6 +554,15 @@ The Optional object is used to represent null with absent value.
 * Classes for fast and practical access to binary and text files,
 * Provides structure-specific and type-specific Maps, Sets, Lists and PriorityQueues,
 * In terms of memory, it is space-efficient
+
+**Speed test:**
+According to the benchmarks, *FastUtil* has the title of the "fastest" implementation. The title is defended with the following benefits:
+* In int-int map testing, there is a fact that the fewer memory accesses an implementation makes to access an entry – the faster it would be, and *FastUtil* has an advantage because of the highly optimized code. This is especially important for large Maps.
+* In int-Object testing, again highly optimized code get's *FastUtil* to top positions. That's because once the underlying storage becomes identical, second order optimizations start to make the difference.
+* In Object-int testing, the most important thing is a minimum possible number of underlying arrays. *FastUtil* again proved to be excellent with a convincing first place.
+* In Object-Object testing, it takes one of the satisfactory top positions, but not the first, because of less efficient memory access pattern.
+
+For further information, feel free to check this <a href="http://java-performance.info/hashmap-overview-jdk-fastutil-goldman-sachs-hppc-koloboke-trove-january-2015/">website</a>, and we highly recommend you to try to do your own tests.
 
 In addition to the advantages *FastUtil* provides, attention should be paid to the following shortcomings. For further information, feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
 * Automatic boxing and unboxing can lead you to choose the wrong method. A suggestion is to set the environment to mark boxing/unboxing as a warning or as an error,
