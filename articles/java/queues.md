@@ -113,7 +113,7 @@ Constructors:
     	
          BlockingQueue<Integer> queue = new PriorityBlockingQueue<>(list);
 
-          // Printing numbers in unspecified order
+         // Printing numbers in unspecified order
          System.out.println(queue);
 ```
 
