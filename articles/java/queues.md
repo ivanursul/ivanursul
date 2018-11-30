@@ -25,35 +25,26 @@ Methods inherited from Interface java.util.Collection: *addAll, clear, contains,
 
 **Example**
 ```
-import java.util.LinkedList; 
-import java.util.Queue; 
-  
-public class Demo 
-{ 
-  public static void main(String[] args) 
-  { 
-    Queue<String> fruits = new LinkedList<>(); 
-  
-    // Adding fruits  
-    fruits.add("Banana");
-    fruits.add("Apple");
-    fruits.add("Orange");
-    fruits.add("Avocado");
-  
-    // Display contents of the queue
-    System.out.println("Fruits in queue: " + fruits); 
-  
-    // Removing the head of the queue
-    String removeElement = fruits.remove(); 
-    System.out.println("Removed element: " + removeElement); 
-  
-    System.out.println("Fruits in queue: " + fruits); 
-  
-    // Viewing the head of the queue 
-    String head = fruits.peek(); 
-    System.out.println("Head of queue: " + head); 
-  } 
-} 
+         Queue<String> fruits = new LinkedList<>(); 
+
+         // Adding fruits  
+         fruits.add("Banana");
+         fruits.add("Apple");
+         fruits.add("Orange");
+         fruits.add("Avocado");
+
+         // Display contents of the queue
+         System.out.println("Fruits in queue: " + fruits); 
+
+         // Removing the head of the queue
+         String removeElement = fruits.remove(); 
+         System.out.println("Removed element: " + removeElement); 
+
+         System.out.println("Fruits in queue: " + fruits); 
+
+         // Viewing the head of the queue 
+         String head = fruits.peek(); 
+         System.out.println("Head of queue: " + head); 
 ```
 
 ### <a href="#priorityQueueClass" name="priorityQueueClass"><i class="fa fa-link anchor" aria-hidden="true"></i></a> PriorityQueue Class
@@ -77,29 +68,21 @@ Constructors:
 
 **Example**
 ```
-import java.util.PriorityQueue;
+         // Creating a PriorityQueue
+         PriorityQueue<String> fruits = new PriorityQueue<>();
 
-public class Demo {
+         // Adding fruits
+         fruits.add("Banana");
+         fruits.add("Orange");
+         fruits.add("Apple");
+         fruits.add("Avocado");
 
-    public static void main(String[] args) {
-    
-        // Creating a PriorityQueue
-        PriorityQueue<String> fruits = new PriorityQueue<>();
+         System.out.println("Fruits in queue: " + fruits);
 
-        // Adding fruits
-        fruits.add("Banana");
-        fruits.add("Orange");
-        fruits.add("Apple");
-        fruits.add("Avocado");
-        
-        System.out.println("Fruits in queue: " + fruits);
+         // Remove a fruit from the PriorityQueue
+         fruits.remove();
 
-        // Remove a fruit from the PriorityQueue
-        fruits.remove();
-        
-        System.out.println("Fruits in queue: " + fruits);        
-    }
-}
+         System.out.println("Fruits in queue: " + fruits);  
 ```
 
 
@@ -121,28 +104,17 @@ Constructors:
 
 **Example**
 ```
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.PriorityBlockingQueue;
-
-public class Demo {
-
-    public static void main(String[] args) {
-    
-     // Creating list of numbers
-    	LinkedList<Integer> list = new LinkedList<Integer>();
-    	list.add(5);
-    	list.add(25);
-    	list.add(2);
-    	list.add(15);    	
+         // Creating list of numbers
+         LinkedList<Integer> list = new LinkedList<Integer>();
+         list.add(5);
+         list.add(25);
+         list.add(2);
+         list.add(15);    	
     	
-    	BlockingQueue<Integer> queue = new PriorityBlockingQueue<>(list);
-    	
-     // Printing numbers in unspecified order
-    	System.out.println(queue);
-    }
-}
+         BlockingQueue<Integer> queue = new PriorityBlockingQueue<>(list);
+
+         // Printing numbers in unspecified order
+         System.out.println(queue);
 ```
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a> and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
