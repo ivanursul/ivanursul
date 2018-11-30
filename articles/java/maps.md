@@ -111,7 +111,7 @@ Similar to TreeMap, *EnumMap* is maintained in the natural order of their keys. 
 
 Like the previously mentioned classes, *EnumMap* is not synchronized as well. The example of a declaration is below:
 ```
-EnumMap<SomeClass, String> map = new EnumMap<SomeClass, String>;
+        EnumMap<SomeClass, String> map = new EnumMap<SomeClass, String>;
 ```
 **Example**
 ```
