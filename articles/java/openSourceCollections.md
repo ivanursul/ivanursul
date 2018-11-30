@@ -36,7 +36,7 @@ To use this library, all you have to do is to insert *dependency* code to your p
 	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Another way of using *Apache Commons Collections* is to download the library from the <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/index.html">official website</a>. When you do that, extract your commons-collections4-4.2-bin.tar.gz with <a href="https://www.win-rar.com/start.html?&L=0">WinRar</a> and open your environment (Eclipse). After you create a project, go to Build Path - Configure Build Path... - choose Libraries - click Add External JARs... - locate your extracted folder and import all the jars.
 
@@ -332,7 +332,7 @@ As you can conclude, writing the code is much easier with *Guava*.
 	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Below, you can find some Interfaces from Package com.google.common.collect, supported by *Guava*. For further information feel free to check the <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/">official website</a>:
 <table>
@@ -579,7 +579,7 @@ Another characteristic is a huge jar file, because of numerous Classes. Therefor
 	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Below, you can find some Interfaces from Package it.unimi.dsi.fastutil, supported by *FastUtil*. For further information feel free to check the <a href="http://fastutil.di.unimi.it/docs/overview-summary.html">official website</a>:
 <table>
@@ -757,7 +757,7 @@ To use this library, all you have to do is to insert Maven's *dependency* code t
 	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 Below, you can find some Interfaces supported by *Trove*. For further information feel free to check the <a href="http://trove4j.sourceforge.net/javadocs/">official website</a>:
 <table>
@@ -905,7 +905,7 @@ To use this library, all you have to do is to insert Maven's *dependency* code t
 	</dependency>
 ```
 
-More information about Maven, and how to use it, you can find in this <a href="https://ivanursul.com/articles/java/maven">article</a>.
+More information about Maven, and how to use it, you can find in this <a href="https://maven.apache.org/">article</a>.
 
 According to the <a href="https://www.goldmansachs.com">official website</a>, the most used iteration patterns in *Goldman Sachs Collections* are:
 * Filtering patterns:
