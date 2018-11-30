@@ -16,6 +16,8 @@ More about this will be explained below, distributed by different libraries.
 
 ### <a href="#apacheCommonsCollections" name="apacheCommonsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Apache Commons Collections
 
+In this section, we will focus on *Apache Commons Collections*, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to ignore Null values, how to merge lists, and how to use Bags, BidiMaps, and MapIterator.
+
 <a href="https://commons.apache.org/proper/commons-collections/">Apache Commons Collections</a> provide the following features:
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/Bag.html">Bag</a> Interface with a number of copies of each object
 * <a href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.2/org/apache/commons/collections4/BidiMap.html">BidiMap</a> Interface provides Bi-Directional Maps that can be looked up both, from value to key, as like as key to value
@@ -294,6 +296,8 @@ In *Apache Commons Collections* exist 19 Packages with numerous Interfaces, Clas
 
 ### <a href="#guava" name="guava"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Guava - Google's Collections
 
+In this section, we will focus on *Guava* and how to take advantage of easier and faster code writing, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use MultiSet, MultiMap, Optional and Ordering Classes.
+
 Just like Apache Commons Collections, *Guava* represents open source set of libraries as well. *Guava* is made by Google and provides the following benefits:
 * It helps in reducing coding errors and makes it easy to maintain the code,
 * It is a reliable, fast, and efficient,
@@ -544,6 +548,8 @@ In *Guava* exist 16 Packages with numerous Interfaces, Classes, and Methods. We 
 
 ### <a href="#fastUtil" name="fastUtil"><i class="fa fa-link anchor" aria-hidden="true"></i></a> FastUtil Collections
 
+In this section, we will focus on *FastUtil* and why it takes the 1st place in performance tests, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use DoubleArrayList, Long2IntArrayMap, how to create Read-Only and Sorted Maps.
+
 *FastUtil* characterizes high performance and the fastest implementations available. Some of the benefits it provides are listed below:
 * Classes that support very large collections (64-bit),
 * Classes for fast and practical access to binary and text files,
@@ -742,6 +748,8 @@ In *FastUtil* exist 11 Packages with numerous Interfaces, Classes, and Methods. 
 
 ### <a href="#troveLibrary" name="troveLibrary"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Trove Library
 
+In this section, we will focus on *Trove*, what this library provides, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about ArrayLists, Sets, and Maps.
+
 *Trove*, in the opposite of FastUtil, is significantly smaller. Advantages of this library are high speed regular and primitive Collections and reduced memory consumption. One of the interesting features is that almost all the Classes and Interfaces start with "T". *Trove* allows storing primitive data types in Collections, which is especially useful if there is a large ArrayList/Set/Map with keys or values that could be a primitive type.
 
 The most important Collections here are ArrayLists, Sets, and Maps, but SortedMaps and Maps with a fixed iteration order do not exist. As you will conclude from the text below, the Trove Maps and Sets use open addressing instead of the chaining approach.
@@ -891,6 +899,8 @@ Below, you can find some Classes supported by *Trove*. For further information f
 ```
 
 ### <a href="#goldmanSachsCollections" name="goldmanSachsCollections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Goldman Sachs Collections (Eclipse Collections)
+
+In this section, we will focus on *GS Collections* and will see what are the parts where this library is similar to four previously mentioned libraries, what this library provides and what are the most used iteration patterns, how to implement the library, its Interfaces, Classes, and Methods, supported by examples about how to use Bags, BiMaps, Lists, Sets, their transformations from one to another and many useful Methods provided by these Collections.
 
 Just like Trove, *Goldman Sachs Collections* is optimized for performance and memory usage and allows storing primitive data types in Collections. Its focus is on iteration improvment and has possibility of creating Immutable Collections, Bags, Multimaps, BiMaps, and Intervals. Just like Guava, writing the code is much easier with *Goldman Sachs Collections*. This library provides sort(), min(), max(), select(), collect() methods for all kind of Collections.
 
