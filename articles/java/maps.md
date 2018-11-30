@@ -36,14 +36,7 @@ Below are the most commonly used *HashMap* methods:
 * boolean isEmpty() - *Returns true if this map contains no key-value mappings*
 
 **Example**
-```
-import java.util.HashMap;
-import java.util.Map;
-
-public class Demo {
-
-    public static void main(String[] args) {
-
+```    
         // Creating HashMap
         Map fruits = new HashMap();
 
@@ -56,15 +49,13 @@ public class Demo {
 
         // Iterate over fruits
         for(Object x: fruits.keySet()) {
-            System.out.println(x + " - " + fruits.get(x));
+                System.out.println(x + " - " + fruits.get(x));
         }    
 
         // Clear all values.
         fruits.clear();
 
         System.out.println("Size: " + fruits.size());
-    }
-}
 ```
 ### <a href="#treeMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> TreeMap
 
@@ -74,13 +65,6 @@ This type is recommended to use if you need SortedMap operations or key-ordered 
 
 **Example**
 ```
-import java.util.SortedMap;
-import java.util.TreeMap;
-
-public class Demo {
-
-    public static void main(String[] args) {
-    
         // Creating a TreeMap
         SortedMap<String, Integer> fruits  = new TreeMap<>();
 
@@ -91,8 +75,6 @@ public class Demo {
         fruits.put("Orange", 22);
 
         System.out.println(fruits);
-    }
-}
 ```
 
 ### <a href="#linkedHashMap" name="linkedHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedHashMap
@@ -105,10 +87,6 @@ Just as HashMap and TreeMap, *LinkedHashMap* is not synchronized as well, which 
 
 **Example**
 ```
-public class Demo {
-
-    public static void main(String[] args) {
-    
         // Creating LinkedHashMap
         Map<String, String> fruits = new LinkedHashMap<String, String>();
         
@@ -121,10 +99,8 @@ public class Demo {
         
         // Iterating
         for(Map.Entry<String, String> x : fruits.entrySet()){
-            System.out.println(x.getKey() + " " + x.getValue());
+                System.out.println(x.getKey() + " " + x.getValue());
         }
-    }
-}
 ```
 
 ### <a href="#enumMap" name="enumMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> EnumMap
@@ -139,12 +115,6 @@ EnumMap<SomeClass, String> map = new EnumMap<SomeClass, String>;
 ```
 **Example**
 ```
-import java.util.EnumMap;
-
-public class Demo {
-
-    public static void main(String[] args) {
-        
         // Creating EnumMap
         EnumMap<Test, String> fruits = new EnumMap<Test, String>(Test.class);
         
@@ -155,29 +125,28 @@ public class Demo {
         fruits.put(Test.D, "Orange");
         
         //Iterate over key
-        for(Test x: fruits.keySet()){
-            System.out.println(x +" "+ x.getNumber() );
+        for(Test x: fruits.keySet()) {
+            System.out.println(x +" "+ x.getNumber());
         }
         
        // Iterate over values
-        for(String x: fruits.values()){
+        for(String x: fruits.values()) {
             System.out.println(x);
         }
-    }
-}
-enum Test {
+        
+        enum Test {
 
-    A(1), B(2), C(3), D(4);
-    private int number;
+            A(1), B(2), C(3), D(4);
+            private int number;
     
-    private Test(int x) {
-        number = x;
-    }
+            private Test(int x) {
+                number = x;
+            }
     
-    public int getNumber() {
-        return number;
-    }
-}
+            public int getNumber() {
+                return number;
+            }
+        }
 ```
 
 ### <a href="#identityHashMap" name="identityHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> IdentityHashMap
@@ -188,14 +157,7 @@ In *IdentityHashMap* Class the order is not guaranteed, it has constant-time per
 
 **Example**
 
-```
-import java.util.Map;
-import java.util.IdentityHashMap;
-
-public class Demo {
-    
-    public static void main(String[] args) { 
-           
+```   
         // Creating IdentityHashMap
         Map fruits = new IdentityHashMap();
                
@@ -204,9 +166,7 @@ public class Demo {
         fruits.put(new String("2") ,"Avocado"); 
         fruits.put(new String("3") ,"Apple"); 
        
-        System.out.println("Fruits:"+ fruits);                            
- }
-}
+        System.out.println("Fruits:"+ fruits);   
 ```
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a> and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
