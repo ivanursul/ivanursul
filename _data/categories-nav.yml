@@ -11,3 +11,7 @@ items:
     text: Learning Amazon Services
     icon: /assets/images/categories-nav/aws_2.png
     url: /articles/aws/    
+  - title: Spring
+    text: Articles about Spring ecosystem
+    icon: /assets/images/categories-nav/spring.png
+    url: /articles/aws/    
