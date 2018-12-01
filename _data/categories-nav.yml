@@ -5,7 +5,7 @@ items:
     url: /articles/java/
   - title: AWS
     text: Learning Amazon Services
-    icon: /assets/images/categories-nav/aws.png
+    icon: /assets/images/categories-nav/aws_logo.png
     url: /articles/aws/    
   - title: ChatBots
     text: Everything about ChatBots
