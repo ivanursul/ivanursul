@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title:  "How we wrote Telegram ChatBot to keep track of co-working"
+title:  "How we wrote Telegram ChatBot to keep track of co-working spends"
 date: 2018-11-25 00:00:00
 permalink: how-we-wrote-telegram-chat-bots
 tags: ['java', 'chat-bots']
@@ -173,4 +173,4 @@ What it does it gives a list of people, that are splitting expenses between them
 
 ### <a href="#deployment" name="deployment"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Deployment
 
-Our application is written in Java, has a Maven pom.xml, we package jar  together with all dependencies that we have 
+Our application is written in Java, has a Maven [pom.xml](https://github.com/ivanursul/donations-bot/blob/master/pom.xml), we package jar together with all dependencies that we have using [maven-assembly-plugin](https://github.com/ivanursul/donations-bot/blob/master/pom.xml#L79)
