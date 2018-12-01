@@ -53,7 +53,7 @@ public class MyAmazingBot extends TelegramLongPollingBot {
 }
 ```
 
-In **getBotToken** method you need to return the token which you got from BotFather, **getBotUsername** returns the name of your Bot and **onUpdateReceived** is the method that is used for interaction with users. The idea is very simple - whenever someones writes a message to your Chat Bot, **onUpdateReceived** is called with a message, your duty is to return a message to the user. I personally use BorFather format and provide a `/help` section which user can visit to see the list of commands:
+In **getBotToken** method you need to return the token which you got from BotFather, **getBotUsername** returns the name of your Bot and **onUpdateReceived** is the method that is used for interaction with users. The idea is very simple - whenever someones writes a message to your Chat Bot, **onUpdateReceived** is called with a message, your duty is to return a message to the user. I personally use BorFather format and provide a /help section which user can visit to see the list of commands:
 
 Why parent class has **LongPollingBot** in the end? Because it inifinitely polls Telegram API and checks whether there's someone who wrote a message recently. In my case, it means that I can write a chat bot and host it on a Raspberry PI, which is very cheap. Since chat bot will be used by three people, I don't worry about performance.
 
