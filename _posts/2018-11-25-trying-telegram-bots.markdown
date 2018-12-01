@@ -173,4 +173,4 @@ What it does it gives a list of people, that are splitting expenses between them
 
 ### <a href="#deployment" name="deployment"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Deployment
 
-Our application is written in Java, has a Maven [pom.xml](https://github.com/ivanursul/donations-bot/blob/master/pom.xml), we package jar together with all dependencies that we have using [maven-assembly-plugin](https://github.com/ivanursul/donations-bot/blob/master/pom.xml#L79)
+Our application is written in Java, has a Maven [pom.xml](https://github.com/ivanursul/donations-bot/blob/master/pom.xml), we package jar together with all dependencies that we have using [maven-assembly-plugin](https://github.com/ivanursul/donations-bot/blob/master/pom.xml#L79). 
