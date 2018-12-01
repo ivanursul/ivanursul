@@ -3,11 +3,11 @@ items:
     text: Write once, run anywhere(c)
     icon: /assets/images/categories-nav/java_i.png
     url: /articles/java/
-  - title: AWS
-    text: Learning Amazon Services
-    icon: /assets/images/categories-nav/aws_logo.png
-    url: /articles/aws/    
   - title: ChatBots
     text: Everything about ChatBots
     icon: /assets/images/categories-nav/bot_color.png
-    url: /articles/chat-bots/
+    url: /articles/chat-bots/    
+  - title: AWS
+    text: Learning Amazon Services
+    icon: /assets/images/categories-nav/aws_2.png
+    url: /articles/aws/    
