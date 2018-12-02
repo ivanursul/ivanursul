@@ -174,3 +174,25 @@ What it does it gives a list of people, that are splitting expenses between them
 ### <a href="#deployment" name="deployment"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Deployment
 
 Our application is written in Java, has a Maven [pom.xml](https://github.com/ivanursul/donations-bot/blob/master/pom.xml), we package jar together with all dependencies that we have using [maven-assembly-plugin](https://github.com/ivanursul/donations-bot/blob/master/pom.xml#L79). 
+
+Application is a jar file which runs on Raspberry PI 3.
+
+### <a href="#getone" name="getone"><i class="fa fa-link anchor" aria-hidden="true"></i></a> I need the this chat bot, how can I get it?
+
+I uploaded this project on [GitHub](https://github.com/ivanursul/donations-bot), so anyone can reuse it. Here are the steps:
+
+* Install java
+* Install Maven
+* Clone/Download project
+* cd to folder
+* run `mvn clean install`
+* cd to `target` folder
+* get `tersh-bot.jar`
+* In order to run it, use following command:
+```
+java -jar tersh-bot.jar ${bot_name} ${bot_token} ${map_db_file_location.db}
+```
+
+### <a href="#future" name="future"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Future plans
+
+We want to buy a Smart Door Lock in our office in the foreseeable future. If we do this, we will have to think how to merge Smart Door Lock app with our Signalization System app. One of the ideas is to use existing bot to unlock/lock the door. This would then use the Smart Door API together with Signalization System API and do all the steps to lock and unlock the door.
