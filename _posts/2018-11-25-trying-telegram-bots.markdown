@@ -185,9 +185,9 @@ I uploaded this project on [GitHub](https://github.com/ivanursul/donations-bot),
 * Install Maven
 * Clone/Download project
 * cd to folder
-* run `mvn clean install`
-* cd to `target` folder
-* get `tersh-bot.jar`
+* run **mvn clean install**
+* cd into **target** folder
+* get **tersh-bot.jar**
 * In order to run it, use following command:
 ```
 java -jar tersh-bot.jar ${bot_name} ${bot_token} ${map_db_file_location.db}
