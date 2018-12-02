@@ -4,7 +4,7 @@ items:
     icon: /assets/images/categories-nav/java_i.png
     url: /articles/java/
   - title: ChatBots
-    text: Everything about ChatBots
+    text: Chatbot Trends and Analysis
     icon: /assets/images/categories-nav/bot_color.png
     url: /articles/chat-bots/    
   - title: AWS
