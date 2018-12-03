@@ -9,7 +9,7 @@ items:
     url: /articles/chat-bots/    
   - title: AWS
     text: Learning Amazon Services
-    icon: /assets/images/categories-nav/aws_2.png
+    icon: /assets/images/categories-nav/aws.png
     url: /articles/aws/    
   - title: Spring
     text: Articles about Spring ecosystem
