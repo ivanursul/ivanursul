@@ -25,6 +25,7 @@ You perform different kinds of operations like searching, sorting, insertion, re
 Interesting articles:
 
 * [Open-Source collections](https://ivanursul.com/articles/java/open-source-collections)
+* [Comparing performance of a different collections](https://ivanursul.com/articles/java/collections-performance)
 
 
 <!-- ### Stream API
