@@ -24,10 +24,10 @@ List Interface is implemented by classes listed below:
 A List is an interface, and the instances of List can be created in the following ways:
 
 ```
-        List list1 = new ArrayList();
-        List list2 = new LinkedList();
-        List list3 = new Vector(); 
-        List list4 = new Stack(); 
+List list1 = new ArrayList();
+List list2 = new LinkedList();
+List list3 = new Vector(); 
+List list4 = new Stack(); 
 ```
 
 ### <a href="#operations-on-list" name="operations-on-list"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Operations on List
@@ -50,41 +50,41 @@ Bellow, you can find a few more methods, for further information feel free to ch
 
 Example:
 ```
-        // Creating a list 
-        List<Integer> list1 = new ArrayList<Integer>(); 
-        list1.add(0, 5);  // adds 5 at 0 index 
-        list1.add(1, 6);  // adds 6 at 1 index
-        list1.add(2, 7);  // adds 7 at 2 index
-        System.out.println(list1);  // [5, 6, 7] 
+// Creating a list 
+List<Integer> list1 = new ArrayList<Integer>(); 
+list1.add(0, 5);  // adds 5 at 0 index 
+list1.add(1, 6);  // adds 6 at 1 index
+list1.add(2, 7);  // adds 7 at 2 index
+System.out.println(list1);  // [5, 6, 7] 
   
-        // Creating a 2nd list
-        List<Integer> list2 = new ArrayList<Integer>(); 
-        list2.add(1); 
-        list2.add(2); 
-        list2.add(3); 
+// Creating a 2nd list
+List<Integer> list2 = new ArrayList<Integer>(); 
+list2.add(1); 
+list2.add(2); 
+list2.add(3); 
   
-        // Will add list list2 from 2 index 
-        list1.addAll(2, list2); 
-        System.out.println(list1); 
+// Will add list list2 from 2 index 
+list1.addAll(2, list2); 
+System.out.println(list1); 
   
-        // Removes element from index 3 
-        list1.remove(3);      
-        System.out.println(list1); 
+// Removes element from index 3 
+list1.remove(3);      
+System.out.println(list1); 
   
-        // Prints element at index 3 
-        System.out.println(list1.get(3)); 
+// Prints element at index 3 
+System.out.println(list1.get(3)); 
   
-        // Replace 0th element with 5 
-        list1.set(0, 5);    
-        System.out.println(list1);  
+// Replace 0th element with 5 
+list1.set(0, 5);    
+System.out.println(list1);  
 ```
 Result:
 ```
-        [5, 6, 7]
-        [5, 6, 1, 2, 3, 7]
-        [5, 6, 1, 3, 7]
-        3
-        [5, 6, 1, 3, 7]
+[5, 6, 7]
+[5, 6, 1, 2, 3, 7]
+[5, 6, 1, 3, 7]
+3
+[5, 6, 1, 3, 7]
 ```
 
 ### <a href="#arrayList" name="arrayList"><i class="fa fa-link anchor" aria-hidden="true"></i></a> ArrayList
@@ -95,7 +95,7 @@ Size enlargement is done by copying the old elements to the new array and using 
 
 As ArrayList is generic that means that you work with a general type T, where T can be replaced by any type such as int, double, String, Object etc. The most important thing is that ArrayList and ArrayList<T> are different. For ArrayList, you must specify the type of elements that will be stored. For example, if you want to store textual values in your ArrayList, this is the way of declaration:
 ```
-        ArrayList<String> text = new ArrayList<String>();
+ArrayList<String> text = new ArrayList<String>();
 ```
 
 You can, also, see a declaration such as List<&#xfeff;String> text = new ArrayList<&#xfeff;String>();. This way, named Polymorphism, is usually used because the object named "text" is intended to be used as a List and it is recommended to declare it as List<String> type.
@@ -115,65 +115,65 @@ The differences between ArrayList and LinkedList are:
 
 The way of declaring LinkedList is similar to ArrayList. For example, if you want to store textual values in your ArrayList, the way of a declaration is:
 ```
-        LinkedList<String> text = new LinkedList<String>();
+LinkedList<String> text = new LinkedList<String>();
 ```
 
 Example - The "throws" function
 ```
-        public Object pop() throws UnderflowException {
+public Object pop() throws UnderflowException {
         
-              if(this.isempty()) {
-                    throw new UnderflowException();
-              }
+   if(this.isempty()) {
+      throw new UnderflowException();
+   }
                 
-               DoublyLinkedList oldback = this.back;
-               Object result = oldback.element;
-               this.back = oldback.next;
+   DoublyLinkedList oldback = this.back;
+   Object result = oldback.element;
+   this.back = oldback.next;
                 
-               if(this.front == oldback) {
-                     this.front = null;
-               }
+   if(this.front == oldback) {
+      this.front = null;
+   }
                  
-               oldback.remove();                
-               return result;
-        }
+   oldback.remove();                
+   return result;
+}
 
-        public boolean isempty() {
+public boolean isempty() {
           
-                if(this.front == null || this.back == null) {
+   if(this.front == null || this.back == null) {
                   
-                        if(this.back != this.front) {
-                              throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
-                        }                          
-                        return true;                          
-                 } else {
-                        return false;
-                 }
-        }
+      if(this.back != this.front) {
+         throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
+      }                          
+      return true;                          
+      } else {
+         return false;
+      }
+}
 ```
 Example - The "insert" function
 ```
-        public void push(Object x) throws OverflowException {
+public void push(Object x) throws OverflowException {
            
-                if (this.isempty()){
-                        this.front = this.back = new DLL(null, x, null);
-                } else {
-                DLL oldback = this.back;
-                this.back = new DLL(null, x, oldback);
-              }
-        }
+      if (this.isempty()){
+         this.front = this.back = new DLL(null, x, null);
+      } else {
+         DLL oldback = this.back;
+         this.back = new DLL(null, x, oldback);
+      }
+}
 
-        public boolean isempty() {
+public boolean isempty() {
          
-                if(this.front == null || this.back == null) {
+   if(this.front == null || this.back == null) {
                 
-                        if(this.back != this.front) {
-                                throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
-                        }                          
-                        return true;
-                 } else {
-                         return false;
-                 }
-        }
+         if(this.back != this.front) {
+            throw new RuntimeException("Losa reprezentacija, front="+front+" back="+back);
+         }                          
+         return true;
+         } else {
+           return false;
+         }
+}
 ```
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a> and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
