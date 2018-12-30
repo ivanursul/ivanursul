@@ -35,7 +35,7 @@ In this section we focus on List's Performance through different libraries. Meas
 
 The graph below shows that the best performans for this method has Goldman Sachs IntLists.mutable.of. At start, almost all libraries has same time, but from 10000 elements things are changing. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Add Method](https://programiranjepro.github.io/ivanursul/articles/java/addmetod.png)
+![Add Method](https://ivanursul.com/assets/images/collections-performance/addmetod.png)
 
 ```
 JDK List<Integer> list = new ArrayList<Integer>();
@@ -111,7 +111,7 @@ Time of execution of add method for 1000000 elements is: 32.41908
 
 The graph below shows that the best performans for this method has FastUtil IntArrayList followed by Trove TIntArrayList. At start, almost all libraries has same time, but from 10000 elements things are changing. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Clear Method](https://programiranjepro.github.io/ivanursul/articles/java/clear.png)
+![Clear Method](https://ivanursul.com/assets/images/collections-performance/clear.png)
 
 ```
 JDK List<Integer> list = new ArrayList<Integer>();
@@ -187,7 +187,7 @@ Time of execution of clear method for 1000000 elements is: 0.836485
 
 The graph below shows that the best performans for this method has Goldman Sachs IntLists.mutable.of. Difference between Collections is minimal, therefore many of them can share the first place. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Contain Method](https://programiranjepro.github.io/ivanursul/articles/java/contain.png)
+![Contain Method](https://ivanursul.com/assets/images/collections-performance/contain.png)
 
 ```
 JDK List<Integer> list = new ArrayList<Integer>();
@@ -227,7 +227,7 @@ Time of execution of contains method 1000 times in list of 1000000 elements is: 
 
 The graph below shows that the best performans for this method has Goldman Sachs IntLists.mutable.of followed by Trove TIntArrayList. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Get Method](https://programiranjepro.github.io/ivanursul/articles/java/get.png)
+![Get Method](https://ivanursul.com/assets/images/collections-performance/get.png)
 
 ```
 JDK List<Integer> list = new ArrayList<Integer>();
@@ -267,7 +267,7 @@ Time of execution of get method 1000 times in list of 1000000 elements is: 0.058
 
 The graph below shows that the best performans for this method has FastUtil IntArrayList along with Goldman Sachs IntLists.mutable.of. Difference between Collections is minimal, therefore many of them can share the first place. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![IndexOf Method](https://programiranjepro.github.io/ivanursul/articles/java/indexof.png)
+![IndexOf Method](https://ivanursul.com/assets/images/collections-performance/indexof.png)
 
 ```
 JDK List<Integer> list = new ArrayList<Integer>();
@@ -307,7 +307,7 @@ Time of execution of indexOf method 1000 times in list of 1000000 elements is: 0
 
 The graph below shows that the best performans for this method has JDK LinkedList. At start, all libraries has similar time, but from 100000 elements things are changing. You can see a big difference between first place and other places. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![AddAll Method](https://programiranjepro.github.io/ivanursul/articles/java/addall.png)
+![AddAll Method](https://ivanursul.com/assets/images/collections-performance/addall.png)
 
 ```
 JDK List<Integer> list = new ArrayList<Integer>();
@@ -362,7 +362,7 @@ Time of execution of add all method for 1000000 elements is: 222768.55
 
 The graph below shows that the best performans for this method has Trove TIntLinkedList. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Remove Method](https://programiranjepro.github.io/ivanursul/articles/java/remove.png)
+![Remove Method](https://ivanursul.com/assets/images/collections-performance/remove.png)
 
 ```
 JDK List<Integer> list = new ArrayList<Integer>();
@@ -410,7 +410,7 @@ In this section we focus on Set's Performance through different libraries. Measu
 
 The graph below shows that the best performans for this method has JDK TreeSet followed by Trove TIntHashSet. At start, almost all libraries has same time, but from 100 elements things are changing. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Add Method](https://programiranjepro.github.io/ivanursul/articles/java/addset.png)
+![Add Method](https://ivanursul.com/assets/images/collections-performance/addset.png)
 
 ```
 JDK Set<String> hashSet = new HashSet<>();
@@ -493,7 +493,7 @@ Time of execution of add method for 1000000 elements is: 29.875902
 
 The graph below shows that the best performans for this method has FastUtil IntAVLTreeSet. Difference between Collections is minimal, therefore many of them can share the first place. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Clear Method](https://programiranjepro.github.io/ivanursul/articles/java/clearset.png)
+![Clear Method](https://ivanursul.com/assets/images/collections-performance/clearset.png)
 
 ```
 JDK Set<String> hashSet = new HashSet<>();
@@ -576,7 +576,7 @@ Time of execution of clear method for 1000000 elements is: 0.001833
 
 The graph below shows that the best performans for this method has Goldman Sachs IntSets.mutable.of. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Contain Method](https://programiranjepro.github.io/ivanursul/articles/java/containset.png)
+![Contain Method](https://ivanursul.com/assets/images/collections-performance/containset.png)
 
 ```
 JDK Set<String> hashSet = new HashSet<>();
@@ -617,7 +617,7 @@ Time of execution of contains method 1000 times in list of 1000000 elements is: 
 
 The graph below shows that the best performans for this method has FastUtil IntArrayList followed by Guava TreeMultiset. At start, both libraries has same time, but from 10000 elements things are changing. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![AddAll Method](https://programiranjepro.github.io/ivanursul/articles/java/addallset.png)
+![AddAll Method](https://ivanursul.com/assets/images/collections-performance/addallset.png)
 
 ```
 Guava HashMultiset<Integer> set = HashMultiset.create();
@@ -644,7 +644,7 @@ Time of execution of add all method for 1000000 elements is: 36.753983
 
 The graph below shows that the best performans for this method has Trove TIntHashSet. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Remove Method](https://programiranjepro.github.io/ivanursul/articles/java/removeset.png)
+![Remove Method](https://ivanursul.com/assets/images/collections-performance/removeset.png)
 
 ```
 JDK Set<String> hashSet = new HashSet<>();
@@ -696,7 +696,7 @@ In this section we focus on Map's Performance through different libraries. Measu
 
 The graph below shows that the best performans for this method has Trove TIntIntHashMap followed by FastUtil Int2IntOpenHashMap. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Put Method](https://programiranjepro.github.io/ivanursul/articles/java/putmap.png)
+![Put Method](https://ivanursul.com/assets/images/collections-performance/putmap.png)
 
 ```
 JDK Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -849,7 +849,7 @@ Time of execution of put method for 1000000 elements is: 1129.8365
 
 The graph below shows that the best performans for this method has JDK TreeMap. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Clear Method](https://programiranjepro.github.io/ivanursul/articles/java/clearmap.png)
+![Clear Method](https://ivanursul.com/assets/images/collections-performance/clearmap.png)
 
 ```
 JDK Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -1002,7 +1002,7 @@ Time of execution of clear method for 1000000 elements is: 26.129318
 
 The graph below shows that the best performans for this method has FastUtil Int2IntOpenHashMap. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Contain Method](https://programiranjepro.github.io/ivanursul/articles/java/containkey.png)
+![Contain Method](https://ivanursul.com/assets/images/collections-performance/containkey.png)
 
 ```
 JDK Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -1075,7 +1075,7 @@ Time of execution of containsKey method 1000 times in list of 1000000 elements i
 
 The graph below shows that the best performans for this method has FastUtil Int2IntOpenHashMap. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Contain Method](https://programiranjepro.github.io/ivanursul/articles/java/containvalue.png)
+![Contain Method](https://ivanursul.com/assets/images/collections-performance/containvalue.png)
 
 ```
 JDK Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -1148,7 +1148,7 @@ Time of execution of containsValue method 1000 times in list of 1000000 elements
 
 The graph below shows that the best performans for this method has Trove TIntIntHashMap. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Get Method](https://programiranjepro.github.io/ivanursul/articles/java/getmap.png)
+![Get Method](https://ivanursul.com/assets/images/collections-performance/getmap.png)
 
 ```
 JDK Map<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -1221,7 +1221,7 @@ Time of execution of get method 1000 times in list of 1000000 elements is: 0.291
 
 The graph below shows that the best performans for this method has Appache Commons TreeBidiMap. After graphic illustration of performance, you can find an exact measure expressed in miliseconds.
 
-![Remove Method](https://programiranjepro.github.io/ivanursul/articles/java/removemap.png)
+![Remove Method](https://ivanursul.com/assets/images/collections-performance/removemap.png)
 
 ```
 JDK Map<Integer, Integer> map = new HashMap<Integer, Integer>();
