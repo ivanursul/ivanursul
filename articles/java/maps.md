@@ -37,25 +37,25 @@ Below are the most commonly used HashMap methods:
 
 Example:
 ```    
-        // Creating HashMap
-        Map fruits = new HashMap();
+// Creating HashMap
+Map fruits = new HashMap();
 
-        // Adding fruits
-        fruits.put("Banana", 1);
-        fruits.put("Apple", 12);
-        fruits.put("Avocado", 8);
+// Adding fruits
+fruits.put("Banana", 1);
+fruits.put("Apple", 12);
+fruits.put("Avocado", 8);
 
-        System.out.println("Fruits: " + fruits.size());
+System.out.println("Fruits: " + fruits.size());
 
-        // Iterate over fruits
-        for(Object x: fruits.keySet()) {
-                System.out.println(x + " - " + fruits.get(x));
-        }    
+// Iterate over fruits
+for(Object x: fruits.keySet()) {
+   System.out.println(x + " - " + fruits.get(x));
+}    
 
-        // Clear all values.
-        fruits.clear();
+// Clear all values.
+fruits.clear();
 
-        System.out.println("Size: " + fruits.size());
+System.out.println("Size: " + fruits.size());
 ```
 ### <a href="#treeMap" name="hashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> TreeMap
 
@@ -65,16 +65,16 @@ This type is recommended to use if you need SortedMap operations or key-ordered 
 
 Example:
 ```
-        // Creating a TreeMap
-        SortedMap<String, Integer> fruits  = new TreeMap<>();
+// Creating a TreeMap
+SortedMap<String, Integer> fruits  = new TreeMap<>();
 
-        // Adding fruits
-        fruits.put("Banana", 1);
-        fruits.put("Apple", 2);
-        fruits.put("Avocado", 5);
-        fruits.put("Orange", 22);
+// Adding fruits
+fruits.put("Banana", 1);
+fruits.put("Apple", 2);
+fruits.put("Avocado", 5);
+fruits.put("Orange", 22);
 
-        System.out.println(fruits);
+System.out.println(fruits);
 ```
 
 ### <a href="#linkedHashMap" name="linkedHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> LinkedHashMap
@@ -87,20 +87,20 @@ Just as HashMap and TreeMap, LinkedHashMap is not synchronized as well, which me
 
 Example:
 ```
-        // Creating LinkedHashMap
-        Map<String, String> fruits = new LinkedHashMap<String, String>();
+// Creating LinkedHashMap
+Map<String, String> fruits = new LinkedHashMap<String, String>();
         
-        // Adding fruits
-        fruits.put("Banana", "1");
-        fruits.put("Apple", "12");
-        fruits.put("Avocado", "5");
-        fruits.put("Orange", "25");
-        fruits.put(null, "22" );
+// Adding fruits
+fruits.put("Banana", "1");
+fruits.put("Apple", "12");
+fruits.put("Avocado", "5");
+fruits.put("Orange", "25");
+fruits.put(null, "22" );
         
-        // Iterating
-        for(Map.Entry<String, String> x : fruits.entrySet()){
-                System.out.println(x.getKey() + " " + x.getValue());
-        }
+// Iterating
+for(Map.Entry<String, String> x : fruits.entrySet()){
+   System.out.println(x.getKey() + " " + x.getValue());
+}
 ```
 
 ### <a href="#enumMap" name="enumMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> EnumMap
@@ -111,42 +111,42 @@ Similar to TreeMap, EnumMap is maintained in the natural order of their keys. En
 
 Like the previously mentioned classes, EnumMap is not synchronized as well. The example of a declaration is below:
 ```
-        EnumMap<SomeClass, String> map = new EnumMap<SomeClass, String>;
+EnumMap<SomeClass, String> map = new EnumMap<SomeClass, String>;
 ```
 Example:
 ```
-        // Creating EnumMap
-        EnumMap<Test, String> fruits = new EnumMap<Test, String>(Test.class);
+// Creating EnumMap
+EnumMap<Test, String> fruits = new EnumMap<Test, String>(Test.class);
         
-        // Adding fruits
-        fruits.put(Test.A, "Banana");
-        fruits.put(Test.B, "Apple");
-        fruits.put(Test.C, "Avocado");
-        fruits.put(Test.D, "Orange");
+// Adding fruits
+fruits.put(Test.A, "Banana");
+fruits.put(Test.B, "Apple");
+fruits.put(Test.C, "Avocado");
+fruits.put(Test.D, "Orange");
         
-        //Iterate over key
-        for(Test x: fruits.keySet()) {
-            System.out.println(x +" "+ x.getNumber());
-        }
+//Iterate over key
+for(Test x: fruits.keySet()) {
+   System.out.println(x +" "+ x.getNumber());
+}
         
-       // Iterate over values
-        for(String x: fruits.values()) {
-            System.out.println(x);
-        }
-        
-        enum Test {
+// Iterate over values
+for(String x: fruits.values()) {
+   System.out.println(x);
+}
 
-            A(1), B(2), C(3), D(4);
-            private int number;
+enum Test {
+
+   A(1), B(2), C(3), D(4);
+   private int number;
     
-            private Test(int x) {
-                number = x;
-            }
+   private Test(int x) {
+      number = x;
+   }
     
-            public int getNumber() {
-                return number;
-            }
-        }
+   public int getNumber() {
+      return number;
+   }
+}
 ```
 
 ### <a href="#identityHashMap" name="identityHashMap"><i class="fa fa-link anchor" aria-hidden="true"></i></a> IdentityHashMap
@@ -158,15 +158,15 @@ In IdentityHashMap Class the order is not guaranteed, it has constant-time perfo
 Example:
 
 ```   
-        // Creating IdentityHashMap
-        Map fruits = new IdentityHashMap();
+// Creating IdentityHashMap
+Map fruits = new IdentityHashMap();
                
-        // Adding fruits
-        fruits.put(new String("1") ,"Banana"); 
-        fruits.put(new String("2") ,"Avocado"); 
-        fruits.put(new String("3") ,"Apple"); 
+// Adding fruits
+fruits.put(new String("1") ,"Banana"); 
+fruits.put(new String("2") ,"Avocado"); 
+fruits.put(new String("3") ,"Apple"); 
        
-        System.out.println("Fruits:"+ fruits);   
+System.out.println("Fruits:"+ fruits);   
 ```
 
 If you liked this article, you might be interested in <a href="https://ivanursul.com/articles/java/lists">Lists</a>, <a href="https://ivanursul.com/articles/java/sets">Sets</a>, <a href="https://ivanursul.com/articles/java/maps">Maps</a>, <a href="https://ivanursul.com/articles/java/queues">Queues</a> and <a href="https://ivanursul.com/articles/java/deques">Deques</a>. Feel free to browse.
