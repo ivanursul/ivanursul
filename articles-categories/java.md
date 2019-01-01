@@ -10,12 +10,12 @@ summary: Write once, run anywhere(c)
 
 Over the past few years I realized that I spend less and less time writing code in Java and more time doing non-technical things like reading emails.
  
-I decided to create a separate place in my blog, where Java world will be covered, so I will start with covering basic things and will continue with more sophisticated, edge-cased articles about the Java world.
+So I decided to create a separate page for writing posts about Java.
 
 ### <a href="#collections" name="collections"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Collections
 
 Collections in Java is a framework that gives an API for working with a group of objects.
-You perform different kinds of operations like searching, sorting, insertion, removing. Some collections are good for one operations, while other collections are good for other operations.
+You perform different kinds of operations like searching, sorting, insertion, removing. Some collections are good for one operations, while others are good for other operations.
 
 * [Lists](https://ivanursul.com/articles/java/lists)
 * [Sets](https://ivanursul.com/articles/java/sets)
