@@ -120,7 +120,7 @@ For a description of the Bot API, see this page: https://core.telegram.org/bots/
 
 ### Step 2: Install Serverless
 
-The fist thing you need to do is install serverless framework:
+The fist thing you need to do is install the **serverless** framework:
 
 ```
 npm install -g serverless
