@@ -401,3 +401,9 @@ Now just go to your chat bot and send any message:
 
 ![](assets/images/telegram-bots/telegram-chat-bot-test.png){: .center-image }
 
+
+PS - don't forget to remove your bot after you finish wiht experiments:
+
+```
+serverless remove
+```
