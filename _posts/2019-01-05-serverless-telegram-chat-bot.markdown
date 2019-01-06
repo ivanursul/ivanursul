@@ -411,3 +411,5 @@ serverless remove
 ### <a href="#conclusion" name="conclusion"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusion
 
 Writing a Serverless Chat Bot makes sense: you can spend less dollars for it and have a working Chat Bot without worrying about infrastructute. 
+
+In this article I haven't wrote about DynamoDB, this is intentially because I didn't want to over-complicate this blog post.
