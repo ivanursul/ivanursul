@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title:  "Experimenting further, writing a Serverless telegram Chat Bot"
+title:  "Experimenting further, writing a Serverless Telegram Chat Bot"
 date: 2019-01-05 00:00:00
 permalink: serverless-telegram-chat-bit
 tags: ['java', 'chat-bots']
