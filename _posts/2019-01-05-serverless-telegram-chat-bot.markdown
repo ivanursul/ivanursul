@@ -8,14 +8,14 @@ tags: ['java', 'chat-bots']
 
 In my [last article](https://ivanursul.com/how-we-wrote-telegram-chat-bots) I wrote about how I wrote Telegram Chat for tracking co-working spends. I wrote a chat bot using Java, hosted it on my Raspberry PI 3. Yes, it's serving its needs, we fully rely on it. However, since this chat bot was written as an experiment, I wanted to proceed with research and investigate how real chat bots are written. 
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Why Raspberry PI 3 is not the the best place for hosting a Chat Bot
+### <a href="#why" name="why"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Why Raspberry PI 3 is not the the best place for hosting a Chat Bot
 
 Since Telegram Chat Bot can use Long-Polling model, we don't care about a dedicated IP address or DNS record, the only thing we need is internet. So yes, Raspberry PI device is a computer, we can run our program there, so hosting a Telegram Chat with Long-Polling model is an option. However, what if we are writing a Chat Bot with hudreds or thousands of requests/second? Obviously, Long-Polling model could become a bottleneck since it allows to run a single application in a single Raspberry PI which means we can't spread the load across multiple devices, which means you can't scale the whole construction horizontally, only vertically, by adding more CPU/RAM power.
 
 Long story short, if we want to have a scalable Chat Bot in Telegram, we have to   get rid of long-polling model.
 
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Understanding Web Hooks
+### <a href="#understandingwebhooks" name="understandingwebhooks"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Understanding Web Hooks
 
 If we refuse long-polling, then what should be use instead? According to Telegram documentation, there's a [setWebhook](https://core.telegram.org/bots/api#setwebhook) API, which allows you to receive requests to a given URL:
 
@@ -59,7 +59,7 @@ After you do that, you will now start receiving POST requests to https://yourdom
 
 Good, so practically speaking, instead of long-polling, we can redirect all incoming user messages to some API, hosted on the internet. Now, we can write a fully-managed backend and scale it horizontally, have a load balancer, add enough instances and live without problems.
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Do we really need a backend for a Chat Bot?
+### <a href="#backend" name="backend"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Do we really need a backend for a Chat Bot?
 
 I wanted to move my Chat Bot to use WebHooks and scale it, if needed, so I started thinking about a possible options. Currently we don't use the Chat bot heavily, we have up to 30 spend units per month, which is nothing.
 
@@ -69,7 +69,7 @@ Another option was to use Serverless approach, write a Lambda function and host 
 
 PS - Check out my article about about [things I learned from using AWS Lambda](https://ivanursul.com/what-i-learned-from-aws-lambda), which includes section about free tier and pricing.
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> What AWS services do I need? 
+### <a href="#awsservices" name="awsservices"><i class="fa fa-link anchor" aria-hidden="true"></i></a> What AWS services do I need? 
 
 Before writing Lambda function, we need to figure out what AWS components do we need for our Chat Bot. 
 
@@ -79,7 +79,7 @@ Secondly, we want a dedicated address to instruct Telegram to send , so we need 
 
 Finally, we want a database for storing our users, spends and relationships. I decided to stick to AWS DynamoDB since you can specify read and write capacity and pay for it. Since I don't have a lot of traffic I can specify set read and write concurrency level to 1 and pay 0.8 dollars per month.
 
-### <a href="#" name=""><i class="fa fa-link anchor" aria-hidden="true"></i></a> Serverless framework
+### <a href="#serverless" name="serverless"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Serverless framework
 
 Serverless is a default option for AWS Lambda, so I sticked to it. I will be using Python as a programming language.
 
@@ -399,7 +399,7 @@ $ curl --request POST --url https://api.telegram.org/bot610644356:AAGZZCEVxKLLoR
 
 Now just go to your chat bot and send any message:
 
-![](assets/images/telegram-bots/telegram-chat-bot-test.png){: .center-image }
+![](assets/images/telegram-bots/telegram-chat-bot-test-1.png){: .center-image }
 
 
 PS - don't forget to remove your bot after you finish wiht experiments:
@@ -407,3 +407,7 @@ PS - don't forget to remove your bot after you finish wiht experiments:
 ```
 serverless remove
 ```
+
+### <a href="#conclusion" name="conclusion"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusion
+
+Writing a Serverless Chat Bot makes sense: you can spend less dollars for it and have a working Chat Bot without worrying about infrastructute. 
