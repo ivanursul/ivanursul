@@ -6,26 +6,26 @@ permalink: serverless-telegram-chat-bit
 tags: ['java', 'chat-bots']
 ---
 
-In my [last article](https://ivanursul.com/how-we-wrote-telegram-chat-bots) I wrote about how I wrote Telegram Chat for tracking co-working spends. I wrote a chat bot using Java, hosted it on my Raspberry PI 3. Yes, it's serving its needs, we fully rely on it. However, since this chat bot was written as an experiment, I wanted to proceed with research and investigate how real chat bots are written. 
+In my [last article](https://ivanursul.com/how-we-wrote-telegram-chat-bots) I wrote about how I wrote Telegram Chat for tracking co-working spends. I wrote a chatbot using Java, hosted it on my Raspberry PI 3. Yes, it's serving its needs, we fully rely on it. However, since this chatbot was written as an experiment, I wanted to proceed with research and investigate how real chatbots are written. 
 
 ### <a href="#why" name="why"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Why Raspberry PI 3 is not the the best place for hosting a Chat Bot
 
-Since Telegram Chat Bot can use Long-Polling model, we don't care about a dedicated IP address or DNS record, the only thing we need is internet. So yes, Raspberry PI device is a computer, we can run our program there, so hosting a Telegram Chat with Long-Polling model is an option. However, what if we are writing a Chat Bot with hudreds or thousands of requests/second? Obviously, Long-Polling model could become a bottleneck since it allows to run a single application in a single Raspberry PI which means we can't spread the load across multiple devices, which means you can't scale the whole construction horizontally, only vertically, by adding more CPU/RAM power.
+Since Telegram Chat Bot can use Long-Polling model, we don't care about a dedicated IP address or DNS record, the only thing we need is the internet connection. So yes, Raspberry PI device is a computer, we can run our program there, so hosting a Telegram Chat with Long-Polling model is an option. However, what if we are writing a Chat Bot with hundreds or thousands of requests/second? Obviously, Long-Polling model could become a bottleneck since it allows to run a single application in a single Raspberry PI which means we can't spread the load across multiple devices, which means you can't scale the whole construction horizontally, only vertically, by adding more CPU/RAM power.
 
-Long story short, if we want to have a scalable Chat Bot in Telegram, we have to   get rid of long-polling model.
+Long story short, if we want to have a scalable Chat Bot in Telegram, we have to get rid of the long-polling model.
 
 
 ### <a href="#understandingwebhooks" name="understandingwebhooks"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Understanding Web Hooks
 
-If we refuse long-polling, then what should be use instead? According to Telegram documentation, there's a [setWebhook](https://core.telegram.org/bots/api#setwebhook) API, which allows you to receive requests to a given URL:
+If we refuse long-polling, then what should be used instead? According to Telegram documentation, there's a [setWebhook](https://core.telegram.org/bots/api#setwebhook) API, which allows you to receive requests to a given URL:
 
 ```
-Use this method to specify a url and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified url, containing a JSON-serialized Update. In case of an unsuccessful request, we will give up after a reasonable amount of attempts. Returns True on success.
+Use this method to specify a URL and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified URL, containing a JSON-serialized Update. In case of an unsuccessful request, we will give up after a reasonable amount of attempts. Returns True on success.
 
 If you'd like to make sure that the Webhook request comes from Telegram, we recommend using a secret path in the URL, e.g. https://www.example.com/<token>. Since nobody else knows your bot‘s token, you can be pretty sure it’s us.
 ```
 
-You have to instruct Telegram to send a request to a specified URL every time someone interacts with your bot. In order to do that, you have to send a POST request with a following signature:
+You have to instruct Telegram to send a request to a specified URL every time someone interacts with your bot. In order to do that, you have to send a POST request with the following signature:
 
 ```
 curl --request POST --url https://api.telegram.org/bot${bot_token}/setWebhook --header 'content-type: application/json' --data '{"url": "https://yourdomain.com/api"}'
@@ -61,27 +61,27 @@ Good, so practically speaking, instead of long-polling, we can redirect all inco
 
 ### <a href="#backend" name="backend"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Do we really need a backend for a Chat Bot?
 
-I wanted to move my Chat Bot to use WebHooks and scale it, if needed, so I started thinking about a possible options. Currently we don't use the Chat bot heavily, we have up to 30 spend units per month, which is nothing.
+I wanted to move my ChatBot to use WebHooks and scale it if needed, so I started thinking about possible options. Currently, we don't use the Chatbot heavily, we have up to 30 spend units per month, which is nothing.
 
-One of the simplest options for me was to write an API and instruct Chat Bot to use it. I could host it on AWS or DigitalOcean, or on any other CloudProvider. I didn't like this approach since I would have to spend 10-20 for running cloud instance.
+One of the simplest options for me was to write an API and instruct ChatBot to use it. I could host it on AWS or DigitalOcean, or on any other CloudProvider. I didn't like this approach since I would have to spend 10-20 for running cloud instance.
 
-Another option was to use Serverless approach, write a Lambda function and host it in AWS. Keeping in mind that AWS has a free tier, which includes 1 million requests per month, and 400,000 GB-seconds of compute time on a monthly basis, I decided to stick to it. 
+Another option was to use the Serverless approach, write a Lambda function and host it in AWS. Keeping in mind that AWS has a free tier, which includes 1 million requests per month, and 400,000 GB-seconds of compute time on a monthly basis, I decided to stick to it. 
 
-PS - Check out my article about about [things I learned from using AWS Lambda](https://ivanursul.com/what-i-learned-from-aws-lambda), which includes section about free tier and pricing.
+PS - Check out my article about [things I learned from using AWS Lambda](https://ivanursul.com/what-i-learned-from-aws-lambda), which includes a section about free tier and pricing.
 
 ### <a href="#awsservices" name="awsservices"><i class="fa fa-link anchor" aria-hidden="true"></i></a> What AWS services do I need? 
 
 Before writing Lambda function, we need to figure out what AWS components do we need for our Chat Bot. 
 
-First of all, we need [AWS Lambda](https://aws.amazon.com/lambda/). I think I will chose Python as a programming language.
+First of all, we need [AWS Lambda](https://aws.amazon.com/lambda/). I think I will choose Python as a programming language.
 
-Secondly, we want a dedicated address to instruct Telegram to send , so we need an [API Gateway](https://aws.amazon.com/api-gateway/). Gateway will receive request from Telegram and invoke Lambda to process the message. Lambda will send a request to Telegram in order to send a response to a user.
+Secondly, we want a dedicated address to instruct Telegram to send, so we need an [API Gateway](https://aws.amazon.com/api-gateway/). Gateway will receive a request from Telegram and invoke Lambda to process the message. Lambda will send a request to Telegram in order to send a response to a user.
 
-Finally, we want a database for storing our users, spends and relationships. I decided to stick to AWS DynamoDB since you can specify read and write capacity and pay for it. Since I don't have a lot of traffic I can specify set read and write concurrency level to 1 and pay 0.8 dollars per month.
+Finally, we want a database for storing our users, spends, and relationships. I decided to stick to AWS DynamoDB since you can specify read and write capacity and pay for it. Since I don't have a lot of traffic I can specify set read and write concurrency level to 1 and pay 0.8 dollars per month.
 
 ### <a href="#serverless" name="serverless"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Serverless framework
 
-Serverless is a default option for AWS Lambda, so I sticked to it. I will be using Python as a programming language.
+Serverless is a default option for AWS Lambda, so I stuck to it. I will be using Python as a programming language.
 
 Before we start, you need to make sure you have: 
 
@@ -92,7 +92,7 @@ Before we start, you need to make sure you have:
 
 ### Step 1: Create your bot
 
-The process of creatin a Chat bot is super easy:
+The process of creating a Chatbot is super easy:
 
 * Go to @BotFather
 * Type **/newbot**
@@ -100,10 +100,10 @@ The process of creatin a Chat bot is super easy:
 ```
 Alright, a new bot. How are we going to call it? Please choose a name for your bot.
 ```
-Specify a name for you bot, I picked **iursul-test-bot**
+Specify a name for your bot, I picked **iursul-test-bot**
 * Now specify a username:
 ```
-Good. Now let's choose a username for your bot. It must end in `bot`. Like this, for example: TetrisBot or tetris_bot.
+Good. Now let's choose a username for your bot. It must end in `bot`. Like this, for example, TetrisBot or tetris_bot.
 ```
 I picked **iursultestbot**
 
@@ -120,7 +120,7 @@ For a description of the Bot API, see this page: https://core.telegram.org/bots/
 
 ### Step 2: Install Serverless
 
-The fist thing you need to do is install the **serverless** framework:
+The first thing you need to do is install the **serverless** framework:
 
 ```
 npm install -g serverless
@@ -134,7 +134,7 @@ Once you install it, go to your projects folder and execute:
 serverless create --template aws-python3 --path iursultestbot
 ```
 
-It will create a following structure: 
+It will create the following structure: 
 
 ```
 .
@@ -143,7 +143,7 @@ It will create a following structure:
 ```
 
 
-**serverless.yml** contains following structure:
+**serverless.yml** contains the following structure:
 
 ```
 service: iursultestbot
@@ -157,7 +157,7 @@ functions:
     handler: handler.hello
 ```
 
-Default **handler.py** file has following code:
+Default **handler.py**  has following code:
 
 ```
 
@@ -223,11 +223,11 @@ What was changed? We added **http** event:
 
 Before you deploy your Lambda project on AWS, you need to have credentials configured on your local machine.
 
-You need to following this 5 steps:
+You need to follow this 5 steps:
 
 * Log in to your AWS Account, at the right corner, click on your name and go to **My Security Credentials**
 * Go to **Users** section and create a user
-* Specify username and choose **Programmatic access**
+* Specify a username and choose **Programmatic access**
 * On **Permissions** page, choose **Attach existing policies directly** and choose **AdministratorAccess**. You can play around with IAM and choose more gradual permissions, I chose **AdministratorAccess** for demo purposes.
 * After you review and create a user, you will be redirected to a page where you can download CSV credentials. You will get access key and secret access key.
 
@@ -283,7 +283,7 @@ functions:
 
 ### Step 7: Organize a proper response for Telegram
 
-At this step, Lambda and API Gateway are ready, the only thing which is left is response format, we need to  send the right response.
+At this step, Lambda and API Gateway are ready, the only thing which is left is response format, we need to send the right response.
 
 Modify your **serverless.yml**:
 
@@ -306,13 +306,13 @@ functions:
           cors: true
 ```
 
-Create a file called **requirements.txt** and add following line:
+Create a file called **requirements.txt** and add the following line:
 
 ```
 requests
 ```
 
-Create a file called **setup.cfg** and add a following line:
+Create a file called **setup.cfg** and add the following line:
 
 ```
 [install]
@@ -402,7 +402,7 @@ Now just go to your chat bot and send any message:
 ![](assets/images/telegram-bots/telegram-chat-bot-test-1.png){: .center-image }
 
 
-PS - don't forget to remove your bot after you finish wiht experiments:
+PS - don't forget to remove your bot after you finish with experiments:
 
 ```
 serverless remove
@@ -410,6 +410,6 @@ serverless remove
 
 ### <a href="#conclusion" name="conclusion"><i class="fa fa-link anchor" aria-hidden="true"></i></a> Conclusion
 
-Writing a Serverless Chat Bot makes sense: you can spend less dollars for it and have a working Chat Bot without worrying about infrastructute. 
+Writing a Serverless Chat Bot makes sense: you can spend fewer dollars on it and have a working Chat Bot without worrying about infrastructure. 
 
-In this article I haven't wrote about DynamoDB, this is intentially because I didn't want to over-complicate this blog post.
+In this article I haven't written about DynamoDB, this is intentional because I didn't want to over-complicate this blog post.
