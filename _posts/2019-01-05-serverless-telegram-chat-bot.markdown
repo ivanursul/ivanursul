@@ -319,7 +319,7 @@ Create a file called **setup.cfg** and add a following line:
 prefix=
 ```
 
-I am not sure if `setup.cfg` is required for everyone, at least it helped me when I was getting the [following message](https://stackoverflow.com/questions/24257803/distutilsoptionerror-must-supply-either-home-or-prefix-exec-prefix-not-both)
+I am not sure if **setup.cfg** is required for everyone, at least it helped me when I was getting the [following message](https://stackoverflow.com/questions/24257803/distutilsoptionerror-must-supply-either-home-or-prefix-exec-prefix-not-both)
 
 Execute:
 
