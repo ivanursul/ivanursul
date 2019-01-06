@@ -86,7 +86,7 @@ Serverless is a default option for AWS Lambda, so I sticked to it. I will be usi
 Before we start, you need to make sure you have: 
 
 * Installed Python3
-* Installed Node.js `v6.5.0` or later
+* Installed Node.js v6.5.0 or later
 * AWS account with admin rights
 * You configured credentials 
 
