@@ -31,7 +31,7 @@ You have to instruct Telegram to send a request to a specified URL every time so
 curl --request POST --url https://api.telegram.org/bot${bot_token}/setWebhook --header 'content-type: application/json' --data '{"url": "https://yourdomain.com/api"}'
 ```
 
-After you do that, you will now start receiving POST requests to `https://yourdomain.com/api` with a JSON-serialized [Update](https://core.telegram.org/bots/api#update) object:
+After you do that, you will now start receiving POST requests to https://yourdomain.com/api with a JSON-serialized [Update](https://core.telegram.org/bots/api#update) object:
 
 ```
 {
@@ -95,17 +95,17 @@ Before we start, you need to make sure you have:
 The process of creatin a Chat bot is super easy:
 
 * Go to @BotFather
-* Type `/newbot`
+* Type **/newbot**
 * You will receive a message: 
 ```
 Alright, a new bot. How are we going to call it? Please choose a name for your bot.
 ```
-Specify a name for you bot, I picked `iursul-test-bot`
+Specify a name for you bot, I picked **iursul-test-bot**
 * Now specify a username:
 ```
 Good. Now let's choose a username for your bot. It must end in `bot`. Like this, for example: TetrisBot or tetris_bot.
 ```
-I picked `iursultestbot`
+I picked **iursultestbot**
 
 After you finish the process, you will get a message:
 
@@ -143,7 +143,7 @@ It will create a following structure:
 ```
 
 
-`serverless.yml` contains following structure:
+**serverless.yml** contains following structure:
 
 ```
 service: iursultestbot
@@ -157,7 +157,7 @@ functions:
     handler: handler.hello
 ```
 
-Default `handler.py` file has following code:
+Default **handler.py** file has following code:
 
 ```
 
@@ -189,7 +189,7 @@ def hello(event, context):
 
 ### Step 4: Add API Gateway
 
-The next thing you need to do is to expose your API to the external world, so everyone can call your bot. In order to do that, modify `serverless.yml` and add API Gateway integration:
+The next thing you need to do is to expose your API to the external world, so everyone can call your bot. In order to do that, modify **serverless.yml** and add API Gateway integration:
 
 ```
 service: iursultestbot
@@ -208,7 +208,7 @@ functions:
           cors: true
 ```
 
-What was changed? We added `http` event:
+What was changed? We added **http** event:
 
 ```
 ...
@@ -225,10 +225,10 @@ Before you deploy your Lambda project on AWS, you need to have credentials confi
 
 You need to following this 5 steps:
 
-* Log in to your AWS Account, at the right corner, click on your name and go to `My Security Credentials`
-* Go to `Users` section and create a user
-* Specify username and choose `Programmatic access`
-* On `Permissions` page, choose `Attach existing policies directly` and choose `AdministratorAccess`. You can play around with IAM and choose more gradual permissions, I chose `AdministratorAccess` for demo purposes.
+* Log in to your AWS Account, at the right corner, click on your name and go to **My Security Credentials**
+* Go to **Users** section and create a user
+* Specify username and choose **Programmatic access**
+* On **Permissions** page, choose **Attach existing policies directly** and choose **AdministratorAccess**. You can play around with IAM and choose more gradual permissions, I chose **AdministratorAccess** for demo purposes.
 * After you review and create a user, you will be redirected to a page where you can download CSV credentials. You will get access key and secret access key.
 
 Make sure you have [awscli installed](https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html) and execute:
@@ -285,7 +285,7 @@ functions:
 
 At this step, Lambda and API Gateway are ready, the only thing which is left is response format, we need to  send the right response.
 
-Modify your `serverless.yml`:
+Modify your **serverless.yml**:
 
 ```
 service: iursultestbot
@@ -306,13 +306,13 @@ functions:
           cors: true
 ```
 
-Create a file called `requirements.txt` and add following line:
+Create a file called **requirements.txt** and add following line:
 
 ```
 requests
 ```
 
-Create a file called `setup.cfg` and add a following line:
+Create a file called **setup.cfg** and add a following line:
 
 ```
 [install]
@@ -340,7 +340,7 @@ Installing collected packages: chardet, urllib3, idna, certifi, requests
 Successfully installed certifi-2018.11.29 chardet-3.0.4 idna-2.8 requests-2.21.0 urllib3-1.24.1
 ```
 
-Modify your `handler.py`:
+Modify your **handler.py**:
 
 ```
 import json
