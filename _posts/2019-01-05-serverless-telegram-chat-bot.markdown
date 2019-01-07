@@ -145,7 +145,7 @@ It will create the following structure:
 
 **serverless.yml** contains the following structure:
 
-```yaml
+```yml
 service: iursultestbot
 
 provider:
