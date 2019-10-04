@@ -1,33 +1,6 @@
 ---
-layout: page
-title: Ivan Ursul | Java, AWS and Web Development
+layout: default
+title: home
 ---
 
-<section class="categories-nav">
-
-    {%- for item in site.data.categories-nav.items -%}
-        {%- assign first_in_row = false -%}
-        {%- unless forloop.last -%}
-            {%- assign mod_index = forloop.index | modulo: 2 -%}
-            {%- if mod_index == 1 -%}
-                {%- assign first_in_row = true -%}
-            {%- endif -%}
-        {%- endunless -%}
-        <a class="categories-nav__item {% if first_in_row == true %}categories-nav__item--first-in-row{% endif %}{% if forloop.last %}categories-nav__item--last{% endif %}" href="{{- item.url | relative_url -}}">
-
-            <div class="categories-nav__icon categories-nav__element">
-                <img src="{{- item.icon | relative_url -}}" alt="" class="categories-nav__icon-img">
-            </div>
-
-            <h2 class="categories-nav__title categories-nav__element">
-                {{- item.title -}}
-            </h2>
-            <div class="categories-nav__text categories-nav__element">
-                {{- item.text -}}
-            </div>
-
-        </a>
-    {%- endfor -%}
-
-
-</section>
+{% include posts_list.html %}
