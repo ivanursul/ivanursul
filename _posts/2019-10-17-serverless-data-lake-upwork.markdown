@@ -1,7 +1,7 @@
 ---
 title:  "Upwork data lake story: building a serverless data lake on AWS"
 date: 2019-10-17 00:00:00
-visible:1
+published: false
 permalink: upwork-serverless-data-lake-aws
 tags: ['aws', 'serverless']
 ---
