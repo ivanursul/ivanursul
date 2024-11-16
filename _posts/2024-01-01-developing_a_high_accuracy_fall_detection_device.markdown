@@ -131,3 +131,29 @@ import numpy as np
 from scipy.signal import butter, filtfilt
 # ... other necessary imports
 ```
+
+## Potential Applications and Benefits
+
+-   **Elderly Care**: Provides immediate detection of falls, allowing for swift assistance and reducing the risk of severe injuries.
+-   **Healthcare Cost Reduction**: Early intervention can prevent complications, lowering hospitalization costs.
+-   **Home Safety Enhancement**: Enables independent living for seniors by ensuring help is available when needed.
+
+## Limitations and Future Work
+
+### Current Limitations
+
+-   **Hardware Constraints**: The Raspberry Pi Zero 2W has limited processing power (512MB RAM, dual-core CPU), which can be a bottleneck for running deep learning models.
+-   **Power Consumption**: Continuous sensor reading and data processing may drain the battery quickly in a wearable setup.
+-   **Data Storage**: Limited onboard storage necessitates efficient data management or external storage solutions.
+
+### Future Improvements
+
+-   **Model Optimization**: Implement model quantization or pruning to reduce computational load.
+-   **Edge Computing**: Explore more powerful yet energy-efficient microcontrollers tailored for AI applications.
+-   **Generalization**: Expand the dataset with more diverse participants to improve the model's robustness across different populations.
+-   **Connectivity**: Integrate wireless communication (e.g., Wi-Fi, Bluetooth) to send alerts directly to caregivers or emergency services.
+
+## Conclusion
+
+This project demonstrates the feasibility of deploying advanced Transformer-based models on resource-limited hardware for real-time fall detection. The high accuracy and recall rates achieved indicate significant potential for improving elderly care and safety. While there are limitations due to hardware constraints, ongoing advancements in edge computing and model optimization techniques offer promising avenues for enhancing the system's performance and practicality.
+
