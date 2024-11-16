@@ -30,7 +30,7 @@ The BMP-388 is a high-precision barometric pressure sensor that measures altitud
 
 ## 3D-Printed Case Design
 
-![](assets/images/serverless-4.svg)
+![](assets/images/open_scad.gif)
 
 Using OpenSCAD, I designed a custom case to house all the components securely. The key design considerations included:
 
