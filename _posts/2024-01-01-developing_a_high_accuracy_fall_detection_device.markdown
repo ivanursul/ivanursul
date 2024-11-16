@@ -165,9 +165,8 @@ The detailed findings and methodologies of this project will be presented at the
 
 -   **Project Repository**: [GitHub - Fall Detection Project](https://github.com/ivanursul/fall-detection-phd)
 -   **Conference Publication**: This work will be presented at the [International Conference on Advanced Trends in Information Theory (ATIT)](https://atit.ieee.org.ua/) in November 2024.
--   **Raspberry Pi Zero 2W**: Official Website
--   **MPU-9265 Sensor Documentation**: Datasheet
--   **BMP-388 Sensor Documentation**: Datasheet
+-   **Raspberry Pi Zero 2W**: [Official Website](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
+-   **MPU-9265 Sensor Documentation**: [Datasheet](https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf)
+-   **BMP-388 Sensor Documentation**: [Datasheet](https://www.mouser.com/pdfdocs/BST-BMP388-DS001-01.pdf)
 -   **OpenSCAD**: [Official Website](https://www.openscad.org/)
--   **Transformer Models**: [Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)
 
