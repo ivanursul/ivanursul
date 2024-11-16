@@ -30,6 +30,7 @@ The BMP-388 is a high-precision barometric pressure sensor that measures altitud
 
 ## 3D-Printed Case Design
 ![](assets/images/open_scad.gif?style=centerme)
+*The model of the box in openscad editor*
 
 Using OpenSCAD, I designed a custom case to house all the components securely. The key design considerations included:
 
@@ -50,7 +51,6 @@ To train the fall detection models, I needed a comprehensive dataset of both fal
 ## Data Preprocessing
 
 ![The model of the box in openscad editor](assets/images/fall_detection_filtering.jpeg?style=centerme)
-*The model of the box in openscad editor*
 
 Raw sensor data often contains noise and irrelevant fluctuations. To address this, I employed several preprocessing techniques:
 
