@@ -29,8 +29,9 @@ The MPU-9265 sensor provides 3-axis accelerometer and gyroscope data. It offers 
 The BMP-388 is a high-precision barometric pressure sensor that measures altitude changes. Detecting rapid altitude changes can help distinguish between falls and other types of movements.
 
 ## 3D-Printed Case Design
-
+<div align="center">
 ![](assets/images/open_scad.gif)
+</div>
 
 Using OpenSCAD, I designed a custom case to house all the components securely. The key design considerations included:
 
