@@ -6,7 +6,7 @@ permalink: developing-fall-detection-device-raspberry-pi
 tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'elderly-care']
 ---
 
-![](assets/images/fall_detection_prototype_device.jpeg)
+![](assets/images/fall_detection_prototype_device.jpeg?style=centerme)
 
 Falls are a significant concern for the elderly population, often leading to serious injuries and a decrease in the quality of life. Detecting falls promptly can enable quick assistance, potentially reducing the severity of injuries and providing peace of mind for both seniors and their families. In my recent project, I set out to create a highly accurate, real-time fall detection device that minimizes false positives while operating on a resource-constrained platform.
 
@@ -29,9 +29,7 @@ The MPU-9265 sensor provides 3-axis accelerometer and gyroscope data. It offers 
 The BMP-388 is a high-precision barometric pressure sensor that measures altitude changes. Detecting rapid altitude changes can help distinguish between falls and other types of movements.
 
 ## 3D-Printed Case Design
-<div align="center">
-![](assets/images/open_scad.gif)
-</div>
+![](assets/images/open_scad.gif?style=centerme)
 
 Using OpenSCAD, I designed a custom case to house all the components securely. The key design considerations included:
 
@@ -51,7 +49,7 @@ To train the fall detection models, I needed a comprehensive dataset of both fal
 
 ## Data Preprocessing
 
-![](assets/images/fall_detection_filtering.jpeg)
+![](assets/images/fall_detection_filtering.jpeg?style=centerme)
 
 Raw sensor data often contains noise and irrelevant fluctuations. To address this, I employed several preprocessing techniques:
 
@@ -149,12 +147,12 @@ from scipy.signal import butter, filtfilt
 -   **Power Consumption**: Continuous sensor reading and data processing may drain the battery quickly in a wearable setup.
 -   **Data Storage**: Limited onboard storage necessitates efficient data management or external storage solutions.
 
-### Future Improvements
+## Next Steps
 
--   **Model Optimization**: Implement model quantization or pruning to reduce computational load.
--   **Edge Computing**: Explore more powerful yet energy-efficient microcontrollers tailored for AI applications.
--   **Generalization**: Expand the dataset with more diverse participants to improve the model's robustness across different populations.
--   **Connectivity**: Integrate wireless communication (e.g., Wi-Fi, Bluetooth) to send alerts directly to caregivers or emergency services.
+1.  **Complete Dataset Recording and Publication**: Finish recording the dataset and make it publicly available. This will contribute to the research community and allow others to validate and build upon this work.
+2.  **PCB Design and Implementation**: Build a custom PCB to replace the wired connections between components. This will significantly reduce the size of the device by eliminating bulky wires, making it more comfortable and practical for users.
+3.  **Model Training with Barometric Data**: Train the model incorporating barometer data, specifically altitude measurements, to assess how it affects the model's accuracy. This could enhance the system's ability to distinguish between falls and non-fall events involving altitude changes.
+4.  **Integration of ECG Sensor (AD8232)**: Expand the sensor array by including an ECG sensor like the AD8232. Training the model with ECG data may improve the detection of physiological changes associated with falls, further increasing accuracy.
 
 ## Conclusion
 
@@ -164,7 +162,6 @@ The detailed findings and methodologies of this project will be presented at the
 
 ## Links and References
 
--   **Project Repository**: [GitHub - Fall Detection Project](https://github.com/ivanursul/fall-detection-phd)
 -   **Conference Publication**: This work will be presented at the [International Conference on Advanced Trends in Information Theory (ATIT)](https://atit.ieee.org.ua/) in November 2024.
 -   **Raspberry Pi Zero 2W**: [Official Website](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
 -   **MPU-9265 Sensor Documentation**: [Datasheet](https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf)
