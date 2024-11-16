@@ -6,6 +6,8 @@ permalink: developing-fall-detection-device-raspberry-pi
 tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'elderly-care']
 ---
 
+![3D-Printed Case](path_to_case_image)
+
 Falls are a significant concern for the elderly population, often leading to serious injuries and a decrease in the quality of life. Detecting falls promptly can enable quick assistance, potentially reducing the severity of injuries and providing peace of mind for both seniors and their families. In my recent project, I set out to create a highly accurate, real-time fall detection device that minimizes false positives while operating on a resource-constrained platform.
 
 ## Project Overview
@@ -92,4 +94,39 @@ Transformers excel in processing sequential data and can handle long-term depend
 
 The **Convolutional Transformer** achieved the highest accuracy of **98.26%**, with a perfect recall of 100% for fall events, ensuring that no falls went undetected.
 
-## Comparison with Existing Solutio
+## Comparison with Existing Solutions
+
+Compared to traditional fall detection systems that often rely on threshold-based methods or classical machine learning algorithms, my Transformer-based approach offers:
+
+- **Higher Accuracy**: Outperforms conventional models like CNNs and LSTMs, which typically achieve around 92-95% accuracy.
+- **Improved Recall**: Achieving 100% recall minimizes the risk of missing actual fall events.
+- **Real-Time Processing**: Despite running on the Raspberry Pi Zero 2W, the models provide quick inference times suitable for real-time detection.
+
+## Hardware and Software Integration
+
+### Sensor Communication
+
+- **I2C Protocol**: The Raspberry Pi communicates with the MPU-9265 and BMP-388 sensors using the I2C protocol.
+- **Continuous Reading**: Implemented multi-threading to read altitude continuously without blocking accelerometer data collection.
+
+### Software Implementation
+
+The device runs a Python script that:
+
+- **Collects Data**: Reads sensor data at 100 Hz and stores it in a buffer.
+- **Processes Data**: Applies filtering and preprocessing in real-time.
+- **Runs Inference**: Feeds the processed data into the trained Transformer model for fall detection.
+- **Alerts**: Activates a buzzer alarm if a fall is detected.
+
+#### Key Libraries Used
+
+```python
+import smbus
+import RPi.GPIO as GPIO
+import board
+import busio
+import adafruit_bmp3xx
+import threading
+import numpy as np
+from scipy.signal import butter, filtfilt
+# ... other necessary imports
