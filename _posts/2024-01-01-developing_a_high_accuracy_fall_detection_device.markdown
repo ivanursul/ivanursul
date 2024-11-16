@@ -6,7 +6,7 @@ permalink: developing-fall-detection-device-raspberry-pi
 tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'elderly-care']
 ---
 
-![3D-Printed Case](path_to_case_image)
+![](assets/images/fall_detection_prototype_device.jpeg)
 
 Falls are a significant concern for the elderly population, often leading to serious injuries and a decrease in the quality of life. Detecting falls promptly can enable quick assistance, potentially reducing the severity of injuries and providing peace of mind for both seniors and their families. In my recent project, I set out to create a highly accurate, real-time fall detection device that minimizes false positives while operating on a resource-constrained platform.
 
@@ -49,6 +49,8 @@ To train the fall detection models, I needed a comprehensive dataset of both fal
 - **Participant Actions**: Participants performed various types of falls and normal daily activities to provide a diverse dataset.
 
 ## Data Preprocessing
+
+![](assets/images/fall_detection_filtering.jpeg)
 
 Raw sensor data often contains noise and irrelevant fluctuations. To address this, I employed several preprocessing techniques:
 
