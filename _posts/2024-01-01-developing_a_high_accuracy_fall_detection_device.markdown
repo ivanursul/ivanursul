@@ -159,3 +159,15 @@ from scipy.signal import butter, filtfilt
 
 This project demonstrates the feasibility of deploying advanced Transformer-based models on resource-limited hardware for real-time fall detection. The high accuracy and recall rates achieved indicate significant potential for improving elderly care and safety. While there are limitations due to hardware constraints, ongoing advancements in edge computing and model optimization techniques offer promising avenues for enhancing the system's performance and practicality.
 
+The detailed findings and methodologies of this project will be presented at the [International Conference on Advanced Trends in Information Theory (ATIT)](https://atit.ieee.org.ua/) in November 2024. I look forward to sharing more insights and engaging with the community there.
+
+## Links and References
+
+-   **Project Repository**: [GitHub - Fall Detection Project](https://github.com/ivanursul/fall-detection-phd)
+-   **Conference Publication**: This work will be presented at the [International Conference on Advanced Trends in Information Theory (ATIT)](https://atit.ieee.org.ua/) in November 2024.
+-   **Raspberry Pi Zero 2W**: Official Website
+-   **MPU-9265 Sensor Documentation**: Datasheet
+-   **BMP-388 Sensor Documentation**: Datasheet
+-   **OpenSCAD**: [Official Website](https://www.openscad.org/)
+-   **Transformer Models**: [Vaswani et al., 2017](https://arxiv.org/abs/1706.03762)
+
