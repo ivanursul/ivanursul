@@ -49,7 +49,7 @@ To train the fall detection models, I needed a comprehensive dataset of both fal
 
 ## Data Preprocessing
 
-![](assets/images/fall_detection_filtering.jpeg?style=centerme)
+![A model of the box in openscad editor](assets/images/fall_detection_filtering.jpeg?style=centerme)
 
 Raw sensor data often contains noise and irrelevant fluctuations. To address this, I employed several preprocessing techniques:
 
