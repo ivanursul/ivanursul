@@ -61,8 +61,6 @@ The final design was printed using a 3D printer, resulting in a functional and a
 
 ## Data Collection Methodology
 
-## Data Collection Methodology
-
 To train the fall detection models effectively, I needed a comprehensive and diverse dataset of both fall events and Activities of Daily Living (ADLs). Recognizing the importance of realistic and varied data, I collaborated with participants from a regional hand-to-hand combat federation. This partnership allowed me to capture a wide range of fall types and daily activities performed by individuals of different ages, weights, and heights.
 
 ### Activities Recorded
@@ -172,15 +170,39 @@ Raw sensor data often contains noise and irrelevant fluctuations. To address thi
 
 ### Transformer-Based Architectures
 
-I explored various Transformer-based models for fall detection, leveraging their ability to capture temporal dependencies in time-series data:
+I explored various Transformer-based models for fall detection, leveraging their ability to capture temporal dependencies in time-series data. Below is a brief description of each model:
 
-1. **Standard Transformer**
-2. **Performer**
-3. **Linformer**
-4. **Temporal Convolutional Transformer**
-5. **Long Short-Term Transformer**
-6. **Multi-Scale Transformer**
-7. **Time-Series Transformer (T2V-BERT)**
+1.  **Standard Transformer**
+
+    The Standard Transformer is the original architecture introduced in the seminal paper "Attention is All You Need" by Vaswani et al. It relies entirely on self-attention mechanisms and feed-forward neural networks, eliminating the need for recurrent layers. This model excels at capturing global dependencies in sequential data, making it effective for processing time-series where the entire sequence context is important.
+
+2.  **Performer**
+
+    The Performer introduces a linearized attention mechanism that reduces the computational complexity of the self-attention operation from quadratic to linear with respect to the sequence length. It uses kernel-based approximations to make Transformers more scalable, especially for long sequences, without significantly sacrificing performance. This makes it suitable for real-time applications on devices with limited computational resources.
+
+3.  **Linformer**
+
+    Linformer addresses the efficiency issue of Transformers by projecting the high-dimensional key and value matrices into lower-dimensional representations. This reduces the memory and computational requirements of the attention mechanism from quadratic to linear complexity. Linformer maintains performance on long sequences while being more resource-efficient, which is ideal for deployment on devices like the Raspberry Pi Zero 2W.
+
+4.  **Temporal Convolutional Transformer**
+
+    The Temporal Convolutional Transformer combines convolutional neural networks (CNNs) with Transformer architectures to capture both local and global temporal dependencies. The convolutional layers extract local patterns and short-term dependencies, while the self-attention layers focus on long-term dependencies across the entire sequence. This hybrid approach enhances the model's ability to detect subtle changes in sensor data indicative of falls.
+
+5.  **Long Short-Term Transformer**
+
+    The Long Short-Term Transformer integrates the strengths of Long Short-Term Memory (LSTM) networks with Transformers. It incorporates recurrent connections to model short-term dependencies and uses self-attention mechanisms for capturing long-term dependencies. This fusion allows the model to effectively process sequences where both recent and distant past information are crucial for accurate fall detection.
+
+6.  **Multi-Scale Transformer**
+
+    The Multi-Scale Transformer processes input sequences at multiple temporal scales simultaneously. It employs hierarchical attention mechanisms to capture patterns at various levels of temporal granularity. This is particularly useful for fall detection, as it can recognize quick, abrupt movements as well as slower, more gradual changes in motion, providing a more robust analysis of sensor data.
+
+7.  **Time-Series Transformer (T2V-BERT)**
+
+    The Time-Series Transformer, also known as T2V-BERT, is specifically designed for time-series data. It incorporates time-aware positional embeddings and temporal encoding to handle continuous time information effectively. This model adapts the Transformer architecture to better capture the temporal dynamics inherent in time-series data like accelerometer and gyroscope readings, enhancing its ability to detect falls accurately.
+
+* * * * *
+
+These models were selected and adapted to balance the need for high accuracy with the computational limitations of running on a resource-constrained device. By evaluating each architecture, I aimed to identify the most effective model for real-time fall detection that could operate efficiently on the Raspberry Pi Zero 2W.
 
 #### Why Transformers?
 
