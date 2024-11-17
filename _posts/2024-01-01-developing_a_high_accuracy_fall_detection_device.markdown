@@ -39,7 +39,7 @@ I chose the Raspberry Pi Zero 2W due to its small form factor, low power consump
 
 ### MPU-9265 Sensor
 
-The MPU-9265 sensor provides 3-axis accelerometer and gyroscope data. It offers comprehensive motion sensing, which is crucial for accurately detecting falls by analyzing sudden changes in acceleration and orientation.
+The MPU-9250 sensor provides 3-axis accelerometer and gyroscope data, offering comprehensive motion sensing capabilities. Honestly, while the MPU-9250 does the job, it's just an okay sensor for capturing accelerometer data. It's nothing groundbreaking, but it gets the basics right. In fact, pretty much any standard accelerometer could handle the work needed for fall detection. The key is to have a sensor that reliably picks up on sudden changes in acceleration and orientation—which the MPU-9250 does adequately. Its data feeds into the system to analyze movements, crucial for accurately detecting falls without overcomplicating the hardware setup.
 
 ### BMP-388 Sensor
 
