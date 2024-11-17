@@ -247,14 +247,59 @@ Compared to traditional fall detection systems that often rely on threshold-base
 
 The device operates in two primary modes: **Data Collection Mode** and **Inference Mode**. A Python script orchestrates both modes, handling data acquisition, processing, and, when appropriate, inference and alerting.
 
-#### **Data Collection Mode**
+### Data Collection Mode
 
-In this mode, the device is used to gather the dataset necessary for training the fall detection models. The process involves:
+In this mode, the device is used to gather the dataset necessary for training the fall detection models. An important aspect of data collection is understanding when falls occur within the 8-second recording intervals. To achieve this, post-processing is performed to analyze the temporal distribution of fall events.
 
--   **Collecting Data**: The device reads sensor data from the accelerometer, gyroscope, and barometric pressure sensors at a rate of 100 Hz. Data is collected in 8-second intervals to capture sufficient pre- and post-event information for each activity or fall.
--   **Signalization**: Visual or auditory cues indicate the start and end of each recording session, helping participants synchronize their actions with the data being collected.
--   **Data Storage**: The collected data, along with labels indicating the type of activity or fall, is stored locally on the device or transferred to a central repository for further preprocessing and model training.
+#### Temporal Analysis of Fall Events
 
+After the data collection sessions, the 8-second intervals are divided into a grid for detailed analysis:
+
+-   **X-Axis**: Represents the 8-second duration, split into seconds.
+-   **Y-Axis**: Represents each second divided into 100-millisecond increments.
+
+By plotting a heatmap of the collected data, we can visualize the frequency and timing of falls within the intervals.
+
+![](assets/images//heatmap_timelapse.gif?style=centerme)
+*Heatmap showing the distribution of fall events across the 8-second intervals*
+
+The heatmap allows us to identify "hot" and "cold" periods within the recording sessions:
+
+-   **Hot Periods**: Times where falls frequently occur.
+-   **Cold Periods**: Times with few or no fall events.
+
+Using this information, we can adjust the data collection script to optimize the timing cues given to participants. By signaling participants to perform falls during the "cold" periods, we can achieve a more uniform distribution of fall events across the entire interval. This uniformity is crucial for:
+
+-   **Model Training**: Ensuring the model is exposed to falls occurring at different times within the interval, improving its ability to detect falls regardless of when they happen.
+-   **Data Balance**: Preventing overrepresentation of falls at specific times, which could bias the model.
+
+#### Enhanced Data Collection Process
+
+With the insights gained from the heatmap analysis, the data collection script was updated to provide more precise signalization:
+
+-   **Adaptive Timing Signals**: The device emits cues to participants to perform falls during underrepresented time segments.
+-   **Dynamic Scheduling**: Adjusts the timing of fall prompts based on real-time data analysis to fill in "cold" periods.
+
+This approach leads to a more evenly distributed dataset, which enhances the robustness of the model during training.
+
+#### Data Collection Workflow
+
+1.  **Initialization**: The device prepares for data collection by initializing sensors and buffers.
+2.  **Signalization**: The device provides auditory or visual cues to the participant:
+    -   **Start Signal**: Indicates the beginning of the 8-second recording interval.
+    -   **Fall Prompt**: Signals the participant to perform a fall during specific time segments identified as "cold" periods.
+    -   **End Signal**: Marks the end of the recording interval.
+3.  **Data Recording**: Sensor data is collected continuously throughout the interval.
+4.  **Post-Processing**: After the session, data is analyzed to generate the heatmap and assess the distribution of falls.
+5.  **Script Adjustment**: Based on the heatmap, the script adjusts future signals to target underrepresented time segments.
+
+#### Benefits of Temporal Distribution Analysis
+
+-   **Improved Model Generalization**: By training on data where falls occur at various times within the interval, the model becomes better at detecting falls in real-world scenarios, where the timing is unpredictable.
+-   **Efficient Data Collection**: Targeting underrepresented time segments makes efficient use of participants' time and efforts, ensuring a more balanced dataset.
+-   **Enhanced Understanding**: Provides deeper insights into the dynamics of falls and how they are captured by the sensors over time, informing future improvements in data collection and model design.
+
+By integrating this post-processing step and adapting the data collection script accordingly, we ensure that our dataset is comprehensive and well-balanced across the entire recording interval. This meticulous approach contributes significantly to the accuracy and reliability of the fall detection models.
 #### **Inference Mode**
 
 In inference mode, the device functions as a real-time fall detection system, continuously monitoring sensor data to identify fall events. The Python script handles the following tasks:
