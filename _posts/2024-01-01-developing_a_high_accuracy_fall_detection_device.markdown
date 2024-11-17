@@ -48,7 +48,7 @@ The BMP-388 is a high-precision barometric pressure sensor that measures atmosph
 Despite common assumptions, the BMP-388 sensor is capable of detecting these subtle changes. I conducted tests where the sensor accurately tracked the altitude variations associated with a fall. This sensitivity allows the device to capture the rapid descent during a fall event, providing an additional layer of data to improve detection accuracy. By integrating barometric pressure readings, we enhance the system's ability to differentiate between falls and other activities, such as sitting down or bending over, which might not involve significant altitude changes.
 
 ## 3D-Printed Case Design
-![](assets/images/open_scad.gif?style=centerme)
+![](assets/images/open_scad_device.png?style=centerme)
 *The model of the box in openscad editor*
 
 Using OpenSCAD, I designed a custom case to house all the components securely. The key design considerations included:
