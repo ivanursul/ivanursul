@@ -245,12 +245,25 @@ Compared to traditional fall detection systems that often rely on threshold-base
 
 ### Software Implementation
 
-The device runs a Python script that:
+The device operates in two primary modes: **Data Collection Mode** and **Inference Mode**. A Python script orchestrates both modes, handling data acquisition, processing, and, when appropriate, inference and alerting.
 
-- **Collects Data**: Reads sensor data at 100 Hz and stores it in a buffer.
-- **Processes Data**: Applies filtering and preprocessing in real-time.
-- **Runs Inference**: Feeds the processed data into the trained Transformer model for fall detection.
-- **Alerts**: Activates a buzzer alarm if a fall is detected.
+#### **Data Collection Mode**
+
+In this mode, the device is used to gather the dataset necessary for training the fall detection models. The process involves:
+
+-   **Collecting Data**: The device reads sensor data from the accelerometer, gyroscope, and barometric pressure sensors at a rate of 100 Hz. Data is collected in 8-second intervals to capture sufficient pre- and post-event information for each activity or fall.
+-   **Signalization**: Visual or auditory cues indicate the start and end of each recording session, helping participants synchronize their actions with the data being collected.
+-   **Data Storage**: The collected data, along with labels indicating the type of activity or fall, is stored locally on the device or transferred to a central repository for further preprocessing and model training.
+
+#### **Inference Mode**
+
+In inference mode, the device functions as a real-time fall detection system, continuously monitoring sensor data to identify fall events. The Python script handles the following tasks:
+
+-   **Continuous Data Acquisition**: Sensor data is continuously read at 100 Hz and stored in a rolling buffer that maintains the latest 8 seconds of data.
+-   **Real-Time Processing**: The buffered data undergoes real-time filtering and preprocessing, including noise reduction using a Butterworth low-pass filter and normalization to standardize inputs for the model.
+-   **Sliding Window Approach**: After processing each 8-second interval, the window slides forward (e.g., by 1 second) to analyze the next segment of data. This overlap ensures continuous monitoring and reduces the chance of missing transient fall events.
+-   **Running Inference**: The preprocessed data is fed into the trained Transformer-based deep learning model to determine whether a fall has occurred within that interval.
+-   **Alert Mechanism**: If a fall is detected, the device immediately activates an alert system, such as sounding a buzzer or sending a notification, to prompt timely assistance.
 
 #### Key Libraries Used
 
@@ -262,8 +275,7 @@ import busio
 import adafruit_bmp3xx
 import threading
 import numpy as np
-from scipy.signal import butter, filtfilt
-# ... other necessary imports
+from scipy.signal
 ```
 
 ## Potential Applications and Benefits
