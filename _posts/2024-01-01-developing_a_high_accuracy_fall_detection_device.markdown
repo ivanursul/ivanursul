@@ -61,11 +61,101 @@ The final design was printed using a 3D printer, resulting in a functional and a
 
 ## Data Collection Methodology
 
-To train the fall detection models, I needed a comprehensive dataset of both fall events and ADLs. I partnered with the regional hand-to-hand combat federation to collect realistic fall data. The data collection process involved:
+## Data Collection Methodology
 
-- **Recording Sessions**: Each session lasted 8 seconds, capturing the sensor data before, during, and after the fall.
-- **Signalization**: The device emitted signals to indicate the start of recording, the moment a fall was expected, and the end of recording.
-- **Participant Actions**: Participants performed various types of falls and normal daily activities to provide a diverse dataset.
+To train the fall detection models effectively, I needed a comprehensive and diverse dataset of both fall events and Activities of Daily Living (ADLs). Recognizing the importance of realistic and varied data, I collaborated with participants from a regional hand-to-hand combat federation. This partnership allowed me to capture a wide range of fall types and daily activities performed by individuals of different ages, weights, and heights.
+
+### Activities Recorded
+
+The dataset includes the following activities, each coded for reference:
+
+| **Activity Type** | **Code** | **Type** | **Total Samples** |
+| --- | --- | --- | --- |
+| Fall on the left | ACT1 | Fall | 85 |
+| Fall on the right | ACT2 | Fall | 95 |
+| Fall on the front | ACT3 | Fall | 78 |
+| Fall on the back | ACT4 | Fall | 86 |
+| Slide | ACT5 | Fall | 75 |
+| Fall on knees | ACT6 | Fall | 77 |
+| Stumble upon | ACT7 | Fall | 78 |
+| Stay without walking and fall | ACT8 | Fall | 75 |
+| Custom fall (subject decides) | ACT9 | Fall | 65 |
+| Sit on chair, fall | ACT10 | Fall | 143 |
+| Try to sit on chair, fall | ACT11 | Fall | 150 |
+| Fall from a higher place | ACT12 | Fall | 9 |
+| Walking | ACT13 | ADL | 84 |
+| Running | ACT14 | ADL | 64 |
+| Jogging | ACT15 | ADL | 68 |
+| Sitting | ACT16 | ADL | 60 |
+| Standing | ACT17 | ADL | 59 |
+| Picking up | ACT18 | ADL | 60 |
+| Laying | ACT19 | ADL | 60 |
+| Standing up from laying | ACT20 | ADL | 55 |
+| Walking, stopping, another direction | ACT21 | ADL | 58 |
+| Waving | ACT22 | ADL | 55 |
+| Reaching | ACT23 | ADL | 48 |
+| Climbing | ACT24 | ADL | 61 |
+| Descend | ACT25 | ADL | 58 |
+
+This variety of activities ensures that the model is trained on diverse movements, improving its ability to distinguish between fall events and normal daily activities.
+
+### Participant Details
+
+A total of 29 participants contributed to the dataset, providing a broad spectrum of physical characteristics. All participants provided informed consent before participating in the data collection process, acknowledging the purpose of the study and their role in it. Safety measures were strictly followed to prevent any injuries during the recording sessions.
+
+The participants are anonymized using subject codes:
+
+| **Code** | **Weight (kg)** | **Height (cm)** | **Age** | **Total Falls** | **Total ADLs** |
+| --- | --- | --- | --- | --- | --- |
+| SBJ01 | 96 | 178 | 32 | 43 | 0 |
+| SBJ02 | 90 | 175 | 30 | 37 | 0 |
+| SBJ03 | 83 | 180 | 32 | 32 | 41 |
+| SBJ04 | 85 | 176 | 19 | 43 | 60 |
+| SBJ05 | 73 | 176 | 19 | 50 | 15 |
+| SBJ06 | 90 | 173 | 22 | 50 | 65 |
+| SBJ07 | 70 | 178 | 27 | 51 | 52 |
+| SBJ08 | 68 | 174 | 24 | 50 | 52 |
+| SBJ09 | 65 | N/A | N/A | 52 | 52 |
+| SBJ10 | 67 | 183 | 30 | 49 | 53 |
+| SBJ11 | 78 | 180 | 30 | 52 | 0 |
+| SBJ12 | 95 | 176 | 22 | 49 | 0 |
+| SBJ13 | 60 | 172 | 20 | 52 | 28 |
+| SBJ14 | 60 | 180 | 20 | 50 | 48 |
+| SBJ15 | 71 | 178 | 32 | 50 | 0 |
+| SBJ16 | 87 | 176 | 29 | 49 | 0 |
+| SBJ17 | 100 | 179 | 29 | 52 | 0 |
+| SBJ18 | 91 | 183 | 29 | 52 | 0 |
+| SBJ19 | 66 | 176 | 34 | 0 | 53 |
+| SBJ20 | 63 | 173 | 32 | 49 | 43 |
+| SBJ21 | 88 | 180 | 30 | 52 | 0 |
+| SBJ22 | 57 | 160 | 31 | 52 | 0 |
+| SBJ23 | 72 | 182 | 31 | 0 | 49 |
+| SBJ24 | 63 | 173 | 31 | 0 | 52 |
+| SBJ25 | 80 | 184 | 32 | 0 | 52 |
+| SBJ26 | 50.5 | 162 | 25 | 0 | 47 |
+| SBJ27 | 100 | 180 | 42 | 0 | 44 |
+| SBJ28 | 85 | 179 | 31 | 0 | 52 |
+| SBJ29 | 70 | 177 | 26 | 0 | 52 |
+
+This diverse group includes individuals ranging in age from 19 to 42 years old, with various weights and heights. Such diversity is crucial to ensure that the model generalizes well across different body types and movement patterns.
+
+### Ethical Considerations
+
+Ethical guidelines were strictly adhered to throughout the data collection process. Each participant signed a consent form agreeing to participate and acknowledging their understanding of the study's purpose. Participants were informed that they could withdraw at any time without any consequences.
+
+Safety measures were implemented to prevent injuries during falls:
+
+-   **Supervision**: All fall activities were supervised by trained professionals.
+-   **Protective Equipment**: Participants used mats and wore appropriate protective gear when necessary.
+-   **Medical Readiness**: First aid kits and medical personnel were on standby during the sessions.
+
+### Recording Procedure
+
+-   **Session Duration**: Each recording session lasted approximately 8 seconds to capture data before, during, and after the activity.
+-   **Signalization**: The device emitted signals to indicate the start of recording, the expected moment of the fall or activity, and the end of recording.
+-   **Repetition**: Each activity was performed multiple times by different participants to ensure data variability.
+
+By meticulously collecting and curating this dataset, the model is trained on realistic scenarios, enhancing its ability to accurately detect falls while minimizing false positives during normal daily activities.
 
 ## Data Preprocessing
 
