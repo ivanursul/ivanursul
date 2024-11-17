@@ -7,12 +7,29 @@ tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'el
 ---
 
 ![](assets/images/fall_detection_prototype_device.jpeg?style=centerme)
+*The prototype with the cover removed*
 
 Falls are a significant concern for the elderly population, often leading to serious injuries and a decrease in the quality of life. Detecting falls promptly can enable quick assistance, potentially reducing the severity of injuries and providing peace of mind for both seniors and their families. In my recent project, I set out to create a highly accurate, real-time fall detection device that minimizes false positives while operating on a resource-constrained platform.
 
 ## Project Overview
+The primary goal of this project was to develop a compact and efficient fall detection system using a Raspberry Pi Zero 2W, equipped with MPU-9250 (accelerometer and gyroscope) and BMP-388 (barometric pressure) sensors. The device is designed to collect data on falls and Activities of Daily Living (ADL), process the data using Transformer-based deep learning models, and detect falls with high accuracy.
 
-The primary goal of this project was to develop a compact and efficient fall detection system using a Raspberry Pi Zero 2W, equipped with MPU-9265 (accelerometer and gyroscope) and BMP-388 (barometric pressure) sensors. The device is designed to collect data on falls and Activities of Daily Living (ADL), process the data using Transformer-based deep learning models, and detect falls with high accuracy.
+A key feature of the device is its placement on the chest, near the heart. This strategic location offers several advantages:
+
+Enhanced Motion Detection: The chest provides a stable and central point for capturing body movements, improving the accuracy of motion sensing.
+Future ECG Integration: Being close to the heart makes the device an ideal candidate for integrating an ECG sensor in future iterations. This would allow for monitoring heart activity alongside fall detection, providing a comprehensive health monitoring solution.
+
+![](assets/images/device_position.jpeg?style=centerme)
+*Example of device placement on the chest*
+
+Initially, the Raspberry Pi Zero 2W was chosen as the development platform due to its small form factor, low power consumption, and sufficient computational capabilities for running lightweight deep learning models. However, to explore more advanced hardware options that could offer increased processing power and additional features, I also considered the Arduino Portenta H7 and the Radxa Zero 3W.
+
+Arduino Portenta H7: A high-performance microcontroller with dual-core processing, ideal for complex computations and real-time data processing.
+Radxa Zero 3W: A powerful single-board computer that offers Wi-Fi and Bluetooth connectivity, providing more options for data transmission and device communication.
+By experimenting with these platforms, the goal is to optimize the device for the best balance between performance, power efficiency, and cost.
+
+![](assets/images/devices.jpeg?style=centerme)
+From left to right: Arduino Portenta H7, Radxa Zero 3W and Raspberry Pi Zero 2W
 
 ## Hardware Components
 
@@ -51,6 +68,7 @@ To train the fall detection models, I needed a comprehensive dataset of both fal
 ## Data Preprocessing
 
 ![The model of the box in openscad editor](assets/images/fall_detection_filtering.jpeg?style=centerme)
+*Filtering mechanisms*
 
 Raw sensor data often contains noise and irrelevant fluctuations. To address this, I employed several preprocessing techniques:
 
