@@ -35,7 +35,7 @@ From left to right: Arduino Portenta H7, Radxa Zero 3W and Raspberry Pi Zero 2W
 
 ### Raspberry Pi Zero 2W
 
-I chose the Raspberry Pi Zero 2W due to its small form factor, low power consumption, and sufficient computational capabilities for running lightweight deep learning models. Its compact size makes it ideal for wearable applications.
+I chose the Raspberry Pi Zero 2W due to its small form factor, low power consumption, and sufficient computational capabilities for running lightweight deep learning models. Its compact size makes it ideal for wearable applications, allowing the device to be conveniently integrated into daily use. That said, I will be exploring other Single Board Computers (SBCs) and microcontrollers in the future. 
 
 ### MPU-9265 Sensor
 
