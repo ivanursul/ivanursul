@@ -158,7 +158,7 @@ By meticulously collecting and curating this dataset, the model is trained on re
 ## Data Preprocessing
 
 ![The model of the box in openscad editor](assets/images/fall_detection_filtering.jpeg?style=centerme)
-*Filtering mechanisms*
+*Compiled information about raw accelerometer data(X, Y, Z axis), processed accelerometer data, magnitude and altitude*
 
 Raw sensor data often contains noise and irrelevant fluctuations. To address this, I employed several preprocessing techniques:
 
@@ -200,7 +200,6 @@ I explored various Transformer-based models for fall detection, leveraging their
 
     The Time-Series Transformer, also known as T2V-BERT, is specifically designed for time-series data. It incorporates time-aware positional embeddings and temporal encoding to handle continuous time information effectively. This model adapts the Transformer architecture to better capture the temporal dynamics inherent in time-series data like accelerometer and gyroscope readings, enhancing its ability to detect falls accurately.
 
-* * * * *
 
 These models were selected and adapted to balance the need for high accuracy with the computational limitations of running on a resource-constrained device. By evaluating each architecture, I aimed to identify the most effective model for real-time fall detection that could operate efficiently on the Raspberry Pi Zero 2W.
 
