@@ -29,7 +29,7 @@ Radxa Zero 3W: A powerful single-board computer that offers Wi-Fi and Bluetooth 
 By experimenting with these platforms, the goal is to optimize the device for the best balance between performance, power efficiency, and cost.
 
 ![](assets/images/devices.jpeg?style=centerme)
-From left to right: Arduino Portenta H7, Radxa Zero 3W and Raspberry Pi Zero 2W
+*From left to right: Arduino Portenta H7, Radxa Zero 3W and Raspberry Pi Zero 2W*
 
 ## Hardware Components
 
@@ -59,7 +59,7 @@ Using OpenSCAD, I designed a custom case to house all the components securely. T
 
 The final design was printed using a 3D printer, resulting in a functional and aesthetically pleasing case.
 
-![](assets/images/printing_timelapse.gif)
+![](assets/images/printing_timelapse.gif?style=centerme)
 *The process of printing case for the device*
 
 ## Data Collection Methodology
