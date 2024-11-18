@@ -58,7 +58,9 @@ Using OpenSCAD, I designed a custom case to house all the components securely. T
 - **Durability**: Designing the case to protect the components from physical damage.
 
 The final design was printed using a 3D printer, resulting in a functional and aesthetically pleasing case.
+
 ![](assets/images/printing_timelapse.gif)
+*The process of printing case for the device*
 
 ## Data Collection Methodology
 
