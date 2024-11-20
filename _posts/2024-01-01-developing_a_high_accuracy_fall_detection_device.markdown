@@ -11,7 +11,9 @@ tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'el
     <source src="https://www.example.com/path-to-audio-file.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-  <p style="font-size: 0.7em; color: #555; margin-top: 5px; font-style: italic;">Listen to an audio description of the fall detection prototype.</p>
+  <p style="font-size: 0.8em; color: #555; margin-top: 5px; font-style: italic; text-align: center;">
+    Listen to an audio description of the fall detection prototype.
+  </p>
 </div>
 
 ![](assets/images/fall_detection_prototype_device.jpeg?style=centerme)
