@@ -6,7 +6,7 @@ permalink: developing-fall-detection-device-raspberry-pi
 tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'elderly-care']
 ---
 
-<div style="position: relative; left: -10%; width: 120%; margin: 20px 0;">
+<div style="position: relative; left: -10%; width: 100%; margin: 20px 0;">
   <audio controls style="width: 100%; border-radius: 10px; background-color: #f5f5f5; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <source src="https://www.example.com/path-to-audio-file.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
