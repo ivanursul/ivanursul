@@ -6,7 +6,7 @@ permalink: developing-fall-detection-device-raspberry-pi
 tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'elderly-care']
 ---
 
-{% include audio-player.html src="https://ivanursul.com/assets/audio/fall-detection-podcast.wav" description="Dive into an AI-generated podcast where two virtual hosts discuss the key findings and implications of the featured article and its groundbreaking research." %}
+{% include audio-player.html audio_source="https://ivanursul.com/assets/audio/fall-detection-podcast.wav" description="Dive into an AI-generated podcast where two virtual hosts discuss the key findings and implications of the featured article and its groundbreaking research." %}
 
 
 ![](assets/images/fall_detection_prototype_device.jpeg?style=centerme)
