@@ -5,11 +5,13 @@ date: 2024-11-16 00:00:00
 permalink: developing-fall-detection-device-raspberry-pi
 tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'elderly-care']
 ---
-<div style="width: 100%; max-width: 100%;">
-  <audio controls style="width: 100%;">
+
+<div style="text-align: center; margin: 20px 0;">
+  <audio controls style="width: 80%; max-width: 600px; border-radius: 10px; background-color: #f5f5f5; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <source src="https://www.example.com/path-to-audio-file.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <p style="font-size: 0.9em; color: #555; margin-top: 10px;">Listen to an audio description of the fall detection prototype.</p>
 </div>
 
 ![](assets/images/fall_detection_prototype_device.jpeg?style=centerme)
