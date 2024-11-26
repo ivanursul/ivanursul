@@ -19,7 +19,7 @@ Audio version
 </div> -->
 
 ![](assets/images/pcb.png?style=centerme)
-*Schematics*
+*Schematics of the PCB module*
 
 
 In my previous post, [Developing a Fall Detection Device with Raspberry Pi](https://ivanursul.com/developing-fall-detection-device-raspberry-pi), I delved into the initial steps of building a fall detection system using the Raspberry Pi Zero 2W. Today, I'm excited to share the next phase of this journey: designing and fabricating a custom PCB that integrates essential sensors to create a compact, robust, and efficient fall detection device.
