@@ -57,7 +57,7 @@ Powering the Raspberry Pi and the array of sensors required careful consideratio
 
 ## Prototyping and Testing: Ironing Out the Kinks
 
-![](assets/images/pcb_render.png?style=centerme)
+![](assets/images/pcb_render_2.png?style=centerme)
 *todo:*
 
 After receiving the fabricated PCB, I dove into testing:
