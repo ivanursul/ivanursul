@@ -3,7 +3,6 @@ layout: "post"
 title:  "Advancing Fall Detection: Crafting a Custom PCB for the Raspberry Pi Zero 2W"
 date: 2024-11-26 00:00:00
 permalink: crafting-custom-pcb-for-raspberry-pi-zero-2w
-published: false
 tags: ['raspberry-pi', 'machine-learning', 'fall-detection', 'transformers', 'elderly-care']
 ---
 
