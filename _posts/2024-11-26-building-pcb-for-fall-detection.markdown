@@ -57,10 +57,12 @@ Powering the Raspberry Pi and the array of sensors required careful consideratio
 
 ## Prototyping and Testing: Ironing Out the Kinks
 
+![](assets/images/pcb_render.png?style=centerme)
+*todo:*
 
 After receiving the fabricated PCB, I dove into testing:
 
--   **Sensor Performance**: Each sensor was soldered onto the board and interfaced via the I2C protocol. Data readings confirmed they were functioning correctly.
+-   **Sensor Performance**: Each sensor was interfaced via the I2C protocol. Data readings confirmed they were functioning correctly.
 -   **Integration Testing**: Running all sensors simultaneously in inference mode, I deployed a machine learning model to detect falls. Impressively, the system could detect a fall within **8 seconds**---most of which was data collection time. The actual detection algorithm executed in mere milliseconds.
 -   **Real-world Application**: Although formal environmental testing wasn't conducted, the device performed reliably during simulated falls, proving the concept's viability.
 
