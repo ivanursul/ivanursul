@@ -6,7 +6,7 @@ permalink: building-svitgrid-solar-monitoring
 tags: ['solar', 'iot', 'esp32', 'flutter', 'gcp', 'energy-monitoring', 'side-project']
 ---
 
-![](assets/images/svitgrid-hero.png?style=centerme)
+![](assets/images/svitgrid/components.png?style=centerme)
 *Svitgrid dashboard: real-time power flow from PV to battery, home, and grid*
 
 A few months into living with my home solar installation, I realized the apps shipped by inverter manufacturers were, to put it politely, unloved. Menus that read like Modbus register dumps. Graphs that took ten seconds to load. No clean way to share access with my family without handing out a password. So I started building my own — and that side project turned into **Svitgrid**, a solar monitoring platform that now ships on iOS, Android, and the web.
@@ -35,11 +35,17 @@ The technology stack ended up looking like this:
 
 The key design decision was supporting **two parallel data delivery paths** from inverter to cloud. More on that in a moment.
 
+![](assets/images/svitgrid/architecture.png?style=centerme)
+*End-to-end data flow: inverter → Mobile Harvester or Svitgrid Edge → Fastify API on Cloud Run → Firestore → mobile/web clients. Firmware updates flow back out from a GCS bucket*
+
 ## Multi-Inverter Support
 
 I started with Deye / Sunsynk / Sol-Ark — these are essentially the same hardware under three brands and dominate the hybrid inverter market in Ukraine and beyond. Svitgrid currently supports around fifteen models in that family, plus Victron systems over Modbus TCP.
 
 What made the Modbus work harder than expected wasn't reading registers — it was handling **realistic topologies**. Master-slave configurations, for example, where two or three inverters work as one logical unit. Owners want to see the individual contribution of each unit, not just the sum, and the protocol doesn't always make that pleasant.
+
+![](assets/images/svitgrid/multi-inverter.jpg?style=centerme)
+*Multi-inverter installation broken out into individual units, so each one's contribution is visible rather than collapsed into a sum*
 
 ## Two Ways to Collect Data
 
@@ -53,11 +59,23 @@ So the second mode is a small ESP32-S3 device I designed to live next to the inv
 
 Right now I'm hand-assembling these units. The next milestone is a professionally manufactured PCB — a familiar journey for anyone who's read [my earlier PCB post](https://ivanursul.com/crafting-custom-pcb-for-raspberry-pi-zero-2w).
 
+![](assets/images/svitgrid/sunmk0-housing.jpg?style=centerme)
+*A small batch of finished SunMk0 edge devices ready to ship — 3D-printed enclosures, USB-C, and a single button*
+
+![](assets/images/svitgrid/edge-device.jpg?style=centerme)
+*Resin printer churning out enclosure parts. "Hand-made" is doing some heavy lifting in that sentence*
+
+![](assets/images/svitgrid/pcb-render.jpg?style=centerme)
+*3D KiCad render of the next-generation PCB, with an ESP32-S3 / ESP32-H2 hybrid layout for Zigbee expansion*
+
 ## OTA Firmware Updates
 
 With hardware in users' homes, OTA is non-negotiable. The firmware uses ESP-IDF's A/B partition scheme: the new image is written to the inactive partition, verified with SHA256, and only booted after a successful handshake — otherwise the device rolls back automatically. The app surfaces progress so users can see exactly what's happening.
 
 There's still a small class of changes (partition table tweaks, bootloader changes) where I need physical USB access, but day-to-day improvements ship over the air.
+
+![](assets/images/svitgrid/flashing.jpg?style=centerme)
+*Reflashing a returned device on a postal-office counter — not glamorous, but the kind of thing that happens when your hardware is in the wild*
 
 ## Analytics and Planning
 
@@ -66,6 +84,9 @@ This is where the project stopped being just a "monitoring" app and started bein
 ### Real-time Graphs
 
 Streaming charts showing PV, battery, and grid contributions side by side. Nothing fancy — but the latency is low enough that you can flip a load on and watch the numbers move.
+
+![](assets/images/svitgrid/realtime-graphs.png?style=centerme)
+*Stacked energy sources view: PV1, PV2, battery, and grid drawn together so you can see exactly where every watt is coming from at any given minute*
 
 ### Weather-Based Forecasts
 
@@ -79,13 +100,25 @@ Ukrainian users will know exactly why this matters. Svitgrid integrates the sche
 
 For users who sell to the grid, the app pulls hourly Day-Ahead Market (RDN) prices, so you can see when it's actually worth pushing energy out.
 
+![](assets/images/svitgrid/weather-pricing.png?style=centerme)
+*Forecast and pricing: tomorrow's generation curve overlaid with hourly market prices, so "when should I sell?" becomes a question with a real answer*
+
+![](assets/images/svitgrid/market-forecast.jpg?style=centerme)
+*Market price view, day by day, against expected output*
+
 ### Green Tariff Math
 
 For those on the green tariff, Svitgrid does the messy arithmetic — 18% income tax, 5% military levy — and shows net monthly income in UAH. It's a small feature, but the alternative is a spreadsheet, and nobody wants the spreadsheet.
 
+![](assets/images/svitgrid/green-tariff.jpg?style=centerme)
+*Green tariff income broken down month-by-month, net of taxes*
+
 ### Smart Planning Assistant
 
 Putting all of the above together, the app suggests concrete daily actions — for example, "sell to the grid between 11:00 and 12:00" — based on the forecast, the market price, and the blackout schedule. Every command the assistant issues is cryptographically signed with the user's private key. Which brings me to the part I care about most.
+
+![](assets/images/svitgrid/planner.jpg?style=centerme)
+*Daily plan generated from the forecast and price feed: when to charge, when to discharge, when to sell*
 
 ## Security: Why the Cloud Should Not Own Your Inverter
 
